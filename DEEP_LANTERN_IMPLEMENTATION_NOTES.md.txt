@@ -1,0 +1,32 @@
+IMPLEMENTATION NOTES — CROSS-PART CLARIFICATIONS
+
+The following notes clarify minor cross-part inconsistencies identified during final review. They do not replace, remove, or rewrite any existing GDD content.
+
+1. Docking Ring — MVP Scope Clarification
+
+Part 5 may describe the Docking Ring as Post-MVP in the context of expanded social functionality. However, Part 8 defines the compact Docking Ring as an MVP feature for private co-op staging, crew boarding, and submarine launch.
+
+Implementation rule:
+The compact functional Docking Ring required for MVP co-op is included in MVP. Expanded/public/social Docking Ring functionality remains Post-MVP.
+
+2. Quest Example — Zone Naming Clarification
+
+The Part 7 example quest may use the identifier Zone_2_Twilight_Trench, while the official GDD zone name is Twilight Reef.
+
+Implementation rule:
+Use Twilight Reef as the official player-facing zone name. Internal identifiers may use a consistent convention such as Zone_TwilightReef.
+
+This is a naming clarification only and does not introduce a new zone.
+
+3. Currents — Simulation Scope Clarification
+
+Some event/season descriptions may refer to changes in currents, while Part 3 explicitly defers continuous fluid/current simulation.
+
+Implementation rule:
+Any current-related gameplay must use lightweight scripted or trigger-based movement/navigation modifiers. Do not implement continuous fluid simulation, complex current physics, or per-frame environmental physics systems.
+
+Source of Truth
+
+These notes are implementation clarifications only. Parts 1–10 remain the authoritative Game Design Document. No feature, currency, progression system, zone, or mechanic should be added based solely on these notes.
+
+When implementing the game, prioritize the locked definitions in Parts 1–10 and use these notes only to resolve the three minor cross-part ambiguities described above.
