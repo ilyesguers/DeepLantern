@@ -13,6 +13,7 @@ Repository for the approved game design, AI-assisted development workflow, visua
 5. [AI Agent Rules](AI_Workflow/AI_AGENT_RULES.md) — non-negotiable invariants.
 6. [Codex first-session prompt](AI_Workflow/CODEX_FIRST_SESSION_PROMPT.md) — inspection-only; no changes.
 7. [File Map](AI_Workflow/FILE_MAP.md) — folder purposes.
+8. [Roblox Studio import guide](Roblox/STUDIO_IMPORT_GUIDE.md) — exact Explorer hierarchy and a safe UI smoke test.
 
 ## Project identity
 Deep Lantern is an exploration-first underwater adventure with a functional research station. The station processes discoveries found by players; it is not a passive tycoon.
