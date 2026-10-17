@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-17 — Fusion UI dependency clarification
+- Confirmed the UI modules use the Fusion 0.3 scoped-constructor API and documented the explicit `elttob/fusion@0.3.0` dependency recommendation with official source and documentation links.
+- Updated the Studio import guide and project state to distinguish source-level API compatibility from actual Studio runtime verification.
+- No game scripts or live Roblox place were changed; Studio testing and asset uploads remain unverified.
+
 ## 2026-10-17 — Roblox asset uploader hardening (CI passed)
 - Added preflight checks for texture paths, duplicate entries and asset ID formats; dry-run mode performs no network calls or writes.
 - Added explicit credential/creator validation, bounded request timeouts, retries for safe/idempotent requests, operation polling limits, error reporting, and atomic progress/source-file writes.
