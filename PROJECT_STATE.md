@@ -2,6 +2,11 @@
 
 Last reviewed: 2026-10-17
 
+## Asset uploader hardening (pending CI verification)
+- `Assets/Textures/TEXTURES/_generators/upload_assets.py` now performs a no-network preflight, validates selected paths and existing IDs, checks required creator configuration before upload, uses request timeouts and bounded retries for transient HTTP/network errors, polls operation status with a configurable limit, and atomically saves progress and updates `AssetIds.luau` after each successful upload.
+- `.github/workflows/texture-qa.yml` runs the uploader with `--dry-run` so file/path issues are caught without credentials or network calls.
+- This hardening has not been verified against Roblox Open Cloud. The uploader still requires a separate live-account test; never commit API keys. Asset upload and Roblox Studio playtesting remain unverified.
+
 ## Status
 This repository is the documentation, AI workflow, and source-asset home for the existing Roblox project. The current Studio place and local .rbxl files must be inspected directly before making implementation claims. GitHub does not automatically synchronize with Roblox Studio.
 
