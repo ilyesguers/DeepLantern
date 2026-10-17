@@ -10,7 +10,7 @@
 | `Assets/Textures/TEXTURES/` | Imported texture pack, maps, icons, UI and VFX assets | Follow its manifest/READMEs; Studio import still requires verification |
 | `Assets/Textures/` | Texture usage guidance | Keep references separate from production texture maps |
 | `Assets/Models/` | Production model exports | Include source, scale/pivot/collision notes and Studio import status |
-| `Blender/` | Blender source/export pipeline guidance | No finished models implied |
+| `Blender/` | Blender preparation checklist, model brief template, and source/export pipeline guidance | No finished models implied |
 | `Roblox/` | Studio integration notes | Do not assume live scripts are present here |
 | `AI_Workflow/` | Agent rules, prompts, setup and checklists | Required before agent work |
 | `CHANGELOG.md` | Human-readable change history | Update with verified project changes |
