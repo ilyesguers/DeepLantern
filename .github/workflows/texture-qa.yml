@@ -125,6 +125,50 @@ jobs:
           print(f"AssetIds map OK: {len(entries)} unique paths; {blank} IDs still blank.")
           PY
 
+      - name: Verify Luau texture references
+        working-directory: Assets/Textures/TEXTURES
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          root = Path(".")
+          ids_source = (root / "luau/AssetIds.luau").read_text(encoding="utf-8")
+          ids = {key for key, _ in re.findall(r'\["([^"]+)"\]\s*=\s*"([^"]*)" ', ids_source)}
+          # Match the actual source formatting without depending on trailing whitespace.
+          ids = {key for key, _ in re.findall(r'\["([^"]+)"\]\s*=\s*"([^"]*)"', ids_source)}
+          atlas_source = (root / "luau/AtlasData.luau").read_text(encoding="utf-8")
+          token_source = (root / "luau/DesignTokens.luau").read_text(encoding="utf-8")
+          missing = []
+
+          for sheet in re.findall(r'sheet\s*=\s*"([^"]+)"', atlas_source):
+              if sheet not in ids:
+                  missing.append(f"AtlasData.luau -> {sheet}")
+          for image in re.findall(r'image\s*=\s*"([^"]+)"', token_source):
+              if image not in ids:
+                  missing.append(f"DesignTokens.luau -> {image}")
+
+          expected = []
+          for style in ("primary", "secondary", "danger"):
+              for state in ("default", "hover", "pressed", "focus", "disabled"):
+                  expected.append(f"ui/buttons/button_{style}_{state}.png")
+          for style in ("aqua", "warning", "critical", "amber", "purple", "white"):
+              expected.append(f"ui/bars/bar_fill_{style}.png")
+          for kind in ("empty", "damaged", "full"):
+              expected.append(f"ui/bars/hull_segment_{kind}.png")
+
+          for path in expected:
+              if path not in ids:
+                  missing.append(f"Dynamic Luau path -> {path}")
+
+          if missing:
+              print("Unmapped texture references:")
+              print("\n".join(f" - {item}" for item in sorted(set(missing))))
+              raise SystemExit(1)
+
+          print(f"Luau texture references OK: {len(expected)} dynamic UI paths and atlas/token references.")
+          PY
+
       - name: Dry-run asset uploader (no credentials or network calls)
         working-directory: Assets/Textures/TEXTURES
         run: python _generators/upload_assets.py --dry-run
