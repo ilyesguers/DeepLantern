@@ -1,3 +1,8 @@
+## 2026-10-17 — Blender workflow preparation
+- Added a Blender checklist and per-model brief template covering approved scope, dimensions, pivots, collision, materials, performance, export deliverables, source/license notes, and Studio validation.
+- Linked the Blender documents from README and file map.
+- Documentation only: no 3D model was created or imported, and no Studio runtime verification is claimed.
+
 # Changelog
 
 ## 2026-10-17 — Fusion UI dependency clarification
