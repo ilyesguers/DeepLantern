@@ -85,6 +85,46 @@ jobs:
           )
           PY
 
+      - name: Verify AssetIds module paths and values
+        working-directory: Assets/Textures/TEXTURES
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          module = Path("luau/AssetIds.luau")
+          source = module.read_text(encoding="utf-8")
+          entries = re.findall(r'\["([^"]+)"\]\s*=\s*"([^"]*)"', source)
+          if not entries:
+              raise SystemExit("AssetIds.luau contains no entries")
+
+          keys = [key for key, _ in entries]
+          duplicates = sorted({key for key in keys if keys.count(key) > 1})
+          if duplicates:
+              raise SystemExit("Duplicate AssetIds keys: " + ", ".join(duplicates[:10]))
+
+          missing = []
+          invalid = []
+          for key, value in entries:
+              path = Path(key)
+              if path.is_absolute() or ".." in path.parts or not path.is_file():
+                  missing.append(key)
+              if value and not re.fullmatch(r"rbxassetid://\d+", value):
+                  invalid.append(key)
+
+          if missing:
+              print("AssetIds paths missing from repository:")
+              print("\n".join(f" - {key}" for key in missing[:50]))
+              raise SystemExit(f"{len(missing)} missing path(s)")
+          if invalid:
+              print("Invalid asset ID values:")
+              print("\n".join(f" - {key}" for key in invalid[:50]))
+              raise SystemExit(f"{len(invalid)} invalid ID value(s)")
+
+          blank = sum(not value for _, value in entries)
+          print(f"AssetIds map OK: {len(entries)} unique paths; {blank} IDs still blank.")
+          PY
+
       - name: Dry-run asset uploader (no credentials or network calls)
         working-directory: Assets/Textures/TEXTURES
         run: python _generators/upload_assets.py --dry-run
