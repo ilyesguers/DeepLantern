@@ -115,10 +115,17 @@ def write_ids_module(done):
     src = IDS_MODULE.read_text(encoding="utf-8")
     for path, asset_id in done.items():
         escaped_path = re.escape(path)
-        pattern = re.compile(r'(\["' + escaped_path + r'"\]\s*=\s*")[^"]*(")')
-        src, count = pattern.subn(lambda m: m.group(1) + asset_id + m.group(2), src)
-        if count != 1:
-            raise RuntimeError(f"Expected exactly one AssetIds.luau key for {path}, found {count}")
+        pattern = re.compile(r'(\["' + escaped_path + r'"\]\s*=\s*")([^"]*)(")')
+        matches = list(pattern.finditer(src))
+        if len(matches) != 1:
+            raise RuntimeError(f"Expected exactly one AssetIds.luau key for {path}, found {len(matches)}")
+        current_id = matches[0].group(2)
+        if current_id and current_id != asset_id:
+            raise RuntimeError(
+                f"Refusing to overwrite existing ID for {path}: "
+                f"module has {current_id}, progress has {asset_id}"
+            )
+        src = pattern.sub(lambda m: m.group(1) + asset_id + m.group(3), src, count=1)
     atomic_write(IDS_MODULE, src)
 
 
@@ -143,6 +150,20 @@ def main():
         raise RuntimeError("Duplicate paths found in AssetIds.luau")
 
     done = read_progress()
+    known_paths = {path for path, _ in pairs}
+    unknown_progress = sorted(set(done) - known_paths)
+    if unknown_progress:
+        raise RuntimeError(
+            f"Progress file contains a path not present in AssetIds.luau: {unknown_progress[0]}"
+        )
+    current_ids = dict(pairs)
+    for path, saved_id in done.items():
+        current_id = current_ids[path]
+        if current_id and current_id != saved_id:
+            raise RuntimeError(
+                f"Conflicting IDs for {path}: AssetIds.luau has {current_id}, "
+                f"progress file has {saved_id}. Resolve this manually before continuing."
+            )
     todo = [(path, asset_id) for path, asset_id in pairs if not asset_id and path not in done]
     invalid = [(path, value) for path, value in pairs if value and not re.fullmatch(r"rbxassetid://\d+", value)]
     if invalid:
