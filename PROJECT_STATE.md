@@ -2,8 +2,8 @@
 
 Last reviewed: 2026-10-17
 
-## Asset uploader hardening (pending CI verification)
-- `Assets/Textures/TEXTURES/_generators/upload_assets.py` now performs a no-network preflight, validates selected paths and existing IDs, checks required creator configuration before upload, uses request timeouts and bounded retries for transient HTTP/network errors, polls operation status with a configurable limit, and atomically saves progress and updates `AssetIds.luau` after each successful upload.
+## Asset uploader hardening (CI passed)
+- `Assets/Textures/TEXTURES/_generators/upload_assets.py` now performs a no-network preflight, validates selected paths and existing IDs, checks required creator configuration before upload, uses request timeouts and bounded retries for safe/idempotent requests (non-idempotent upload POSTs are not automatically retried), polls operation status with a configurable limit, and atomically saves progress and updates `AssetIds.luau` after each successful upload.
 - `.github/workflows/texture-qa.yml` runs the uploader with `--dry-run` so file/path issues are caught without credentials or network calls.
 - This hardening has not been verified against Roblox Open Cloud. The uploader still requires a separate live-account test; never commit API keys. Asset upload and Roblox Studio playtesting remain unverified.
 
@@ -47,3 +47,8 @@ PLAN → DIVE → DECIDE → DEBRIEF → UPGRADE → GO DEEPER.
 
 ## Agent status
 Start with an inspection-only Studio session. Report verified state, unknowns, and the smallest safe next task. Never claim Studio was inspected unless the MCP/Studio tool actually worked.
+
+
+## Roblox Studio import readiness
+- Added `Roblox/STUDIO_IMPORT_GUIDE.md` documenting the expected Explorer hierarchy for the texture UI modules and a safe demo smoke test.
+- The repository still does not include a live `.rbxl`/`.rbxlx` place. Fusion version compatibility, actual asset uploads, and runtime behavior must be verified in Studio.
