@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-17 — Roblox asset uploader hardening (pending CI verification)
+- Added preflight checks for texture paths, duplicate entries and asset ID formats; dry-run mode performs no network calls or writes.
+- Added explicit credential/creator validation, bounded request timeouts and retries, operation polling limits, error reporting, and atomic progress/source-file writes.
+- Added a credential-free uploader dry-run to the texture QA workflow.
+- Live Roblox Open Cloud uploads and Studio validation have not been performed.
+
 ## 2026-10-17 — Archive integration
 - Imported 545 new files from the supplied AI Programmer Pack and texture archive into the integration branch.
 - Added the approved GDD source files, visual reference boards, and texture pack under `Assets/Textures/TEXTURES/`.
