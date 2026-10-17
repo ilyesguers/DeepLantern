@@ -1,0 +1,1783 @@
+DEEP LANTERN
+GAME DESIGN DOCUMENT (GDD)
+Parts 1–10 — APPROVED / LOCKED
+> **Document Status:** Parts 1–10 APPROVED / LOCKED
+>
+> **Core tagline:** Light the way down.
+>
+> **Project identity:** Exploration-Adventure with a base-building
+heart.
+>
+> **Design principle:** Small, beautiful, playable first.
+PART 1 — CORE CONCEPT & DESIGN PILLARS
+1. Genre & Platform
+Genre: Exploration-Adventure / Functional Base-Building Hybrid
+Platform: Roblox — PC, mobile, console, and tablet.
+2. Player Role
+The player is the Chief Expedition Officer & Deep-Sea Submarine Pilot.
+The player operates a bioluminescent deep-sea research station and
+pilots submarines into handcrafted underwater zones.
+3. Tone
+^(●) Wonder and curiosity first.
+^(●) Eerie and mysterious at greater depths, without becoming horror.
+^(●) The ocean should feel unknown, beautiful, and slightly unsettling.
+^(●) Discovery should be the primary emotional reward.
+4. Unique Selling Proposition
+The station is a functional operational base, not a passive cash
+printer.
+The player prepares at the station, dives into the ocean, makes
+meaningful decisions, returns with discoveries, processes those
+discoveries, and upgrades the station/submarine to reach deeper areas.
+5. Core Design Pillars
+1. Active Exploration — The dive itself is the main game.
+2. Purpose-Driven Base Expansion — Station wings directly support
+exploration.
+3. Fair Risk — Failure costs a portion of unsecured cargo, never
+permanent progression.
+4. Observation & Preparation Over RNG — Knowledge and equipment matter
+more than luck.
+5. Wonder First — Exploration and discovery are the emotional core.
+6. Permanent Station Ownership — No rebirth/reset prestige.
+6. Core Loop
+PLAN → DIVE → DECIDE → DEBRIEF → UPGRADE → GO DEEPER
+^(●) PLAN: Choose submarine, equipment, objective, and cargo protection.
+^(●) DIVE: Pilot the submarine through handcrafted underwater
+environments.
+^(●) DECIDE: Continue deeper or return based on Battery/Oxygen, Hull,
+Cargo, hazards, and discoveries.
+^(●) DEBRIEF: Process cargo, earn Credits and Research Data, update the
+Codex.
+^(●) UPGRADE: Unlock new capabilities through the station and research
+systems.
+^(●) GO DEEPER: Use new capabilities to reach new areas and discover
+more.
+7. Session Structures
+^(●) Short: approximately 10–15 minutes.
+^(●) Medium: approximately 30–45 minutes.
+^(●) Long: approximately 60–90+ minutes.
+8. Two-Currency Rule
+The game has exactly two gameplay currencies:
+^(●) Credits — primary economic currency.
+^(●) Research Data — earned only through active exploration, scanning,
+studying, and decoding.
+Research Data cannot be purchased with Robux, earned passively, or
+obtained through AFK systems.
+9. Anti-Goals
+Deep Lantern is not:
+^(●) A generic button tycoon.
+^(●) An idle/AFK game.
+^(●) A pure RNG game.
+^(●) A frustrating survival simulator.
+^(●) Pay-to-win.
+^(●) A spreadsheet-heavy inventory simulator.
+^(●) Jumpscare horror.
+^(●) Forced multiplayer.
+^(●) A rebirth/reset game.
+^(●) A massive MMO-scale open world.
+10. North Star
+> Prepare at your home base, descend into an awe-inspiring unknown, make
+smart decisions under pressure, and bring your discoveries back to the
+light.
+PART 1 STATUS: APPROVED / LOCKED
+PART 2 — PROGRESSION, ECONOMY & LONG-TERM STRUCTURE
+1. Progression Philosophy
+Progression focuses on capability over stat inflation.
+Players should unlock new ways to explore rather than repeatedly receive
+tiny numerical increases.
+Progression has four major vectors:
+1. Depth Reach
+2. Station Tier
+3. Codex Mastery
+4. Submarine Fleet
+2. World / Depth Zones
+The planned depth progression consists of:
+1. Shallows
+2. Kelp Forest
+3. Twilight Reef
+4. Abyss
+5. Lost Ruins
+6. The Hollow
+7. Beyond
+Exact numerical depth thresholds are intentionally deferred until
+technical balancing.
+3. Station Tiers
+Station progression:
+Outpost → Station → Complex → Citadel → Deep Empire
+Citadel and Deep Empire are post-MVP progression.
+4. Submarine Progression
+Submarine progression uses:
+^(●) Hull frame.
+^(●) Utility/navigation slots.
+^(●) Internal/module slots.
+^(●) Capability-focused equipment.
+Exact module statistics and recipes are deferred to technical
+implementation.
+5. Submarine Classes
+Planned classes:
+^(●) Scout
+^(●) Hauler
+^(●) Surveyor
+^(●) Abyssal
+^(●) Multi-Crew — future/deferred detailed implementation.
+6. Capability-Based Upgrades
+Examples include:
+^(●) Plasma Cutter.
+^(●) Thermal Recharging Unit.
+^(●) Acoustic Decoy Launcher.
+Upgrades should unlock capabilities rather than produce endless +1% stat
+inflation.
+7. Economy
+Credits
+Credits are the primary economic currency.
+They are earned through recovered minerals, relics, and related dive
+results during debrief.
+Research Data
+Research Data is earned through:
+^(●) Scanning.
+^(●) Studying.
+^(●) Analyzing.
+^(●) Decoding.
+^(●) Verification.
+^(●) Active exploration.
+Research Data cannot be:
+^(●) Purchased with Robux.
+^(●) Generated AFK.
+^(●) Traded/transferred between players.
+8. Physical Resources
+Main physical resource categories:
+^(●) Geological Minerals.
+^(●) Biological Samples.
+^(●) Relics & Artifacts.
+^(●) Field Consumables.
+9. Technology Tree
+Three research branches:
+1. Engineering
+2. Survey
+3. Abyssal
+10. Goals
+Short-Term
+^(●) Improve basic submarine capabilities.
+^(●) Complete early discoveries.
+^(●) Upgrade the station from Outpost.
+Mid-Term
+^(●) Reach deeper zones.
+^(●) Expand the station.
+^(●) Build Codex mastery.
+^(●) Unlock stronger exploration capabilities.
+Long-Term
+^(●) Deep Expeditions.
+^(●) Relic restoration.
+^(●) Gallery completion.
+^(●) Advanced depth progression.
+^(●) Seasonal content.
+11. Endgame
+Endgame includes:
+^(●) Deep Expeditions.
+^(●) Relic restoration.
+^(●) Gallery/Aquarium completion.
+^(●) Mastery.
+^(●) Expedition Seasons lasting approximately 8–12 weeks.
+There is no hard progression reset.
+12. Anti-Grind Rules
+No:
+^(●) Artificial timers.
+^(●) Energy/stamina systems outside the unified Battery/Oxygen dive
+resource.
+^(●) Filler activity.
+^(●) Rebirth.
+^(●) Trading economy.
+^(●) Pay-to-progress.
+^(●) RNG progression walls.
+^(●) Endless stat inflation.
+Candidate and deferred systems should remain isolated from the MVP.
+PART 2 STATUS: APPROVED / LOCKED
+PART 3 — WORLD, ZONES, EXPLORATION & DIVE DESIGN
+1. World Philosophy
+Small, Beautiful, Playable First
+The world uses a compact, handcrafted, vertical environment.
+Scale is created through:
+^(●) Dense level design.
+^(●) Narrow passages.
+^(●) Fog.
+^(●) Darkness.
+^(●) Depth transitions.
+^(●) Modular reusable assets.
+The game should avoid expensive physics, fluid simulation, and
+continuous complex AI.
+2. World Structure
+Compact Station → Launch/Dock Chute → Primary Zone → Sub-Zones → Points
+of Interest → Secrets/Gates → Depth Transitions
+The environment should be modular and reusable.
+3. Exploration Philosophy
+Exploration is player-led.
+Navigation uses:
+^(●) Visual signposting.
+^(●) Simple sonar.
+^(●) Environmental clues.
+^(●) Landmarks.
+^(●) Depth information.
+No quest-marker GPS system.
+4. MVP Dive Loop
+PLAN → DIVE → EXPLORE / COLLECT / SCAN → DECIDE / RETURN → DEBRIEF /
+UPGRADE
+5. Zone Framework
+Each zone should define:
+^(●) Core fantasy.
+^(●) Visual identity.
+^(●) Exploration mechanic.
+^(●) Hazard.
+^(●) Discoveries.
+^(●) Resources.
+^(●) Biological identity.
+^(●) Secrets.
+^(●) Return value.
+^(●) Set-piece.
+6. MVP Zones
+Launch MVP targets:
+1. Station.
+2. Shallows.
+3. Kelp Forest.
+4. Twilight Reef.
+7. Post-MVP Zones
+Future:
+^(●) Abyss.
+^(●) Lost Ruins.
+^(●) The Hollow.
+^(●) Beyond.
+8. Hazards
+Hazards use:
+^(●) Static trigger volumes.
+^(●) Simple state checks.
+^(●) Readable feedback.
+No complex fluid or structural simulation.
+9. Creature Performance
+Creatures use:
+^(●) Small groups.
+^(●) Simple waypoint/spline/state AI.
+^(●) Distance-based activation.
+^(●) Lightweight rigs.
+No predator/prey ecosystem simulation.
+10. Visual Quality
+Visual quality comes primarily from:
+^(●) Lighting.
+^(●) Fog.
+^(●) Atmosphere.
+^(●) Emissive materials.
+^(●) Carefully selected particles.
+Not from massive meshes or huge particle counts.
+11. Reusable Modular Assets
+Assets should be designed as reusable kits.
+The principle is reusable asset variety, not creating thousands of
+simultaneously active objects.
+12. Deferred Systems
+Deferred:
+^(●) Tractor Winch.
+^(●) Hardwired Compass.
+^(●) Complex ecosystem.
+^(●) Dynamic weather.
+^(●) Large procedural generation.
+^(●) NPC fleets.
+^(●) Continuous currents.
+13. Performance Rules
+^(●) Fake scale instead of simulating massive environments.
+^(●) Use triggers instead of expensive simulation.
+^(●) Modularize everything.
+^(●) Use lighting for atmosphere.
+^(●) Keep AI simple but visually effective.
+14. MVP Core Systems
+^(●) Simplified submarine piloting.
+^(●) Inventory/cargo.
+^(●) Static resource nodes.
+^(●) Basic scanning.
+^(●) Lighting/spotlights.
+^(●) Safe return/respawn.
+^(●) Partial unsecured-cargo loss on failure.
+Failure does not destroy permanent progression.
+PART 3 STATUS: APPROVED / LOCKED
+PART 4 — SUBMARINE, DIVE CONTROL & CORE DIVE SYSTEMS
+1. Submarine Philosophy
+The submarine is:
+^(●) The player’s avatar.
+^(●) The player’s sanctuary.
+^(●) The primary exploration tool.
+There is no free-swimming character gameplay at launch.
+2. Design Goals
+^(●) Tactical exploration.
+^(●) Direct control.
+^(●) Weighted movement.
+^(●) Resource management.
+^(●) Capability-focused progression.
+^(●) Mobile-friendly controls.
+3. Controls
+Core actions:
+^(●) WASD / left joystick.
+^(●) Ascend/descend.
+^(●) Lantern.
+^(●) Hold scanner.
+^(●) Interact/collect.
+^(●) Secure Cargo.
+^(●) Recall/Emergency Return.
+4. Camera
+^(●) Third-person trailing camera.
+^(●) Mobile camera pan.
+^(●) Native/smoothed camera.
+^(●) Clear view of the submarine and environment.
+5. Movement
+Movement is arcade-leaning but weighted.
+^(●) Simple acceleration/deceleration.
+^(●) Upright lock.
+^(●) Pitch/roll primarily cosmetic/client-side.
+^(●) Lightweight movement constraints such as LinearVelocity or
+equivalent.
+No realistic submarine simulator complexity.
+6. Core Dive Resources
+There are exactly three core dive resources:
+Battery / Oxygen
+Battery/Oxygen is a single unified dive-limiting resource.
+There are no separate:
+^(●) Oxygen.
+^(●) Fuel.
+^(●) Energy.
+systems.
+Hull
+Represents submarine structural condition.
+Cargo
+Represents physical expedition capacity.
+7. Lantern
+The Lantern is a core exploration tool.
+^(●) Limited lighting.
+^(●) Lightweight SpotLight/SurfaceLight-style implementation.
+^(●) Dynamic shadows only if performance allows.
+^(●) Used for navigation and discovery.
+8. Scanner
+Scanner progression:
+Sighted → Scanned → Studied → Mastered
+Scanning depends on:
+^(●) Position.
+^(●) Conditions.
+^(●) Observation.
+^(●) Equipment capability.
+Not RNG.
+9. Manual Recall
+Manual Recall is a safe return/recall system to the Station.
+It is not a general-purpose teleport system.
+Emergency return activates at:
+^(●) 0 Hull, or
+^(●) 0 Battery/Oxygen.
+10. Secure Cargo
+Secure Cargo is a consumable obtained/unlocked through Station
+progression.
+Detailed crafting/recipes are deferred.
+On failure:
+^(●) A portion of unsecured cargo is lost.
+^(●) Secured Cargo is retained.
+^(●) Submarine is retained.
+^(●) Station upgrades are retained.
+^(●) Codex progression is retained.
+^(●) Permanent tools are retained.
+11. Go Deeper or Return
+The core risk decision is based on readable:
+^(●) Battery/Oxygen.
+^(●) Hull.
+^(●) Cargo.
+^(●) Conditions.
+^(●) Discoveries.
+^(●) Depth.
+12. Hazards
+Hazards use static trigger volumes and simple checks.
+No fluid simulation or structural simulation.
+13. Collection
+Physical collection categories:
+^(●) Minerals.
+^(●) Samples.
+^(●) Relics.
+^(●) Consumables.
+Cargo uses a simple slot/weight model.
+No inventory Tetris.
+14. Debrief
+At the Station:
+^(●) Cargo is processed into permanent results.
+^(●) Codex updates.
+^(●) Research Data is awarded.
+^(●) Minerals are evaluated for Credits.
+^(●) New progression becomes available.
+15. Upgrades
+Upgrades are capability-based.
+No infinite +1% spam.
+16. Submarine Classes
+^(●) Scout.
+^(●) Hauler.
+^(●) Surveyor.
+^(●) Abyssal.
+^(●) Multi-Crew (future).
+17. Solo-First
+The game is designed to be fully playable solo.
+Co-op is optional.
+18. Performance
+^(●) No physics spam.
+^(●) Event-driven systems.
+^(●) Lightweight lighting.
+^(●) Client-side presentation.
+^(●) Server validation.
+19. Anti-Goals
+No:
+^(●) Realistic submarine simulator.
+^(●) Huge spreadsheet inventory.
+^(●) Pay-to-win.
+^(●) PvP/combat.
+PART 4 STATUS: APPROVED / LOCKED
+PART 5 — STATION, BASE BUILDING, TYCOON SYSTEMS & FACILITY PROGRESSION
+1. Station Philosophy
+The Station is a functional, physical hub supporting:
+Plan → Dive → Debrief → Upgrade → Go Deeper
+It is not a passive tycoon cash generator.
+2. Compact Station
+The Station is:
+^(●) Compact.
+^(●) Clustered.
+^(●) Physically walkable.
+^(●) Modular.
+^(●) Reusable.
+No massive hub, crowds, or dynamic placement grids.
+3. Station Wings
+Power Core
+Provides base infrastructure/structural readiness.
+It does not create player-managed electricity.
+Sub Dock
+Handles:
+^(●) Submarine selection.
+^(●) Cargo loading.
+^(●) Launch/return.
+^(●) Staging.
+Upgrades can expand storage/staging capability.
+Workshop
+Handles:
+^(●) Submarine upgrades.
+^(●) Tools.
+^(●) Hull plating.
+Research Lab
+Handles:
+^(●) Research Data.
+^(●) Technology trees.
+^(●) Scanner upgrades.
+^(●) Hazard resistance/capabilities.
+Observatory
+Handles:
+^(●) Map data.
+^(●) Hazard alerts.
+^(●) Zone signatures.
+Aquarium / Gallery
+Handles:
+^(●) Marine-life displays.
+^(●) Relic displays.
+^(●) Social showcase.
+Archive
+Handles:
+^(●) Lore.
+^(●) Artifacts.
+^(●) History.
+^(●) Concise data/audio records.
+Docking Ring
+Handles:
+^(●) Social/co-op staging.
+^(●) Crew preparation.
+4. Station Tiers
+MVP:
+Outpost → Station → Complex
+Post-MVP:
+Citadel → Deep Empire
+5. Construction Model
+Fixed-node construction:
+1. Unlock/select wing node.
+2. Station structure updates instantly.
+No free placement system.
+6. Visual Evolution
+Station progression changes:
+^(●) Materials.
+^(●) Modular kits.
+^(●) Architecture.
+No excessive object stacking.
+7. Preparation
+Preparation should take under approximately 30 seconds:
+^(●) Select sub.
+^(●) Equip modules.
+^(●) Load Secure Cargo Buoys.
+^(●) Review objective.
+^(●) Launch.
+8. Economy
+Exactly two currencies:
+^(●) Credits.
+^(●) Research Data.
+Credits come from dive processing.
+Research Data comes from active exploration/scanning/studying.
+Research Data cannot be bought with Robux or earned AFK.
+9. No Passive Tycoon Core
+No:
+^(●) Auto-droppers.
+^(●) Passive generators.
+^(●) Waiting-for-cash timers.
+10. Debrief UI
+Debrief summarizes:
+^(●) Credits.
+^(●) Research Data.
+^(●) New Codex entries.
+^(●) Unlocks.
+11. Navigation
+^(●) Physical movement.
+^(●) Visual landmarks.
+^(●) No minimap.
+^(●) No fast travel.
+12. NPCs
+Minimal and functional.
+No:
+^(●) Crowds.
+^(●) Complex pathfinding.
+^(●) Huge dialogue systems.
+13. Social
+^(●) Co-op staging.
+^(●) Gallery/Aquarium showcase.
+14. Customization
+MVP:
+^(●) Fixed progression visual upgrades.
+Post-MVP:
+^(●) Cosmetic themes.
+^(●) Expanded customization.
+15. MVP Station
+MVP contains:
+^(●) Compact Station.
+^(●) Sub Dock.
+^(●) Workshop.
+^(●) Research Lab.
+^(●) Aquarium/Gallery.
+^(●) Supporting Power Core.
+^(●) Archive.
+^(●) Observatory.
+^(●) Outpost → Station → Complex.
+Post-MVP includes:
+^(●) Citadel.
+^(●) Deep Empire.
+^(●) Expanded Docking Ring functionality.
+^(●) Advanced Observatory.
+^(●) Cosmetics.
+16. Performance
+^(●) Modular reuse.
+^(●) Anchored/non-collidable props where appropriate.
+^(●) Lightweight lighting.
+^(●) Event-driven UI.
+17. Anti-Goals
+No:
+^(●) Generic tycoon.
+^(●) Decorator sandbox.
+^(●) Idle game.
+^(●) Overcrowded hub.
+PART 5 STATUS: APPROVED / LOCKED
+PART 6 — COLLECTION, CODEX & RESEARCH SYSTEMS
+1. Collection Philosophy
+KNOWLEDGE OVER RNG
+The collection system rewards:
+^(●) Observation.
+^(●) Preparation.
+^(●) Exploration.
+^(●) Understanding.
+The catalog is compact and high quality.
+2. Codex Categories
+1. Marine Life.
+2. Geological Minerals & Samples.
+3. Relics & Artifacts.
+4. Environmental Anomalies.
+3. Codex Progression
+Sighted → Scanned → Studied → Mastered
+Sighted
+^(●) Visual sighting in headlight/sonar range.
+^(●) Basic silhouette/placeholder name.
+Scanned
+^(●) Hold scanner on target.
+^(●) Reveals biometrics, danger, material composition.
+^(●) Provides initial Research Data.
+Studied
+^(●) Requires contextual conditions.
+^(●) Reveals behavior logs/hazard details.
+^(●) Provides advanced Research Data.
+Mastered
+^(●) Requires milestone interactions.
+^(●) Unlocks useful capability/tool access.
+^(●) Can unlock specialized scanner functionality or targeted utility
+module slots.
+^(●) Adds collection milestones.
+^(●) Enables Aquarium/Gallery display.
+Mastery is capability-based, not endless stat inflation.
+4. Marine Life
+Marine life is catalogued non-lethally.
+No creature capture inventory.
+Records can include:
+^(●) Digital data.
+^(●) Tissue/sample records where appropriate.
+^(●) Photos/visual records.
+Creatures are linked to:
+^(●) Zone.
+^(●) Depth.
+^(●) Conditions.
+5. Modular Creature Design
+Creatures use:
+^(●) Shared rigs.
+^(●) Modular skeletal structures.
+^(●) Reusable textures.
+^(●) Lightweight state machines.
+^(●) Culling/LOD.
+6. Environmental Discoveries
+Examples:
+^(●) Vents.
+^(●) Magnetic trenches.
+^(●) Bioluminescent kelp.
+^(●) Canyons.
+^(●) Ruins.
+Scanning can reveal:
+^(●) Safe corridors.
+^(●) Caches.
+^(●) Warnings.
+7. Resources
+Geological Minerals
+Physical cargo → Credits at debrief.
+Biological Samples
+→ Research Data.
+Relics / Artifacts
+Use specialized secure cargo slots and unlock Archive lore.
+8. Research Data
+Research Data is earned only through active:
+^(●) Scanning.
+^(●) Analysis.
+^(●) Decoding.
+^(●) Verification.
+^(●) Study.
+No AFK or Robux acquisition.
+9. Study Conditions
+Study may depend on:
+^(●) Timing.
+^(●) Lighting.
+^(●) Equipment thresholds.
+^(●) Behavioral triggers.
+10. Variants / Rarity
+Variants are:
+^(●) Environmental.
+^(●) Descriptive.
+^(●) Geographic.
+No gambling/gacha rarity system.
+11. Aquarium / Gallery
+Physical showcase for:
+^(●) Mastered marine life.
+^(●) Relics.
+It does not provide passive income or stat bonuses.
+12. Archive
+Archive content is:
+^(●) Concise.
+^(●) Lore-focused.
+^(●) Audio/data oriented.
+No bloated dialogue.
+13. Collection Mastery
+Zone mastery rewards limited meaningful exploration capabilities, such
+as:
+^(●) Scanner functionality.
+^(●) Sonar readability.
+^(●) Hidden discovery conditions.
+^(●) Environmental information.
+No infinite stat progression.
+14. Research Unlocks
+Research Data feeds the technology tree.
+Potential capabilities include:
+^(●) Hull reinforcement.
+^(●) Depth permits.
+^(●) Specialized tools.
+15. Repeat Exploration
+Better equipment reveals:
+^(●) Hidden caves.
+^(●) Microfauna.
+^(●) Artifacts.
+^(●) New phenomena.
+16. MVP
+MVP includes:
+^(●) Four Codex categories.
+^(●) Four-tier progression.
+^(●) Research Lab integration.
+^(●) Basic Aquarium/Gallery.
+^(●) Archive.
+17. Performance
+^(●) On-demand assets.
+^(●) Lightweight data flags/strings.
+^(●) Low-overhead gallery animation.
+18. Anti-Goals
+No:
+^(●) Loot boxes.
+^(●) Gacha.
+^(●) AFK progression.
+^(●) Trading.
+^(●) Inventory Tetris.
+^(●) Spreadsheet management.
+PART 6 STATUS: APPROVED / LOCKED
+PART 7 — QUESTS, ACTIVITIES & EVENTS
+1. Quest Philosophy
+Quests provide Guided Exploration, not checklist simulation.
+Quests are optional.
+They use:
+^(●) Sonar signatures.
+^(●) Depth ranges.
+^(●) Landmarks.
+^(●) Environmental clues.
+No quest-marker GPS.
+2. Quest Categories
+1. Expeditions — Structural depth milestones/sector entries.
+2. Research — Scans, study conditions, samples.
+3. Discovery — Anomalies, vents, caves.
+4. Recovery — Secure cargo, relics, logs.
+5. Survey — Mapping resource veins and testing hazard corridors.
+3. Reusable Objective Templates
+1. DISCOVER
+2. SCAN
+3. STUDY
+4. RECOVER
+5. SURVEY
+6. REACH
+7. RETURN SAFELY
+Objectives are event-driven.
+Example Data Schema
+{
+"QuestID": "Q_RESEARCH_04",
+"Title": "Thermal Vent Fauna Study",
+"SourceWing": "ResearchLab",
+"PrerequisiteZone": "Zone_2_Twilight_Trench",
+"Objectives": [
+{ "Type": "REACH", "Depth": 1200 },
+{ "Type": "STUDY", "Entity": "Vent_Crab", "Condition":
+"Near_Active_Vent" },
+{ "Type": "RETURN_SAFELY" }
+],
+"Rewards": { "Credits": 850, "ResearchData": 300 }
+}
+The exact numerical values are examples, not final balance requirements.
+4. Quest Sources
+^(●) Observatory → Expeditions / Survey.
+^(●) Research Lab → Research / Discovery.
+^(●) Archive → Recovery.
+^(●) Workshop/Sub Dock → equipment requirements.
+Quests are accessed through terminals, not NPC dialogue.
+5. Quest + Dive Integration
+Quest preparation considers:
+^(●) Sub choice.
+^(●) Payload.
+^(●) Equipment.
+^(●) Battery/Oxygen.
+^(●) Risk.
+^(●) Return decision.
+6. Quest + Codex Integration
+Quests can assist:
+^(●) Scanned → Studied progression.
+^(●) Archive unlocks.
+The Codex remains functional without quests.
+7. Optional Activities
+Resource Surveys
+Changing sub-zones and appropriate tools such as Plasma Cutter.
+Environmental Hazard Mitigation
+Thermal/electrical/magnetic hazard interaction.
+Static Research Point Recalibration
+Uses existing static research stations or anchored oceanic beacons in
+handcrafted zones.
+No player-built research networks.
+8. Event Philosophy
+Events are:
+^(●) Localized.
+^(●) Lightweight.
+^(●) Zero-FOMO.
+No aggressive countdown pressure.
+9. Event Types
+Anomalous Shifts
+Temporary environmental changes, such as:
+^(●) Bioluminescent blooms.
+^(●) Thermal flares.
+Research Focus
+Station-wide research incentives providing bonus Research Data for
+specific zone findings over multi-day windows.
+Only active exploration actions qualify.
+Regional Seasons
+Rotating environmental conditions affecting:
+^(●) Currents.
+^(●) Pressure.
+^(●) Navigation.
+10. Event Frequency
+Events may last multiple days.
+No:
+^(●) Pay-to-enter.
+^(●) Exclusive stat upgrades.
+^(●) FOMO pressure.
+11. Rewards
+Exactly two currencies:
+^(●) Credits.
+^(●) Research Data.
+Quests supplement exploration rather than replace it.
+12. Solo-First
+All quest content is designed to be completable solo.
+13. MVP
+MVP uses:
+^(●) Full five-category framework.
+^(●) Small curated quest set.
+^(●) Primarily Discover/Scan/Study/Recover/Reach/Return Safely.
+^(●) Survey only where appropriate.
+^(●) Station terminal integration.
+^(●) Resource Surveys.
+^(●) Hazard Mitigation.
+^(●) Relic Retrievals.
+^(●) Lightweight static multi-day environmental modifiers.
+14. Post-MVP
+^(●) Dynamic multi-stage narrative campaign.
+^(●) Community milestones.
+^(●) Advanced seasonal cycles.
+15. Performance
+^(●) Zero per-frame polling.
+^(●) Event-driven triggers.
+^(●) Server validation.
+^(●) No dynamic NPC spawning.
+16. Anti-Grind
+No:
+^(●) Daily chores.
+^(●) Weekly chores.
+^(●) Kill counts.
+^(●) Filler fetch quests.
+Independent exploration can reach maximum progression.
+17. Anti-Goals
+No:
+^(●) MMO quest overload.
+^(●) GPS markers.
+^(●) FOMO.
+^(●) Third currencies.
+^(●) Pay-to-win contracts.
+^(●) Player-built deployable infrastructure.
+PART 7 STATUS: APPROVED / LOCKED
+PART 8 — SOCIAL & CO-OP SYSTEMS
+1. Social Philosophy
+Social interaction strictly enhances exploration.
+Cooperation creates new ways to experience the same core loop rather
+than separate progression.
+The game rejects:
+^(●) MMO social plazas.
+^(●) Massive populations.
+^(●) Mandatory clans/guilds.
+^(●) PvP.
+^(●) Social rankings.
+2. Co-op Design Goals
+^(●) Complete solo parity.
+^(●) Every crew member useful.
+^(●) No class lock-in.
+^(●) Simple communication.
+^(●) Low networking/CPU overhead.
+^(●) Short 10–15 minute sessions.
+3. Crew Size & Session Structure
+Target:
+2–4 players
+Private crews are the default.
+The Crew Host/Crew Leader:
+^(●) Selects zone.
+^(●) Configures expedition.
+^(●) Launches from Docking Ring.
+The server remains authoritative for:
+^(●) Submarine state.
+^(●) World physics.
+^(●) Progression.
+^(●) Cargo.
+^(●) Quests.
+^(●) Rewards.
+If the host disconnects:
+^(●) Server retains authority.
+^(●) Crew Leader is reassigned to a remaining player.
+^(●) No physics reset or re-simulation.
+4. Crew Roles
+Pilot
+Movement and depth.
+Lamp Operator
+Lantern orientation/focus/frequency.
+Navigator
+Existing sonar, pinging, and map tags.
+Collector
+Cargo arm/sample vacuum/Secure Buoys.
+Roles are temporary lightweight interface assignments over existing
+systems.
+For 2–4 players, unassigned functions consolidate into the Pilot and
+remaining terminals.
+5. Shared Submarine
+One physical submarine per crew.
+There are no separate submarines inside the same crew dive.
+The server simulates one sub body.
+Console stations manipulate existing systems.
+Shared HUD:
+^(●) Battery/Oxygen.
+^(●) Hull.
+^(●) Depth.
+^(●) Cargo.
+6. Solo Parity
+Solo uses a unified cockpit.
+Co-op splits controls among temporary roles.
+No multi-lock mechanics.
+Submarine stats do not scale with crew size.
+7. Co-op Dive Flow
+PLAN → DIVE → DECIDE → DEBRIEF
+^(●) Host selects zone/sub.
+^(●) Crew assigns roles.
+^(●) Pilot navigates.
+^(●) Lamp illuminates.
+^(●) Navigator uses sonar.
+^(●) Collector harvests/secures cargo.
+^(●) Crew monitors Battery/Oxygen and Hull.
+^(●) Server processes rewards without economic inflation.
+8. Quest Integration
+Reuses Part 7.
+^(●) Shared contract progress.
+^(●) Event-driven triggers.
+^(●) One trigger per relevant sub instance.
+^(●) No duplicate triggers.
+Supported objectives include:
+^(●) REACH.
+^(●) SCAN.
+^(●) RECOVER.
+9. Codex
+Codex progression remains:
+Sighted → Scanned → Studied → Mastered
+Contribution attribution is based on meaningful active participation.
+There is no fixed 120-second AFK threshold.
+Each player maintains a personal Codex.
+10. Cargo / Rewards / Economy
+Exactly two currencies.
+Physical cargo value is calculated once per expedition.
+Co-op does not multiply the underlying economic value.
+Active crew members receive fair individual Credit attribution derived
+from the single expedition calculation.
+Research Data remains tied to active exploration.
+No duplication.
+No player trading.
+11. Failure / Disconnect
+If:
+^(●) Hull reaches 0, or
+^(●) Battery/Oxygen reaches 0,
+Emergency Extraction occurs.
+Unsecured cargo is lost.
+Secured cargo, permanent upgrades, Codex progression, and permanent
+assets remain safe.
+If a non-host disconnects:
+^(●) Role consolidates.
+^(●) Player may rejoin if session remains.
+If host disconnects:
+^(●) Server retains state.
+^(●) Crew Leader is reassigned.
+^(●) No world physics transfer.
+12. Station Social
+Players can:
+^(●) Walk around the host station.
+^(●) Invite friends.
+^(●) Prepare for dives.
+No lobby bloat.
+13. Docking Ring
+Compact physical staging area for:
+^(●) Sub mounting.
+^(●) Launch terminal.
+^(●) Crew boarding.
+14. Aquarium / Gallery
+Visual showcase only.
+No:
+^(●) Passive income.
+^(●) Stat bonuses.
+15. Communication
+Uses:
+^(●) Roblox default secure text chat.
+^(●) Lightweight contextual ping wheel:
+^(●) Scan Target.
+^(●) Hazard Ahead.
+^(●) Cargo Detected.
+^(●) Return to Dock.
+^(●) Check Battery.
+^(●) Native Roblox Spatial Voice where supported.
+No custom voice system.
+16. Public / Private
+MVP:
+^(●) Private/friend co-op only.
+Post-MVP:
+^(●) Public sessions/browser.
+Maximum four players per dive.
+17. Matchmaking
+MVP:
+^(●) Friend-based/direct invite.
+Post-MVP:
+^(●) Public browser.
+No:
+^(●) MMR.
+^(●) Ranked queues.
+18. Network / Performance
+^(●) Server authoritative.
+^(●) Event-driven.
+^(●) One submarine physics body.
+^(●) Zero per-frame RemoteEvents.
+^(●) Client-side visual effects.
+19. Anti-Grief
+^(●) No PvP.
+^(●) No friendly fire.
+^(●) Permanent assets protected.
+^(●) Cargo/research server-authoritative.
+^(●) No stealing.
+^(●) Crew Leader can kick while docked.
+20. MVP
+^(●) 2–4 player private/friend co-op.
+^(●) One shared sub.
+^(●) Four temporary roles.
+^(●) Compatibility across MVP handcrafted zones.
+^(●) Server-calculated non-inflationary Credits.
+^(●) Active Research Data.
+^(●) Docking Ring.
+^(●) Ping wheel.
+^(●) Server-authoritative anti-grief/disconnect protection.
+21. Post-MVP
+^(●) Public Crew Browser.
+^(●) Crew cosmetics.
+^(●) Guestbooks/audio leave-behinds.
+^(●) Community milestone boards.
+22. Anti-Grind / FOMO
+No:
+^(●) Multiplayer dailies.
+^(●) Group-exclusive gear.
+^(●) Guild/clan grind.
+^(●) Social streak penalties.
+23. Anti-Goals
+No:
+^(●) MMO scale.
+^(●) PvP/raids.
+^(●) Mandatory co-op.
+^(●) Class lock-in.
+^(●) Player-built multiplayer infrastructure.
+^(●) Complex voice/matchmaking.
+^(●) Third currency.
+PART 8 STATUS: APPROVED / LOCKED
+PART 9 — UI/UX, PLAYER EXPERIENCE & ETHICAL MONETIZATION
+1. UI/UX Philosophy
+The UI is a scientific tool, not decorative clutter.
+Principles:
+1. Information Before Decoration.
+2. Minimal During Exploration.
+3. Contextual Controls.
+4. Consistent Interactions.
+5. Fast Action Access.
+6. Zero Spreadsheet Overhead.
+UI elements should appear as:
+^(●) Instrument panels.
+^(●) Physical console displays.
+^(●) HUD glass projections.
+Dynamic HUD elements auto-dim/retract.
+Critical warnings receive priority.
+2. Visual Identity
+Visual language:
+^(●) Deep ocean/scientific.
+^(●) Dark navy/abyssal blue.
+^(●) Restrained teal/cyan.
+^(●) Warm amber/gold.
+^(●) Crimson alert.
+Typography:
+^(●) Geometric sans.
+^(●) Monospace.
+UI:
+^(●) Semi-transparent glass panels.
+^(●) Subtle 1px teal borders.
+^(●) Subtle chamfering.
+^(●) Glow only when functional.
+Audio identity:
+^(●) Sonar clicks.
+^(●) Pneumatic seals.
+^(●) Terminal chimes.
+3. UI Hierarchy
+Level 1 — Critical
+^(●) Battery/Oxygen.
+^(●) Hull.
+^(●) Cargo.
+^(●) Depth.
+^(●) Active objective.
+^(●) Emergency Recall.
+Level 2 — Important
+^(●) Sonar.
+^(●) Scanner.
+^(●) Capability check.
+^(●) Contract tracker.
+^(●) Tool status.
+Level 3 — Detailed
+^(●) Full Codex.
+^(●) Research trees.
+^(●) Sub customization.
+^(●) Gallery logs.
+^(●) Economy ledger.
+^(●) Robux catalog.
+Level 3 does not remain active during dives.
+Station terminals can pause solo movement/lock controls while docked.
+4. Station UI
+Physical terminals:
+^(●) Sub Dock.
+^(●) Workshop.
+^(●) Research Lab.
+^(●) Observatory.
+^(●) Aquarium/Gallery.
+Interactions use camera transitions to console/over-shoulder views.
+5. Dive HUD
+Includes:
+^(●) Depth.
+^(●) Battery/Oxygen.
+^(●) Hull.
+^(●) Scanner.
+^(●) Cargo.
+^(●) Contract tracker.
+^(●) Lantern.
+^(●) Ping/Recall.
+No floating arrows or GPS lines.
+Navigation uses:
+^(●) Sonar.
+^(●) Beacons.
+^(●) Depth.
+^(●) Environmental clues.
+Nonessential status elements dim after approximately five seconds of
+stable cruising and brighten during important events.
+6. Cross-Platform Controls
+PC
+^(●) WASD.
+^(●) Space/Shift.
+^(●) Mouse/scroll.
+^(●) Right click.
+^(●) R/E.
+Mobile
+^(●) Joystick.
+^(●) Vertical sliders.
+^(●) Touch vector drag.
+^(●) Action tap.
+^(●) Context button.
+Controller
+^(●) Thumbsticks.
+^(●) Triggers.
+^(●) Shoulder buttons.
+^(●) Face buttons.
+Mobile hitboxes should be at least approximately 48×48 px.
+7. Resource Display
+Battery/Oxygen
+One combined bar.
+Hull
+Segmented bar.
+Cargo
+Simple capacity/slot gauge such as:
+4 / 12
+No Inventory Tetris.
+8. Scanner / Codex
+Progression:
+Sighted → Scanned → Studied → Mastered
+The Codex is presented as a scientific field journal with:
+^(●) Wireframe/3D visual.
+^(●) Habitat.
+^(●) Behavior.
+^(●) Milestones.
+9. Quest UI
+Example structure:
+ABYSSAL MINERAL SURVEY
+^(●) Zone: Kelp Forest.
+^(●) Recommended module.
+^(●) Objectives.
+^(●) Rewards.
+Uses official established zones.
+10. Debrief
+Example:
+^(●) Kelp Forest dive.
+^(●) Credits.
+^(●) Research Data.
+^(●) Codex updates.
+^(●) Cargo Recovered.
+^(●) Secured Cargo Retained.
+^(●) Unsecured Cargo Recovered.
+The summary is a fast single-card experience.
+Example quantities are illustrative only; actual secured/unsecured
+quantities depend on player actions.
+11. Upgrade / Research
+Example:
+Deep Scanner Array
+Costs:
+^(●) Credits.
+^(●) Research Data.
+Provides capability.
+No endless +1% progression.
+12. Aquarium / Gallery
+Displays:
+^(●) Mastered specimens.
+^(●) Relics.
+No passive income.
+13. Co-op UI
+Includes:
+^(●) Crew roster.
+^(●) Role badges.
+^(●) Shared telemetry.
+^(●) Contextual pings.
+14. Mobile / Controller
+^(●) Touch scaling.
+^(●) Controller snap-to-element.
+15. Accessibility
+^(●) Scalable text.
+^(●) High contrast.
+^(●) Colorblind-safe icon + text.
+^(●) Motion reduction.
+16. Notifications
+^(●) Small toasts.
+^(●) No full-screen banners.
+^(●) Auto-disappear after approximately three seconds.
+17. Tutorial
+First approximately ten minutes:
+^(●) Contextual one-line directives.
+^(●) No giant tutorial.
+^(●) No unskippable tutorial sequence.
+18. Failure UX
+At:
+^(●) Hull 0, or
+^(●) Battery/Oxygen exhaustion,
+Emergency Extraction safely returns the player to the Station.
+Only a portion of unsecured cargo is lost.
+Retained:
+^(●) Secured cargo.
+^(●) Submarine.
+^(●) Upgrades.
+^(●) Codex.
+19. Monetization Philosophy
+Zero Pay-to-Win.
+Exactly two gameplay currencies cannot be bought.
+Purchases must be transparent.
+No:
+^(●) Gambling.
+^(●) Random purchases.
+^(●) Artificial friction.
+20. Monetization Categories
+Cosmetics
+^(●) Sub paint.
+^(●) Custom lantern beams.
+^(●) Station themes.
+Convenience
+^(●) Extra cosmetic preset slots.
+VIP / Social
+^(●) Nameplate.
+^(●) Visitor showcase.
+No:
+^(●) Stat boosting.
+^(●) Research Data.
+^(●) Depth skips.
+^(●) Cargo capacity.
+^(●) Faster submarine.
+21. Cosmetic Monetization
+Possible cosmetics:
+^(●) Hull paints.
+^(●) Tinted lantern beams.
+Tinted lantern beams cannot change:
+^(●) Intensity.
+^(●) Range.
+^(●) Creature reaction.
+Station aesthetic themes are cosmetic.
+22. Convenience
+Extra cosmetic preset slots.
+No station fast travel.
+Convenience purchases cannot grant:
+^(●) Credits.
+^(●) Research Data.
+^(●) Deeper hull access.
+^(●) Instant quest completion.
+23. VIP / Social
+Possible:
+^(●) Scientific insignia.
+^(●) Aquarium lighting.
+No gameplay power.
+24. Prohibitions
+Strictly prohibited:
+^(●) Loot boxes/gacha.
+^(●) Direct Credits/Data purchases.
+^(●) Paywalled depth.
+^(●) Paid stat modules.
+^(●) Energy/stutter timers.
+^(●) Paid resurrection/heal.
+^(●) FOMO.
+^(●) Paid PvP advantage.
+25. Robux Store
+The store is:
+^(●) Calm.
+^(●) Research-catalog themed.
+^(●) Cosmetic-only in the MVP.
+No automatic popups.
+Store is player-initiated.
+26. MVP
+^(●) Station terminals.
+^(●) Dive HUD.
+^(●) Cross-platform controls.
+^(●) Scanner + basic Codex.
+^(●) Contract card + Debrief.
+^(●) Co-op HUD.
+^(●) Basic accessibility.
+^(●) Transparent cosmetic-only Robux Store.
+27. Post-MVP
+^(●) UI color themes.
+^(●) Expanded cosmetic catalog.
+^(●) Guestbook.
+^(●) Public Crew Browser.
+28. Performance
+^(●) Event-driven updates.
+^(●) No continuous RenderStepped UI updates.
+^(●) Minimal ViewportFrames.
+^(●) Compact texture atlases.
+^(●) Exact sizes validated during optimization.
+29. Anti-Goals
+No:
+^(●) Simulator UI chaos.
+^(●) Currency selling.
+^(●) Cluttered HUD.
+^(●) Predatory store.
+PART 9 STATUS: APPROVED / LOCKED
+PART 10 — AUDIO, VFX & ATMOSPHERE
+1. AUDIO PHILOSOPHY
+Deep Lantern audio is rooted in underwater physical realism blended with
+scientific wonder.
+Sound design emphasizes:
+^(●) Underwater acoustic behavior.
+^(●) Mechanical submarine resonance.
+^(●) Functional communication.
+^(●) Quiet immersion.
+^(●) Awe-inspiring discovery.
+1.1 Core Principles
+Functional Communication First
+Audio is a primary gameplay sensor.
+Sounds should communicate:
+^(●) Proximity.
+^(●) Target type.
+^(●) Hull strain.
+^(●) Battery/Oxygen depletion.
+^(●) Important state changes.
+Low-Frequency Focus & Hull Resonance
+The submarine hull acts as an acoustic chamber.
+Internal sounds are:
+^(●) Crisp.
+^(●) Dry.
+^(●) Mechanical.
+External sounds are:
+^(●) Muffled.
+^(●) Heavy.
+^(●) Resonant.
+Wonder First, Eerie Later
+Shallow zones emphasize:
+^(●) Curious exploration.
+^(●) Soft synthetic pads.
+^(●) Gentle aquatic resonance.
+Deeper areas progressively introduce:
+^(●) Sub-bass drones.
+^(●) Mechanical creaks.
+^(●) Alien acoustic reflections.
+Non-Intrusive & Reusable
+Sound events avoid:
+^(●) Harsh mid-range spikes.
+^(●) Abrasive arcade reward sounds.
+Loops use long, non-repetitive cycles with variation.
+2. SUBMARINE AUDIO
+Submarine audio communicates mechanical state and immediate environment.
+Core states include:
+^(●) Engine Cruise — low continuous hum with speed-based pitch.
+^(●) Acceleration/Deceleration — hydraulic hiss and mechanical whir.
+^(●) Hull Strain/Creak — deep metal groan under stress.
+^(●) Lantern Activation — relay click and capacitor hum.
+^(●) Scanner Pulse/Lock — mechanical click, rising tone, lock ping.
+^(●) Cargo Collection — hydraulic suction and container latch.
+^(●) Secure Cargo Buoy — pneumatic launch and beacon ping.
+^(●) Battery/Oxygen Warning — soft warning chime that becomes more
+urgent at low reserve.
+^(●) Hull Damage — metallic impact and pressure-related feedback.
+^(●) Recall/Emergency Extraction — mechanical winch/clamp feedback.
+Sound assets should be reusable across submarine classes.
+3. SONAR & SCANNER AUDIO
+Sonar is the primary non-visual detection system in dark environments.
+It should feel scientific rather than arcade-like.
+Sonar Signatures
+^(●) Normal Sonar Pulse — wideband acoustic ping.
+^(●) Nearby Object Detection — double-ping with distance-based echo.
+^(●) Creature Detection — organic thrumming echo.
+^(●) Resource Detection — crisp metallic ping.
+^(●) Hazard/Anomaly Detection — low-frequency warble.
+^(●) Quest/Relic Signature — subtle harmonic resonance.
+Scanner Progression
+^(●) Scan Lock/Target Acquisition.
+^(●) Scanning Phase.
+^(●) Scan Complete.
+^(●) Codex progression sounds.
+Codex sound progression:
+^(●) Sighted → quiet soft pulse.
+^(●) Scanned → scientific confirmation ping.
+^(●) Studied → dual harmonic tone.
+^(●) Mastered → warm deep chime ringdown.
+No fireworks or exaggerated fanfare.
+4. ENVIRONMENTAL AUDIO
+Each zone combines:
+^(●) Base ambient bed.
+^(●) Tonal atmosphere.
+^(●) Randomized 3D environmental events.
+Shallows — MVP
+^(●) Light water movement.
+^(●) Soft surface ambience.
+^(●) Gentle bubbles.
+^(●) Distant fish activity.
+Kelp Forest — MVP
+^(●) Low water movement.
+^(●) Kelp rustle.
+^(●) Deep current swells.
+^(●) Distant creature calls.
+^(●) Holdfast creaks.
+Twilight Reef — MVP
+^(●) Deep ocean rumble.
+^(●) Bioluminescent hums.
+^(●) Coral pops.
+^(●) Cavern echoes.
+Abyss
+^(●) Deep drone.
+^(●) Heavy pressure ambience.
+^(●) Silence between major events.
+^(●) Structural groans.
+^(●) Seismic thrumming.
+^(●) Frequencies above 2kHz are heavily attenuated.
+Lost Ruins
+^(●) Hollow resonance.
+^(●) Metallic harmonic hums.
+^(●) Structural creaks.
+^(●) Echo reflections.
+The Hollow
+^(●) Interior cavern resonance.
+^(●) Strange echo feedback.
+^(●) Deep spatial void ambience.
+Beyond
+^(●) Unearthly interference.
+^(●) Shifting harmonics.
+^(●) Anomalous acoustic behavior.
+5. STATION AUDIO
+The Station is safe, functional, and grounded.
+Power Core
+Heavy industrial/electrical hum.
+Sub Dock
+Water echoes, hydraulic arms, gantry creaks.
+Workshop
+Tool clinks, welding hiss, diagnostic sounds.
+Research Lab
+Quiet server/fan ambience, scientific UI clicks.
+Observatory
+Quiet room tone, glass resonance.
+Aquarium/Gallery
+Filtration pumps, bubbler ambience, reverberant water sounds.
+Archive
+Quiet terminal/data ambience.
+Docking Ring
+Airtight seal hiss and pressure equalization.
+6. CREATURE AUDIO
+Creatures use modular sound banks rather than expensive real-time
+procedural audio.
+Small Biologicals
+^(●) Higher-frequency clicks.
+^(●) Fin movement.
+^(●) Short attenuation.
+Medium Predators
+^(●) Low territorial sounds.
+^(●) Rhythmic pulses.
+^(●) Heavy tail movement.
+Large / Leviathan
+^(●) Ultra-low calls.
+^(●) Long acoustic propagation.
+^(●) Environmental reverb.
+Bioluminescent Organisms
+Soft electronic-like tonal hums synchronized with visual presentation
+through lightweight reusable systems.
+7. VFX PHILOSOPHY
+Priority:
+1. Gameplay Signals.
+2. Submarine Feedback.
+3. Atmosphere & Depth.
+Core Guidelines
+^(●) Readability over density.
+^(●) Emissive/texture-based illumination over expensive real-time
+lighting.
+^(●) Strict particle budgets.
+^(●) Short lifespans.
+^(●) Low emission rates.
+^(●) Tight bounds.
+8. SUBMARINE VFX
+Propulsion
+Fine, fast-fading bubbles.
+Lantern Beam
+Lightweight cone/beam mesh with scrolling translucent material.
+Scanner Beam
+Thin translucent forward-facing light sheet.
+Sonar Pulse
+Expanding translucent ring mesh.
+Hull Impact
+Brief sparks and bubble trail.
+Hazard Interaction
+Lightweight electrical arcs or thermal bubble effects.
+Emergency Recall
+Bubble cavitation, light-ring presentation, and screen-space feedback.
+Secure Cargo Buoy
+Bubble trail and pulsing emissive beacon.
+9. ENVIRONMENTAL VFX
+Marine Snow
+Small camera-relative particle system.
+Kelp Swaying
+Lightweight animated material/mesh deformation or equivalent
+Roblox-compatible presentation technique. No physics or skeletal
+simulation is required.
+Bioluminescent Organisms
+Unlit emissive materials with lightweight scripted or animated
+transparency pulses triggered through reusable client-side presentation
+systems, avoiding continuous per-object per-frame logic.
+Bubbles / Vents
+Vertical particle streams using texture atlases.
+Depth Transitions
+Screen-space tint and fog adjustments triggered by depth transitions.
+10. LIGHTING & ATMOSPHERE
+Lighting communicates:
+^(●) Safety.
+^(●) Danger.
+^(●) Depth progression.
+Dynamic lights are strictly budgeted.
+Shallows
+High directional light and brighter atmosphere.
+Kelp Forest
+Medium/dappled lighting.
+Twilight Reef
+Dark environment with emissive bioluminescence.
+Any dynamic light is limited to the submarine’s existing
+Lantern/headlight budget.
+Abyss
+Extreme darkness with submarine Lantern dependence.
+Warning Lighting
+Low Battery/Oxygen or critical Hull warnings can trigger red
+cabin/exterior visual feedback.
+This is purely visual and does not consume game energy or change
+mechanical stats.
+11. DEPTH & ENVIRONMENTAL TRANSITIONS
+Depth progression should feel seamless.
+Piloting Downward → Fog Density Increases → Ambient Light Fades → Sonar
+HUD Auto-Brightens
+Transitions use:
+^(●) Fog.
+^(●) Ambient lighting.
+^(●) Screen-edge effects.
+^(●) Marine snow.
+^(●) Audio filtering.
+^(●) Ambient loop transitions.
+No disruptive loading cuts or cinematic interruptions are required.
+12. DANGER & EMERGENCY FEEDBACK
+Feedback uses:
+^(●) HUD warning icon.
+^(●) Audio alarm.
+^(●) Submarine emissive feedback.
+^(●) Colorblind-safe coding.
+Battery/Oxygen Low
+Soft periodic warning and yellow reserve indication.
+Battery/Oxygen Critical
+Rapid warning and red reserve indication.
+Hull Damage
+Metallic impact and structural UI feedback.
+Critical Hull
+Low hull-strain ambience and warning indicator.
+Hazard Proximity
+Audio clicks, environmental distortion, and distance information.
+Emergency Extraction Active
+Hydraulic audio, visual convergence, and an emergency extraction status
+indicator on the HUD.
+No new countdown mechanic is introduced here.
+13. DISCOVERY & REWARD FEEDBACK
+Discovery feedback is dignified and scientific.
+Flow:
+Scan Complete → Soft Tone → Clean Holographic UI → Codex Update
+New Species Sighted
+Small non-intrusive icon over target with acoustic tick.
+Species Scanned
+Clean holographic ring and brief cyan target highlight.
+Studied / Mastered
+Subtle HUD pulse and warm harmonic tone.
+Mineral / Relic Discovery
+Soft metallic chime and smooth cargo UI feedback.
+Research Data Earned
+A small non-intrusive HUD toast confirms the Research Data gained,
+without floating numerical text in the world.
+14. AQUARIUM / GALLERY PRESENTATION
+The Aquarium/Gallery is a peaceful display space.
+It includes:
+^(●) Emissive water environments.
+^(●) Localized lighting.
+^(●) Client-side specimen animation.
+^(●) Interactive Codex plaques.
+Relics appear on clean display pedestals/cases.
+No passive income.
+15. CO-OP AUDIO & VFX
+Contextual Pings
+3D audio ping at target plus colorblind-safe marker.
+Crew Role Changes
+Mechanical switch sound and HUD transition.
+Shared Scan Contributions
+Secondary visual accent distinguishes teammate scan contributions.
+Shared Hazards
+Unified warnings for all crew.
+16. ACCESSIBILITY
+Colorblind Support
+Dual-coding using color + icon/pattern.
+Motion Safeguards
+^(●) No full-screen white flashes.
+^(●) No high-frequency strobe.
+^(●) Screen shake low by default and disableable.
+Audio Accessibility
+Independent sliders for:
+^(●) Master.
+^(●) SFX.
+^(●) Ambient.
+^(●) UI.
+^(●) Engine.
+Critical sounds have visual captions such as:
+^(●) [Hull Creak]
+^(●) [Sonar Ping]
+^(●) [Warning Alarm]
+17. PERFORMANCE BUDGET & OPTIMIZATION RULES
+These values are initial implementation targets, not permanent hard
+limits.
+Final budgets must be validated through:
+^(●) Roblox Studio profiling.
+^(●) Real-device testing.
+^(●) Low-end PC testing.
+^(●) Mobile testing.
+Runtime Resource Budgets
+|Resource |Low|Medium|High |
+|----------------------------|--:|-----:|----:|
+|Max Active Particles |150|400 |1,000|
+|Dynamic Light Count |1 |3 |6 |
+|Shadow-Casting Lights |0 |1 |1 |
+|Simultaneous Audio Streams |12 |24 |48 |
+|VFX Cull Distance |60m|120m |250m |
+|Creature Audio Cull Distance|40m|80m |150m |
+Optimization Strategies
+^(●) Client-side visual execution.
+^(●) Object pooling.
+^(●) Distance culling.
+^(●) LODs.
+^(●) Freeze/deactivate environmental effects outside their activation
+radius.
+18. MVP VS POST-MVP
+MVP
+^(●) Station.
+^(●) Shallows.
+^(●) Kelp Forest.
+^(●) Twilight Reef.
+^(●) Core submarine audio/VFX.
+^(●) Sonar and Scanner feedback.
+^(●) Basic co-op ping/alert visuals.
+^(●) Core accessibility.
+^(●) Basic Aquarium presentation.
+Post-MVP
+^(●) Abyss.
+^(●) Lost Ruins.
+^(●) The Hollow.
+^(●) Beyond.
+^(●) Advanced dynamic reverb.
+^(●) Advanced Aquarium visual effects.
+^(●) Future environmental audio/VFX systems.
+19. ANTI-GOALS
+No:
+^(●) Volumetric ocean simulations.
+^(●) Real-time complex fluid solvers.
+^(●) Heavy screen shake.
+^(●) Arcade audio spam.
+^(●) Dynamic-light flooding.
+^(●) Intrusive full-screen VFX.
+^(●) Server-side VFX replication.
+20. IMPLEMENTATION PHILOSOPHY
+The implementation is event-driven.
+Gameplay State Change → Client Sound/VFX Manager → Acquire Pooled
+Instance → Play → Return to Pool
+Principles:
+^(●) Modular sound banks.
+^(●) Event-driven triggers.
+^(●) No state checking inside per-frame updates.
+^(●) Client-side presentation.
+^(●) Graceful quality degradation.
+If frame rates drop below target on low-end hardware, secondary
+presentation can be reduced.
+21. COMPLETION CHECKLIST
+Audio Philosophy defined.
+Submarine Audio defined.
+Sonar & Scanner Audio defined.
+Environmental Audio defined.
+Station Audio defined.
+Creature Audio defined.
+VFX Philosophy established.
+Submarine VFX detailed.
+Environmental VFX detailed.
+Lighting & Atmosphere defined.
+Depth Transitions structured.
+Danger & Emergency Feedback designed.
+Discovery & Reward Feedback designed.
+Aquarium & Gallery Presentation designed.
+Co-op Audio/VFX aligned with Part 8.
+Accessibility features detailed.
+Performance Budget & Quality Targets defined.
+MVP vs Post-MVP separated.
+Anti-Goals declared.
+Event-driven Implementation Philosophy outlined.
+PART 10 STATUS: APPROVED / LOCKED
+MASTER DESIGN RULES — PARTS 1–10
+The following rules are locked across the complete GDD:
+1. Exactly two gameplay currencies: Credits and Research Data.
+2. Battery/Oxygen is one unified dive-limiting resource, not separate
+systems.
+3. No free-swimming character gameplay at launch.
+4. No PvP or combat as a core system.
+5. No rebirth/prestige resets.
+6. No passive tycoon cash generation.
+7. No loot boxes/gacha/gambling.
+8. No pay-to-win.
+9. Research Data cannot be bought with Robux.
+10. No player trading economy.
+11. Failure is fair: only a portion of unsecured cargo can be lost.
+12. Secured Cargo and permanent progression are protected.
+13. The Station is functional and compact.
+14. The submarine is the primary exploration vehicle.
+15. Exploration is the primary gameplay and economic driver.
+16. Progression prioritizes capability over endless stat inflation.
+17. MVP world scope is compact:
+^(●) Station
+^(●) Shallows
+^(●) Kelp Forest
+^(●) Twilight Reef
+18. Post-MVP zones:
+^(●) Abyss
+^(●) Lost Ruins
+^(●) The Hollow
+^(●) Beyond
+19. Co-op is optional and solo parity is required.
+20. Co-op target is 2–4 players with one shared submarine.
+21. Server-authoritative progression/rewards/cargo.
+22. Event-driven architecture is preferred.
+23. No unnecessary per-frame polling or RemoteEvents.
+24. Low-end PC and mobile performance are first-class constraints.
+25. Visual spectacle must never compromise gameplay readability.
+26. No GPS-style quest marker system.
+27. Codex progression is:
+Sighted → Scanned → Studied → Mastered
+28. Station progression is:
+Outpost → Station → Complex → Citadel → Deep Empire
+29. The core loop is:
+PLAN → DIVE → DECIDE → DEBRIEF → UPGRADE → GO DEEPER
+30. The project is designed as a compact, polished Roblox experience
+rather than a massive open-world MMO.
+DOCUMENT STATUS
+GDD COMPLETE
+Parts 1–10: APPROVED / LOCKED
+There is no Part 11 in the current GDD.
+The next project stage is technical architecture and implementation
+planning, followed by staged development in Roblox Studio.
+Recommended Persistent Project Files
+DEEP_LANTERN/
+├── DEEP_LANTERN_GDD.md
+└── PROJECT_STATE.md
+DEEP_LANTERN_GDD.md answers:
+> What are we building?
+PROJECT_STATE.md answers:
+> What has actually been implemented, what is currently being worked on,
+and what remains?
+The GDD should remain stable after lock. Implementation discoveries
+should normally be recorded in PROJECT_STATE.md rather than silently
+changing the GDD.

@@ -1,0 +1,2662 @@
+{
+ "name": "Deep Lantern texture pack",
+ "version": "1.0.0",
+ "source_of_truth": "GDD Parts 1-10 (visual references are style only; no gameplay values come from images)",
+ "palette": {
+  "deep": "#081E3B",
+  "navy": "#0B2447",
+  "aqua": "#00D1FF",
+  "teal": "#00A893",
+  "purple": "#8B5CF6",
+  "amber": "#F59E0B",
+  "white": "#E6F1FF",
+  "red": "#EF4444",
+  "green": "#4ADE80",
+  "gold": "#FBBF24",
+  "blue": "#2F80ED",
+  "pink": "#F472B6",
+  "gray": "#94A3B8",
+  "dark": "#050E1F"
+ },
+ "conventions": {
+  "materials": {
+   "size": 512,
+   "tileable": true,
+   "maps": {
+    "color.png": "BrickColor/ColorMap (sRGB, alpha only for glass)",
+    "normal.png": "NormalMap OpenGL +Y up (Roblox compatible)",
+    "roughness.png": "RoughnessMap (white=rough)",
+    "metalness.png": "MetalnessMap (white=metal)",
+    "emissive.png": "optional; apply as Neon/emissive overlay or SurfaceAppearance.EmissiveMaskContent"
+   },
+   "roblox": "Upload color/normal/roughness/metalness as Images, then use SurfaceAppearance on a MeshPart. For plain Parts use color.png on a Texture (StudsPerTileU/V = studs_per_tile)."
+  },
+  "ui_panels": "9-slice. ImageLabel.ScaleType = Slice, SliceCenter from manifest (px in source). Chamfer is baked in, do not add UICorner.",
+  "icons": {
+   "size": 128,
+   "plated": "colour icon on glass plate",
+   "glyph": "white silhouette, tint with ImageColor3"
+  },
+  "vfx": "Particles: ParticleEmitter.Texture. Beams: Beam.Texture. Respect GDD budgets (<=150 particles Low)."
+ },
+ "materials": {
+  "rock_dark": {
+   "category": "terrain",
+   "studs_per_tile": 12,
+   "notes": "Shallows/Station rocks, boulders, cliffs (soft faceted, baked AO)",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 1.12
+  },
+  "rock_mossy": {
+   "category": "terrain",
+   "studs_per_tile": 12,
+   "notes": "Kelp Forest rocks and ruins (moss in crevices)",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 1.22
+  },
+  "sand_seabed": {
+   "category": "terrain",
+   "studs_per_tile": 16,
+   "notes": "Seabed floors in Shallows and Station surroundings",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.98
+  },
+  "coral_pink": {
+   "category": "terrain",
+   "studs_per_tile": 6,
+   "notes": "Shallows coral clusters",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 1.18
+  },
+  "coral_purple": {
+   "category": "terrain",
+   "studs_per_tile": 6,
+   "notes": "Twilight Reef coral, emissive glow",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.94
+  },
+  "kelp_green": {
+   "category": "terrain",
+   "studs_per_tile": 4,
+   "notes": "Kelp blades (vertical streaks)",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 1.24
+  },
+  "moss": {
+   "category": "terrain",
+   "studs_per_tile": 8,
+   "notes": "Moss overlay for rocks and ruins",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.96
+  },
+  "hull_white": {
+   "category": "submarine",
+   "studs_per_tile": 8,
+   "notes": "Default sub hull, amber trim",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.06
+  },
+  "hull_ocean_blue": {
+   "category": "submarine",
+   "studs_per_tile": 8,
+   "notes": "Ocean Blue sub variant",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.04
+  },
+  "hull_deep_black": {
+   "category": "submarine",
+   "studs_per_tile": 8,
+   "notes": "Deep Black sub variant, aqua trim",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.06
+  },
+  "hull_sand": {
+   "category": "submarine",
+   "studs_per_tile": 8,
+   "notes": "Sand (Desert) sub variant",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.1
+  },
+  "hull_arctic": {
+   "category": "submarine",
+   "studs_per_tile": 8,
+   "notes": "Arctic (Ice) sub variant",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.11
+  },
+  "hull_camo": {
+   "category": "submarine",
+   "studs_per_tile": 8,
+   "notes": "Camo (Stealth) sub variant",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.09
+  },
+  "carbon_composite": {
+   "category": "submarine",
+   "studs_per_tile": 4,
+   "notes": "Hull detailing, carbon fibre",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 1.41
+  },
+  "rusted_metal": {
+   "category": "terrain",
+   "studs_per_tile": 8,
+   "notes": "Wrecks, debris, old structures",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.91
+  },
+  "rubber_seal": {
+   "category": "submarine",
+   "studs_per_tile": 4,
+   "notes": "Seals and gaskets",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 1.02
+  },
+  "crystal_blue": {
+   "category": "resource",
+   "studs_per_tile": 6,
+   "notes": "Crystal / Rare Crystal nodes",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.63
+  },
+  "crystal_purple": {
+   "category": "resource",
+   "studs_per_tile": 6,
+   "notes": "Twilight Reef crystals",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.78
+  },
+  "crystal_ruby": {
+   "category": "resource",
+   "studs_per_tile": 6,
+   "notes": "Ruby Crystal nodes",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.84
+  },
+  "station_floor": {
+   "category": "station",
+   "studs_per_tile": 8,
+   "notes": "Grated deck floor with hazard marks",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 3.47
+  },
+  "station_wall": {
+   "category": "station",
+   "studs_per_tile": 10,
+   "notes": "Interior wall: white panels, blue band, aqua light line",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 44.17
+  },
+  "glass_blue": {
+   "category": "station",
+   "studs_per_tile": 8,
+   "notes": "Windows, domes; color map has alpha",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": true,
+   "seam_ratio": 1.97
+  },
+  "emissive_strip_aqua": {
+   "category": "station",
+   "studs_per_tile": 8,
+   "notes": "Light strips (aqua)",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.0
+  },
+  "emissive_strip_amber": {
+   "category": "station",
+   "studs_per_tile": 8,
+   "notes": "Light strips (amber)",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.0
+  },
+  "emissive_strip_red": {
+   "category": "station",
+   "studs_per_tile": 8,
+   "notes": "Warning strips (crimson)",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.0
+  },
+  "bio_skin_aqua": {
+   "category": "creature",
+   "studs_per_tile": 6,
+   "notes": "Bioluminescent dots (aqua)",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.56
+  },
+  "bio_skin_purple": {
+   "category": "creature",
+   "studs_per_tile": 6,
+   "notes": "Bioluminescent dots (purple)",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 1.26
+  },
+  "bio_skin_teal": {
+   "category": "creature",
+   "studs_per_tile": 6,
+   "notes": "Bioluminescent dots (teal)",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 1.05
+  },
+  "scales_normal": {
+   "category": "creature",
+   "studs_per_tile": 4,
+   "notes": "Creature scales: Normal",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.54
+  },
+  "scales_bioluminescent": {
+   "category": "creature",
+   "studs_per_tile": 4,
+   "notes": "Creature scales: Bioluminescent",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.54
+  },
+  "scales_albino": {
+   "category": "creature",
+   "studs_per_tile": 4,
+   "notes": "Creature scales: Albino",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.52
+  },
+  "scales_armored": {
+   "category": "creature",
+   "studs_per_tile": 4,
+   "notes": "Creature scales: Armored",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.55
+  },
+  "scales_corrupted": {
+   "category": "creature",
+   "studs_per_tile": 4,
+   "notes": "Creature scales: Corrupted",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.58
+  },
+  "scales_rare": {
+   "category": "creature",
+   "studs_per_tile": 4,
+   "notes": "Creature scales: Rare (rainbow)",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.99
+  },
+  "relic_stone": {
+   "category": "relic",
+   "studs_per_tile": 6,
+   "notes": "Ancient stone with glowing runes",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.69
+  },
+  "relic_obsidian": {
+   "category": "relic",
+   "studs_per_tile": 6,
+   "notes": "Obsidian Core with violet fractures",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness",
+    "emissive"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.93
+  },
+  "cliff_layered": {
+   "category": "terrain",
+   "studs_per_tile": 16,
+   "notes": "Layered cliff strata for canyon walls and zone borders",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.84
+  },
+  "pebbles_seabed": {
+   "category": "terrain",
+   "studs_per_tile": 10,
+   "notes": "Pebble seabed for Kelp Forest / Station surroundings",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 1.04
+  },
+  "ruins_blocks": {
+   "category": "terrain",
+   "studs_per_tile": 10,
+   "notes": "Ancient masonry for Kelp ruins and Lost Ruins teaser",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "metalness"
+   ],
+   "has_alpha": false,
+   "seam_ratio": 0.98
+  }
+ },
+ "ui": {
+  "panels/panel_glass.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    16,
+    16,
+    48,
+    48
+   ],
+   "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+  },
+  "panels/panel_glass_dim.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    16,
+    16,
+    48,
+    48
+   ],
+   "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+  },
+  "panels/panel_glass_elevated.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    16,
+    16,
+    48,
+    48
+   ],
+   "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+  },
+  "panels/panel_glass_solid.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    16,
+    16,
+    48,
+    48
+   ],
+   "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+  },
+  "panels/panel_glass_alert.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    16,
+    16,
+    48,
+    48
+   ],
+   "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+  },
+  "panels/panel_glass_warning.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    16,
+    16,
+    48,
+    48
+   ],
+   "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+  },
+  "panels/panel_glass_discovery.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    16,
+    16,
+    48,
+    48
+   ],
+   "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+  },
+  "panels/panel_toast.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    14,
+    50,
+    18
+   ],
+   "usage": "Toast background (small, auto-dismiss ~3s)."
+  },
+  "panels/frame_select.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    16,
+    16,
+    48,
+    48
+   ],
+   "usage": "Selection / gamepad focus frame, transparent fill."
+  },
+  "buttons/button_primary_default.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_primary_hover.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_primary_pressed.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_primary_disabled.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_primary_focus.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_secondary_default.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_secondary_hover.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_secondary_pressed.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_secondary_disabled.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_secondary_focus.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_danger_default.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_danger_hover.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_danger_pressed.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_danger_disabled.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "buttons/button_danger_focus.png": {
+   "size": [
+    64,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    14,
+    12,
+    50,
+    20
+   ],
+   "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+  },
+  "bars/bar_track.png": {
+   "size": [
+    32,
+    16
+   ],
+   "type": "slice9",
+   "slice_center": [
+    8,
+    7,
+    24,
+    9
+   ],
+   "usage": "Bar background. Fill clipped inside with ImageLabel Size scale X."
+  },
+  "bars/bar_fill_white.png": {
+   "size": [
+    32,
+    16
+   ],
+   "type": "slice9",
+   "slice_center": [
+    8,
+    7,
+    24,
+    9
+   ],
+   "usage": "Neutral fill, tint with ImageColor3. Pair with bar_track; use ColorBlind-safe icon+text too."
+  },
+  "bars/bar_fill_aqua.png": {
+   "size": [
+    32,
+    16
+   ],
+   "type": "slice9",
+   "slice_center": [
+    8,
+    7,
+    24,
+    9
+   ],
+   "usage": "Battery/Oxygen normal. Pair with bar_track; use ColorBlind-safe icon+text too."
+  },
+  "bars/bar_fill_amber.png": {
+   "size": [
+    32,
+    16
+   ],
+   "type": "slice9",
+   "slice_center": [
+    8,
+    7,
+    24,
+    9
+   ],
+   "usage": "Cargo. Pair with bar_track; use ColorBlind-safe icon+text too."
+  },
+  "bars/bar_fill_warning.png": {
+   "size": [
+    32,
+    16
+   ],
+   "type": "slice9",
+   "slice_center": [
+    8,
+    7,
+    24,
+    9
+   ],
+   "usage": "Battery/Oxygen low reserve (yellow). Pair with bar_track; use ColorBlind-safe icon+text too."
+  },
+  "bars/bar_fill_critical.png": {
+   "size": [
+    32,
+    16
+   ],
+   "type": "slice9",
+   "slice_center": [
+    8,
+    7,
+    24,
+    9
+   ],
+   "usage": "Battery/Oxygen critical, hull critical (red). Pair with bar_track; use ColorBlind-safe icon+text too."
+  },
+  "bars/bar_fill_purple.png": {
+   "size": [
+    32,
+    16
+   ],
+   "type": "slice9",
+   "slice_center": [
+    8,
+    7,
+    24,
+    9
+   ],
+   "usage": "Research progress. Pair with bar_track; use ColorBlind-safe icon+text too."
+  },
+  "bars/hull_segment_full.png": {
+   "size": [
+    24,
+    16
+   ],
+   "type": "image",
+   "usage": "One segment of the segmented Hull bar (UIListLayout horizontal)."
+  },
+  "bars/hull_segment_empty.png": {
+   "size": [
+    24,
+    16
+   ],
+   "type": "image",
+   "usage": "One segment of the segmented Hull bar (UIListLayout horizontal)."
+  },
+  "bars/hull_segment_damaged.png": {
+   "size": [
+    24,
+    16
+   ],
+   "type": "image",
+   "usage": "One segment of the segmented Hull bar (UIListLayout horizontal)."
+  },
+  "glow/shadow_soft.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    28,
+    28,
+    36,
+    36
+   ],
+   "usage": "Soft drop shadow under panels; place behind with larger Size."
+  },
+  "glow/glow_aqua.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    28,
+    28,
+    36,
+    36
+   ],
+   "usage": "Functional glow only (GDD: glow only when functional). Place behind element."
+  },
+  "glow/glow_amber.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    28,
+    28,
+    36,
+    36
+   ],
+   "usage": "Functional glow only (GDD: glow only when functional). Place behind element."
+  },
+  "glow/glow_red.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    28,
+    28,
+    36,
+    36
+   ],
+   "usage": "Functional glow only (GDD: glow only when functional). Place behind element."
+  },
+  "glow/glow_purple.png": {
+   "size": [
+    64,
+    64
+   ],
+   "type": "slice9",
+   "slice_center": [
+    28,
+    28,
+    36,
+    36
+   ],
+   "usage": "Functional glow only (GDD: glow only when functional). Place behind element."
+  },
+  "misc/divider_h.png": {
+   "size": [
+    256,
+    4
+   ],
+   "type": "image",
+   "usage": "Horizontal divider with faded ends (use sparingly; prefer whitespace)."
+  },
+  "misc/tile_scanlines.png": {
+   "size": [
+    8,
+    4
+   ],
+   "type": "tile",
+   "tile_size": [
+    8,
+    4
+   ],
+   "usage": "HUD glass scanline overlay. ScaleType=Tile, TileSize=UDim2.fromOffset(8,4), ImageTransparency ~0.5."
+  },
+  "misc/tile_grid_32.png": {
+   "size": [
+    32,
+    32
+   ],
+   "type": "tile",
+   "tile_size": [
+    32,
+    32
+   ],
+   "usage": "Blueprint/terminal background grid."
+  },
+  "misc/tile_dots_16.png": {
+   "size": [
+    16,
+    16
+   ],
+   "type": "tile",
+   "tile_size": [
+    16,
+    16
+   ],
+   "usage": "Dot matrix background."
+  },
+  "misc/tile_grain_128.png": {
+   "size": [
+    128,
+    128
+   ],
+   "type": "tile",
+   "tile_size": [
+    128,
+    128
+   ],
+   "usage": "Subtle film grain over panels (optional)."
+  },
+  "misc/scroll_thumb.png": {
+   "size": [
+    16,
+    32
+   ],
+   "type": "slice9",
+   "slice_center": [
+    7,
+    8,
+    9,
+    24
+   ],
+   "usage": "ScrollingFrame.ScrollBarImageColor3 neutral; use as ScrollBar image."
+  },
+  "misc/checkbox_off.png": {
+   "size": [
+    32,
+    32
+   ],
+   "type": "image",
+   "usage": "Checkbox (icon + text for state; not colour only)."
+  },
+  "misc/checkbox_on.png": {
+   "size": [
+    32,
+    32
+   ],
+   "type": "image",
+   "usage": "Checkbox (icon + text for state; not colour only)."
+  },
+  "misc/slider_thumb.png": {
+   "size": [
+    32,
+    32
+   ],
+   "type": "image",
+   "usage": "Slider thumb (settings)."
+  },
+  "misc/badge_dot.png": {
+   "size": [
+    16,
+    16
+   ],
+   "type": "image",
+   "usage": "Unread / new-codex-entry dot."
+  }
+ },
+ "icons": {
+  "hud/battery_oxygen": {
+   "category": "hud",
+   "accent": "#00D1FF",
+   "plated": "hud/battery_oxygen.png",
+   "glyph": "glyph/hud/battery_oxygen.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/hull": {
+   "category": "hud",
+   "accent": "#2F80ED",
+   "plated": "hud/hull.png",
+   "glyph": "glyph/hud/hull.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/cargo": {
+   "category": "hud",
+   "accent": "#F59E0B",
+   "plated": "hud/cargo.png",
+   "glyph": "glyph/hud/cargo.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/depth": {
+   "category": "hud",
+   "accent": "#00D1FF",
+   "plated": "hud/depth.png",
+   "glyph": "glyph/hud/depth.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/scanner": {
+   "category": "hud",
+   "accent": "#00D1FF",
+   "plated": "hud/scanner.png",
+   "glyph": "glyph/hud/scanner.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/sonar": {
+   "category": "hud",
+   "accent": "#00D1FF",
+   "plated": "hud/sonar.png",
+   "glyph": "glyph/hud/sonar.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/lantern": {
+   "category": "hud",
+   "accent": "#F59E0B",
+   "plated": "hud/lantern.png",
+   "glyph": "glyph/hud/lantern.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/recall": {
+   "category": "hud",
+   "accent": "#00D1FF",
+   "plated": "hud/recall.png",
+   "glyph": "glyph/hud/recall.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/ping": {
+   "category": "hud",
+   "accent": "#00D1FF",
+   "plated": "hud/ping.png",
+   "glyph": "glyph/hud/ping.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/objective": {
+   "category": "hud",
+   "accent": "#00D1FF",
+   "plated": "hud/objective.png",
+   "glyph": "glyph/hud/objective.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/research_data": {
+   "category": "hud",
+   "accent": "#2F80ED",
+   "plated": "hud/research_data.png",
+   "glyph": "glyph/hud/research_data.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/credits": {
+   "category": "hud",
+   "accent": "#FBBF24",
+   "plated": "hud/credits.png",
+   "glyph": "glyph/hud/credits.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/warning": {
+   "category": "hud",
+   "accent": "#F59E0B",
+   "plated": "hud/warning.png",
+   "glyph": "glyph/hud/warning.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/hazard": {
+   "category": "hud",
+   "accent": "#EF4444",
+   "plated": "hud/hazard.png",
+   "glyph": "glyph/hud/hazard.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/check": {
+   "category": "hud",
+   "accent": "#4ADE80",
+   "plated": "hud/check.png",
+   "glyph": "glyph/hud/check.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/close": {
+   "category": "hud",
+   "accent": "#EF4444",
+   "plated": "hud/close.png",
+   "glyph": "glyph/hud/close.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/settings": {
+   "category": "hud",
+   "accent": "#94A3B8",
+   "plated": "hud/settings.png",
+   "glyph": "glyph/hud/settings.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/codex": {
+   "category": "hud",
+   "accent": "#00D1FF",
+   "plated": "hud/codex.png",
+   "glyph": "glyph/hud/codex.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/quest": {
+   "category": "hud",
+   "accent": "#00A893",
+   "plated": "hud/quest.png",
+   "glyph": "glyph/hud/quest.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/station": {
+   "category": "hud",
+   "accent": "#00D1FF",
+   "plated": "hud/station.png",
+   "glyph": "glyph/hud/station.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/lock": {
+   "category": "hud",
+   "accent": "#94A3B8",
+   "plated": "hud/lock.png",
+   "glyph": "glyph/hud/lock.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "hud/secure_cargo_buoy": {
+   "category": "hud",
+   "accent": "#F59E0B",
+   "plated": "hud/secure_cargo_buoy.png",
+   "glyph": "glyph/hud/secure_cargo_buoy.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "roles/role_pilot": {
+   "category": "roles",
+   "accent": "#00D1FF",
+   "plated": "roles/role_pilot.png",
+   "glyph": "glyph/roles/role_pilot.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "roles/role_lamp_operator": {
+   "category": "roles",
+   "accent": "#F59E0B",
+   "plated": "roles/role_lamp_operator.png",
+   "glyph": "glyph/roles/role_lamp_operator.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "roles/role_navigator": {
+   "category": "roles",
+   "accent": "#00A893",
+   "plated": "roles/role_navigator.png",
+   "glyph": "glyph/roles/role_navigator.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "roles/role_collector": {
+   "category": "roles",
+   "accent": "#4ADE80",
+   "plated": "roles/role_collector.png",
+   "glyph": "glyph/roles/role_collector.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "roles/ping_scan_target": {
+   "category": "roles",
+   "accent": "#00D1FF",
+   "plated": "roles/ping_scan_target.png",
+   "glyph": "glyph/roles/ping_scan_target.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "roles/ping_hazard_ahead": {
+   "category": "roles",
+   "accent": "#EF4444",
+   "plated": "roles/ping_hazard_ahead.png",
+   "glyph": "glyph/roles/ping_hazard_ahead.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "roles/ping_cargo_detected": {
+   "category": "roles",
+   "accent": "#F59E0B",
+   "plated": "roles/ping_cargo_detected.png",
+   "glyph": "glyph/roles/ping_cargo_detected.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "roles/ping_return_to_dock": {
+   "category": "roles",
+   "accent": "#00D1FF",
+   "plated": "roles/ping_return_to_dock.png",
+   "glyph": "glyph/roles/ping_return_to_dock.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "roles/ping_check_battery": {
+   "category": "roles",
+   "accent": "#F59E0B",
+   "plated": "roles/ping_check_battery.png",
+   "glyph": "glyph/roles/ping_check_battery.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/crystal": {
+   "category": "resources",
+   "accent": "#2F80ED",
+   "plated": "resources/crystal.png",
+   "glyph": "glyph/resources/crystal.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/rare_crystal": {
+   "category": "resources",
+   "accent": "#8B5CF6",
+   "plated": "resources/rare_crystal.png",
+   "glyph": "glyph/resources/rare_crystal.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/ruby_crystal": {
+   "category": "resources",
+   "accent": "#F472B6",
+   "plated": "resources/ruby_crystal.png",
+   "glyph": "glyph/resources/ruby_crystal.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/titanium": {
+   "category": "resources",
+   "accent": "#94A3B8",
+   "plated": "resources/titanium.png",
+   "glyph": "glyph/resources/titanium.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/gold_nugget": {
+   "category": "resources",
+   "accent": "#FBBF24",
+   "plated": "resources/gold_nugget.png",
+   "glyph": "glyph/resources/gold_nugget.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/common_ore": {
+   "category": "resources",
+   "accent": "#94A3B8",
+   "plated": "resources/common_ore.png",
+   "glyph": "glyph/resources/common_ore.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/element_shard": {
+   "category": "resources",
+   "accent": "#8B5CF6",
+   "plated": "resources/element_shard.png",
+   "glyph": "glyph/resources/element_shard.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/organic_matter": {
+   "category": "resources",
+   "accent": "#4ADE80",
+   "plated": "resources/organic_matter.png",
+   "glyph": "glyph/resources/organic_matter.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/fiber": {
+   "category": "resources",
+   "accent": "#E6F1FF",
+   "plated": "resources/fiber.png",
+   "glyph": "glyph/resources/fiber.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/gas_canister": {
+   "category": "resources",
+   "accent": "#F59E0B",
+   "plated": "resources/gas_canister.png",
+   "glyph": "glyph/resources/gas_canister.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/sample_jar": {
+   "category": "resources",
+   "accent": "#00D1FF",
+   "plated": "resources/sample_jar.png",
+   "glyph": "glyph/resources/sample_jar.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/coral_sample": {
+   "category": "resources",
+   "accent": "#F472B6",
+   "plated": "resources/coral_sample.png",
+   "glyph": "glyph/resources/coral_sample.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/seaweed": {
+   "category": "resources",
+   "accent": "#4ADE80",
+   "plated": "resources/seaweed.png",
+   "glyph": "glyph/resources/seaweed.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/organism": {
+   "category": "resources",
+   "accent": "#4ADE80",
+   "plated": "resources/organism.png",
+   "glyph": "glyph/resources/organism.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/dna_sample": {
+   "category": "resources",
+   "accent": "#00D1FF",
+   "plated": "resources/dna_sample.png",
+   "glyph": "glyph/resources/dna_sample.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/ancient_relic": {
+   "category": "resources",
+   "accent": "#FBBF24",
+   "plated": "resources/ancient_relic.png",
+   "glyph": "glyph/resources/ancient_relic.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/ancient_lantern": {
+   "category": "resources",
+   "accent": "#00D1FF",
+   "plated": "resources/ancient_lantern.png",
+   "glyph": "glyph/resources/ancient_lantern.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/crystal_relic": {
+   "category": "resources",
+   "accent": "#8B5CF6",
+   "plated": "resources/crystal_relic.png",
+   "glyph": "glyph/resources/crystal_relic.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/fossil": {
+   "category": "resources",
+   "accent": "#F59E0B",
+   "plated": "resources/fossil.png",
+   "glyph": "glyph/resources/fossil.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/obsidian_core": {
+   "category": "resources",
+   "accent": "#8B5CF6",
+   "plated": "resources/obsidian_core.png",
+   "glyph": "glyph/resources/obsidian_core.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/data_pod": {
+   "category": "resources",
+   "accent": "#00D1FF",
+   "plated": "resources/data_pod.png",
+   "glyph": "glyph/resources/data_pod.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/stone_tablet": {
+   "category": "resources",
+   "accent": "#FBBF24",
+   "plated": "resources/stone_tablet.png",
+   "glyph": "glyph/resources/stone_tablet.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/relic_fragment": {
+   "category": "resources",
+   "accent": "#F59E0B",
+   "plated": "resources/relic_fragment.png",
+   "glyph": "glyph/resources/relic_fragment.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/relic_orb": {
+   "category": "resources",
+   "accent": "#8B5CF6",
+   "plated": "resources/relic_orb.png",
+   "glyph": "glyph/resources/relic_orb.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/battery_cell": {
+   "category": "resources",
+   "accent": "#4ADE80",
+   "plated": "resources/battery_cell.png",
+   "glyph": "glyph/resources/battery_cell.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/oxygen_canister": {
+   "category": "resources",
+   "accent": "#00D1FF",
+   "plated": "resources/oxygen_canister.png",
+   "glyph": "glyph/resources/oxygen_canister.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/repair_kit": {
+   "category": "resources",
+   "accent": "#EF4444",
+   "plated": "resources/repair_kit.png",
+   "glyph": "glyph/resources/repair_kit.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/tool_kit": {
+   "category": "resources",
+   "accent": "#F59E0B",
+   "plated": "resources/tool_kit.png",
+   "glyph": "glyph/resources/tool_kit.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "resources/signal_flare": {
+   "category": "resources",
+   "accent": "#EF4444",
+   "plated": "resources/signal_flare.png",
+   "glyph": "glyph/resources/signal_flare.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "anomalies/energy_vortex": {
+   "category": "anomalies",
+   "accent": "#00D1FF",
+   "plated": "anomalies/energy_vortex.png",
+   "glyph": "glyph/anomalies/energy_vortex.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "anomalies/gas_vent": {
+   "category": "anomalies",
+   "accent": "#00A893",
+   "plated": "anomalies/gas_vent.png",
+   "glyph": "glyph/anomalies/gas_vent.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "anomalies/magnetic_field": {
+   "category": "anomalies",
+   "accent": "#8B5CF6",
+   "plated": "anomalies/magnetic_field.png",
+   "glyph": "glyph/anomalies/magnetic_field.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "anomalies/light_phenomenon": {
+   "category": "anomalies",
+   "accent": "#F59E0B",
+   "plated": "anomalies/light_phenomenon.png",
+   "glyph": "glyph/anomalies/light_phenomenon.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "anomalies/unknown_signal": {
+   "category": "anomalies",
+   "accent": "#00D1FF",
+   "plated": "anomalies/unknown_signal.png",
+   "glyph": "glyph/anomalies/unknown_signal.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "anomalies/leviathan": {
+   "category": "anomalies",
+   "accent": "#2F80ED",
+   "plated": "anomalies/leviathan.png",
+   "glyph": "glyph/anomalies/leviathan.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "equipment/lantern_tool": {
+   "category": "equipment",
+   "accent": "#F59E0B",
+   "plated": "equipment/lantern_tool.png",
+   "glyph": "glyph/equipment/lantern_tool.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "equipment/scanner_tool": {
+   "category": "equipment",
+   "accent": "#00D1FF",
+   "plated": "equipment/scanner_tool.png",
+   "glyph": "glyph/equipment/scanner_tool.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "equipment/plasma_cutter": {
+   "category": "equipment",
+   "accent": "#F59E0B",
+   "plated": "equipment/plasma_cutter.png",
+   "glyph": "glyph/equipment/plasma_cutter.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "equipment/thermal_unit": {
+   "category": "equipment",
+   "accent": "#00D1FF",
+   "plated": "equipment/thermal_unit.png",
+   "glyph": "glyph/equipment/thermal_unit.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "equipment/acoustic_decoy": {
+   "category": "equipment",
+   "accent": "#8B5CF6",
+   "plated": "equipment/acoustic_decoy.png",
+   "glyph": "glyph/equipment/acoustic_decoy.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "equipment/secure_cargo": {
+   "category": "equipment",
+   "accent": "#F59E0B",
+   "plated": "equipment/secure_cargo.png",
+   "glyph": "glyph/equipment/secure_cargo.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "equipment/recall_beacon": {
+   "category": "equipment",
+   "accent": "#00D1FF",
+   "plated": "equipment/recall_beacon.png",
+   "glyph": "glyph/equipment/recall_beacon.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "codex/codex_sighted": {
+   "category": "codex",
+   "accent": "#94A3B8",
+   "plated": "codex/codex_sighted.png",
+   "glyph": "glyph/codex/codex_sighted.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "codex/codex_scanned": {
+   "category": "codex",
+   "accent": "#00D1FF",
+   "plated": "codex/codex_scanned.png",
+   "glyph": "glyph/codex/codex_scanned.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "codex/codex_studied": {
+   "category": "codex",
+   "accent": "#8B5CF6",
+   "plated": "codex/codex_studied.png",
+   "glyph": "glyph/codex/codex_studied.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "codex/codex_mastered": {
+   "category": "codex",
+   "accent": "#FBBF24",
+   "plated": "codex/codex_mastered.png",
+   "glyph": "glyph/codex/codex_mastered.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "creatures/jellyfish": {
+   "category": "creatures",
+   "accent": "#00D1FF",
+   "plated": "creatures/jellyfish.png",
+   "glyph": "glyph/creatures/jellyfish.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "creatures/anglerfish": {
+   "category": "creatures",
+   "accent": "#8B5CF6",
+   "plated": "creatures/anglerfish.png",
+   "glyph": "glyph/creatures/anglerfish.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "creatures/reef_shark": {
+   "category": "creatures",
+   "accent": "#2F80ED",
+   "plated": "creatures/reef_shark.png",
+   "glyph": "glyph/creatures/reef_shark.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "creatures/manta_ray": {
+   "category": "creatures",
+   "accent": "#00A893",
+   "plated": "creatures/manta_ray.png",
+   "glyph": "glyph/creatures/manta_ray.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "creatures/coral_crab": {
+   "category": "creatures",
+   "accent": "#EF4444",
+   "plated": "creatures/coral_crab.png",
+   "glyph": "glyph/creatures/coral_crab.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "creatures/tube_worm": {
+   "category": "creatures",
+   "accent": "#F472B6",
+   "plated": "creatures/tube_worm.png",
+   "glyph": "glyph/creatures/tube_worm.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "creatures/alien_fish": {
+   "category": "creatures",
+   "accent": "#8B5CF6",
+   "plated": "creatures/alien_fish.png",
+   "glyph": "glyph/creatures/alien_fish.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "creatures/coral_guardian": {
+   "category": "creatures",
+   "accent": "#F59E0B",
+   "plated": "creatures/coral_guardian.png",
+   "glyph": "glyph/creatures/coral_guardian.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "zones/zone_shallows": {
+   "category": "zones",
+   "accent": "#00D1FF",
+   "plated": "zones/zone_shallows.png",
+   "glyph": "glyph/zones/zone_shallows.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "zones/zone_kelp_forest": {
+   "category": "zones",
+   "accent": "#4ADE80",
+   "plated": "zones/zone_kelp_forest.png",
+   "glyph": "glyph/zones/zone_kelp_forest.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "zones/zone_twilight_reef": {
+   "category": "zones",
+   "accent": "#8B5CF6",
+   "plated": "zones/zone_twilight_reef.png",
+   "glyph": "glyph/zones/zone_twilight_reef.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "zones/zone_station": {
+   "category": "zones",
+   "accent": "#00D1FF",
+   "plated": "zones/zone_station.png",
+   "glyph": "glyph/zones/zone_station.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "zones/zone_abyss": {
+   "category": "zones",
+   "accent": "#2F80ED",
+   "plated": "zones/zone_abyss.png",
+   "glyph": "glyph/zones/zone_abyss.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "zones/zone_lost_ruins": {
+   "category": "zones",
+   "accent": "#FBBF24",
+   "plated": "zones/zone_lost_ruins.png",
+   "glyph": "glyph/zones/zone_lost_ruins.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "zones/zone_the_hollow": {
+   "category": "zones",
+   "accent": "#94A3B8",
+   "plated": "zones/zone_the_hollow.png",
+   "glyph": "glyph/zones/zone_the_hollow.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "zones/zone_beyond": {
+   "category": "zones",
+   "accent": "#F472B6",
+   "plated": "zones/zone_beyond.png",
+   "glyph": "glyph/zones/zone_beyond.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "wings/wing_power_core": {
+   "category": "wings",
+   "accent": "#F59E0B",
+   "plated": "wings/wing_power_core.png",
+   "glyph": "glyph/wings/wing_power_core.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "wings/wing_sub_dock": {
+   "category": "wings",
+   "accent": "#00D1FF",
+   "plated": "wings/wing_sub_dock.png",
+   "glyph": "glyph/wings/wing_sub_dock.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "wings/wing_workshop": {
+   "category": "wings",
+   "accent": "#F59E0B",
+   "plated": "wings/wing_workshop.png",
+   "glyph": "glyph/wings/wing_workshop.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "wings/wing_research_lab": {
+   "category": "wings",
+   "accent": "#8B5CF6",
+   "plated": "wings/wing_research_lab.png",
+   "glyph": "glyph/wings/wing_research_lab.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "wings/wing_observatory": {
+   "category": "wings",
+   "accent": "#2F80ED",
+   "plated": "wings/wing_observatory.png",
+   "glyph": "glyph/wings/wing_observatory.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "wings/wing_aquarium": {
+   "category": "wings",
+   "accent": "#00A893",
+   "plated": "wings/wing_aquarium.png",
+   "glyph": "glyph/wings/wing_aquarium.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "wings/wing_archive": {
+   "category": "wings",
+   "accent": "#FBBF24",
+   "plated": "wings/wing_archive.png",
+   "glyph": "glyph/wings/wing_archive.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "wings/wing_docking_ring": {
+   "category": "wings",
+   "accent": "#00D1FF",
+   "plated": "wings/wing_docking_ring.png",
+   "glyph": "glyph/wings/wing_docking_ring.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "classes/sub_scout": {
+   "category": "classes",
+   "accent": "#00D1FF",
+   "plated": "classes/sub_scout.png",
+   "glyph": "glyph/classes/sub_scout.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "classes/sub_hauler": {
+   "category": "classes",
+   "accent": "#F59E0B",
+   "plated": "classes/sub_hauler.png",
+   "glyph": "glyph/classes/sub_hauler.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "classes/sub_surveyor": {
+   "category": "classes",
+   "accent": "#00A893",
+   "plated": "classes/sub_surveyor.png",
+   "glyph": "glyph/classes/sub_surveyor.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "classes/sub_abyssal": {
+   "category": "classes",
+   "accent": "#EF4444",
+   "plated": "classes/sub_abyssal.png",
+   "glyph": "glyph/classes/sub_abyssal.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "classes/sub_multicrew": {
+   "category": "classes",
+   "accent": "#94A3B8",
+   "plated": "classes/sub_multicrew.png",
+   "glyph": "glyph/classes/sub_multicrew.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "tiers/tier_outpost": {
+   "category": "tiers",
+   "accent": "#00D1FF",
+   "plated": "tiers/tier_outpost.png",
+   "glyph": "glyph/tiers/tier_outpost.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "tiers/tier_station": {
+   "category": "tiers",
+   "accent": "#00D1FF",
+   "plated": "tiers/tier_station.png",
+   "glyph": "glyph/tiers/tier_station.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "tiers/tier_complex": {
+   "category": "tiers",
+   "accent": "#00D1FF",
+   "plated": "tiers/tier_complex.png",
+   "glyph": "glyph/tiers/tier_complex.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "tiers/tier_citadel": {
+   "category": "tiers",
+   "accent": "#94A3B8",
+   "plated": "tiers/tier_citadel.png",
+   "glyph": "glyph/tiers/tier_citadel.png",
+   "size": [
+    128,
+    128
+   ]
+  },
+  "tiers/tier_deep_empire": {
+   "category": "tiers",
+   "accent": "#94A3B8",
+   "plated": "tiers/tier_deep_empire.png",
+   "glyph": "glyph/tiers/tier_deep_empire.png",
+   "size": [
+    128,
+    128
+   ]
+  }
+ },
+ "vfx": {
+  "particles/particle_marine_snow.png": {
+   "size": [
+    64,
+    64
+   ],
+   "usage": "ParticleEmitter.Texture for marine snow (camera-relative, tiny, low rate)."
+  },
+  "particles/particle_glow.png": {
+   "size": [
+    128,
+    128
+   ],
+   "usage": "Soft additive glow. Tint with Color. Bioluminescence, lantern flare."
+  },
+  "particles/particle_bubble.png": {
+   "size": [
+    64,
+    64
+   ],
+   "usage": "Single bubble."
+  },
+  "particles/particle_bubble_atlas.png": {
+   "size": [
+    256,
+    256
+   ],
+   "usage": "ParticleEmitter flipbook (FlipbookLayout=Grid4x4, mode Random) for vents/propulsion."
+  },
+  "particles/particle_spark.png": {
+   "size": [
+    64,
+    64
+   ],
+   "usage": "Hull impact sparks / discovery sparkle."
+  },
+  "particles/particle_ring.png": {
+   "size": [
+    128,
+    128
+   ],
+   "usage": "Expanding pulse ring (scan complete, pings)."
+  },
+  "particles/particle_thermal_flare.png": {
+   "size": [
+    128,
+    128
+   ],
+   "usage": "Thermal vent flare / Anomalous Shift."
+  },
+  "particles/particle_electric_arc.png": {
+   "size": [
+    256,
+    64
+   ],
+   "usage": "Hazard interaction: lightweight electric arc (Beam texture)."
+  },
+  "beams/lantern_beam_streaks.png": {
+   "size": [
+    256,
+    256
+   ],
+   "tileable": true,
+   "usage": "Scrolling translucent texture on the lantern cone mesh/beam (animate Offset)."
+  },
+  "beams/beam_falloff.png": {
+   "size": [
+    256,
+    64
+   ],
+   "usage": "Beam.Texture: bright at origin, fades along length and sideways."
+  },
+  "beams/scanner_sheet.png": {
+   "size": [
+    256,
+    256
+   ],
+   "usage": "Thin translucent forward light sheet for the scanner beam."
+  },
+  "beams/light_rays_tile.png": {
+   "size": [
+    512,
+    512
+   ],
+   "tileable": true,
+   "usage": "God-rays overlay in Shallows/Kelp (fade top-to-bottom with UIGradient or Transparency)."
+  },
+  "beams/caustics_tile.png": {
+   "size": [
+    512,
+    512
+   ],
+   "tileable": true,
+   "usage": "Light caustics: project on seabed as Decal/Texture on Shallows (additive, animate)."
+  },
+  "beams/marine_snow_tile.png": {
+   "size": [
+    512,
+    512
+   ],
+   "tileable": true,
+   "usage": "Screen-space marine snow (ImageLabel tile, scroll slowly). Prefer ParticleEmitter in 3D."
+  },
+  "hud/vignette_navy.png": {
+   "size": [
+    512,
+    512
+   ],
+   "usage": "Depth transition screen-edge tint (fullscreen, ZIndex under HUD)."
+  },
+  "hud/vignette_alert.png": {
+   "size": [
+    512,
+    512
+   ],
+   "usage": "Critical Hull/Battery warning edge (no white flash, no strobe; fade slowly <=1Hz)."
+  },
+  "hud/vignette_amber.png": {
+   "size": [
+    512,
+    512
+   ],
+   "usage": "Low reserve warning edge tint."
+  },
+  "hud/sonar_radar_bg.png": {
+   "size": [
+    512,
+    512
+   ],
+   "usage": "Sonar HUD background (circular). Square ImageLabel + UIAspectRatioConstraint."
+  },
+  "hud/sonar_sweep.png": {
+   "size": [
+    512,
+    512
+   ],
+   "usage": "Rotate this ImageLabel (Rotation) for the sonar sweep; event-driven pings preferred (no per-frame polling)."
+  },
+  "hud/sonar_ring.png": {
+   "size": [
+    512,
+    512
+   ],
+   "usage": "Expanding sonar pulse (UI scale tween or ring mesh texture)."
+  },
+  "hud/scan_reticle.png": {
+   "size": [
+    256,
+    256
+   ],
+   "usage": "Scanner lock reticle (BillboardGui on target)."
+  },
+  "hud/target_ring_holo.png": {
+   "size": [
+    256,
+    256
+   ],
+   "usage": "Species Scanned: clean holographic ring + brief cyan highlight."
+  },
+  "hud/recall_ring.png": {
+   "size": [
+    512,
+    512
+   ],
+   "usage": "Emergency Recall light-ring presentation (rotate + scale; with cavitation bubbles)."
+  },
+  "hud/bio_pulse.png": {
+   "size": [
+    256,
+    256
+   ],
+   "usage": "Bioluminescent pulse (tint per creature). Animate ImageTransparency, not per-frame logic."
+  },
+  "backdrops/depth_shallows.png": {
+   "size": [
+    16,
+    256
+   ],
+   "usage": "Vertical zone gradient (ImageLabel Stretch) for terminals / loading / codex backgrounds."
+  },
+  "backdrops/depth_kelp_forest.png": {
+   "size": [
+    16,
+    256
+   ],
+   "usage": "Vertical zone gradient (ImageLabel Stretch) for terminals / loading / codex backgrounds."
+  },
+  "backdrops/depth_twilight_reef.png": {
+   "size": [
+    16,
+    256
+   ],
+   "usage": "Vertical zone gradient (ImageLabel Stretch) for terminals / loading / codex backgrounds."
+  },
+  "backdrops/depth_station.png": {
+   "size": [
+    16,
+    256
+   ],
+   "usage": "Vertical zone gradient (ImageLabel Stretch) for terminals / loading / codex backgrounds."
+  },
+  "backdrops/depth_abyss.png": {
+   "size": [
+    16,
+    256
+   ],
+   "usage": "Vertical zone gradient (ImageLabel Stretch) for terminals / loading / codex backgrounds."
+  }
+ },
+ "branding": {
+  "logo_wordmark.png": {
+   "size": [
+    1433,
+    622
+   ],
+   "usage": "Main logo (transparent). Loading screen, title, store header."
+  },
+  "game_icon_512.png": {
+   "size": [
+    512,
+    512
+   ],
+   "usage": "Experience icon (Roblox asks for 512x512). Upload as the game icon; no text, readable at 64px."
+  },
+  "game_icon_128.png": {
+   "size": [
+    128,
+    128
+   ],
+   "usage": "Small UI use / favicon style."
+  },
+  "loading_backdrop_1920x1080.png": {
+   "size": [
+    1920,
+    1080
+   ],
+   "usage": "Loading / title backdrop (no text). Place the wordmark on top, centred."
+  },
+  "decals/label_power_core.png": {
+   "size": [
+    1024,
+    192
+   ],
+   "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+  },
+  "decals/label_sub_dock.png": {
+   "size": [
+    1024,
+    192
+   ],
+   "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+  },
+  "decals/label_workshop.png": {
+   "size": [
+    1024,
+    192
+   ],
+   "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+  },
+  "decals/label_research_lab.png": {
+   "size": [
+    1024,
+    192
+   ],
+   "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+  },
+  "decals/label_observatory.png": {
+   "size": [
+    1024,
+    192
+   ],
+   "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+  },
+  "decals/label_aquarium.png": {
+   "size": [
+    1024,
+    192
+   ],
+   "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+  },
+  "decals/label_archive.png": {
+   "size": [
+    1024,
+    192
+   ],
+   "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+  },
+  "decals/label_docking_ring.png": {
+   "size": [
+    1024,
+    192
+   ],
+   "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+  },
+  "decals/label_airlock.png": {
+   "size": [
+    1024,
+    192
+   ],
+   "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+  },
+  "decals/label_depth_gauge.png": {
+   "size": [
+    1024,
+    192
+   ],
+   "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+  },
+  "decals/hazard_stripes_tile.png": {
+   "size": [
+    128,
+    128
+   ],
+   "tileable": true,
+   "usage": "Hazard / docking edge stripes (tile, 128px)."
+  }
+ },
+ "atlases": {
+  "cell": 128,
+  "sheets": {
+   "icons_plated_1.png": {
+    "size": [
+     1024,
+     1024
+    ],
+    "count": 64
+   },
+   "icons_plated_2.png": {
+    "size": [
+     1024,
+     1024
+    ],
+    "count": 47
+   },
+   "icons_glyph_1.png": {
+    "size": [
+     1024,
+     1024
+    ],
+    "count": 64
+   },
+   "icons_glyph_2.png": {
+    "size": [
+     1024,
+     1024
+    ],
+    "count": 47
+   }
+  },
+  "data_module": "luau/AtlasData.luau"
+ }
+}

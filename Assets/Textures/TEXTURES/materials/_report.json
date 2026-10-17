@@ -1,0 +1,525 @@
+{
+ "rock_dark": {
+  "category": "terrain",
+  "studs_per_tile": 12,
+  "notes": "Shallows/Station rocks, boulders, cliffs (soft faceted, baked AO)",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 1.12
+ },
+ "rock_mossy": {
+  "category": "terrain",
+  "studs_per_tile": 12,
+  "notes": "Kelp Forest rocks and ruins (moss in crevices)",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 1.22
+ },
+ "sand_seabed": {
+  "category": "terrain",
+  "studs_per_tile": 16,
+  "notes": "Seabed floors in Shallows and Station surroundings",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.98
+ },
+ "coral_pink": {
+  "category": "terrain",
+  "studs_per_tile": 6,
+  "notes": "Shallows coral clusters",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 1.18
+ },
+ "coral_purple": {
+  "category": "terrain",
+  "studs_per_tile": 6,
+  "notes": "Twilight Reef coral, emissive glow",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.94
+ },
+ "kelp_green": {
+  "category": "terrain",
+  "studs_per_tile": 4,
+  "notes": "Kelp blades (vertical streaks)",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 1.24
+ },
+ "moss": {
+  "category": "terrain",
+  "studs_per_tile": 8,
+  "notes": "Moss overlay for rocks and ruins",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.96
+ },
+ "hull_white": {
+  "category": "submarine",
+  "studs_per_tile": 8,
+  "notes": "Default sub hull, amber trim",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.06
+ },
+ "hull_ocean_blue": {
+  "category": "submarine",
+  "studs_per_tile": 8,
+  "notes": "Ocean Blue sub variant",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.04
+ },
+ "hull_deep_black": {
+  "category": "submarine",
+  "studs_per_tile": 8,
+  "notes": "Deep Black sub variant, aqua trim",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.06
+ },
+ "hull_sand": {
+  "category": "submarine",
+  "studs_per_tile": 8,
+  "notes": "Sand (Desert) sub variant",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.1
+ },
+ "hull_arctic": {
+  "category": "submarine",
+  "studs_per_tile": 8,
+  "notes": "Arctic (Ice) sub variant",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.11
+ },
+ "hull_camo": {
+  "category": "submarine",
+  "studs_per_tile": 8,
+  "notes": "Camo (Stealth) sub variant",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.09
+ },
+ "carbon_composite": {
+  "category": "submarine",
+  "studs_per_tile": 4,
+  "notes": "Hull detailing, carbon fibre",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 1.41
+ },
+ "rusted_metal": {
+  "category": "terrain",
+  "studs_per_tile": 8,
+  "notes": "Wrecks, debris, old structures",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.91
+ },
+ "rubber_seal": {
+  "category": "submarine",
+  "studs_per_tile": 4,
+  "notes": "Seals and gaskets",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 1.02
+ },
+ "crystal_blue": {
+  "category": "resource",
+  "studs_per_tile": 6,
+  "notes": "Crystal / Rare Crystal nodes",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.63
+ },
+ "crystal_purple": {
+  "category": "resource",
+  "studs_per_tile": 6,
+  "notes": "Twilight Reef crystals",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.78
+ },
+ "crystal_ruby": {
+  "category": "resource",
+  "studs_per_tile": 6,
+  "notes": "Ruby Crystal nodes",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.84
+ },
+ "station_floor": {
+  "category": "station",
+  "studs_per_tile": 8,
+  "notes": "Grated deck floor with hazard marks",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 3.47
+ },
+ "station_wall": {
+  "category": "station",
+  "studs_per_tile": 10,
+  "notes": "Interior wall: white panels, blue band, aqua light line",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 44.17
+ },
+ "glass_blue": {
+  "category": "station",
+  "studs_per_tile": 8,
+  "notes": "Windows, domes; color map has alpha",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": true,
+  "seam_ratio": 1.97
+ },
+ "emissive_strip_aqua": {
+  "category": "station",
+  "studs_per_tile": 8,
+  "notes": "Light strips (aqua)",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.0
+ },
+ "emissive_strip_amber": {
+  "category": "station",
+  "studs_per_tile": 8,
+  "notes": "Light strips (amber)",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.0
+ },
+ "emissive_strip_red": {
+  "category": "station",
+  "studs_per_tile": 8,
+  "notes": "Warning strips (crimson)",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.0
+ },
+ "bio_skin_aqua": {
+  "category": "creature",
+  "studs_per_tile": 6,
+  "notes": "Bioluminescent dots (aqua)",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.56
+ },
+ "bio_skin_purple": {
+  "category": "creature",
+  "studs_per_tile": 6,
+  "notes": "Bioluminescent dots (purple)",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 1.26
+ },
+ "bio_skin_teal": {
+  "category": "creature",
+  "studs_per_tile": 6,
+  "notes": "Bioluminescent dots (teal)",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 1.05
+ },
+ "scales_normal": {
+  "category": "creature",
+  "studs_per_tile": 4,
+  "notes": "Creature scales: Normal",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.54
+ },
+ "scales_bioluminescent": {
+  "category": "creature",
+  "studs_per_tile": 4,
+  "notes": "Creature scales: Bioluminescent",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.54
+ },
+ "scales_albino": {
+  "category": "creature",
+  "studs_per_tile": 4,
+  "notes": "Creature scales: Albino",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.52
+ },
+ "scales_armored": {
+  "category": "creature",
+  "studs_per_tile": 4,
+  "notes": "Creature scales: Armored",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.55
+ },
+ "scales_corrupted": {
+  "category": "creature",
+  "studs_per_tile": 4,
+  "notes": "Creature scales: Corrupted",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.58
+ },
+ "scales_rare": {
+  "category": "creature",
+  "studs_per_tile": 4,
+  "notes": "Creature scales: Rare (rainbow)",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.99
+ },
+ "relic_stone": {
+  "category": "relic",
+  "studs_per_tile": 6,
+  "notes": "Ancient stone with glowing runes",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.69
+ },
+ "relic_obsidian": {
+  "category": "relic",
+  "studs_per_tile": 6,
+  "notes": "Obsidian Core with violet fractures",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness",
+   "emissive"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.93
+ },
+ "cliff_layered": {
+  "category": "terrain",
+  "studs_per_tile": 16,
+  "notes": "Layered cliff strata for canyon walls and zone borders",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.84
+ },
+ "pebbles_seabed": {
+  "category": "terrain",
+  "studs_per_tile": 10,
+  "notes": "Pebble seabed for Kelp Forest / Station surroundings",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 1.04
+ },
+ "ruins_blocks": {
+  "category": "terrain",
+  "studs_per_tile": 10,
+  "notes": "Ancient masonry for Kelp ruins and Lost Ruins teaser",
+  "maps": [
+   "color",
+   "normal",
+   "roughness",
+   "metalness"
+  ],
+  "has_alpha": false,
+  "seam_ratio": 0.98
+ }
+}

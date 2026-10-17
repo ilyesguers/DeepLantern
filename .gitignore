@@ -1,0 +1,22 @@
+# OS/editor noise
+.DS_Store
+._*
+Thumbs.db
+.vscode/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Blender backups/cache
+*.blend1
+*.blend2
+__pycache__/
+
+# Local Roblox place backups should not be accidentally committed
+save.rbxl
+DeepLantern_Backup_Oct09.rbxl
+*.rbxl.lock
