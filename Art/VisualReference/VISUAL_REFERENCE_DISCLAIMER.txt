@@ -1,0 +1,17 @@
+IMPORTANT — VISUAL REFERENCE ONLY
+This image is a visual reference for the Deep Lantern project.
+Any text, numbers, prices, currencies, statistics, depths, item
+quantities, UI values, labels, icons, rewards, equipment, or other
+gameplay details shown inside this image are visual examples only and
+must NOT be treated as official game data, mechanics, progression
+values, or required features.
+The Deep Lantern GDD — Parts 1–10 is the authoritative Source of Truth.
+If anything in this image conflicts with the GDD, the GDD always takes
+priority.
+Use this image to understand visual direction, composition, color
+language, atmosphere, proportions, presentation, and general Roblox art
+style only.
+Do not implement gameplay behavior, statistics, currencies, progression,
+zones, items, or mechanics based solely on this image.
+Refer to the GDD and DEEP_LANTERN_IMPLEMENTATION_NOTES.md for official
+implementation rules and clarifications.

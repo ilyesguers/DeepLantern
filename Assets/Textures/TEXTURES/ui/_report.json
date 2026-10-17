@@ -1,0 +1,632 @@
+{
+ "panels/panel_glass.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   16,
+   16,
+   48,
+   48
+  ],
+  "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+ },
+ "panels/panel_glass_dim.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   16,
+   16,
+   48,
+   48
+  ],
+  "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+ },
+ "panels/panel_glass_elevated.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   16,
+   16,
+   48,
+   48
+  ],
+  "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+ },
+ "panels/panel_glass_solid.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   16,
+   16,
+   48,
+   48
+  ],
+  "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+ },
+ "panels/panel_glass_alert.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   16,
+   16,
+   48,
+   48
+  ],
+  "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+ },
+ "panels/panel_glass_warning.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   16,
+   16,
+   48,
+   48
+  ],
+  "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+ },
+ "panels/panel_glass_discovery.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   16,
+   16,
+   48,
+   48
+  ],
+  "usage": "ImageLabel ScaleType=Slice, SliceCenter=Rect(16,16,48,48). Chamfer is baked in: do not add UICorner."
+ },
+ "panels/panel_toast.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   14,
+   50,
+   18
+  ],
+  "usage": "Toast background (small, auto-dismiss ~3s)."
+ },
+ "panels/frame_select.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   16,
+   16,
+   48,
+   48
+  ],
+  "usage": "Selection / gamepad focus frame, transparent fill."
+ },
+ "buttons/button_primary_default.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_primary_hover.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_primary_pressed.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_primary_disabled.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_primary_focus.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_secondary_default.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_secondary_hover.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_secondary_pressed.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_secondary_disabled.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_secondary_focus.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_danger_default.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_danger_hover.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_danger_pressed.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_danger_disabled.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "buttons/button_danger_focus.png": {
+  "size": [
+   64,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   14,
+   12,
+   50,
+   20
+  ],
+  "usage": "ImageButton ScaleType=Slice; swap Image per state (default/hover/pressed/disabled/focus). Min hit target 48px."
+ },
+ "bars/bar_track.png": {
+  "size": [
+   32,
+   16
+  ],
+  "type": "slice9",
+  "slice_center": [
+   8,
+   7,
+   24,
+   9
+  ],
+  "usage": "Bar background. Fill clipped inside with ImageLabel Size scale X."
+ },
+ "bars/bar_fill_white.png": {
+  "size": [
+   32,
+   16
+  ],
+  "type": "slice9",
+  "slice_center": [
+   8,
+   7,
+   24,
+   9
+  ],
+  "usage": "Neutral fill, tint with ImageColor3. Pair with bar_track; use ColorBlind-safe icon+text too."
+ },
+ "bars/bar_fill_aqua.png": {
+  "size": [
+   32,
+   16
+  ],
+  "type": "slice9",
+  "slice_center": [
+   8,
+   7,
+   24,
+   9
+  ],
+  "usage": "Battery/Oxygen normal. Pair with bar_track; use ColorBlind-safe icon+text too."
+ },
+ "bars/bar_fill_amber.png": {
+  "size": [
+   32,
+   16
+  ],
+  "type": "slice9",
+  "slice_center": [
+   8,
+   7,
+   24,
+   9
+  ],
+  "usage": "Cargo. Pair with bar_track; use ColorBlind-safe icon+text too."
+ },
+ "bars/bar_fill_warning.png": {
+  "size": [
+   32,
+   16
+  ],
+  "type": "slice9",
+  "slice_center": [
+   8,
+   7,
+   24,
+   9
+  ],
+  "usage": "Battery/Oxygen low reserve (yellow). Pair with bar_track; use ColorBlind-safe icon+text too."
+ },
+ "bars/bar_fill_critical.png": {
+  "size": [
+   32,
+   16
+  ],
+  "type": "slice9",
+  "slice_center": [
+   8,
+   7,
+   24,
+   9
+  ],
+  "usage": "Battery/Oxygen critical, hull critical (red). Pair with bar_track; use ColorBlind-safe icon+text too."
+ },
+ "bars/bar_fill_purple.png": {
+  "size": [
+   32,
+   16
+  ],
+  "type": "slice9",
+  "slice_center": [
+   8,
+   7,
+   24,
+   9
+  ],
+  "usage": "Research progress. Pair with bar_track; use ColorBlind-safe icon+text too."
+ },
+ "bars/hull_segment_full.png": {
+  "size": [
+   24,
+   16
+  ],
+  "type": "image",
+  "usage": "One segment of the segmented Hull bar (UIListLayout horizontal)."
+ },
+ "bars/hull_segment_empty.png": {
+  "size": [
+   24,
+   16
+  ],
+  "type": "image",
+  "usage": "One segment of the segmented Hull bar (UIListLayout horizontal)."
+ },
+ "bars/hull_segment_damaged.png": {
+  "size": [
+   24,
+   16
+  ],
+  "type": "image",
+  "usage": "One segment of the segmented Hull bar (UIListLayout horizontal)."
+ },
+ "glow/shadow_soft.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   28,
+   28,
+   36,
+   36
+  ],
+  "usage": "Soft drop shadow under panels; place behind with larger Size."
+ },
+ "glow/glow_aqua.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   28,
+   28,
+   36,
+   36
+  ],
+  "usage": "Functional glow only (GDD: glow only when functional). Place behind element."
+ },
+ "glow/glow_amber.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   28,
+   28,
+   36,
+   36
+  ],
+  "usage": "Functional glow only (GDD: glow only when functional). Place behind element."
+ },
+ "glow/glow_red.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   28,
+   28,
+   36,
+   36
+  ],
+  "usage": "Functional glow only (GDD: glow only when functional). Place behind element."
+ },
+ "glow/glow_purple.png": {
+  "size": [
+   64,
+   64
+  ],
+  "type": "slice9",
+  "slice_center": [
+   28,
+   28,
+   36,
+   36
+  ],
+  "usage": "Functional glow only (GDD: glow only when functional). Place behind element."
+ },
+ "misc/divider_h.png": {
+  "size": [
+   256,
+   4
+  ],
+  "type": "image",
+  "usage": "Horizontal divider with faded ends (use sparingly; prefer whitespace)."
+ },
+ "misc/tile_scanlines.png": {
+  "size": [
+   8,
+   4
+  ],
+  "type": "tile",
+  "tile_size": [
+   8,
+   4
+  ],
+  "usage": "HUD glass scanline overlay. ScaleType=Tile, TileSize=UDim2.fromOffset(8,4), ImageTransparency ~0.5."
+ },
+ "misc/tile_grid_32.png": {
+  "size": [
+   32,
+   32
+  ],
+  "type": "tile",
+  "tile_size": [
+   32,
+   32
+  ],
+  "usage": "Blueprint/terminal background grid."
+ },
+ "misc/tile_dots_16.png": {
+  "size": [
+   16,
+   16
+  ],
+  "type": "tile",
+  "tile_size": [
+   16,
+   16
+  ],
+  "usage": "Dot matrix background."
+ },
+ "misc/tile_grain_128.png": {
+  "size": [
+   128,
+   128
+  ],
+  "type": "tile",
+  "tile_size": [
+   128,
+   128
+  ],
+  "usage": "Subtle film grain over panels (optional)."
+ },
+ "misc/scroll_thumb.png": {
+  "size": [
+   16,
+   32
+  ],
+  "type": "slice9",
+  "slice_center": [
+   7,
+   8,
+   9,
+   24
+  ],
+  "usage": "ScrollingFrame.ScrollBarImageColor3 neutral; use as ScrollBar image."
+ },
+ "misc/checkbox_off.png": {
+  "size": [
+   32,
+   32
+  ],
+  "type": "image",
+  "usage": "Checkbox (icon + text for state; not colour only)."
+ },
+ "misc/checkbox_on.png": {
+  "size": [
+   32,
+   32
+  ],
+  "type": "image",
+  "usage": "Checkbox (icon + text for state; not colour only)."
+ },
+ "misc/slider_thumb.png": {
+  "size": [
+   32,
+   32
+  ],
+  "type": "image",
+  "usage": "Slider thumb (settings)."
+ },
+ "misc/badge_dot.png": {
+  "size": [
+   16,
+   16
+  ],
+  "type": "image",
+  "usage": "Unread / new-codex-entry dot."
+ }
+}

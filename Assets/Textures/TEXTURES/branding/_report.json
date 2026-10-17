@@ -1,0 +1,108 @@
+{
+ "logo_wordmark.png": {
+  "size": [
+   1433,
+   622
+  ],
+  "usage": "Main logo (transparent). Loading screen, title, store header."
+ },
+ "game_icon_512.png": {
+  "size": [
+   512,
+   512
+  ],
+  "usage": "Experience icon (Roblox asks for 512x512). Upload as the game icon; no text, readable at 64px."
+ },
+ "game_icon_128.png": {
+  "size": [
+   128,
+   128
+  ],
+  "usage": "Small UI use / favicon style."
+ },
+ "loading_backdrop_1920x1080.png": {
+  "size": [
+   1920,
+   1080
+  ],
+  "usage": "Loading / title backdrop (no text). Place the wordmark on top, centred."
+ },
+ "decals/label_power_core.png": {
+  "size": [
+   1024,
+   192
+  ],
+  "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+ },
+ "decals/label_sub_dock.png": {
+  "size": [
+   1024,
+   192
+  ],
+  "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+ },
+ "decals/label_workshop.png": {
+  "size": [
+   1024,
+   192
+  ],
+  "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+ },
+ "decals/label_research_lab.png": {
+  "size": [
+   1024,
+   192
+  ],
+  "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+ },
+ "decals/label_observatory.png": {
+  "size": [
+   1024,
+   192
+  ],
+  "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+ },
+ "decals/label_aquarium.png": {
+  "size": [
+   1024,
+   192
+  ],
+  "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+ },
+ "decals/label_archive.png": {
+  "size": [
+   1024,
+   192
+  ],
+  "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+ },
+ "decals/label_docking_ring.png": {
+  "size": [
+   1024,
+   192
+  ],
+  "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+ },
+ "decals/label_airlock.png": {
+  "size": [
+   1024,
+   192
+  ],
+  "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+ },
+ "decals/label_depth_gauge.png": {
+  "size": [
+   1024,
+   192
+  ],
+  "usage": "Station signage. SurfaceGui ImageLabel or Decal on a flat part; matches GDD terminals."
+ },
+ "decals/hazard_stripes_tile.png": {
+  "size": [
+   128,
+   128
+  ],
+  "tileable": true,
+  "usage": "Hazard / docking edge stripes (tile, 128px)."
+ }
+}

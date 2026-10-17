@@ -1,0 +1,209 @@
+{
+ "particles/particle_marine_snow.png": {
+  "size": [
+   64,
+   64
+  ],
+  "usage": "ParticleEmitter.Texture for marine snow (camera-relative, tiny, low rate)."
+ },
+ "particles/particle_glow.png": {
+  "size": [
+   128,
+   128
+  ],
+  "usage": "Soft additive glow. Tint with Color. Bioluminescence, lantern flare."
+ },
+ "particles/particle_bubble.png": {
+  "size": [
+   64,
+   64
+  ],
+  "usage": "Single bubble."
+ },
+ "particles/particle_bubble_atlas.png": {
+  "size": [
+   256,
+   256
+  ],
+  "usage": "ParticleEmitter flipbook (FlipbookLayout=Grid4x4, mode Random) for vents/propulsion."
+ },
+ "particles/particle_spark.png": {
+  "size": [
+   64,
+   64
+  ],
+  "usage": "Hull impact sparks / discovery sparkle."
+ },
+ "particles/particle_ring.png": {
+  "size": [
+   128,
+   128
+  ],
+  "usage": "Expanding pulse ring (scan complete, pings)."
+ },
+ "particles/particle_thermal_flare.png": {
+  "size": [
+   128,
+   128
+  ],
+  "usage": "Thermal vent flare / Anomalous Shift."
+ },
+ "particles/particle_electric_arc.png": {
+  "size": [
+   256,
+   64
+  ],
+  "usage": "Hazard interaction: lightweight electric arc (Beam texture)."
+ },
+ "beams/lantern_beam_streaks.png": {
+  "size": [
+   256,
+   256
+  ],
+  "tileable": true,
+  "usage": "Scrolling translucent texture on the lantern cone mesh/beam (animate Offset)."
+ },
+ "beams/beam_falloff.png": {
+  "size": [
+   256,
+   64
+  ],
+  "usage": "Beam.Texture: bright at origin, fades along length and sideways."
+ },
+ "beams/scanner_sheet.png": {
+  "size": [
+   256,
+   256
+  ],
+  "usage": "Thin translucent forward light sheet for the scanner beam."
+ },
+ "beams/light_rays_tile.png": {
+  "size": [
+   512,
+   512
+  ],
+  "tileable": true,
+  "usage": "God-rays overlay in Shallows/Kelp (fade top-to-bottom with UIGradient or Transparency)."
+ },
+ "beams/caustics_tile.png": {
+  "size": [
+   512,
+   512
+  ],
+  "tileable": true,
+  "usage": "Light caustics: project on seabed as Decal/Texture on Shallows (additive, animate)."
+ },
+ "beams/marine_snow_tile.png": {
+  "size": [
+   512,
+   512
+  ],
+  "tileable": true,
+  "usage": "Screen-space marine snow (ImageLabel tile, scroll slowly). Prefer ParticleEmitter in 3D."
+ },
+ "hud/vignette_navy.png": {
+  "size": [
+   512,
+   512
+  ],
+  "usage": "Depth transition screen-edge tint (fullscreen, ZIndex under HUD)."
+ },
+ "hud/vignette_alert.png": {
+  "size": [
+   512,
+   512
+  ],
+  "usage": "Critical Hull/Battery warning edge (no white flash, no strobe; fade slowly <=1Hz)."
+ },
+ "hud/vignette_amber.png": {
+  "size": [
+   512,
+   512
+  ],
+  "usage": "Low reserve warning edge tint."
+ },
+ "hud/sonar_radar_bg.png": {
+  "size": [
+   512,
+   512
+  ],
+  "usage": "Sonar HUD background (circular). Square ImageLabel + UIAspectRatioConstraint."
+ },
+ "hud/sonar_sweep.png": {
+  "size": [
+   512,
+   512
+  ],
+  "usage": "Rotate this ImageLabel (Rotation) for the sonar sweep; event-driven pings preferred (no per-frame polling)."
+ },
+ "hud/sonar_ring.png": {
+  "size": [
+   512,
+   512
+  ],
+  "usage": "Expanding sonar pulse (UI scale tween or ring mesh texture)."
+ },
+ "hud/scan_reticle.png": {
+  "size": [
+   256,
+   256
+  ],
+  "usage": "Scanner lock reticle (BillboardGui on target)."
+ },
+ "hud/target_ring_holo.png": {
+  "size": [
+   256,
+   256
+  ],
+  "usage": "Species Scanned: clean holographic ring + brief cyan highlight."
+ },
+ "hud/recall_ring.png": {
+  "size": [
+   512,
+   512
+  ],
+  "usage": "Emergency Recall light-ring presentation (rotate + scale; with cavitation bubbles)."
+ },
+ "hud/bio_pulse.png": {
+  "size": [
+   256,
+   256
+  ],
+  "usage": "Bioluminescent pulse (tint per creature). Animate ImageTransparency, not per-frame logic."
+ },
+ "backdrops/depth_shallows.png": {
+  "size": [
+   16,
+   256
+  ],
+  "usage": "Vertical zone gradient (ImageLabel Stretch) for terminals / loading / codex backgrounds."
+ },
+ "backdrops/depth_kelp_forest.png": {
+  "size": [
+   16,
+   256
+  ],
+  "usage": "Vertical zone gradient (ImageLabel Stretch) for terminals / loading / codex backgrounds."
+ },
+ "backdrops/depth_twilight_reef.png": {
+  "size": [
+   16,
+   256
+  ],
+  "usage": "Vertical zone gradient (ImageLabel Stretch) for terminals / loading / codex backgrounds."
+ },
+ "backdrops/depth_station.png": {
+  "size": [
+   16,
+   256
+  ],
+  "usage": "Vertical zone gradient (ImageLabel Stretch) for terminals / loading / codex backgrounds."
+ },
+ "backdrops/depth_abyss.png": {
+  "size": [
+   16,
+   256
+  ],
+  "usage": "Vertical zone gradient (ImageLabel Stretch) for terminals / loading / codex backgrounds."
+ }
+}

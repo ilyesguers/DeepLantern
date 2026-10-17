@@ -1,0 +1,4255 @@
+{
+ "cell": 128,
+ "sheets": {
+  "icons_plated_1.png": {
+   "size": [
+    1024,
+    1024
+   ],
+   "count": 64
+  },
+  "icons_plated_2.png": {
+   "size": [
+    1024,
+    1024
+   ],
+   "count": 47
+  },
+  "icons_glyph_1.png": {
+   "size": [
+    1024,
+    1024
+   ],
+   "count": 64
+  },
+  "icons_glyph_2.png": {
+   "size": [
+    1024,
+    1024
+   ],
+   "count": 47
+  }
+ },
+ "icons": {
+  "anomalies/energy_vortex": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     0,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     0,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "anomalies/gas_vent": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     128,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     128,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "anomalies/leviathan": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     256,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     256,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "anomalies/light_phenomenon": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     384,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     384,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "anomalies/magnetic_field": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     512,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     512,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "anomalies/unknown_signal": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     640,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     640,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "classes/sub_abyssal": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     768,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     768,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "classes/sub_hauler": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     896,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     896,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "classes/sub_multicrew": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     0,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     0,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "classes/sub_scout": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     128,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     128,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "classes/sub_surveyor": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     256,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     256,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "codex/codex_mastered": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     384,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     384,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "codex/codex_scanned": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     512,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     512,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "codex/codex_sighted": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     640,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     640,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "codex/codex_studied": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     768,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     768,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "creatures/alien_fish": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     896,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     896,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "creatures/anglerfish": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     0,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     0,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "creatures/coral_crab": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     128,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     128,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "creatures/coral_guardian": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     256,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     256,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "creatures/jellyfish": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     384,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     384,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "creatures/manta_ray": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     512,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     512,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "creatures/reef_shark": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     640,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     640,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "creatures/tube_worm": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     768,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     768,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "equipment/acoustic_decoy": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     896,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     896,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "equipment/lantern_tool": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     0,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     0,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "equipment/plasma_cutter": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     128,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     128,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "equipment/recall_beacon": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     256,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     256,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "equipment/scanner_tool": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     384,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     384,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "equipment/secure_cargo": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     512,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     512,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "equipment/thermal_unit": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     640,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     640,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/battery_oxygen": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     768,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     768,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/cargo": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     896,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     896,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/check": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     0,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     0,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/close": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     128,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     128,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/codex": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     256,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     256,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/credits": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     384,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     384,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/depth": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     512,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     512,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/hazard": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     640,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     640,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/hull": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     768,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     768,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/lantern": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     896,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     896,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/lock": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     0,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     0,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/objective": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     128,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     128,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/ping": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     256,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     256,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/quest": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     384,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     384,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/recall": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     512,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     512,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/research_data": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     640,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     640,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/scanner": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     768,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     768,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/secure_cargo_buoy": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     896,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     896,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/settings": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     0,
+     768,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     0,
+     768,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/sonar": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     128,
+     768,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     128,
+     768,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/station": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     256,
+     768,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     256,
+     768,
+     128,
+     128
+    ]
+   }
+  },
+  "hud/warning": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     384,
+     768,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     384,
+     768,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/ancient_lantern": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     512,
+     768,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     512,
+     768,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/ancient_relic": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     640,
+     768,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     640,
+     768,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/battery_cell": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     768,
+     768,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     768,
+     768,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/common_ore": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     896,
+     768,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     896,
+     768,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/coral_sample": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     0,
+     896,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     0,
+     896,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/crystal": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     128,
+     896,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     128,
+     896,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/crystal_relic": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     256,
+     896,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     256,
+     896,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/data_pod": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     384,
+     896,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     384,
+     896,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/dna_sample": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     512,
+     896,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     512,
+     896,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/element_shard": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     640,
+     896,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     640,
+     896,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/fiber": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     768,
+     896,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     768,
+     896,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/fossil": {
+   "plated": {
+    "sheet": "icons_plated_1.png",
+    "rect": [
+     896,
+     896,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_1.png",
+    "rect": [
+     896,
+     896,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/gas_canister": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     0,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     0,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/gold_nugget": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     128,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     128,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/obsidian_core": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     256,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     256,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/organic_matter": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     384,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     384,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/organism": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     512,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     512,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/oxygen_canister": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     640,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     640,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/rare_crystal": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     768,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     768,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/relic_fragment": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     896,
+     0,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     896,
+     0,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/relic_orb": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     0,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     0,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/repair_kit": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     128,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     128,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/ruby_crystal": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     256,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     256,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/sample_jar": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     384,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     384,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/seaweed": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     512,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     512,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/signal_flare": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     640,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     640,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/stone_tablet": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     768,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     768,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/titanium": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     896,
+     128,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     896,
+     128,
+     128,
+     128
+    ]
+   }
+  },
+  "resources/tool_kit": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     0,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     0,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "roles/ping_cargo_detected": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     128,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     128,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "roles/ping_check_battery": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     256,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     256,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "roles/ping_hazard_ahead": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     384,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     384,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "roles/ping_return_to_dock": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     512,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     512,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "roles/ping_scan_target": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     640,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     640,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "roles/role_collector": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     768,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     768,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "roles/role_lamp_operator": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     896,
+     256,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     896,
+     256,
+     128,
+     128
+    ]
+   }
+  },
+  "roles/role_navigator": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     0,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     0,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "roles/role_pilot": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     128,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     128,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "tiers/tier_citadel": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     256,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     256,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "tiers/tier_complex": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     384,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     384,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "tiers/tier_deep_empire": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     512,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     512,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "tiers/tier_outpost": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     640,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     640,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "tiers/tier_station": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     768,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     768,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "wings/wing_aquarium": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     896,
+     384,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     896,
+     384,
+     128,
+     128
+    ]
+   }
+  },
+  "wings/wing_archive": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     0,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     0,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "wings/wing_docking_ring": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     128,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     128,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "wings/wing_observatory": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     256,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     256,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "wings/wing_power_core": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     384,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     384,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "wings/wing_research_lab": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     512,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     512,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "wings/wing_sub_dock": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     640,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     640,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "wings/wing_workshop": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     768,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     768,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "zones/zone_abyss": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     896,
+     512,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     896,
+     512,
+     128,
+     128
+    ]
+   }
+  },
+  "zones/zone_beyond": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     0,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     0,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "zones/zone_kelp_forest": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     128,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     128,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "zones/zone_lost_ruins": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     256,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     256,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "zones/zone_shallows": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     384,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     384,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "zones/zone_station": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     512,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     512,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "zones/zone_the_hollow": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     640,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     640,
+     640,
+     128,
+     128
+    ]
+   }
+  },
+  "zones/zone_twilight_reef": {
+   "plated": {
+    "sheet": "icons_plated_2.png",
+    "rect": [
+     768,
+     640,
+     128,
+     128
+    ]
+   },
+   "glyph": {
+    "sheet": "icons_glyph_2.png",
+    "rect": [
+     768,
+     640,
+     128,
+     128
+    ]
+   }
+  }
+ },
+ "icons_flat": {
+  "anomalies/energy_vortex#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    0,
+    0,
+    128,
+    128
+   ]
+  },
+  "anomalies/energy_vortex#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    0,
+    0,
+    128,
+    128
+   ]
+  },
+  "anomalies/gas_vent#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    128,
+    0,
+    128,
+    128
+   ]
+  },
+  "anomalies/gas_vent#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    128,
+    0,
+    128,
+    128
+   ]
+  },
+  "anomalies/leviathan#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    256,
+    0,
+    128,
+    128
+   ]
+  },
+  "anomalies/leviathan#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    256,
+    0,
+    128,
+    128
+   ]
+  },
+  "anomalies/light_phenomenon#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    384,
+    0,
+    128,
+    128
+   ]
+  },
+  "anomalies/light_phenomenon#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    384,
+    0,
+    128,
+    128
+   ]
+  },
+  "anomalies/magnetic_field#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    512,
+    0,
+    128,
+    128
+   ]
+  },
+  "anomalies/magnetic_field#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    512,
+    0,
+    128,
+    128
+   ]
+  },
+  "anomalies/unknown_signal#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    640,
+    0,
+    128,
+    128
+   ]
+  },
+  "anomalies/unknown_signal#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    640,
+    0,
+    128,
+    128
+   ]
+  },
+  "classes/sub_abyssal#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    768,
+    0,
+    128,
+    128
+   ]
+  },
+  "classes/sub_abyssal#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    768,
+    0,
+    128,
+    128
+   ]
+  },
+  "classes/sub_hauler#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    896,
+    0,
+    128,
+    128
+   ]
+  },
+  "classes/sub_hauler#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    896,
+    0,
+    128,
+    128
+   ]
+  },
+  "classes/sub_multicrew#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    0,
+    128,
+    128,
+    128
+   ]
+  },
+  "classes/sub_multicrew#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    0,
+    128,
+    128,
+    128
+   ]
+  },
+  "classes/sub_scout#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    128,
+    128,
+    128,
+    128
+   ]
+  },
+  "classes/sub_scout#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    128,
+    128,
+    128,
+    128
+   ]
+  },
+  "classes/sub_surveyor#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    256,
+    128,
+    128,
+    128
+   ]
+  },
+  "classes/sub_surveyor#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    256,
+    128,
+    128,
+    128
+   ]
+  },
+  "codex/codex_mastered#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    384,
+    128,
+    128,
+    128
+   ]
+  },
+  "codex/codex_mastered#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    384,
+    128,
+    128,
+    128
+   ]
+  },
+  "codex/codex_scanned#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    512,
+    128,
+    128,
+    128
+   ]
+  },
+  "codex/codex_scanned#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    512,
+    128,
+    128,
+    128
+   ]
+  },
+  "codex/codex_sighted#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    640,
+    128,
+    128,
+    128
+   ]
+  },
+  "codex/codex_sighted#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    640,
+    128,
+    128,
+    128
+   ]
+  },
+  "codex/codex_studied#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    768,
+    128,
+    128,
+    128
+   ]
+  },
+  "codex/codex_studied#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    768,
+    128,
+    128,
+    128
+   ]
+  },
+  "creatures/alien_fish#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    896,
+    128,
+    128,
+    128
+   ]
+  },
+  "creatures/alien_fish#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    896,
+    128,
+    128,
+    128
+   ]
+  },
+  "creatures/anglerfish#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    0,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/anglerfish#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    0,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/coral_crab#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    128,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/coral_crab#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    128,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/coral_guardian#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    256,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/coral_guardian#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    256,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/jellyfish#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    384,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/jellyfish#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    384,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/manta_ray#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    512,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/manta_ray#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    512,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/reef_shark#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    640,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/reef_shark#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    640,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/tube_worm#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    768,
+    256,
+    128,
+    128
+   ]
+  },
+  "creatures/tube_worm#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    768,
+    256,
+    128,
+    128
+   ]
+  },
+  "equipment/acoustic_decoy#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    896,
+    256,
+    128,
+    128
+   ]
+  },
+  "equipment/acoustic_decoy#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    896,
+    256,
+    128,
+    128
+   ]
+  },
+  "equipment/lantern_tool#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    0,
+    384,
+    128,
+    128
+   ]
+  },
+  "equipment/lantern_tool#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    0,
+    384,
+    128,
+    128
+   ]
+  },
+  "equipment/plasma_cutter#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    128,
+    384,
+    128,
+    128
+   ]
+  },
+  "equipment/plasma_cutter#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    128,
+    384,
+    128,
+    128
+   ]
+  },
+  "equipment/recall_beacon#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    256,
+    384,
+    128,
+    128
+   ]
+  },
+  "equipment/recall_beacon#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    256,
+    384,
+    128,
+    128
+   ]
+  },
+  "equipment/scanner_tool#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    384,
+    384,
+    128,
+    128
+   ]
+  },
+  "equipment/scanner_tool#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    384,
+    384,
+    128,
+    128
+   ]
+  },
+  "equipment/secure_cargo#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    512,
+    384,
+    128,
+    128
+   ]
+  },
+  "equipment/secure_cargo#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    512,
+    384,
+    128,
+    128
+   ]
+  },
+  "equipment/thermal_unit#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    640,
+    384,
+    128,
+    128
+   ]
+  },
+  "equipment/thermal_unit#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    640,
+    384,
+    128,
+    128
+   ]
+  },
+  "hud/battery_oxygen#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    768,
+    384,
+    128,
+    128
+   ]
+  },
+  "hud/battery_oxygen#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    768,
+    384,
+    128,
+    128
+   ]
+  },
+  "hud/cargo#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    896,
+    384,
+    128,
+    128
+   ]
+  },
+  "hud/cargo#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    896,
+    384,
+    128,
+    128
+   ]
+  },
+  "hud/check#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    0,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/check#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    0,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/close#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    128,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/close#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    128,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/codex#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    256,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/codex#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    256,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/credits#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    384,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/credits#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    384,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/depth#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    512,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/depth#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    512,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/hazard#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    640,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/hazard#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    640,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/hull#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    768,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/hull#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    768,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/lantern#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    896,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/lantern#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    896,
+    512,
+    128,
+    128
+   ]
+  },
+  "hud/lock#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    0,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/lock#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    0,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/objective#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    128,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/objective#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    128,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/ping#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    256,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/ping#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    256,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/quest#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    384,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/quest#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    384,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/recall#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    512,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/recall#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    512,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/research_data#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    640,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/research_data#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    640,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/scanner#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    768,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/scanner#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    768,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/secure_cargo_buoy#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    896,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/secure_cargo_buoy#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    896,
+    640,
+    128,
+    128
+   ]
+  },
+  "hud/settings#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    0,
+    768,
+    128,
+    128
+   ]
+  },
+  "hud/settings#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    0,
+    768,
+    128,
+    128
+   ]
+  },
+  "hud/sonar#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    128,
+    768,
+    128,
+    128
+   ]
+  },
+  "hud/sonar#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    128,
+    768,
+    128,
+    128
+   ]
+  },
+  "hud/station#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    256,
+    768,
+    128,
+    128
+   ]
+  },
+  "hud/station#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    256,
+    768,
+    128,
+    128
+   ]
+  },
+  "hud/warning#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    384,
+    768,
+    128,
+    128
+   ]
+  },
+  "hud/warning#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    384,
+    768,
+    128,
+    128
+   ]
+  },
+  "resources/ancient_lantern#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    512,
+    768,
+    128,
+    128
+   ]
+  },
+  "resources/ancient_lantern#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    512,
+    768,
+    128,
+    128
+   ]
+  },
+  "resources/ancient_relic#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    640,
+    768,
+    128,
+    128
+   ]
+  },
+  "resources/ancient_relic#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    640,
+    768,
+    128,
+    128
+   ]
+  },
+  "resources/battery_cell#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    768,
+    768,
+    128,
+    128
+   ]
+  },
+  "resources/battery_cell#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    768,
+    768,
+    128,
+    128
+   ]
+  },
+  "resources/common_ore#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    896,
+    768,
+    128,
+    128
+   ]
+  },
+  "resources/common_ore#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    896,
+    768,
+    128,
+    128
+   ]
+  },
+  "resources/coral_sample#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    0,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/coral_sample#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    0,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/crystal#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    128,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/crystal#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    128,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/crystal_relic#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    256,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/crystal_relic#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    256,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/data_pod#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    384,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/data_pod#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    384,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/dna_sample#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    512,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/dna_sample#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    512,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/element_shard#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    640,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/element_shard#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    640,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/fiber#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    768,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/fiber#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    768,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/fossil#plated": {
+   "sheet": "icons_plated_1.png",
+   "rect": [
+    896,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/fossil#glyph": {
+   "sheet": "icons_glyph_1.png",
+   "rect": [
+    896,
+    896,
+    128,
+    128
+   ]
+  },
+  "resources/gas_canister#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    0,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/gas_canister#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    0,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/gold_nugget#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    128,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/gold_nugget#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    128,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/obsidian_core#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    256,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/obsidian_core#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    256,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/organic_matter#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    384,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/organic_matter#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    384,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/organism#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    512,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/organism#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    512,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/oxygen_canister#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    640,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/oxygen_canister#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    640,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/rare_crystal#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    768,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/rare_crystal#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    768,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/relic_fragment#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    896,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/relic_fragment#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    896,
+    0,
+    128,
+    128
+   ]
+  },
+  "resources/relic_orb#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    0,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/relic_orb#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    0,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/repair_kit#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    128,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/repair_kit#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    128,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/ruby_crystal#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    256,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/ruby_crystal#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    256,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/sample_jar#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    384,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/sample_jar#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    384,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/seaweed#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    512,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/seaweed#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    512,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/signal_flare#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    640,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/signal_flare#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    640,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/stone_tablet#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    768,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/stone_tablet#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    768,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/titanium#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    896,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/titanium#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    896,
+    128,
+    128,
+    128
+   ]
+  },
+  "resources/tool_kit#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    0,
+    256,
+    128,
+    128
+   ]
+  },
+  "resources/tool_kit#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    0,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/ping_cargo_detected#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    128,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/ping_cargo_detected#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    128,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/ping_check_battery#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    256,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/ping_check_battery#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    256,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/ping_hazard_ahead#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    384,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/ping_hazard_ahead#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    384,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/ping_return_to_dock#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    512,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/ping_return_to_dock#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    512,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/ping_scan_target#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    640,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/ping_scan_target#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    640,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/role_collector#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    768,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/role_collector#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    768,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/role_lamp_operator#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    896,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/role_lamp_operator#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    896,
+    256,
+    128,
+    128
+   ]
+  },
+  "roles/role_navigator#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    0,
+    384,
+    128,
+    128
+   ]
+  },
+  "roles/role_navigator#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    0,
+    384,
+    128,
+    128
+   ]
+  },
+  "roles/role_pilot#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    128,
+    384,
+    128,
+    128
+   ]
+  },
+  "roles/role_pilot#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    128,
+    384,
+    128,
+    128
+   ]
+  },
+  "tiers/tier_citadel#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    256,
+    384,
+    128,
+    128
+   ]
+  },
+  "tiers/tier_citadel#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    256,
+    384,
+    128,
+    128
+   ]
+  },
+  "tiers/tier_complex#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    384,
+    384,
+    128,
+    128
+   ]
+  },
+  "tiers/tier_complex#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    384,
+    384,
+    128,
+    128
+   ]
+  },
+  "tiers/tier_deep_empire#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    512,
+    384,
+    128,
+    128
+   ]
+  },
+  "tiers/tier_deep_empire#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    512,
+    384,
+    128,
+    128
+   ]
+  },
+  "tiers/tier_outpost#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    640,
+    384,
+    128,
+    128
+   ]
+  },
+  "tiers/tier_outpost#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    640,
+    384,
+    128,
+    128
+   ]
+  },
+  "tiers/tier_station#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    768,
+    384,
+    128,
+    128
+   ]
+  },
+  "tiers/tier_station#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    768,
+    384,
+    128,
+    128
+   ]
+  },
+  "wings/wing_aquarium#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    896,
+    384,
+    128,
+    128
+   ]
+  },
+  "wings/wing_aquarium#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    896,
+    384,
+    128,
+    128
+   ]
+  },
+  "wings/wing_archive#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    0,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_archive#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    0,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_docking_ring#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    128,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_docking_ring#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    128,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_observatory#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    256,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_observatory#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    256,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_power_core#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    384,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_power_core#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    384,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_research_lab#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    512,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_research_lab#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    512,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_sub_dock#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    640,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_sub_dock#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    640,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_workshop#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    768,
+    512,
+    128,
+    128
+   ]
+  },
+  "wings/wing_workshop#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    768,
+    512,
+    128,
+    128
+   ]
+  },
+  "zones/zone_abyss#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    896,
+    512,
+    128,
+    128
+   ]
+  },
+  "zones/zone_abyss#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    896,
+    512,
+    128,
+    128
+   ]
+  },
+  "zones/zone_beyond#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    0,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_beyond#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    0,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_kelp_forest#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    128,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_kelp_forest#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    128,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_lost_ruins#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    256,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_lost_ruins#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    256,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_shallows#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    384,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_shallows#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    384,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_station#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    512,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_station#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    512,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_the_hollow#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    640,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_the_hollow#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    640,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_twilight_reef#plated": {
+   "sheet": "icons_plated_2.png",
+   "rect": [
+    768,
+    640,
+    128,
+    128
+   ]
+  },
+  "zones/zone_twilight_reef#glyph": {
+   "sheet": "icons_glyph_2.png",
+   "rect": [
+    768,
+    640,
+    128,
+    128
+   ]
+  }
+ }
+}

@@ -1,0 +1,1112 @@
+{
+ "hud/battery_oxygen": {
+  "category": "hud",
+  "accent": "#00D1FF",
+  "plated": "hud/battery_oxygen.png",
+  "glyph": "glyph/hud/battery_oxygen.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/hull": {
+  "category": "hud",
+  "accent": "#2F80ED",
+  "plated": "hud/hull.png",
+  "glyph": "glyph/hud/hull.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/cargo": {
+  "category": "hud",
+  "accent": "#F59E0B",
+  "plated": "hud/cargo.png",
+  "glyph": "glyph/hud/cargo.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/depth": {
+  "category": "hud",
+  "accent": "#00D1FF",
+  "plated": "hud/depth.png",
+  "glyph": "glyph/hud/depth.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/scanner": {
+  "category": "hud",
+  "accent": "#00D1FF",
+  "plated": "hud/scanner.png",
+  "glyph": "glyph/hud/scanner.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/sonar": {
+  "category": "hud",
+  "accent": "#00D1FF",
+  "plated": "hud/sonar.png",
+  "glyph": "glyph/hud/sonar.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/lantern": {
+  "category": "hud",
+  "accent": "#F59E0B",
+  "plated": "hud/lantern.png",
+  "glyph": "glyph/hud/lantern.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/recall": {
+  "category": "hud",
+  "accent": "#00D1FF",
+  "plated": "hud/recall.png",
+  "glyph": "glyph/hud/recall.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/ping": {
+  "category": "hud",
+  "accent": "#00D1FF",
+  "plated": "hud/ping.png",
+  "glyph": "glyph/hud/ping.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/objective": {
+  "category": "hud",
+  "accent": "#00D1FF",
+  "plated": "hud/objective.png",
+  "glyph": "glyph/hud/objective.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/research_data": {
+  "category": "hud",
+  "accent": "#2F80ED",
+  "plated": "hud/research_data.png",
+  "glyph": "glyph/hud/research_data.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/credits": {
+  "category": "hud",
+  "accent": "#FBBF24",
+  "plated": "hud/credits.png",
+  "glyph": "glyph/hud/credits.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/warning": {
+  "category": "hud",
+  "accent": "#F59E0B",
+  "plated": "hud/warning.png",
+  "glyph": "glyph/hud/warning.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/hazard": {
+  "category": "hud",
+  "accent": "#EF4444",
+  "plated": "hud/hazard.png",
+  "glyph": "glyph/hud/hazard.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/check": {
+  "category": "hud",
+  "accent": "#4ADE80",
+  "plated": "hud/check.png",
+  "glyph": "glyph/hud/check.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/close": {
+  "category": "hud",
+  "accent": "#EF4444",
+  "plated": "hud/close.png",
+  "glyph": "glyph/hud/close.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/settings": {
+  "category": "hud",
+  "accent": "#94A3B8",
+  "plated": "hud/settings.png",
+  "glyph": "glyph/hud/settings.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/codex": {
+  "category": "hud",
+  "accent": "#00D1FF",
+  "plated": "hud/codex.png",
+  "glyph": "glyph/hud/codex.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/quest": {
+  "category": "hud",
+  "accent": "#00A893",
+  "plated": "hud/quest.png",
+  "glyph": "glyph/hud/quest.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/station": {
+  "category": "hud",
+  "accent": "#00D1FF",
+  "plated": "hud/station.png",
+  "glyph": "glyph/hud/station.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/lock": {
+  "category": "hud",
+  "accent": "#94A3B8",
+  "plated": "hud/lock.png",
+  "glyph": "glyph/hud/lock.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "hud/secure_cargo_buoy": {
+  "category": "hud",
+  "accent": "#F59E0B",
+  "plated": "hud/secure_cargo_buoy.png",
+  "glyph": "glyph/hud/secure_cargo_buoy.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "roles/role_pilot": {
+  "category": "roles",
+  "accent": "#00D1FF",
+  "plated": "roles/role_pilot.png",
+  "glyph": "glyph/roles/role_pilot.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "roles/role_lamp_operator": {
+  "category": "roles",
+  "accent": "#F59E0B",
+  "plated": "roles/role_lamp_operator.png",
+  "glyph": "glyph/roles/role_lamp_operator.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "roles/role_navigator": {
+  "category": "roles",
+  "accent": "#00A893",
+  "plated": "roles/role_navigator.png",
+  "glyph": "glyph/roles/role_navigator.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "roles/role_collector": {
+  "category": "roles",
+  "accent": "#4ADE80",
+  "plated": "roles/role_collector.png",
+  "glyph": "glyph/roles/role_collector.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "roles/ping_scan_target": {
+  "category": "roles",
+  "accent": "#00D1FF",
+  "plated": "roles/ping_scan_target.png",
+  "glyph": "glyph/roles/ping_scan_target.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "roles/ping_hazard_ahead": {
+  "category": "roles",
+  "accent": "#EF4444",
+  "plated": "roles/ping_hazard_ahead.png",
+  "glyph": "glyph/roles/ping_hazard_ahead.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "roles/ping_cargo_detected": {
+  "category": "roles",
+  "accent": "#F59E0B",
+  "plated": "roles/ping_cargo_detected.png",
+  "glyph": "glyph/roles/ping_cargo_detected.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "roles/ping_return_to_dock": {
+  "category": "roles",
+  "accent": "#00D1FF",
+  "plated": "roles/ping_return_to_dock.png",
+  "glyph": "glyph/roles/ping_return_to_dock.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "roles/ping_check_battery": {
+  "category": "roles",
+  "accent": "#F59E0B",
+  "plated": "roles/ping_check_battery.png",
+  "glyph": "glyph/roles/ping_check_battery.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/crystal": {
+  "category": "resources",
+  "accent": "#2F80ED",
+  "plated": "resources/crystal.png",
+  "glyph": "glyph/resources/crystal.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/rare_crystal": {
+  "category": "resources",
+  "accent": "#8B5CF6",
+  "plated": "resources/rare_crystal.png",
+  "glyph": "glyph/resources/rare_crystal.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/ruby_crystal": {
+  "category": "resources",
+  "accent": "#F472B6",
+  "plated": "resources/ruby_crystal.png",
+  "glyph": "glyph/resources/ruby_crystal.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/titanium": {
+  "category": "resources",
+  "accent": "#94A3B8",
+  "plated": "resources/titanium.png",
+  "glyph": "glyph/resources/titanium.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/gold_nugget": {
+  "category": "resources",
+  "accent": "#FBBF24",
+  "plated": "resources/gold_nugget.png",
+  "glyph": "glyph/resources/gold_nugget.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/common_ore": {
+  "category": "resources",
+  "accent": "#94A3B8",
+  "plated": "resources/common_ore.png",
+  "glyph": "glyph/resources/common_ore.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/element_shard": {
+  "category": "resources",
+  "accent": "#8B5CF6",
+  "plated": "resources/element_shard.png",
+  "glyph": "glyph/resources/element_shard.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/organic_matter": {
+  "category": "resources",
+  "accent": "#4ADE80",
+  "plated": "resources/organic_matter.png",
+  "glyph": "glyph/resources/organic_matter.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/fiber": {
+  "category": "resources",
+  "accent": "#E6F1FF",
+  "plated": "resources/fiber.png",
+  "glyph": "glyph/resources/fiber.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/gas_canister": {
+  "category": "resources",
+  "accent": "#F59E0B",
+  "plated": "resources/gas_canister.png",
+  "glyph": "glyph/resources/gas_canister.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/sample_jar": {
+  "category": "resources",
+  "accent": "#00D1FF",
+  "plated": "resources/sample_jar.png",
+  "glyph": "glyph/resources/sample_jar.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/coral_sample": {
+  "category": "resources",
+  "accent": "#F472B6",
+  "plated": "resources/coral_sample.png",
+  "glyph": "glyph/resources/coral_sample.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/seaweed": {
+  "category": "resources",
+  "accent": "#4ADE80",
+  "plated": "resources/seaweed.png",
+  "glyph": "glyph/resources/seaweed.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/organism": {
+  "category": "resources",
+  "accent": "#4ADE80",
+  "plated": "resources/organism.png",
+  "glyph": "glyph/resources/organism.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/dna_sample": {
+  "category": "resources",
+  "accent": "#00D1FF",
+  "plated": "resources/dna_sample.png",
+  "glyph": "glyph/resources/dna_sample.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/ancient_relic": {
+  "category": "resources",
+  "accent": "#FBBF24",
+  "plated": "resources/ancient_relic.png",
+  "glyph": "glyph/resources/ancient_relic.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/ancient_lantern": {
+  "category": "resources",
+  "accent": "#00D1FF",
+  "plated": "resources/ancient_lantern.png",
+  "glyph": "glyph/resources/ancient_lantern.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/crystal_relic": {
+  "category": "resources",
+  "accent": "#8B5CF6",
+  "plated": "resources/crystal_relic.png",
+  "glyph": "glyph/resources/crystal_relic.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/fossil": {
+  "category": "resources",
+  "accent": "#F59E0B",
+  "plated": "resources/fossil.png",
+  "glyph": "glyph/resources/fossil.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/obsidian_core": {
+  "category": "resources",
+  "accent": "#8B5CF6",
+  "plated": "resources/obsidian_core.png",
+  "glyph": "glyph/resources/obsidian_core.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/data_pod": {
+  "category": "resources",
+  "accent": "#00D1FF",
+  "plated": "resources/data_pod.png",
+  "glyph": "glyph/resources/data_pod.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/stone_tablet": {
+  "category": "resources",
+  "accent": "#FBBF24",
+  "plated": "resources/stone_tablet.png",
+  "glyph": "glyph/resources/stone_tablet.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/relic_fragment": {
+  "category": "resources",
+  "accent": "#F59E0B",
+  "plated": "resources/relic_fragment.png",
+  "glyph": "glyph/resources/relic_fragment.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/relic_orb": {
+  "category": "resources",
+  "accent": "#8B5CF6",
+  "plated": "resources/relic_orb.png",
+  "glyph": "glyph/resources/relic_orb.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/battery_cell": {
+  "category": "resources",
+  "accent": "#4ADE80",
+  "plated": "resources/battery_cell.png",
+  "glyph": "glyph/resources/battery_cell.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/oxygen_canister": {
+  "category": "resources",
+  "accent": "#00D1FF",
+  "plated": "resources/oxygen_canister.png",
+  "glyph": "glyph/resources/oxygen_canister.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/repair_kit": {
+  "category": "resources",
+  "accent": "#EF4444",
+  "plated": "resources/repair_kit.png",
+  "glyph": "glyph/resources/repair_kit.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/tool_kit": {
+  "category": "resources",
+  "accent": "#F59E0B",
+  "plated": "resources/tool_kit.png",
+  "glyph": "glyph/resources/tool_kit.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "resources/signal_flare": {
+  "category": "resources",
+  "accent": "#EF4444",
+  "plated": "resources/signal_flare.png",
+  "glyph": "glyph/resources/signal_flare.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "anomalies/energy_vortex": {
+  "category": "anomalies",
+  "accent": "#00D1FF",
+  "plated": "anomalies/energy_vortex.png",
+  "glyph": "glyph/anomalies/energy_vortex.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "anomalies/gas_vent": {
+  "category": "anomalies",
+  "accent": "#00A893",
+  "plated": "anomalies/gas_vent.png",
+  "glyph": "glyph/anomalies/gas_vent.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "anomalies/magnetic_field": {
+  "category": "anomalies",
+  "accent": "#8B5CF6",
+  "plated": "anomalies/magnetic_field.png",
+  "glyph": "glyph/anomalies/magnetic_field.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "anomalies/light_phenomenon": {
+  "category": "anomalies",
+  "accent": "#F59E0B",
+  "plated": "anomalies/light_phenomenon.png",
+  "glyph": "glyph/anomalies/light_phenomenon.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "anomalies/unknown_signal": {
+  "category": "anomalies",
+  "accent": "#00D1FF",
+  "plated": "anomalies/unknown_signal.png",
+  "glyph": "glyph/anomalies/unknown_signal.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "anomalies/leviathan": {
+  "category": "anomalies",
+  "accent": "#2F80ED",
+  "plated": "anomalies/leviathan.png",
+  "glyph": "glyph/anomalies/leviathan.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "equipment/lantern_tool": {
+  "category": "equipment",
+  "accent": "#F59E0B",
+  "plated": "equipment/lantern_tool.png",
+  "glyph": "glyph/equipment/lantern_tool.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "equipment/scanner_tool": {
+  "category": "equipment",
+  "accent": "#00D1FF",
+  "plated": "equipment/scanner_tool.png",
+  "glyph": "glyph/equipment/scanner_tool.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "equipment/plasma_cutter": {
+  "category": "equipment",
+  "accent": "#F59E0B",
+  "plated": "equipment/plasma_cutter.png",
+  "glyph": "glyph/equipment/plasma_cutter.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "equipment/thermal_unit": {
+  "category": "equipment",
+  "accent": "#00D1FF",
+  "plated": "equipment/thermal_unit.png",
+  "glyph": "glyph/equipment/thermal_unit.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "equipment/acoustic_decoy": {
+  "category": "equipment",
+  "accent": "#8B5CF6",
+  "plated": "equipment/acoustic_decoy.png",
+  "glyph": "glyph/equipment/acoustic_decoy.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "equipment/secure_cargo": {
+  "category": "equipment",
+  "accent": "#F59E0B",
+  "plated": "equipment/secure_cargo.png",
+  "glyph": "glyph/equipment/secure_cargo.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "equipment/recall_beacon": {
+  "category": "equipment",
+  "accent": "#00D1FF",
+  "plated": "equipment/recall_beacon.png",
+  "glyph": "glyph/equipment/recall_beacon.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "codex/codex_sighted": {
+  "category": "codex",
+  "accent": "#94A3B8",
+  "plated": "codex/codex_sighted.png",
+  "glyph": "glyph/codex/codex_sighted.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "codex/codex_scanned": {
+  "category": "codex",
+  "accent": "#00D1FF",
+  "plated": "codex/codex_scanned.png",
+  "glyph": "glyph/codex/codex_scanned.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "codex/codex_studied": {
+  "category": "codex",
+  "accent": "#8B5CF6",
+  "plated": "codex/codex_studied.png",
+  "glyph": "glyph/codex/codex_studied.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "codex/codex_mastered": {
+  "category": "codex",
+  "accent": "#FBBF24",
+  "plated": "codex/codex_mastered.png",
+  "glyph": "glyph/codex/codex_mastered.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "creatures/jellyfish": {
+  "category": "creatures",
+  "accent": "#00D1FF",
+  "plated": "creatures/jellyfish.png",
+  "glyph": "glyph/creatures/jellyfish.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "creatures/anglerfish": {
+  "category": "creatures",
+  "accent": "#8B5CF6",
+  "plated": "creatures/anglerfish.png",
+  "glyph": "glyph/creatures/anglerfish.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "creatures/reef_shark": {
+  "category": "creatures",
+  "accent": "#2F80ED",
+  "plated": "creatures/reef_shark.png",
+  "glyph": "glyph/creatures/reef_shark.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "creatures/manta_ray": {
+  "category": "creatures",
+  "accent": "#00A893",
+  "plated": "creatures/manta_ray.png",
+  "glyph": "glyph/creatures/manta_ray.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "creatures/coral_crab": {
+  "category": "creatures",
+  "accent": "#EF4444",
+  "plated": "creatures/coral_crab.png",
+  "glyph": "glyph/creatures/coral_crab.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "creatures/tube_worm": {
+  "category": "creatures",
+  "accent": "#F472B6",
+  "plated": "creatures/tube_worm.png",
+  "glyph": "glyph/creatures/tube_worm.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "creatures/alien_fish": {
+  "category": "creatures",
+  "accent": "#8B5CF6",
+  "plated": "creatures/alien_fish.png",
+  "glyph": "glyph/creatures/alien_fish.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "creatures/coral_guardian": {
+  "category": "creatures",
+  "accent": "#F59E0B",
+  "plated": "creatures/coral_guardian.png",
+  "glyph": "glyph/creatures/coral_guardian.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "zones/zone_shallows": {
+  "category": "zones",
+  "accent": "#00D1FF",
+  "plated": "zones/zone_shallows.png",
+  "glyph": "glyph/zones/zone_shallows.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "zones/zone_kelp_forest": {
+  "category": "zones",
+  "accent": "#4ADE80",
+  "plated": "zones/zone_kelp_forest.png",
+  "glyph": "glyph/zones/zone_kelp_forest.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "zones/zone_twilight_reef": {
+  "category": "zones",
+  "accent": "#8B5CF6",
+  "plated": "zones/zone_twilight_reef.png",
+  "glyph": "glyph/zones/zone_twilight_reef.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "zones/zone_station": {
+  "category": "zones",
+  "accent": "#00D1FF",
+  "plated": "zones/zone_station.png",
+  "glyph": "glyph/zones/zone_station.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "zones/zone_abyss": {
+  "category": "zones",
+  "accent": "#2F80ED",
+  "plated": "zones/zone_abyss.png",
+  "glyph": "glyph/zones/zone_abyss.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "zones/zone_lost_ruins": {
+  "category": "zones",
+  "accent": "#FBBF24",
+  "plated": "zones/zone_lost_ruins.png",
+  "glyph": "glyph/zones/zone_lost_ruins.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "zones/zone_the_hollow": {
+  "category": "zones",
+  "accent": "#94A3B8",
+  "plated": "zones/zone_the_hollow.png",
+  "glyph": "glyph/zones/zone_the_hollow.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "zones/zone_beyond": {
+  "category": "zones",
+  "accent": "#F472B6",
+  "plated": "zones/zone_beyond.png",
+  "glyph": "glyph/zones/zone_beyond.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "wings/wing_power_core": {
+  "category": "wings",
+  "accent": "#F59E0B",
+  "plated": "wings/wing_power_core.png",
+  "glyph": "glyph/wings/wing_power_core.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "wings/wing_sub_dock": {
+  "category": "wings",
+  "accent": "#00D1FF",
+  "plated": "wings/wing_sub_dock.png",
+  "glyph": "glyph/wings/wing_sub_dock.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "wings/wing_workshop": {
+  "category": "wings",
+  "accent": "#F59E0B",
+  "plated": "wings/wing_workshop.png",
+  "glyph": "glyph/wings/wing_workshop.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "wings/wing_research_lab": {
+  "category": "wings",
+  "accent": "#8B5CF6",
+  "plated": "wings/wing_research_lab.png",
+  "glyph": "glyph/wings/wing_research_lab.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "wings/wing_observatory": {
+  "category": "wings",
+  "accent": "#2F80ED",
+  "plated": "wings/wing_observatory.png",
+  "glyph": "glyph/wings/wing_observatory.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "wings/wing_aquarium": {
+  "category": "wings",
+  "accent": "#00A893",
+  "plated": "wings/wing_aquarium.png",
+  "glyph": "glyph/wings/wing_aquarium.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "wings/wing_archive": {
+  "category": "wings",
+  "accent": "#FBBF24",
+  "plated": "wings/wing_archive.png",
+  "glyph": "glyph/wings/wing_archive.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "wings/wing_docking_ring": {
+  "category": "wings",
+  "accent": "#00D1FF",
+  "plated": "wings/wing_docking_ring.png",
+  "glyph": "glyph/wings/wing_docking_ring.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "classes/sub_scout": {
+  "category": "classes",
+  "accent": "#00D1FF",
+  "plated": "classes/sub_scout.png",
+  "glyph": "glyph/classes/sub_scout.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "classes/sub_hauler": {
+  "category": "classes",
+  "accent": "#F59E0B",
+  "plated": "classes/sub_hauler.png",
+  "glyph": "glyph/classes/sub_hauler.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "classes/sub_surveyor": {
+  "category": "classes",
+  "accent": "#00A893",
+  "plated": "classes/sub_surveyor.png",
+  "glyph": "glyph/classes/sub_surveyor.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "classes/sub_abyssal": {
+  "category": "classes",
+  "accent": "#EF4444",
+  "plated": "classes/sub_abyssal.png",
+  "glyph": "glyph/classes/sub_abyssal.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "classes/sub_multicrew": {
+  "category": "classes",
+  "accent": "#94A3B8",
+  "plated": "classes/sub_multicrew.png",
+  "glyph": "glyph/classes/sub_multicrew.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "tiers/tier_outpost": {
+  "category": "tiers",
+  "accent": "#00D1FF",
+  "plated": "tiers/tier_outpost.png",
+  "glyph": "glyph/tiers/tier_outpost.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "tiers/tier_station": {
+  "category": "tiers",
+  "accent": "#00D1FF",
+  "plated": "tiers/tier_station.png",
+  "glyph": "glyph/tiers/tier_station.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "tiers/tier_complex": {
+  "category": "tiers",
+  "accent": "#00D1FF",
+  "plated": "tiers/tier_complex.png",
+  "glyph": "glyph/tiers/tier_complex.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "tiers/tier_citadel": {
+  "category": "tiers",
+  "accent": "#94A3B8",
+  "plated": "tiers/tier_citadel.png",
+  "glyph": "glyph/tiers/tier_citadel.png",
+  "size": [
+   128,
+   128
+  ]
+ },
+ "tiers/tier_deep_empire": {
+  "category": "tiers",
+  "accent": "#94A3B8",
+  "plated": "tiers/tier_deep_empire.png",
+  "glyph": "glyph/tiers/tier_deep_empire.png",
+  "size": [
+   128,
+   128
+  ]
+ }
+}
