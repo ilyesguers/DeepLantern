@@ -3,7 +3,9 @@
 Last reviewed: 2026-10-17
 
 ## Status
-This repository is the documentation and AI workflow home for the existing Roblox project. The current Studio place and local .rbxl files must be inspected directly before making implementation claims. Do not assume this GitHub repository is automatically synchronized with Roblox Studio.
+This repository is the documentation, AI workflow, and source-asset home for the existing Roblox project. The current Studio place and local .rbxl files must be inspected directly before making implementation claims. GitHub does not automatically synchronize with Roblox Studio.
+
+Archive integration status: 545 new paths from the supplied AI Programmer Pack and texture archive were committed to the integration branch. The texture manifest exists at `Assets/Textures/TEXTURES/manifest.json`. Seventeen differing existing documentation files were preserved and their useful unique guidance reconciled into the current versions. The imported assets have not yet been verified by importing/previewing them in Roblox Studio. Do not claim in-game validation until performed.
 
 ## Approved design
 GDD Parts 1–10 are approved/locked. There is no Part 11. Approved GDD remains the product source of truth.
