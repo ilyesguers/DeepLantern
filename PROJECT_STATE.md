@@ -48,7 +48,7 @@ PLAN → DIVE → DECIDE → DEBRIEF → UPGRADE → GO DEEPER.
 ## Agent status
 Start with an inspection-only Studio session. Report verified state, unknowns, and the smallest safe next task. Never claim Studio was inspected unless the MCP/Studio tool actually worked.
 
-
 ## Roblox Studio import readiness
 - Added `Roblox/STUDIO_IMPORT_GUIDE.md` documenting the expected Explorer hierarchy for the texture UI modules and a safe demo smoke test.
-- The repository still does not include a live `.rbxl`/`.rbxlx` place. Fusion version compatibility, actual asset uploads, and runtime behavior must be verified in Studio.
+- UI source modules use Fusion 0.3-style scoped constructors. The import guide now recommends explicit Fusion 0.3.0 (`elttob/fusion@0.3.0`) and links to the official source/docs; this is a source-level compatibility assessment, not a Studio runtime test.
+- The repository still does not include a live `.rbxl`/`.rbxlx` place. Fusion installation/runtime compatibility, actual asset uploads, and UI behavior must be verified in Studio.

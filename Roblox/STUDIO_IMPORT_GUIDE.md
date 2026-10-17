@@ -16,7 +16,7 @@ Create these instances in `ReplicatedStorage` (instance names and capitalization
 ```text
 ReplicatedStorage
 ├── Packages
-│   └── Fusion                 (compatible Fusion package/module)
+│   └── Fusion                 (Fusion 0.3.0 package/module)
 └── DeepLantern
     ├── AssetIds               (ModuleScript from luau/AssetIds.luau)
     ├── AtlasData               (ModuleScript from luau/AtlasData.luau)
@@ -32,7 +32,17 @@ ReplicatedStorage
         └── Toast                (ModuleScript from luau/UI/Toast.luau)
 ```
 
-Install Fusion using a trusted source and choose a version compatible with the API used by these modules. This repository does not currently pin or vendor a Fusion version, so version compatibility must be verified in Studio.
+### Fusion dependency
+
+The UI modules use the **Fusion 0.3 API** (scoped constructors such as `scope:New`, `scope:Computed`, `scope:Tween`, plus `Fusion.UsedAs`). Use the official Fusion project and keep the version explicit rather than installing an unspecified/latest package.
+
+- Recommended package version: `elttob/fusion@0.3.0` (Wally package name/version).
+- Official source and releases: https://github.com/dphfox/Fusion
+- Fusion 0.3 scope documentation: https://elttob.uk/Fusion/0.3/tutorials/fundamentals/scopes/
+
+If using Wally, declare `elttob/fusion = "0.3.0"` in the project's dependencies and install it into `ReplicatedStorage.Packages` using the normal Rojo/Wally workflow. If importing the official Roblox model instead, choose the Fusion 0.3 release explicitly. Do not mix Fusion 0.2 examples/APIs with these 0.3 modules.
+
+This is a dependency recommendation based on the source API, **not proof that the modules have run successfully in Studio**. The project does not yet vendor Fusion or include a place file.
 
 ## Texture asset IDs
 
@@ -49,7 +59,7 @@ Install Fusion using a trusted source and choose a version compatible with the A
 
 ## Demo smoke test
 
-1. Confirm the Explorer hierarchy above and a compatible Fusion package are present.
+1. Confirm the Explorer hierarchy above and Fusion 0.3.0 are present at `ReplicatedStorage.Packages.Fusion`.
 2. Copy `luau/UI/DiveHUD.demo.client.luau` into a **LocalScript** under `StarterPlayer/StarterPlayerScripts`.
 3. Start a local client test in Studio and inspect **View → Output** for missing modules, asset errors, or Fusion API mismatches.
 4. Confirm the HUD renders, battery/depth demo values update, and the scan/recall buttons create toasts.
@@ -60,6 +70,6 @@ Install Fusion using a trusted source and choose a version compatible with the A
 
 - Live Open Cloud uploads and moderation status.
 - All texture IDs and visual appearance in Studio.
-- Fusion version compatibility.
+- Fusion dependency installation and runtime compatibility in Studio.
 - Full game runtime, client/server behavior, mobile performance, or multiplayer.
 - Import of production models or a complete game place; no `.rbxl`/`.rbxlx` file is provided in this repository.
