@@ -84,3 +84,7 @@ jobs:
               len(manifest.get("vfx", {})), "VFX entries"
           )
           PY
+
+      - name: Dry-run asset uploader (no credentials or network calls)
+        working-directory: Assets/Textures/TEXTURES
+        run: python _generators/upload_assets.py --dry-run
