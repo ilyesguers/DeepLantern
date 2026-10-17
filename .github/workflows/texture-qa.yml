@@ -1,0 +1,87 @@
+name: Texture Pack QA
+
+on:
+  pull_request:
+    paths:
+      - "Assets/Textures/TEXTURES/**"
+      - ".github/workflows/texture-qa.yml"
+  push:
+    branches: [main]
+    paths:
+      - "Assets/Textures/TEXTURES/**"
+      - ".github/workflows/texture-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: texture-qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-textures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install QA dependencies
+        run: python -m pip install --disable-pip-version-check numpy Pillow
+
+      - name: Validate texture pack
+        working-directory: Assets/Textures/TEXTURES
+        run: python _generators/validate.py
+
+      - name: Verify manifest references
+        working-directory: Assets/Textures/TEXTURES
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path(".")
+          manifest = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+          missing = []
+
+          for name, material in manifest.get("materials", {}).items():
+              for map_name in material.get("maps", []):
+                  path = root / "materials" / name / f"{map_name}.png"
+                  if not path.is_file():
+                      missing.append(str(path))
+
+          for rel in manifest.get("ui", {}):
+              if not (root / "ui" / rel).is_file():
+                  missing.append(str(root / "ui" / rel))
+
+          for name, icon in manifest.get("icons", {}).items():
+              for field in ("plated", "glyph"):
+                  rel = icon.get(field)
+                  if rel and not (root / "icons" / rel).is_file():
+                      missing.append(str(root / "icons" / rel))
+
+          for name, item in manifest.get("vfx", {}).items():
+              rel = item if isinstance(item, str) else item.get("path", "")
+              if rel and not (root / "vfx" / rel).is_file():
+                  missing.append(str(root / "vfx" / rel))
+
+          if missing:
+              print("Missing manifest assets:")
+              print("\n".join(f" - {path}" for path in missing))
+              raise SystemExit(1)
+
+          print(
+              "Manifest references OK:",
+              len(manifest.get("materials", {})), "materials;",
+              len(manifest.get("ui", {})), "UI entries;",
+              len(manifest.get("icons", {})), "icons;",
+              len(manifest.get("vfx", {})), "VFX entries"
+          )
+          PY
