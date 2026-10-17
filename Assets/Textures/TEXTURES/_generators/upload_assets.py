@@ -74,6 +74,10 @@ def read_progress():
 
 def request_with_retries(session, method, url, *, attempts=4, **kwargs):
     timeout = kwargs.pop("timeout", REQUEST_TIMEOUT)
+    # Do not automatically retry non-idempotent uploads: a timeout can happen after
+    # Roblox accepted the upload, and retrying POST could create duplicate assets.
+    if method.upper() not in {"GET", "HEAD", "OPTIONS"}:
+        attempts = 1
     last_error = None
     for attempt in range(attempts):
         try:
@@ -113,8 +117,8 @@ def write_ids_module(done):
         escaped_path = re.escape(path)
         pattern = re.compile(r'(\["' + escaped_path + r'"\]\s*=\s*")[^"]*(")')
         src, count = pattern.subn(lambda m: m.group(1) + asset_id + m.group(2), src)
-        if count > 1:
-            raise RuntimeError(f"Duplicate AssetIds.luau key: {path}")
+        if count != 1:
+            raise RuntimeError(f"Expected exactly one AssetIds.luau key for {path}, found {count}")
     atomic_write(IDS_MODULE, src)
 
 
