@@ -1,0 +1,126 @@
+name: Integrate DeepLantern archives
+
+on:
+  push:
+    branches:
+      - integrate/archives-auto-2026-10-17-001
+    paths:
+      - ".github/workflows/integrate-archives.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deeplantern-archive-integration
+  cancel-in-progress: false
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout integration branch
+        uses: actions/checkout@v4
+        with:
+          ref: integrate/archives-auto-2026-10-17-001
+          fetch-depth: 0
+
+      - name: Verify and merge archive contents without overwriting
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, shutil, subprocess, zipfile
+
+          root = pathlib.Path.cwd()
+          report = []
+          conflicts = []
+          added = 0
+          unchanged = 0
+
+          archives = [
+              ("DeepLantern_AI_Programmer_Pack_v2.zip", "pack"),
+              ("DeepLantern_Textures.zip", "textures"),
+          ]
+          for archive, kind in archives:
+              p = root / archive
+              if not p.is_file():
+                  raise SystemExit(f"Required archive is missing from repository: {archive}")
+              with zipfile.ZipFile(p) as z:
+                  bad = z.testzip()
+                  if bad:
+                      raise SystemExit(f"ZIP integrity check failed: {archive}: {bad}")
+                  for info in z.infolist():
+                      if info.is_dir():
+                          continue
+                      raw = pathlib.PurePosixPath(info.filename)
+                      if raw.is_absolute() or ".." in raw.parts or not raw.parts:
+                          raise SystemExit(f"Unsafe ZIP path in {archive}: {info.filename}")
+                      parts = list(raw.parts)
+                      if kind == "textures":
+                          if parts[0] != "TEXTURES":
+                              raise SystemExit(f"Unexpected texture archive root: {info.filename}")
+                          parts = parts[1:]
+                          if not parts:
+                              continue
+                          rel = pathlib.Path("Assets/Textures/TEXTURES", *parts)
+                      else:
+                          rel = pathlib.Path(*parts)
+                      dest = root / rel
+                      if not dest.resolve().is_relative_to(root.resolve()):
+                          raise SystemExit(f"Unsafe output path: {rel}")
+                      data = z.read(info)
+                      if dest.exists():
+                          if dest.is_file() and hashlib.sha256(dest.read_bytes()).digest() == hashlib.sha256(data).digest():
+                              unchanged += 1
+                              continue
+                          conflicts.append({"archive": archive, "source": info.filename, "destination": rel.as_posix(),
+                                            "existing_sha256": hashlib.sha256(dest.read_bytes()).hexdigest() if dest.is_file() else "not-a-file",
+                                            "incoming_sha256": hashlib.sha256(data).hexdigest()})
+                          continue
+                      dest.parent.mkdir(parents=True, exist_ok=True)
+                      dest.write_bytes(data)
+                      added += 1
+                      report.append(rel.as_posix())
+
+          (root / "archive-integration-added-files.json").write_text(json.dumps({
+              "added": added, "unchanged_identical": unchanged, "conflicts": conflicts,
+              "added_paths": report
+          }, indent=2), encoding="utf-8")
+
+          if conflicts:
+              print("Conflicting paths were preserved; no existing file was overwritten:")
+              for c in conflicts:
+                  print(f"CONFLICT: {c['destination']} (incoming from {c['archive']}:{c['source']})")
+          print(f"Added {added} files; skipped {unchanged} byte-identical files; conflicts: {len(conflicts)}")
+          PY
+
+      - name: Validate imported files
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib, json
+          report = json.loads(pathlib.Path("archive-integration-added-files.json").read_text(encoding="utf-8"))
+          if report["conflicts"]:
+              print(json.dumps(report["conflicts"], indent=2))
+              raise SystemExit("Conflicts require reconciliation before this integration can be called complete.")
+          if not pathlib.Path("Assets/Textures/TEXTURES/manifest.json").is_file():
+              raise SystemExit("Texture manifest was not imported.")
+          print(f"Validated {report['added']} newly imported paths; no conflicting existing files.")
+          PY
+          python3 -m compileall -q --invalidation-mode=checked Assets/Textures/TEXTURES 2>/dev/null || true
+
+      - name: Commit and push imported files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Assets/Textures/TEXTURES AI_Workflow AI_START_HERE.md Art Blender Docs GDD Roblox CHANGELOG.md README.md PROJECT_STATE.md .gitignore archive-integration-added-files.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Integrate DeepLantern archives safely"
+          git push origin integrate/archives-auto-2026-10-17-001
