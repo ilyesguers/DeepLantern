@@ -48,6 +48,10 @@ PLAN → DIVE → DECIDE → DEBRIEF → UPGRADE → GO DEEPER.
 ## Agent status
 Start with an inspection-only Studio session. Report verified state, unknowns, and the smallest safe next task. Never claim Studio was inspected unless the MCP/Studio tool actually worked.
 
+## Blender preparation readiness
+- Added a Blender-specific preparation checklist and model brief template to standardize approved 3D assets, scale/pivot/collision requirements, exports, source/license notes, and Studio verification.
+- No new 3D model has been created or imported by this documentation work. The first model must be selected only after inspecting the current Studio place and confirming an actual need.
+
 ## Roblox Studio import readiness
 - Added `Roblox/STUDIO_IMPORT_GUIDE.md` documenting the expected Explorer hierarchy for the texture UI modules and a safe demo smoke test.
 - UI source modules use Fusion 0.3-style scoped constructors. The import guide now recommends explicit Fusion 0.3.0 (`elttob/fusion@0.3.0`) and links to the official source/docs; this is a source-level compatibility assessment, not a Studio runtime test.
