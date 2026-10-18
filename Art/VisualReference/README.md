@@ -1,26 +1,33 @@
 # Visual Reference Library
 
-## Status
-The reference-board PNG files from the user's archive have been inspected in the uploaded ZIP, but have **not yet been committed to this repository**. Do not assume they are present here until each image is visible in this folder on GitHub.
+## Canonical location and status
 
-## Planned board inventory
-- `00_DEEP_LANTERN_MASTER_VISUAL_BOARD.png`
-- `01_ART_DIRECTION_BIBLE.png` (source archive filename contains an extra prefix; normalize only when uploaded)
-- `02_SUBMARINE_DESIGN.png`
-- `03_STATION_DESIGN_SHEET_ROBLOX.png.png` (normalize duplicate extension on upload)
-- `04_MVP_ZONES_ROBLOX_BUILD.png`
-- `05_CREATURES_ROBLOX_BUILD.png`
-- `06_RESOURCES_ICONS_ROBLOX.png`
-- `07_EQUIPMENT_ROBLOX_BUILD.png`
-- `08_UI_UX_ROBLOX_REFERENCE.png`
-- `WORLD_MAP_ROBLOX_REFERENCE.png`
+The canonical location for the ten visual reference boards is this folder: `Art/VisualReference/`. All ten PNG boards listed below are present in the repository.
 
-## Rules
-These are visual design references, not production-ready texture maps, models, UI assets, or gameplay specifications. The approved GDD Parts 1–10 overrides anything that appears in a reference board if there is a conflict.
+## Board inventory
 
-## Upload quality checklist
-- Keep original image resolution and aspect ratio.
-- Remove macOS `__MACOSX` metadata files from the source archive.
-- Use consistent ASCII filenames and one extension.
-- Verify each uploaded image renders correctly in GitHub.
-- Record origin/license and intended use where known; do not invent licensing claims.
+1. `00_Master_Visual_Board.png` — overall art direction and visual identity.
+2. `01_Art_Direction_Bible.png` — palette, materials, lighting and style rules.
+3. `02_Submarine_Design.png` — submarine shape and design language.
+4. `03_Station_Design.png` — station architecture and functional spaces.
+5. `04_MVP_Zones.png` — visual direction for MVP zones.
+6. `05_Creatures.png` — creature concepts and silhouettes.
+7. `06_Resources_Icons.png` — resources and icon direction.
+8. `07_Equipment.png` — equipment design direction.
+9. `08_UI_UX_Reference.png` — interface visual reference.
+10. `09_World_Map.png` — world layout reference.
+
+## Authority
+
+These images are visual references, not approved gameplay specifications, production-ready 3D models, or proof that assets have been imported into Roblox Studio. The approved GDD Parts 1–10 overrides any image detail that conflicts with it.
+
+## Duplicate legacy folder
+
+The root `VISUAL_REFERENCE/` folder currently contains byte-identical copies of the same ten boards under inconsistent filenames. It is retained temporarily to avoid breaking old links. Add new reference boards only here. Do not delete the legacy copies until links and history have been checked.
+
+## Safe use checklist
+
+- Preserve the original resolution and aspect ratio.
+- Do not infer gameplay values, depth, prices, progression or mechanics from the art.
+- Treat generated texture/UI assets separately from these reference boards.
+- Do not invent licensing or source information that has not been verified.
