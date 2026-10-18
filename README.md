@@ -6,6 +6,7 @@ Repository for the approved game design, AI-assisted development workflow, visua
 > **Safety first:** This repository does not automatically synchronize with Roblox Studio. Never overwrite `save.rbxl` or `DeepLantern_Backup_Oct09.rbxl`. Work on a separately named copy and do not save or publish without explicit user approval.
 
 ## Start here
+1. [Asset readiness audit](ASSET_READINESS.md) — what is present, what still needs validation, and what is intentionally deferred.
 1. [AI Start Here](AI_START_HERE.md) — mandatory onboarding.
 2. [Project State](PROJECT_STATE.md) — known design and implementation context.
 3. [Approved GDD source (text)](GDD/DeepLantern_GDD_Parts_1-10_APPROVED.txt) — readable approved Parts 1–10.
