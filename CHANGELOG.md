@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-18 — Asset readiness documentation
+- Added a verified asset-readiness checklist and clarified the canonical visual-reference folder.
+- Corrected outdated visual-reference README wording that implied the boards were not yet committed.
+- Preserved duplicate/legacy files; no images or other assets were deleted or renamed.
+- No Roblox Studio place was modified; visual inspection of all images, Roblox uploads and in-Studio runtime tests remain pending.
+
+
 ## 2026-10-17 — Fusion UI dependency clarification
 - Confirmed the UI modules use the Fusion 0.3 scoped-constructor API and documented the explicit `elttob/fusion@0.3.0` dependency recommendation with official source and documentation links.
 - Updated the Studio import guide and project state to distinguish source-level API compatibility from actual Studio runtime verification.
