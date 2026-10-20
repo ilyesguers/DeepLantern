@@ -1,10 +1,11 @@
 # Deep Lantern Model Factory Progress
 
 Last updated: 2026-10-20
-Current stage: GDD SCOPE AUDITED — PREPARATION
-Current asset: DL-001 — Existing Scout / research submarine visual asset
-Status: QUEUED
+Current stage: ALL 20 TASKS BLOCKED — no genuine 3D generator/export available
+Current asset: none in progress (DL-001 is the first to resume once unblocked)
+Status: BLOCKED
 Actual 3D models uploaded: 0
+Blocked tasks: 20 of 20
 Roblox Studio validation: NOT STARTED (intentionally deferred)
 
 ## Session checkpoint
@@ -14,29 +15,45 @@ Roblox Studio validation: NOT STARTED (intentionally deferred)
 - No model is complete until genuine 3D model bytes are committed under Assets/ModelFactory/Models/<ID>/.
 - This audit is a plan review only; no model files have been created or Studio-tested.
 
+## Blocker (applies to every task)
+No genuine 3D-generation or export capability was available on 2026-10-20. Checked: no Blender/MeshLab/FreeCAD/OpenSCAD/converters installed; no bpy, trimesh, pymeshlab, open3d, pygltflib, torch or diffusers; HTTPS to api.meshy.ai, api.tripo3d.ai and huggingface.co returned no response; no generator API credentials in the environment. Roblox Studio generation tools are out of scope for this stage. Hand-coded primitive geometry was deliberately not substituted, because it would be generic placeholder geometry rather than a generated model.
+
+To unblock, provide one of: an authorized text-to-3D/image-to-3D generator the session can reach and download from; human-supplied exports (.glb/.fbx/.obj plus textures) to package under Assets/ModelFactory/Models/<ID>/; or a session with a permitted local 3D toolchain.
+
+## Completed this session
+- Read README.md, PROMPT.md, PROGRESS.md and GDD_COMPLIANCE_AUDIT.md, the DL-001/DL-002 task files, and every detailed brief under Blender/MODEL_FACTORY/TASKS/ (present on branch assets/model-factory-queue).
+- Confirmed the work branch assets/roblox-studio-model-factory contained 0 model files; main untouched.
+- Wrote Assets/ModelFactory/Models/DL-001..DL-020/BLOCKED.md (commit 40f9c0f), each preserving the asset's generator prompt and its GDD audit restriction.
+- Actual 3D models committed: 0. No textures, previews, manifests, geometry statistics, licenses or tests exist or are claimed.
+
+## Remaining work
+- All 20 assets: generate genuine models once the blocker is cleared, then replace each BLOCKED.md with the full package (model, textures, preview, manifest.json, README.md).
+- Next asset: DL-001, then DL-002, DL-014, DL-005, DL-003, DL-004 (P0 order), following the queue order below.
+- Roblox Studio import/validation stays deferred to a later stage.
+
 ## Queue status
 | ID | Asset | Priority | Status | GDD guardrail | GitHub path |
 |---|---|---|---|---|---|
-| DL-001 | Existing Scout / research submarine visual asset | P0 | QUEUED | Do not replace gameplay/controller contracts or invent a new class | — |
-| DL-002 | MVP modular station kit | P0 | QUEUED | Outpost → Station → Complex only; no Citadel/Deep Empire | — |
-| DL-014 | Sub Dock / compact Docking Ring-compatible pad | P0 | QUEUED | Compact MVP function only; no public/social expansion | — |
-| DL-005 | Research Lab console | P0 | QUEUED | Existing terminal visual prop only | — |
-| DL-003 | Static dive/research beacon | P0 | QUEUED | Existing zone landmark; no player-built network or GPS | — |
-| DL-004 | Sample canister family | P0 | QUEUED | Existing biological sample/cargo/debrief categories only | — |
-| DL-006 | Coral family | P1 | QUEUED | Shallows/Twilight Reef only | — |
-| DL-007 | Kelp cluster | P1 | QUEUED | Kelp Forest dressing; no complex ecosystem | — |
-| DL-008 | Seafloor rock kit | P1 | QUEUED | Static geological dressing; no procedural generation | — |
-| DL-009 | Bioluminescent flora | P1 | QUEUED | Existing MVP zones; no unapproved event logic | — |
-| DL-011 | Twilight Reef arch | P1 | QUEUED | Landmark within Zone_TwilightReef; not a new zone | — |
-| DL-010 | Small wreckage set | P1 | QUEUED | Static points of interest in an existing MVP zone | — |
-| DL-015 | Cave entrance pieces | P1 | QUEUED | Existing-zone secret only; no Lost Ruins zone | — |
-| DL-012 | Individual relic props | P1 | QUEUED | Existing Codex/Archive relics; full Lost Ruins is post-MVP | — |
-| DL-013 | Aquarium/Gallery discovery display | P2 | QUEUED | Visual showcase only; no passive income/stat bonuses | — |
-| DL-016 | Cables and hoses | P2 | QUEUED | Static dressing; no simulated cable physics or power network | — |
-| DL-017 | Diegetic signage kit | P2 | QUEUED | Wayfinding only; no GPS quest markers/minimap | — |
-| DL-018 | Research crates | P2 | QUEUED | Existing cargo/station dressing only | — |
-| DL-020 | Lighting fixture meshes | P2 | QUEUED | Fixture meshes only; Studio lights added later | — |
-| DL-019 | Small Codex fauna | P3 | QUEUED | Non-lethal, light/simple; no capture inventory or complex ecosystem | — |
+| DL-001 | Existing Scout / research submarine visual asset | P0 | BLOCKED | Do not replace gameplay/controller contracts or invent a new class | Assets/ModelFactory/Models/DL-001/BLOCKED.md (40f9c0f) |
+| DL-002 | MVP modular station kit | P0 | BLOCKED | Outpost → Station → Complex only; no Citadel/Deep Empire | Assets/ModelFactory/Models/DL-002/BLOCKED.md (40f9c0f) |
+| DL-014 | Sub Dock / compact Docking Ring-compatible pad | P0 | BLOCKED | Compact MVP function only; no public/social expansion | Assets/ModelFactory/Models/DL-014/BLOCKED.md (40f9c0f) |
+| DL-005 | Research Lab console | P0 | BLOCKED | Existing terminal visual prop only | Assets/ModelFactory/Models/DL-005/BLOCKED.md (40f9c0f) |
+| DL-003 | Static dive/research beacon | P0 | BLOCKED | Existing zone landmark; no player-built network or GPS | Assets/ModelFactory/Models/DL-003/BLOCKED.md (40f9c0f) |
+| DL-004 | Sample canister family | P0 | BLOCKED | Existing biological sample/cargo/debrief categories only | Assets/ModelFactory/Models/DL-004/BLOCKED.md (40f9c0f) |
+| DL-006 | Coral family | P1 | BLOCKED | Shallows/Twilight Reef only | Assets/ModelFactory/Models/DL-006/BLOCKED.md (40f9c0f) |
+| DL-007 | Kelp cluster | P1 | BLOCKED | Kelp Forest dressing; no complex ecosystem | Assets/ModelFactory/Models/DL-007/BLOCKED.md (40f9c0f) |
+| DL-008 | Seafloor rock kit | P1 | BLOCKED | Static geological dressing; no procedural generation | Assets/ModelFactory/Models/DL-008/BLOCKED.md (40f9c0f) |
+| DL-009 | Bioluminescent flora | P1 | BLOCKED | Existing MVP zones; no unapproved event logic | Assets/ModelFactory/Models/DL-009/BLOCKED.md (40f9c0f) |
+| DL-011 | Twilight Reef arch | P1 | BLOCKED | Landmark within Zone_TwilightReef; not a new zone | Assets/ModelFactory/Models/DL-011/BLOCKED.md (40f9c0f) |
+| DL-010 | Small wreckage set | P1 | BLOCKED | Static points of interest in an existing MVP zone | Assets/ModelFactory/Models/DL-010/BLOCKED.md (40f9c0f) |
+| DL-015 | Cave entrance pieces | P1 | BLOCKED | Existing-zone secret only; no Lost Ruins zone | Assets/ModelFactory/Models/DL-015/BLOCKED.md (40f9c0f) |
+| DL-012 | Individual relic props | P1 | BLOCKED | Existing Codex/Archive relics; full Lost Ruins is post-MVP | Assets/ModelFactory/Models/DL-012/BLOCKED.md (40f9c0f) |
+| DL-013 | Aquarium/Gallery discovery display | P2 | BLOCKED | Visual showcase only; no passive income/stat bonuses | Assets/ModelFactory/Models/DL-013/BLOCKED.md (40f9c0f) |
+| DL-016 | Cables and hoses | P2 | BLOCKED | Static dressing; no simulated cable physics or power network | Assets/ModelFactory/Models/DL-016/BLOCKED.md (40f9c0f) |
+| DL-017 | Diegetic signage kit | P2 | BLOCKED | Wayfinding only; no GPS quest markers/minimap | Assets/ModelFactory/Models/DL-017/BLOCKED.md (40f9c0f) |
+| DL-018 | Research crates | P2 | BLOCKED | Existing cargo/station dressing only | Assets/ModelFactory/Models/DL-018/BLOCKED.md (40f9c0f) |
+| DL-020 | Lighting fixture meshes | P2 | BLOCKED | Fixture meshes only; Studio lights added later | Assets/ModelFactory/Models/DL-020/BLOCKED.md (40f9c0f) |
+| DL-019 | Small Codex fauna | P3 | BLOCKED | Non-lethal, light/simple; no capture inventory or complex ecosystem | Assets/ModelFactory/Models/DL-019/BLOCKED.md (40f9c0f) |
 
 ## GDD compliance audit
 See Assets/ModelFactory/GDD_COMPLIANCE_AUDIT.md for the full 20-item scope review, MVP/post-MVP boundaries, and acceptance checklist.
