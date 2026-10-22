@@ -1,6 +1,6 @@
 # Deep Lantern Model Factory Progress
 
-Last updated: 2026-10-20
+Last updated: 2026-10-22
 Current stage: ALL 20 TASKS BLOCKED — no genuine 3D generator/export available
 Current asset: none in progress (DL-001 is the first to resume once unblocked)
 Status: BLOCKED
@@ -30,6 +30,10 @@ To unblock, provide one of: an authorized text-to-3D/image-to-3D generator the s
 - All 20 assets: generate genuine models once the blocker is cleared, then replace each BLOCKED.md with the full package (model, textures, preview, manifest.json, README.md).
 - Next asset: DL-001, then DL-002, DL-014, DL-005, DL-003, DL-004 (P0 order), following the queue order below.
 - Roblox Studio import/validation stays deferred to a later stage.
+
+## Samples (outside the queue)
+- Assets/ModelFactory/Samples/AbyssalSharkBoss/ — real user-supplied Blender FBX (26,884 tris, 98 parts, 9 flat materials). Reference only; not GDD-approved for the game. See its README.md and manifest.json.
+- Queue status unchanged: 0 queue models uploaded, 20 of 20 BLOCKED. Next asset when unblocked: DL-001. The blocker remains: no 3D generator or Blender reachable from the Claude session (bpy cannot be installed). Fastest unblock: the owner exports .glb/.fbx from Blender or a text-to-3D service and uploads it; then package under Models/<ID>/.
 
 ## Queue status
 | ID | Asset | Priority | Status | GDD guardrail | GitHub path |

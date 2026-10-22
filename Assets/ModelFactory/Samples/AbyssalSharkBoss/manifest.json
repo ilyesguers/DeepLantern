@@ -1,0 +1,61 @@
+{
+  "id": "SAMPLE-AbyssalSharkBoss",
+  "name": "Abyssal Shark Boss (user-supplied sample)",
+  "status": "UPLOADED_TO_GITHUB",
+  "queue_item": false,
+  "gdd_status": "NOT an approved MVP asset: Abyssal/boss shark has no GDD entry; Abyss is post-MVP; GDD has no boss/combat mechanic. Reference/sample only.",
+  "generator": "Exported from Blender (stable FBX IO) 5.2.2 LTS by the repository owner; not generated in a Claude session",
+  "files": [
+    {
+      "path": "model.fbx",
+      "format": "FBX binary 7.4",
+      "bytes": 739564,
+      "sha256": "c5096ee8c0ac98ed81556a7052ef795ada9505c48fe5d4b477ff83a4dc38647f"
+    }
+  ],
+  "textures": "none (flat material colors only, no image textures)",
+  "measured_from_file": {
+    "mesh_objects": 98,
+    "geometry_nodes": 98,
+    "vertices": 13684,
+    "triangles": 26884,
+    "materials": [
+      "Abyssal slate hide",
+      "Black eye slit",
+      "Blood red gums",
+      "Fin edges - deep teal",
+      "Ivory teeth",
+      "Mouth cavity",
+      "Old scars",
+      "Pale armored underside",
+      "Reactor amber"
+    ],
+    "raw_bounds": {
+      "x": [
+        -8.54,
+        5.52
+      ],
+      "y": [
+        -3.1,
+        3.1
+      ],
+      "z": [
+        -4.42,
+        4.68
+      ]
+    }
+  },
+  "not_verified": [
+    "real-world scale/units and axis orientation",
+    "pivot/origin",
+    "UVs",
+    "normals/topology quality",
+    "Roblox Studio import",
+    "license/rights beyond owner-supplied"
+  ],
+  "preview": "none — no genuine render could be produced in the session",
+  "limitations": [
+    "~26.9k triangles in 98 separate meshes is heavy for mobile Roblox; needs optimization/merging per material before use",
+    "No Roblox Studio import has been performed"
+  ]
+}
