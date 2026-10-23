@@ -1,11 +1,11 @@
 # Deep Lantern Model Factory Progress
 
 Last updated: 2026-10-22
-Current stage: ALL 20 TASKS BLOCKED — no genuine 3D generator/export available
-Current asset: none in progress (DL-001 is the first to resume once unblocked)
-Status: BLOCKED
-Actual 3D models uploaded: 0
-Blocked tasks: 20 of 20
+Current stage: PRODUCING via procedural Python geometry (no AI/Blender available)
+Current asset: DL-002 (next)
+Status: IN_PROGRESS
+Actual 3D models uploaded: 1 (DL-001)
+Blocked tasks: 19 of 20 (not yet attempted; the earlier blocker no longer applies)
 Roblox Studio validation: NOT STARTED (intentionally deferred)
 
 ## Session checkpoint
@@ -31,6 +31,9 @@ To unblock, provide one of: an authorized text-to-3D/image-to-3D generator the s
 - Next asset: DL-001, then DL-002, DL-014, DL-005, DL-003, DL-004 (P0 order), following the queue order below.
 - Roblox Studio import/validation stays deferred to a later stage.
 
+## Method update (2026-10-23)
+Owner authorised any workable method. Blender/bpy and AI generators remain unreachable, so models are built as procedural low-poly geometry with Assets/ModelFactory/Tools/dlmesh.py (numpy + Pillow): real triangles exported to .glb/.obj, preview rendered from the exported mesh. This is stated honestly in every manifest; it is not AI text-to-3D. Each model's generator script is committed beside it.
+
 ## Samples (outside the queue)
 - Assets/ModelFactory/Samples/AbyssalSharkBoss/ — real user-supplied Blender FBX (26,884 tris, 98 parts, 9 flat materials). Reference only; not GDD-approved for the game. See its README.md and manifest.json.
 - Queue status unchanged: 0 queue models uploaded, 20 of 20 BLOCKED. Next asset when unblocked: DL-001. The blocker remains: no 3D generator or Blender reachable from the Claude session (bpy cannot be installed). Fastest unblock: the owner exports .glb/.fbx from Blender or a text-to-3D service and uploads it; then package under Models/<ID>/.
@@ -38,7 +41,7 @@ To unblock, provide one of: an authorized text-to-3D/image-to-3D generator the s
 ## Queue status
 | ID | Asset | Priority | Status | GDD guardrail | GitHub path |
 |---|---|---|---|---|---|
-| DL-001 | Existing Scout / research submarine visual asset | P0 | BLOCKED | Do not replace gameplay/controller contracts or invent a new class | Assets/ModelFactory/Models/DL-001/BLOCKED.md (40f9c0f) |
+| DL-001 | Existing Scout / research submarine visual asset | P0 | UPLOADED_TO_GITHUB | Do not replace gameplay/controller contracts or invent a new class | Assets/ModelFactory/Models/DL-001/ (model.glb, model.obj, preview.png, manifest.json) |
 | DL-002 | MVP modular station kit | P0 | BLOCKED | Outpost → Station → Complex only; no Citadel/Deep Empire | Assets/ModelFactory/Models/DL-002/BLOCKED.md (40f9c0f) |
 | DL-014 | Sub Dock / compact Docking Ring-compatible pad | P0 | BLOCKED | Compact MVP function only; no public/social expansion | Assets/ModelFactory/Models/DL-014/BLOCKED.md (40f9c0f) |
 | DL-005 | Research Lab console | P0 | BLOCKED | Existing terminal visual prop only | Assets/ModelFactory/Models/DL-005/BLOCKED.md (40f9c0f) |
