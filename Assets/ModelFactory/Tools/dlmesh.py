@@ -134,6 +134,54 @@ def mirror_x(tris):
     return t[:, [0, 2, 1], :]
 
 
+def _quad_out(a, b, c, d, normal):
+    """Two triangles for quad abcd, wound so the normal points along `normal`."""
+    t1 = [a, b, c]; t2 = [a, c, d]
+    n = np.cross(np.subtract(t1[1], t1[0]), np.subtract(t1[2], t1[0]))
+    if np.dot(n, normal) < 0:
+        t1 = [a, c, b]; t2 = [a, d, c]
+    return [t1, t2]
+
+
+def annulus(r_out, r_in, length, n=16, axis="z", pos=(0, 0, 0)):
+    """Hollow ring (washer) centred on pos, extruded `length` along axis."""
+    ang = np.linspace(0, 2 * math.pi, n, endpoint=False)
+    h = length / 2.0
+    tris = []
+    for k in range(n):
+        k2 = (k + 1) % n
+        c0, s0, c1, s1 = math.cos(ang[k]), math.sin(ang[k]), math.cos(ang[k2]), math.sin(ang[k2])
+        P = lambda r, c, s, z: np.array([r * c, r * s, z])
+        o0b, o1b, o0t, o1t = P(r_out, c0, s0, -h), P(r_out, c1, s1, -h), P(r_out, c0, s0, h), P(r_out, c1, s1, h)
+        i0b, i1b, i0t, i1t = P(r_in, c0, s0, -h), P(r_in, c1, s1, -h), P(r_in, c0, s0, h), P(r_in, c1, s1, h)
+        mid = np.array([math.cos((ang[k] + (ang[k] + 2 * math.pi / n)) / 2), math.sin((ang[k] + (ang[k] + 2 * math.pi / n)) / 2), 0])
+        tris += _quad_out(o0b, o1b, o1t, o0t, mid)
+        tris += _quad_out(i0b, i1b, i1t, i0t, -mid)
+        tris += _quad_out(o0t, o1t, i1t, i0t, np.array([0, 0, 1.0]))
+        tris += _quad_out(o0b, o1b, i1b, i0b, np.array([0, 0, -1.0]))
+    t = np.array(tris)
+    if axis == "x":
+        t = transform(t, rot=(0, 90, 0))
+    elif axis == "y":
+        t = transform(t, rot=(-90, 0, 0))
+    return transform(t, pos=pos)
+
+
+def combine(name, placements):
+    """Merge models into a new Model. placements: [(Model, (x,y,z) offset[, (rx,ry,rz)])]."""
+    out = Model(name)
+    for pl in placements:
+        mdl, off = pl[0], pl[1]
+        rot = pl[2] if len(pl) > 2 else (0, 0, 0)
+        for key, mat in mdl.materials.items():
+            if key not in out.materials:
+                out.materials[key] = dict(mat); out.parts.setdefault(key, [])
+            tris = mdl.mesh(key)
+            if len(tris):
+                out.parts[key].append(transform(tris, rot=rot, pos=off))
+    return out
+
+
 # ----------------------------------------------------------------------------
 # model container, export, validation
 # ----------------------------------------------------------------------------
@@ -376,7 +424,7 @@ def render_sheet(model, path, title, views, panel=(640, 400), px_per_unit=44, co
     sheet.save(path)
 
 
-def write_manifest(model, out_dir, meta, files=("model.glb", "model.obj", "model.mtl", "preview.png")):
+def write_manifest(model, out_dir, meta, files=("model.glb", "model.obj", "model.mtl", "preview.png"), extra=None):
     """Validate the exported .glb by re-reading it, then write manifest.json with measured numbers only."""
     import hashlib, os
     glb = read_glb_stats(os.path.join(out_dir, "model.glb"))
@@ -400,5 +448,51 @@ def write_manifest(model, out_dir, meta, files=("model.glb", "model.obj", "model
         roblox_import="NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
         not_verified=["Roblox Studio import", "UV mapping (none authored; no textures)", "fit against the existing live submarine/controller contracts"],
     )
+    if extra:
+        mf.update(extra)
     json.dump(mf, open(os.path.join(out_dir, "manifest.json"), "w"), indent=2)
     return mf
+
+
+def emit(out_dir, meta, collection, parts=None, views=None, px=44, center=(0, 0, 0), title="", panel=(640, 400), cols=2):
+    """Write collection (model.glb/.obj/.mtl), optional per-part .glb files under parts/, preview and manifest."""
+    import os
+    os.makedirs(out_dir, exist_ok=True)
+    collection.write_glb(os.path.join(out_dir, "model.glb"))
+    collection.write_obj(os.path.join(out_dir, "model.obj"), "model.mtl")
+    collection.write_mtl(os.path.join(out_dir, "model.mtl"))
+    files = ["model.glb", "model.obj", "model.mtl", "preview.png"]
+    extra = {}
+    if parts:
+        os.makedirs(os.path.join(out_dir, "parts"), exist_ok=True)
+        pinfo = {}
+        for pname, pm in parts.items():
+            rel = f"parts/{pname}.glb"
+            pm.write_glb(os.path.join(out_dir, rel))
+            st = read_glb_stats(os.path.join(out_dir, rel))
+            assert st["all_finite"] and st["triangles"] == pm.stats()["triangles"]
+            pinfo[pname] = dict(file=rel, triangles=st["triangles"], size=pm.stats()["size"],
+                                bounds_min=st["bounds_min"], bounds_max=st["bounds_max"])
+            files.append(rel)
+        extra["parts"] = pinfo
+    render_sheet(collection, os.path.join(out_dir, "preview.png"), title, views, panel=panel, px_per_unit=px, cols=cols, center=center)
+    write_manifest(collection, out_dir, meta, files=tuple(files), extra=extra)
+    return collection.stats()
+
+
+def std_materials(m, extra=()):
+    """Shared Deep Lantern palette (navy/graphite, off-white, amber, cyan, selective glow)."""
+    m.material("hull_offwhite", (0.84, 0.87, 0.90), metallic=0.15, roughness=0.55)
+    m.material("graphite_navy", (0.07, 0.10, 0.17), metallic=0.45, roughness=0.55)
+    m.material("amber_accent", (0.93, 0.58, 0.10), metallic=0.2, roughness=0.5)
+    m.material("glass_cyan", (0.30, 0.78, 0.95), metallic=0.0, roughness=0.1, alpha=0.5)
+    m.material("emissive_cyan", (0.10, 0.55, 0.80), emissive=(0.25, 0.85, 1.0), roughness=0.4)
+    for e in extra:
+        if e == "teal_shell":
+            m.material("teal_shell", (0.07, 0.27, 0.32), metallic=0.3, roughness=0.6)
+        elif e == "titanium":
+            m.material("titanium", (0.62, 0.66, 0.70), metallic=0.85, roughness=0.35)
+        elif e == "specimen_violet":
+            m.material("specimen_violet", (0.45, 0.25, 0.75), emissive=(0.55, 0.30, 0.95), roughness=0.4)
+        elif e == "emissive_amber":
+            m.material("emissive_amber", (0.80, 0.50, 0.10), emissive=(1.0, 0.72, 0.25), roughness=0.4)

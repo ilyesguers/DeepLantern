@@ -1,0 +1,172 @@
+{
+  "id": "DL-003",
+  "title": "Static dive / sonar beacon",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl003.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-003_DIVE_BEACON.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 101672,
+      "sha256": "c14fcac356f667052255202754e4b2a208145d5828f12ec4ca597e0f8d9d53db"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 112890,
+      "sha256": "67e6ddd1985a188d829c57b3c650fe74a896cc33e4671938be557d83c144788a"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 389,
+      "sha256": "bd38ec6350365afffa4f4303435145d3d677c887756bcb95a22930f24fa445fe"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 39010,
+      "sha256": "b1c2416cd05b8042b056c3d15c1bd3910346e231bfaf577d342b015303bc5460"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Bottom centre of the base (0,0,0); flat base on y=0.",
+  "measured": {
+    "model_stats": {
+      "triangles": 1156,
+      "triangles_per_material": {
+        "hull_offwhite": 0,
+        "graphite_navy": 228,
+        "amber_accent": 120,
+        "glass_cyan": 0,
+        "emissive_cyan": 200,
+        "teal_shell": 168,
+        "titanium": 440
+      },
+      "bounds_min": [
+        -1.1835,
+        -0.0,
+        -0.7699
+      ],
+      "bounds_max": [
+        1.1835,
+        2.47,
+        1.28
+      ],
+      "size": [
+        2.367,
+        2.47,
+        2.0499
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 101672,
+      "meshes": 5,
+      "materials": 5,
+      "triangles": 1156,
+      "all_finite": true,
+      "bounds_min": [
+        -1.1835,
+        -0.0,
+        -0.7699
+      ],
+      "bounds_max": [
+        1.1835,
+        2.47,
+        1.28
+      ]
+    }
+  },
+  "materials": {
+    "hull_offwhite": {
+      "color": [
+        0.84,
+        0.87,
+        0.9,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.15,
+      "roughness": 0.55
+    },
+    "graphite_navy": {
+      "color": [
+        0.07,
+        0.1,
+        0.17,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.45,
+      "roughness": 0.55
+    },
+    "amber_accent": {
+      "color": [
+        0.93,
+        0.58,
+        0.1,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.2,
+      "roughness": 0.5
+    },
+    "glass_cyan": {
+      "color": [
+        0.3,
+        0.78,
+        0.95,
+        0.5
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.1
+    },
+    "emissive_cyan": {
+      "color": [
+        0.1,
+        0.55,
+        0.8,
+        1.0
+      ],
+      "emissive": [
+        0.25,
+        0.85,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "teal_shell": {
+      "color": [
+        0.07,
+        0.27,
+        0.32,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.3,
+      "roughness": 0.6
+    },
+    "titanium": {
+      "color": [
+        0.62,
+        0.66,
+        0.7,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.85,
+      "roughness": 0.35
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ]
+}

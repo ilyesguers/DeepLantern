@@ -1,0 +1,262 @@
+{
+  "id": "DL-004",
+  "title": "Sample canister family (3 variants)",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl004.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-004_SAMPLE_CANISTERS.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 90056,
+      "sha256": "93490284083e2c80727b1162545325bb5b32e48f014127148b0f550938fdd833"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 96160,
+      "sha256": "e83efe148179caa82d6970fca0561f2ac866f9070462d4341ffb249809516d2f"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 469,
+      "sha256": "2b02586a5995b4d18aa7fb8070f19f062413dbc8781d30dc1953ce7d01523256"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 38269,
+      "sha256": "143a83a2c0e4d24c7cecd0a014e5012990b7173bc0f6b64a9aafbd85077ab4da"
+    },
+    {
+      "path": "parts/standard_capsule.glb",
+      "bytes": 36312,
+      "sha256": "fa569969caaf0085485b6fd75cb6889a91b5f60ae3a29b019e0d0d0005b78b68"
+    },
+    {
+      "path": "parts/fragile_bio_sample.glb",
+      "bytes": 43204,
+      "sha256": "0bf9462511b3d6ce3ff217121912a2436b8d699130f25e957c95d8f774b414b9"
+    },
+    {
+      "path": "parts/mineral_vault.glb",
+      "bytes": 21456,
+      "sha256": "64355e6f81e63f2c129725a270762345ec2d42b166be80130e440440d5c6ccce"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Each variant in parts/ has its origin at its geometric centre; model.glb places the three side by side at x=-0.8/0/+0.8 with bottoms on y=0.",
+  "measured": {
+    "model_stats": {
+      "triangles": 984,
+      "triangles_per_material": {
+        "hull_offwhite": 36,
+        "graphite_navy": 180,
+        "amber_accent": 180,
+        "glass_cyan": 200,
+        "emissive_cyan": 44,
+        "teal_shell": 120,
+        "titanium": 144,
+        "specimen_violet": 80
+      },
+      "bounds_min": [
+        -1.02,
+        -0.0,
+        -0.29
+      ],
+      "bounds_max": [
+        1.095,
+        0.71,
+        0.27
+      ],
+      "size": [
+        2.115,
+        0.71,
+        0.56
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 90056,
+      "meshes": 8,
+      "materials": 8,
+      "triangles": 984,
+      "all_finite": true,
+      "bounds_min": [
+        -1.02,
+        -0.0,
+        -0.29
+      ],
+      "bounds_max": [
+        1.095,
+        0.71,
+        0.27
+      ]
+    }
+  },
+  "materials": {
+    "hull_offwhite": {
+      "color": [
+        0.84,
+        0.87,
+        0.9,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.15,
+      "roughness": 0.55
+    },
+    "graphite_navy": {
+      "color": [
+        0.07,
+        0.1,
+        0.17,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.45,
+      "roughness": 0.55
+    },
+    "amber_accent": {
+      "color": [
+        0.93,
+        0.58,
+        0.1,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.2,
+      "roughness": 0.5
+    },
+    "glass_cyan": {
+      "color": [
+        0.3,
+        0.78,
+        0.95,
+        0.5
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.1
+    },
+    "emissive_cyan": {
+      "color": [
+        0.1,
+        0.55,
+        0.8,
+        1.0
+      ],
+      "emissive": [
+        0.25,
+        0.85,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "teal_shell": {
+      "color": [
+        0.07,
+        0.27,
+        0.32,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.3,
+      "roughness": 0.6
+    },
+    "titanium": {
+      "color": [
+        0.62,
+        0.66,
+        0.7,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.85,
+      "roughness": 0.35
+    },
+    "specimen_violet": {
+      "color": [
+        0.45,
+        0.25,
+        0.75,
+        1.0
+      ],
+      "emissive": [
+        0.55,
+        0.3,
+        0.95
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ],
+  "parts": {
+    "standard_capsule": {
+      "file": "parts/standard_capsule.glb",
+      "triangles": 356,
+      "size": [
+        0.44,
+        0.71,
+        0.455
+      ],
+      "bounds_min": [
+        -0.22,
+        -0.31,
+        -0.22
+      ],
+      "bounds_max": [
+        0.22,
+        0.4,
+        0.235
+      ]
+    },
+    "fragile_bio_sample": {
+      "file": "parts/fragile_bio_sample.glb",
+      "triangles": 448,
+      "size": [
+        0.4,
+        0.605,
+        0.45
+      ],
+      "bounds_min": [
+        -0.2,
+        -0.295,
+        -0.225
+      ],
+      "bounds_max": [
+        0.2,
+        0.31,
+        0.225
+      ]
+    },
+    "mineral_vault": {
+      "file": "parts/mineral_vault.glb",
+      "triangles": 180,
+      "size": [
+        0.59,
+        0.47,
+        0.56
+      ],
+      "bounds_min": [
+        -0.295,
+        -0.22,
+        -0.29
+      ],
+      "bounds_max": [
+        0.295,
+        0.25,
+        0.27
+      ]
+    }
+  }
+}

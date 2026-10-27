@@ -2,10 +2,10 @@
 
 Last updated: 2026-10-22
 Current stage: PRODUCING via procedural Python geometry (no AI/Blender available)
-Current asset: DL-002 (next)
+Current asset: DL-014 (next), then DL-002
 Status: IN_PROGRESS
-Actual 3D models uploaded: 1 (DL-001)
-Blocked tasks: 19 of 20 (not yet attempted; the earlier blocker no longer applies)
+Actual 3D models uploaded: 4 (DL-001, DL-003, DL-004, DL-005)
+Blocked tasks: 16 of 20 (not yet attempted; the earlier blocker no longer applies)
 Roblox Studio validation: NOT STARTED (intentionally deferred)
 
 ## Session checkpoint
@@ -44,9 +44,9 @@ Owner authorised any workable method. Blender/bpy and AI generators remain unrea
 | DL-001 | Existing Scout / research submarine visual asset | P0 | UPLOADED_TO_GITHUB | Do not replace gameplay/controller contracts or invent a new class | Assets/ModelFactory/Models/DL-001/ (model.glb, model.obj, preview.png, manifest.json) |
 | DL-002 | MVP modular station kit | P0 | BLOCKED | Outpost → Station → Complex only; no Citadel/Deep Empire | Assets/ModelFactory/Models/DL-002/BLOCKED.md (40f9c0f) |
 | DL-014 | Sub Dock / compact Docking Ring-compatible pad | P0 | BLOCKED | Compact MVP function only; no public/social expansion | Assets/ModelFactory/Models/DL-014/BLOCKED.md (40f9c0f) |
-| DL-005 | Research Lab console | P0 | BLOCKED | Existing terminal visual prop only | Assets/ModelFactory/Models/DL-005/BLOCKED.md (40f9c0f) |
-| DL-003 | Static dive/research beacon | P0 | BLOCKED | Existing zone landmark; no player-built network or GPS | Assets/ModelFactory/Models/DL-003/BLOCKED.md (40f9c0f) |
-| DL-004 | Sample canister family | P0 | BLOCKED | Existing biological sample/cargo/debrief categories only | Assets/ModelFactory/Models/DL-004/BLOCKED.md (40f9c0f) |
+| DL-005 | Research Lab console | P0 | UPLOADED_TO_GITHUB | Existing terminal visual prop only | Assets/ModelFactory/Models/DL-005/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-003 | Static dive/research beacon | P0 | UPLOADED_TO_GITHUB | Existing zone landmark; no player-built network or GPS | Assets/ModelFactory/Models/DL-003/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-004 | Sample canister family | P0 | UPLOADED_TO_GITHUB | Existing biological sample/cargo/debrief categories only | Assets/ModelFactory/Models/DL-004/ (model.glb, model.obj, preview.png, manifest.json) |
 | DL-006 | Coral family | P1 | BLOCKED | Shallows/Twilight Reef only | Assets/ModelFactory/Models/DL-006/BLOCKED.md (40f9c0f) |
 | DL-007 | Kelp cluster | P1 | BLOCKED | Kelp Forest dressing; no complex ecosystem | Assets/ModelFactory/Models/DL-007/BLOCKED.md (40f9c0f) |
 | DL-008 | Seafloor rock kit | P1 | BLOCKED | Static geological dressing; no procedural generation | Assets/ModelFactory/Models/DL-008/BLOCKED.md (40f9c0f) |
