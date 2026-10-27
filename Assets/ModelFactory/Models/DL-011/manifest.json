@@ -1,0 +1,205 @@
+{
+  "id": "DL-011",
+  "title": "Twilight Reef landmark arch",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl011.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-011_TWILIGHT_REEF_ARCH.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 109776,
+      "sha256": "f381d806729dd7a5bda42b0c81114ed36f0737b25cfd9cf04b098138f4bed14a"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 117236,
+      "sha256": "c7a7c69a0fd79e02248caf5c38c8cf03622543f04c5df56677d5b524e7e82489"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 519,
+      "sha256": "965f9aed293cadb0938ab1765448d81e936e71a8b43e280313f504aebae70047"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 105836,
+      "sha256": "2f4bfc97436173f09328d390eda1f6843ff8a43702d1b306b2aef547f4b61669"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Centre of the footprint on the seafloor (0,0,0); opening faces +/-Z, spans X.",
+  "measured": {
+    "model_stats": {
+      "triangles": 1210,
+      "triangles_per_material": {
+        "hull_offwhite": 0,
+        "graphite_navy": 0,
+        "amber_accent": 0,
+        "glass_cyan": 0,
+        "emissive_cyan": 0,
+        "stone_blue": 390,
+        "stone_warm": 192,
+        "coral_pink": 72,
+        "coral_orange": 72,
+        "coral_violet": 72,
+        "coral_turq": 36,
+        "shadow_blue": 96,
+        "emissive_teal": 140,
+        "emissive_violet": 140
+      },
+      "bounds_min": [
+        -6.6443,
+        -0.45,
+        -2.2343
+      ],
+      "bounds_max": [
+        8.069,
+        8.346,
+        2.763
+      ],
+      "size": [
+        14.7133,
+        8.796,
+        4.9974
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 109776,
+      "meshes": 9,
+      "materials": 9,
+      "triangles": 1210,
+      "all_finite": true,
+      "bounds_min": [
+        -6.6443,
+        -0.45,
+        -2.2343
+      ],
+      "bounds_max": [
+        8.069,
+        8.346,
+        2.763
+      ]
+    }
+  },
+  "materials": {
+    "stone_blue": {
+      "color": [
+        0.3,
+        0.38,
+        0.47,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.9
+    },
+    "stone_warm": {
+      "color": [
+        0.52,
+        0.43,
+        0.37,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.9
+    },
+    "coral_pink": {
+      "color": [
+        0.9,
+        0.42,
+        0.55,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "coral_orange": {
+      "color": [
+        0.95,
+        0.52,
+        0.22,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "coral_violet": {
+      "color": [
+        0.5,
+        0.32,
+        0.72,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "coral_turq": {
+      "color": [
+        0.15,
+        0.72,
+        0.75,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "shadow_blue": {
+      "color": [
+        0.06,
+        0.14,
+        0.28,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "emissive_teal": {
+      "color": [
+        0.1,
+        0.5,
+        0.5,
+        1.0
+      ],
+      "emissive": [
+        0.2,
+        0.95,
+        0.85
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "emissive_violet": {
+      "color": [
+        0.35,
+        0.2,
+        0.55,
+        1.0
+      ],
+      "emissive": [
+        0.65,
+        0.35,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ]
+}

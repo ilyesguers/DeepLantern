@@ -1,0 +1,299 @@
+{
+  "id": "DL-006",
+  "title": "Coral family (5 species)",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl006.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-006_CORAL_FAMILY.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 239504,
+      "sha256": "9b04673d8803374984d93d71abdda01749ea4d80b4a76128ab1a89cc78e57f62"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 271641,
+      "sha256": "27b04a6c88e6f448581b9300ac4919d754010bce93e9627bf7bb9164b85af818"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 388,
+      "sha256": "c557ed78ed01fb938c2c75f46e742e601b923230a6315fcc294dcb64a63af837"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 71473,
+      "sha256": "2c071c05e99368effeda05e9b7f5c86d0d815cd351f8c35591321d5b8b8e2723"
+    },
+    {
+      "path": "parts/branching_fan.glb",
+      "bytes": 56112,
+      "sha256": "34b98bb4120aebb5395877daa3cfc384df0f5ff10448ec20c3a6d8647d3eca47"
+    },
+    {
+      "path": "parts/brain_coral.glb",
+      "bytes": 50196,
+      "sha256": "8725c79287099edff649137a42fb2b5ca41110087d3b3f74d93c867aba66a013"
+    },
+    {
+      "path": "parts/plate_coral.glb",
+      "bytes": 16252,
+      "sha256": "8a06ed28748acb1f85fec0ca82e11cc4f206f3658bafce636f03b2449c9344d8"
+    },
+    {
+      "path": "parts/tubular_coral.glb",
+      "bytes": 76432,
+      "sha256": "34379a9948f2c365cf7a12ec177cff3b8be3e5df271dc104f4b06dc7f40c6567"
+    },
+    {
+      "path": "parts/mound_coral.glb",
+      "bytes": 49244,
+      "sha256": "9845f40780bfb922ab2b408c037567a4d852212e603ad8190c6650cca0f9080d"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Each part in parts/ has its pivot at seafloor contact (base centre, y=0). model.glb lays the five out 2.4 m apart along X.",
+  "measured": {
+    "model_stats": {
+      "triangles": 2776,
+      "triangles_per_material": {
+        "hull_offwhite": 0,
+        "graphite_navy": 0,
+        "amber_accent": 0,
+        "glass_cyan": 0,
+        "emissive_cyan": 0,
+        "coral_pink": 894,
+        "coral_orange": 626,
+        "coral_violet": 88,
+        "coral_mint": 168,
+        "coral_turq": 288,
+        "shadow_blue": 652,
+        "emissive_teal": 60
+      },
+      "bounds_min": [
+        -5.8287,
+        -0.06,
+        -1.0355
+      ],
+      "bounds_max": [
+        5.5349,
+        2.0511,
+        1.0722
+      ],
+      "size": [
+        11.3636,
+        2.1111,
+        2.1077
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 239504,
+      "meshes": 7,
+      "materials": 7,
+      "triangles": 2776,
+      "all_finite": true,
+      "bounds_min": [
+        -5.8287,
+        -0.06,
+        -1.0355
+      ],
+      "bounds_max": [
+        5.5349,
+        2.0511,
+        1.0722
+      ]
+    }
+  },
+  "materials": {
+    "coral_pink": {
+      "color": [
+        0.9,
+        0.42,
+        0.55,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "coral_orange": {
+      "color": [
+        0.95,
+        0.52,
+        0.22,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "coral_violet": {
+      "color": [
+        0.5,
+        0.32,
+        0.72,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "coral_mint": {
+      "color": [
+        0.55,
+        0.88,
+        0.72,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "coral_turq": {
+      "color": [
+        0.15,
+        0.72,
+        0.75,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "shadow_blue": {
+      "color": [
+        0.06,
+        0.14,
+        0.28,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "emissive_teal": {
+      "color": [
+        0.1,
+        0.5,
+        0.5,
+        1.0
+      ],
+      "emissive": [
+        0.2,
+        0.95,
+        0.85
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ],
+  "parts": {
+    "branching_fan": {
+      "file": "parts/branching_fan.glb",
+      "triangles": 634,
+      "size": [
+        2.0605,
+        2.1111,
+        0.7704
+      ],
+      "bounds_min": [
+        -1.0287,
+        -0.06,
+        -0.3838
+      ],
+      "bounds_max": [
+        1.0318,
+        2.0511,
+        0.3867
+      ]
+    },
+    "brain_coral": {
+      "file": "parts/brain_coral.glb",
+      "triangles": 564,
+      "size": [
+        1.5952,
+        1.28,
+        1.609
+      ],
+      "bounds_min": [
+        -0.8056,
+        -0.05,
+        -0.8604
+      ],
+      "bounds_max": [
+        0.7896,
+        1.23,
+        0.7487
+      ]
+    },
+    "plate_coral": {
+      "file": "parts/plate_coral.glb",
+      "triangles": 160,
+      "size": [
+        1.9958,
+        1.2284,
+        2.1077
+      ],
+      "bounds_min": [
+        -0.9825,
+        0.0,
+        -1.0355
+      ],
+      "bounds_max": [
+        1.0132,
+        1.2284,
+        1.0722
+      ]
+    },
+    "tubular_coral": {
+      "file": "parts/tubular_coral.glb",
+      "triangles": 876,
+      "size": [
+        1.5079,
+        1.635,
+        1.4134
+      ],
+      "bounds_min": [
+        -0.6723,
+        -0.06,
+        -0.7647
+      ],
+      "bounds_max": [
+        0.8356,
+        1.575,
+        0.6486
+      ]
+    },
+    "mound_coral": {
+      "file": "parts/mound_coral.glb",
+      "triangles": 542,
+      "size": [
+        1.3244,
+        1.0,
+        1.2153
+      ],
+      "bounds_min": [
+        -0.5895,
+        -0.05,
+        -0.5735
+      ],
+      "bounds_max": [
+        0.7349,
+        0.95,
+        0.6418
+      ]
+    }
+  }
+}

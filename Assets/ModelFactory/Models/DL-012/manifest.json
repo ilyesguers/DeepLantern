@@ -1,0 +1,204 @@
+{
+  "id": "DL-012",
+  "title": "Ancient seafloor relic (clean + partly buried)",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl012.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-012_ANCIENT_RELIC.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 142308,
+      "sha256": "956f59f3a3cae2b59c71ee63d5143b022db808da3279400c7f4984d1e969a9c7"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 159642,
+      "sha256": "c93c03267827f234d7ca059f62ce2fe22b3fdc6368fd0f097667b90d403e1e04"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 280,
+      "sha256": "0d796de91918019e906e381cbd3aa19d531d8f1c5b1940a0849323aebbdf3538"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 95177,
+      "sha256": "6b2a0fbefe99a59d96084aef2cb920cd28117630df349b8cdf3405e77d6ead66"
+    },
+    {
+      "path": "parts/relic_clean.glb",
+      "bytes": 67492,
+      "sha256": "f158095f2a4aefafa08791c61f245e9a7b48c34a4dd04303cf80bc84e3556ced"
+    },
+    {
+      "path": "parts/relic_buried.glb",
+      "bytes": 78500,
+      "sha256": "007f35fabd894e9fd5eac286be0ed3b72fe466bdebcf0fe09dd2af278b3429b5"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Base centre (0,0,0) for each part; ring faces +Z. model.glb shows clean (x=-6) and buried (x=+6) side by side.",
+  "measured": {
+    "model_stats": {
+      "triangles": 1640,
+      "triangles_per_material": {
+        "hull_offwhite": 0,
+        "graphite_navy": 0,
+        "amber_accent": 0,
+        "glass_cyan": 0,
+        "emissive_cyan": 0,
+        "relic_stone": 912,
+        "stone_blue": 96,
+        "sediment": 120,
+        "emissive_teal": 416,
+        "metal_dark": 96,
+        "mineral": 0
+      },
+      "bounds_min": [
+        -10.75,
+        -1.35,
+        -2.4915
+      ],
+      "bounds_max": [
+        11.5952,
+        9.35,
+        2.7362
+      ],
+      "size": [
+        22.3452,
+        10.7,
+        5.2277
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 142308,
+      "meshes": 5,
+      "materials": 5,
+      "triangles": 1640,
+      "all_finite": true,
+      "bounds_min": [
+        -10.75,
+        -1.35,
+        -2.4915
+      ],
+      "bounds_max": [
+        11.5952,
+        9.35,
+        2.7362
+      ]
+    }
+  },
+  "materials": {
+    "relic_stone": {
+      "color": [
+        0.22,
+        0.25,
+        0.3,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.1,
+      "roughness": 0.85
+    },
+    "stone_blue": {
+      "color": [
+        0.3,
+        0.38,
+        0.47,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.9
+    },
+    "sediment": {
+      "color": [
+        0.62,
+        0.58,
+        0.48,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.9
+    },
+    "emissive_teal": {
+      "color": [
+        0.1,
+        0.5,
+        0.5,
+        1.0
+      ],
+      "emissive": [
+        0.2,
+        0.95,
+        0.85
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "metal_dark": {
+      "color": [
+        0.13,
+        0.15,
+        0.19,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.5,
+      "roughness": 0.7
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ],
+  "parts": {
+    "relic_clean": {
+      "file": "parts/relic_clean.glb",
+      "triangles": 760,
+      "size": [
+        9.5,
+        9.5,
+        1.75
+      ],
+      "bounds_min": [
+        -4.75,
+        -0.15,
+        -0.85
+      ],
+      "bounds_max": [
+        4.75,
+        9.35,
+        0.9
+      ]
+    },
+    "relic_buried": {
+      "file": "parts/relic_buried.glb",
+      "triangles": 880,
+      "size": [
+        11.6453,
+        9.5,
+        5.2277
+      ],
+      "bounds_min": [
+        -6.0501,
+        -1.35,
+        -2.4915
+      ],
+      "bounds_max": [
+        5.5952,
+        8.15,
+        2.7362
+      ]
+    }
+  }
+}

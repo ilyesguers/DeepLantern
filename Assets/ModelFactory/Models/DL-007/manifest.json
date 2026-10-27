@@ -1,0 +1,282 @@
+{
+  "id": "DL-007",
+  "title": "Kelp cluster (small, medium, tall)",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl007.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-007_KELP_CLUSTER.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 279240,
+      "sha256": "980a4c5ddf80dd7a22ab89ca291a858af00edbfc42378a859be5d9ae1b2fdcfe"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 318855,
+      "sha256": "5066ccacce92506cad40c6187102624c199e634a3467543ac821788ca5f695f9"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 539,
+      "sha256": "8453beb82d5ad95367b938643d95e0dbbafa027d186dbb9d3d1fa791c6939751"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 72148,
+      "sha256": "9cd82cd665a70858514f270d0d7bc0dc0ff8c600bfb744cc1ca5c0a5e90fb85b"
+    },
+    {
+      "path": "parts/kelp_small.glb",
+      "bytes": 72900,
+      "sha256": "64909b02ce80806b0688295b952f5ee48f0c95cb187341dc0bd389474adcd7e9"
+    },
+    {
+      "path": "parts/kelp_medium.glb",
+      "bytes": 97436,
+      "sha256": "7a186f559fda1baff0fc5182eed2ce40271ebf8d1e776ff225929432d482562e"
+    },
+    {
+      "path": "parts/kelp_tall.glb",
+      "bytes": 117912,
+      "sha256": "6c5f35740f3b5879395385c1cf72be62bd7a14b1a7f67efc720a32bb3957a5aa"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Each part in parts/ has its pivot at the root centre on the seafloor (y=0). model.glb lays the three out 1.8 m apart along X.",
+  "measured": {
+    "model_stats": {
+      "triangles": 3270,
+      "triangles_per_material": {
+        "hull_offwhite": 0,
+        "graphite_navy": 0,
+        "amber_accent": 0,
+        "glass_cyan": 0,
+        "emissive_cyan": 0,
+        "kelp_deep": 1554,
+        "kelp_mid": 720,
+        "kelp_lime": 288,
+        "kelp_gold": 384,
+        "stone_blue": 324
+      },
+      "bounds_min": [
+        -2.3368,
+        -0.1,
+        -0.6895
+      ],
+      "bounds_max": [
+        2.7107,
+        5.9458,
+        0.7452
+      ],
+      "size": [
+        5.0474,
+        6.0458,
+        1.4347
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 279240,
+      "meshes": 5,
+      "materials": 5,
+      "triangles": 3270,
+      "all_finite": true,
+      "bounds_min": [
+        -2.3368,
+        -0.1,
+        -0.6895
+      ],
+      "bounds_max": [
+        2.7107,
+        5.9458,
+        0.7452
+      ]
+    }
+  },
+  "materials": {
+    "hull_offwhite": {
+      "color": [
+        0.84,
+        0.87,
+        0.9,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.15,
+      "roughness": 0.55
+    },
+    "graphite_navy": {
+      "color": [
+        0.07,
+        0.1,
+        0.17,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.45,
+      "roughness": 0.55
+    },
+    "amber_accent": {
+      "color": [
+        0.93,
+        0.58,
+        0.1,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.2,
+      "roughness": 0.5
+    },
+    "glass_cyan": {
+      "color": [
+        0.3,
+        0.78,
+        0.95,
+        0.5
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.1
+    },
+    "emissive_cyan": {
+      "color": [
+        0.1,
+        0.55,
+        0.8,
+        1.0
+      ],
+      "emissive": [
+        0.25,
+        0.85,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "kelp_deep": {
+      "color": [
+        0.04,
+        0.26,
+        0.24,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.75
+    },
+    "kelp_mid": {
+      "color": [
+        0.2,
+        0.52,
+        0.38,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.75
+    },
+    "kelp_lime": {
+      "color": [
+        0.52,
+        0.74,
+        0.24,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.75
+    },
+    "kelp_gold": {
+      "color": [
+        0.78,
+        0.62,
+        0.2,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.75
+    },
+    "stone_blue": {
+      "color": [
+        0.3,
+        0.38,
+        0.47,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.9
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ],
+  "parts": {
+    "kelp_small": {
+      "file": "parts/kelp_small.glb",
+      "triangles": 814,
+      "size": [
+        1.0361,
+        2.4795,
+        1.0165
+      ],
+      "bounds_min": [
+        -0.5368,
+        -0.1,
+        -0.5725
+      ],
+      "bounds_max": [
+        0.4994,
+        2.3795,
+        0.444
+      ]
+    },
+    "kelp_medium": {
+      "file": "parts/kelp_medium.glb",
+      "triangles": 1106,
+      "size": [
+        1.2319,
+        4.0209,
+        1.2278
+      ],
+      "bounds_min": [
+        -0.5953,
+        -0.1,
+        -0.6772
+      ],
+      "bounds_max": [
+        0.6365,
+        3.9209,
+        0.5506
+      ]
+    },
+    "kelp_tall": {
+      "file": "parts/kelp_tall.glb",
+      "triangles": 1350,
+      "size": [
+        1.775,
+        6.0458,
+        1.4347
+      ],
+      "bounds_min": [
+        -0.8643,
+        -0.1,
+        -0.6895
+      ],
+      "bounds_max": [
+        0.9107,
+        5.9458,
+        0.7452
+      ]
+    }
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "id": "DL-009",
+  "title": "Bioluminescent flora (3 assets)",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl009.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-009_BIOLUMINESCENT_FLORA.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 141568,
+      "sha256": "4d6911429dc6d86536de108fdb54e3c87164deedb95ddc3025e21989accf2521"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 158116,
+      "sha256": "638b23892fbb5dab8726b40a1f3f7f183284bf23b2426e90141796b263c691de"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 391,
+      "sha256": "59af657133763d950825ddc004d2520f9795cde549ab6640a80a074c36ec8e0e"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 45633,
+      "sha256": "9dee77a63499c82273d0d17ba9d3dbe9e0e908114844b90c3bd3c5afd754d5df"
+    },
+    {
+      "path": "parts/cup_anemone.glb",
+      "bytes": 43028,
+      "sha256": "02a2853871af69e553af66142a8e3840ca2a247b80744ca1b9ea5ff4d030b49b"
+    },
+    {
+      "path": "parts/bulb_cluster.glb",
+      "bytes": 80980,
+      "sha256": "34651b5e785977b627fc275c86b43034b765843ee74c29063b0b7156c8537d22"
+    },
+    {
+      "path": "parts/glowing_sea_flower.glb",
+      "bytes": 24936,
+      "sha256": "148e1b0b19b05b9279e09c25916f0497fe6d5f20594f1730a70ad5382c688931"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Each part in parts/ has its pivot at base centre (y=0). model.glb spaces the three 2.2 m apart along X.",
+  "measured": {
+    "model_stats": {
+      "triangles": 1618,
+      "triangles_per_material": {
+        "hull_offwhite": 0,
+        "graphite_navy": 0,
+        "amber_accent": 0,
+        "glass_cyan": 0,
+        "emissive_cyan": 0,
+        "flora_body": 556,
+        "flora_violet": 346,
+        "emissive_teal": 248,
+        "emissive_violet": 96,
+        "emissive_amber": 48,
+        "stone_blue": 324
+      },
+      "bounds_min": [
+        -2.86,
+        -0.08,
+        -0.7671
+      ],
+      "bounds_max": [
+        2.7823,
+        2.1413,
+        0.7001
+      ],
+      "size": [
+        5.6423,
+        2.2213,
+        1.4673
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 141568,
+      "meshes": 6,
+      "materials": 6,
+      "triangles": 1618,
+      "all_finite": true,
+      "bounds_min": [
+        -2.86,
+        -0.08,
+        -0.7671
+      ],
+      "bounds_max": [
+        2.7823,
+        2.1413,
+        0.7001
+      ]
+    }
+  },
+  "materials": {
+    "flora_body": {
+      "color": [
+        0.08,
+        0.22,
+        0.3,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.7
+    },
+    "flora_violet": {
+      "color": [
+        0.26,
+        0.18,
+        0.42,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.7
+    },
+    "emissive_teal": {
+      "color": [
+        0.1,
+        0.5,
+        0.5,
+        1.0
+      ],
+      "emissive": [
+        0.2,
+        0.95,
+        0.85
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "emissive_violet": {
+      "color": [
+        0.35,
+        0.2,
+        0.55,
+        1.0
+      ],
+      "emissive": [
+        0.65,
+        0.35,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "emissive_amber": {
+      "color": [
+        0.8,
+        0.5,
+        0.1,
+        1.0
+      ],
+      "emissive": [
+        1.0,
+        0.72,
+        0.25
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "stone_blue": {
+      "color": [
+        0.3,
+        0.38,
+        0.47,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.9
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ],
+  "parts": {
+    "cup_anemone": {
+      "file": "parts/cup_anemone.glb",
+      "triangles": 468,
+      "size": [
+        1.32,
+        1.51,
+        1.3948
+      ],
+      "bounds_min": [
+        -0.66,
+        -0.08,
+        -0.7671
+      ],
+      "bounds_max": [
+        0.66,
+        1.43,
+        0.6277
+      ]
+    },
+    "bulb_cluster": {
+      "file": "parts/bulb_cluster.glb",
+      "triangles": 898,
+      "size": [
+        1.438,
+        2.036,
+        1.4003
+      ],
+      "bounds_min": [
+        -0.6933,
+        -0.08,
+        -0.7002
+      ],
+      "bounds_max": [
+        0.7447,
+        1.956,
+        0.7001
+      ]
+    },
+    "glowing_sea_flower": {
+      "file": "parts/glowing_sea_flower.glb",
+      "triangles": 252,
+      "size": [
+        1.0769,
+        2.2013,
+        1.0263
+      ],
+      "bounds_min": [
+        -0.4946,
+        -0.06,
+        -0.5103
+      ],
+      "bounds_max": [
+        0.5823,
+        2.1413,
+        0.5159
+      ]
+    }
+  }
+}

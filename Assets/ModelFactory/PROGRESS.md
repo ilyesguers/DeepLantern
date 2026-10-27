@@ -2,10 +2,10 @@
 
 Last updated: 2026-10-22
 Current stage: PRODUCING via procedural Python geometry (no AI/Blender available)
-Current asset: DL-006 (next P1)
+Current asset: DL-013 (next P2), then DL-016, DL-017, DL-018, DL-020, DL-019
 Status: IN_PROGRESS
-Actual 3D models uploaded: 6 (DL-001, DL-002, DL-003, DL-004, DL-005, DL-014) — all P0 done
-Blocked tasks: 14 of 20 (not yet attempted; the earlier blocker no longer applies)
+Actual 3D models uploaded: 14 (all P0 + all P1: DL-001..DL-012, DL-014, DL-015)
+Blocked tasks: 6 of 20 (P2/P3, not yet attempted; the earlier blocker no longer applies)
 Roblox Studio validation: NOT STARTED (intentionally deferred)
 
 ## Session checkpoint
@@ -47,14 +47,14 @@ Owner authorised any workable method. Blender/bpy and AI generators remain unrea
 | DL-005 | Research Lab console | P0 | UPLOADED_TO_GITHUB | Existing terminal visual prop only | Assets/ModelFactory/Models/DL-005/ (model.glb, model.obj, preview.png, manifest.json) |
 | DL-003 | Static dive/research beacon | P0 | UPLOADED_TO_GITHUB | Existing zone landmark; no player-built network or GPS | Assets/ModelFactory/Models/DL-003/ (model.glb, model.obj, preview.png, manifest.json) |
 | DL-004 | Sample canister family | P0 | UPLOADED_TO_GITHUB | Existing biological sample/cargo/debrief categories only | Assets/ModelFactory/Models/DL-004/ (model.glb, model.obj, preview.png, manifest.json) |
-| DL-006 | Coral family | P1 | BLOCKED | Shallows/Twilight Reef only | Assets/ModelFactory/Models/DL-006/BLOCKED.md (40f9c0f) |
-| DL-007 | Kelp cluster | P1 | BLOCKED | Kelp Forest dressing; no complex ecosystem | Assets/ModelFactory/Models/DL-007/BLOCKED.md (40f9c0f) |
-| DL-008 | Seafloor rock kit | P1 | BLOCKED | Static geological dressing; no procedural generation | Assets/ModelFactory/Models/DL-008/BLOCKED.md (40f9c0f) |
-| DL-009 | Bioluminescent flora | P1 | BLOCKED | Existing MVP zones; no unapproved event logic | Assets/ModelFactory/Models/DL-009/BLOCKED.md (40f9c0f) |
-| DL-011 | Twilight Reef arch | P1 | BLOCKED | Landmark within Zone_TwilightReef; not a new zone | Assets/ModelFactory/Models/DL-011/BLOCKED.md (40f9c0f) |
-| DL-010 | Small wreckage set | P1 | BLOCKED | Static points of interest in an existing MVP zone | Assets/ModelFactory/Models/DL-010/BLOCKED.md (40f9c0f) |
-| DL-015 | Cave entrance pieces | P1 | BLOCKED | Existing-zone secret only; no Lost Ruins zone | Assets/ModelFactory/Models/DL-015/BLOCKED.md (40f9c0f) |
-| DL-012 | Individual relic props | P1 | BLOCKED | Existing Codex/Archive relics; full Lost Ruins is post-MVP | Assets/ModelFactory/Models/DL-012/BLOCKED.md (40f9c0f) |
+| DL-006 | Coral family | P1 | UPLOADED_TO_GITHUB | Shallows/Twilight Reef only | Assets/ModelFactory/Models/DL-006/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-007 | Kelp cluster | P1 | UPLOADED_TO_GITHUB | Kelp Forest dressing; no complex ecosystem | Assets/ModelFactory/Models/DL-007/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-008 | Seafloor rock kit | P1 | UPLOADED_TO_GITHUB | Static geological dressing; no procedural generation | Assets/ModelFactory/Models/DL-008/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-009 | Bioluminescent flora | P1 | UPLOADED_TO_GITHUB | Existing MVP zones; no unapproved event logic | Assets/ModelFactory/Models/DL-009/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-011 | Twilight Reef arch | P1 | UPLOADED_TO_GITHUB | Landmark within Zone_TwilightReef; not a new zone | Assets/ModelFactory/Models/DL-011/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-010 | Small wreckage set | P1 | UPLOADED_TO_GITHUB | Static points of interest in an existing MVP zone | Assets/ModelFactory/Models/DL-010/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-015 | Cave entrance pieces | P1 | UPLOADED_TO_GITHUB | Existing-zone secret only; no Lost Ruins zone | Assets/ModelFactory/Models/DL-015/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-012 | Individual relic props | P1 | UPLOADED_TO_GITHUB | Existing Codex/Archive relics; full Lost Ruins is post-MVP | Assets/ModelFactory/Models/DL-012/ (model.glb, model.obj, preview.png, manifest.json) |
 | DL-013 | Aquarium/Gallery discovery display | P2 | BLOCKED | Visual showcase only; no passive income/stat bonuses | Assets/ModelFactory/Models/DL-013/BLOCKED.md (40f9c0f) |
 | DL-016 | Cables and hoses | P2 | BLOCKED | Static dressing; no simulated cable physics or power network | Assets/ModelFactory/Models/DL-016/BLOCKED.md (40f9c0f) |
 | DL-017 | Diegetic signage kit | P2 | BLOCKED | Wayfinding only; no GPS quest markers/minimap | Assets/ModelFactory/Models/DL-017/BLOCKED.md (40f9c0f) |

@@ -1,0 +1,264 @@
+{
+  "id": "DL-015",
+  "title": "Cave entrance kit (mouth, ledge, buttress, accent)",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl015.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-015_CAVE_ENTRANCE.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 89620,
+      "sha256": "80dc9a49e2296b5a217bfa32a1bfef6c755f27a394c3b7bcf675ee445474948f"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 97408,
+      "sha256": "63d09cea600c45329b7aba271d308c28bc438c52986f71855a33a2ec71eea710"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 333,
+      "sha256": "47882c5bd34c9f206e9f97a639692ddf080c88e0619bfb9bac1bd4a666c8023d"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 80633,
+      "sha256": "b3b3d2e14ecad7debbbb3e630587ae11eab281bf47ce01dff97ef0c2a44f6722"
+    },
+    {
+      "path": "parts/rock_mouth.glb",
+      "bytes": 38556,
+      "sha256": "6de7668f108e0f979cce304d960f353be053289cf5a9ce18bc1abb75770c808d"
+    },
+    {
+      "path": "parts/overhanging_ledge.glb",
+      "bytes": 13256,
+      "sha256": "19c2f6a200bc2591654d989325cdb0c897e51589ad41bfa6fe5aaa754d355560"
+    },
+    {
+      "path": "parts/side_wall_buttress.glb",
+      "bytes": 21008,
+      "sha256": "0513912b7ae0542c918febfac26a6f1647e7e749b7c9d2b968ce4d1d790b9214"
+    },
+    {
+      "path": "parts/mineral_accent.glb",
+      "bytes": 24404,
+      "sha256": "cc7c9688712851dcb1b4f95095a08e1a89a0189e1f0f23f6666b789d6638941c"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Each part in parts/ has its pivot at ground-contact centre (y=0), mouth facing +Z. model.glb shows an illustrative arrangement (ledge raised 5.1 m, buttress 9.5 m to -X), not a verified snap assembly.",
+  "measured": {
+    "model_stats": {
+      "triangles": 1002,
+      "triangles_per_material": {
+        "hull_offwhite": 0,
+        "graphite_navy": 0,
+        "amber_accent": 0,
+        "glass_cyan": 0,
+        "emissive_cyan": 0,
+        "stone_blue": 492,
+        "stone_warm": 174,
+        "sediment": 152,
+        "shadow_blue": 24,
+        "emissive_teal": 112,
+        "coral_violet": 48,
+        "coral_pink": 0
+      },
+      "bounds_min": [
+        -11.6719,
+        -0.1,
+        -2.3534
+      ],
+      "bounds_max": [
+        6.3664,
+        9.9,
+        3.2437
+      ],
+      "size": [
+        18.0383,
+        10.0,
+        5.5972
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 89620,
+      "meshes": 6,
+      "materials": 6,
+      "triangles": 1002,
+      "all_finite": true,
+      "bounds_min": [
+        -11.6719,
+        -0.1,
+        -2.3534
+      ],
+      "bounds_max": [
+        6.3664,
+        9.9,
+        3.2437
+      ]
+    }
+  },
+  "materials": {
+    "stone_blue": {
+      "color": [
+        0.3,
+        0.38,
+        0.47,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.9
+    },
+    "stone_warm": {
+      "color": [
+        0.52,
+        0.43,
+        0.37,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.9
+    },
+    "sediment": {
+      "color": [
+        0.62,
+        0.58,
+        0.48,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.9
+    },
+    "shadow_blue": {
+      "color": [
+        0.06,
+        0.14,
+        0.28,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "emissive_teal": {
+      "color": [
+        0.1,
+        0.5,
+        0.5,
+        1.0
+      ],
+      "emissive": [
+        0.2,
+        0.95,
+        0.85
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "coral_violet": {
+      "color": [
+        0.5,
+        0.32,
+        0.72,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ],
+  "parts": {
+    "rock_mouth": {
+      "file": "parts/rock_mouth.glb",
+      "triangles": 416,
+      "size": [
+        13.0473,
+        7.0822,
+        4.4694
+      ],
+      "bounds_min": [
+        -6.6809,
+        -0.07,
+        -2.3534
+      ],
+      "bounds_max": [
+        6.3664,
+        7.0122,
+        2.116
+      ]
+    },
+    "overhanging_ledge": {
+      "file": "parts/overhanging_ledge.glb",
+      "triangles": 114,
+      "size": [
+        8.8313,
+        4.8,
+        4.8294
+      ],
+      "bounds_min": [
+        -4.2549,
+        0.0,
+        -2.3982
+      ],
+      "bounds_max": [
+        4.5764,
+        4.8,
+        2.4311
+      ]
+    },
+    "side_wall_buttress": {
+      "file": "parts/side_wall_buttress.glb",
+      "triangles": 216,
+      "size": [
+        4.5022,
+        3.3,
+        4.2636
+      ],
+      "bounds_min": [
+        -2.1719,
+        -0.1,
+        -2.1741
+      ],
+      "bounds_max": [
+        2.3303,
+        3.2,
+        2.0895
+      ]
+    },
+    "mineral_accent": {
+      "file": "parts/mineral_accent.glb",
+      "triangles": 256,
+      "size": [
+        1.1064,
+        0.97,
+        0.906
+      ],
+      "bounds_min": [
+        -0.4907,
+        -0.07,
+        -0.4623
+      ],
+      "bounds_max": [
+        0.6157,
+        0.9,
+        0.4437
+      ]
+    }
+  }
+}
