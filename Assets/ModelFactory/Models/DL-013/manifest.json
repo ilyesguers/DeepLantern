@@ -2,58 +2,72 @@
   "id": "DL-013",
   "title": "Discovery specimen display (pedestal + replaceable specimen)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl013.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl013.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-013_DISCOVERY_DISPLAY.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 57912,
-      "sha256": "e0ae8cbb94db2759918131db6d5f218aed07cd6433d057c76cb071903342ee2b"
+      "bytes": 165412,
+      "sha256": "ba45e2d4795d8ba330a3314bbf5d54e7585db3f648093cc1d6e197292d080a06"
     },
     {
       "path": "model.obj",
-      "bytes": 59550,
-      "sha256": "ef5bd0466ff241bcd150f38bed1e0b4ead69df7f3937252a438b7b341ba39885"
+      "bytes": 238188,
+      "sha256": "76cf66d1e170052fb47c0a9f002a969ab678c80cc118de6ec56794dba16cb16a"
     },
     {
       "path": "model.mtl",
-      "bytes": 416,
-      "sha256": "9869e86a6396b28753d71d6a0607722409e83b5d41837024f6f7e61f07553c5d"
+      "bytes": 548,
+      "sha256": "f3117cface2098e37e8513c05e95906bd7413b52334f6b67a569ece76bf56423"
     },
     {
       "path": "preview.png",
-      "bytes": 45448,
-      "sha256": "d92539c3f4614d8b3d2fda4ec39a4deae62be746bac590e3485b60e9d20e0388"
+      "bytes": 148188,
+      "sha256": "345f6c21a6e45e98aa6c9d755a652570ecd73c6aa7659dc087027093975e356b"
+    },
+    {
+      "path": "textures/detail_metal.png",
+      "bytes": 31365,
+      "sha256": "2bbe08f1bc4fa236b0e4ff200f5ce702d806410b6b379b43e8eae432353c2408"
+    },
+    {
+      "path": "textures/detail_panel.png",
+      "bytes": 22113,
+      "sha256": "f4127a296c5a5359cd23265f641d5c8b75ef2f3d7916cea8e86c80920d7f8735"
     },
     {
       "path": "parts/display_pedestal.glb",
-      "bytes": 47576,
-      "sha256": "05722d52f0eff4ed9707f011144b3c8a38af691a95da5f016437a17da2f6a5a5"
+      "bytes": 150124,
+      "sha256": "00179c1d9c7188cbc943c10aa9531c46fd3e74e411877e11d7078bf79f59ef79"
     },
     {
       "path": "parts/specimen_placeholder.glb",
-      "bytes": 11496,
-      "sha256": "639879775d3957ea998b635bb68e4444f733b269ea577b5ae8ef61e65ecab59c"
+      "bytes": 48396,
+      "sha256": "74c1b1ee758a0f13c1d471355cbffacb92d0fc25849dce57fd98d95da73d7d85"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Pedestal: floor centre (0,0,0). Specimen placeholder: bottom centre; model.glb seats it on the mount at y=1.03.",
   "measured": {
     "model_stats": {
-      "triangles": 614,
+      "triangles": 774,
       "triangles_per_material": {
-        "hull_offwhite": 44,
-        "graphite_navy": 156,
+        "hull_offwhite": 76,
+        "graphite_navy": 284,
         "amber_accent": 0,
         "glass_cyan": 126,
         "emissive_cyan": 128,
         "teal_shell": 32,
         "titanium": 48,
-        "emissive_violet": 80
+        "emissive_violet": 80,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -0.62,
@@ -72,10 +86,10 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 57912,
+      "file_bytes": 165412,
       "meshes": 7,
       "materials": 7,
-      "triangles": 614,
+      "triangles": 774,
       "all_finite": true,
       "bounds_min": [
         -0.62,
@@ -181,13 +195,13 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {
     "display_pedestal": {
       "file": "parts/display_pedestal.glb",
-      "triangles": 502,
+      "triangles": 662,
       "size": [
         1.24,
         1.73,

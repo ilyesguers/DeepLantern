@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (864 triangles, 7 materials, no textures) built from Python-authored geometry (`source/generate_dl018.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (3,040 triangles, 6 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl018.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 Existing cargo/station dressing only. No inventory, dropper or storage mechanics.
@@ -23,4 +23,4 @@ Per-part files:
 Hard case with handle and latches, large sealed supply crate with reinforced ribs and a separate lid object, and a fragile-instrument case with shock-isolating feet. Each has a blank label plate and a flat stable base.
 
 ## Limitations
-Scuffing is not modelled (no textures). The stacked arrangement in model.glb is a visual check, not a measured clipping test. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+Scuffing is not modelled (procedural detail textures only). The stacked arrangement in model.glb is a visual check, not a measured clipping test. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

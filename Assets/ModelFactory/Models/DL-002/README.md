@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (2164 triangles, 9 materials, no textures) built from Python-authored geometry (`source/generate_dl002.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (6,036 triangles, 9 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl002.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 Restricted to the GDD MVP tiers Outpost -> Station -> Complex and the named MVP wings. Reusable architectural modules only; no Citadel/Deep Empire, giant hub, grid-building system, droppers or passive generators.
@@ -33,4 +33,4 @@ Per-part files:
 Grid unit: 4.0 m wide x 3.0 m tall x 0.4 m wall thickness. Modules (each also in parts/): wall_panel, window_wall, corner_wall, door_frame (pressure seal, no door leaf), hatch (wheel + lock lugs), service_access_panel, floor_tile (service channel), ceiling_beam, railing_short, railing_corner, pipe_bundle, cable_tray, floodlight_bracket, vent_filter_unit. Wall-type origins are at the bottom centre of the wall line. model.glb is a spaced preview layout, not a snapped assembly. No snap test or 3x2 assembly check has been run in Studio.
 
 ## Limitations
-Door frame has no door leaf; hatch wheel is static; corner wall is a single L piece. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+Door frame has no door leaf; hatch wheel is static; corner wall is a single L piece. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

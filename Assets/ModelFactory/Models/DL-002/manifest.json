@@ -2,118 +2,132 @@
   "id": "DL-002",
   "title": "MVP modular research station kit (14 modules)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl002.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl002.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Assets/ModelFactory/Tasks/DL-002.md + Blender/MODEL_FACTORY/TASKS/DL-002_RESEARCH_STATION_KIT.md (branch assets/model-factory-queue)",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 189688,
-      "sha256": "829347656ffb785d5750bf68e289cf9103fb886f511e9c58c3a680f3e9c8c0fc"
+      "bytes": 928336,
+      "sha256": "a89a8ccf8521dfbee31a198ee63793b4dad2ebda57820a2ef827f2e20f359562"
     },
     {
       "path": "model.obj",
-      "bytes": 213666,
-      "sha256": "f6238382c9cbcdf9671d249ced393edaccaee358132fd99417c2ad3ec8a897ec"
+      "bytes": 1940787,
+      "sha256": "0518266e41f842f5befeb64f3d6128283892dc81c53985733818908df7fd7863"
     },
     {
       "path": "model.mtl",
-      "bytes": 519,
-      "sha256": "8e06f0a4f50561416a86519036988b9daaf857eb79f746a065a390f9811426b3"
+      "bytes": 717,
+      "sha256": "9daedfa0b983adbef6cf4aa730cab435e52d5382ae8309083b5a485864ef5919"
     },
     {
       "path": "preview.png",
-      "bytes": 44697,
-      "sha256": "47ce85b3c27d7e4a5f66bf09dbd817678138dff490f891402110630695a3c119"
+      "bytes": 214029,
+      "sha256": "4f54496ed989f18a8f2e52375f269553ba6e9b1ceb25bd8055605fa3b4b64d10"
+    },
+    {
+      "path": "textures/detail_metal.png",
+      "bytes": 31989,
+      "sha256": "0a5839c7390ceb67d324ef17a07bd9c5bf80a7251d0e846028bf3ae967b24e18"
+    },
+    {
+      "path": "textures/detail_panel.png",
+      "bytes": 24666,
+      "sha256": "697eebcbd3fa523ec793be60f18552428fd438e920d544870291b53eee1b0bcf"
     },
     {
       "path": "parts/wall_panel.glb",
-      "bytes": 7908,
-      "sha256": "b7be4b0bc17acfce7dda4b83af2a1f84a435fe014d6230626c9aac4ce5c60f72"
+      "bytes": 97592,
+      "sha256": "af449e7b53d5e05ddd92b02ff55dc0b9ff81aedc4e92c6d4dc6f94682f632b0c"
     },
     {
       "path": "parts/window_wall.glb",
-      "bytes": 15812,
-      "sha256": "1ff84a22dc22b4df07f9293772467ac432f0db9ea9893354b44230c0aa82c32d"
+      "bytes": 141904,
+      "sha256": "d8006eb945405a631298f24213414abd5bf0903342f998e002e60a2ac0f4460c"
     },
     {
       "path": "parts/corner_wall.glb",
-      "bytes": 16808,
-      "sha256": "8d1bdaf2230e36b71b0bfc313a1c3e8fca7e50a3b7d51ceeff5f1b9f1b409567"
+      "bytes": 149464,
+      "sha256": "100ded3bc2d264feb2518702d2905ed3abebd3d9f0f2d3b34f8edf9ff120f13d"
     },
     {
       "path": "parts/door_frame.glb",
-      "bytes": 17680,
-      "sha256": "2cf982de0894b87a123c29c9d9b097945c0d477d0dce356230431ab2a10d7d67"
+      "bytes": 149416,
+      "sha256": "4e7bd82930fd40e275cfa413383ee531ce83e7e193e0e95bfab45ebaa1d6f1d3"
     },
     {
       "path": "parts/hatch.glb",
-      "bytes": 42808,
-      "sha256": "7699681adb0a97d9cda8e665f5087db932fd0a494460e68f6a08f54099d95ed3"
+      "bytes": 179952,
+      "sha256": "18a1a34c4ce377549faae6f4d7a893e9349774286cb14935f3525059a12d3a37"
     },
     {
       "path": "parts/service_access_panel.glb",
-      "bytes": 16512,
-      "sha256": "ea07ef9234d9c583cb5f37a4d2b66354ad2789c49c0ac031e74a66e4ce8e7b2b"
+      "bytes": 139160,
+      "sha256": "96e4885fc89eabbd89b5da053b8c482938ac39eba70cc37c88cb83c62440ac55"
     },
     {
       "path": "parts/floor_tile.glb",
-      "bytes": 13436,
-      "sha256": "931bd321e85a9dc0206cb54c6e493f62615a363c011713776c252fc21b27f060"
+      "bytes": 108596,
+      "sha256": "a4b812e448ec8c3ce912a1257ca165aa00de26ea911a70afe7c4064b440ed0d5"
     },
     {
       "path": "parts/ceiling_beam.glb",
-      "bytes": 6716,
-      "sha256": "e54a3bf20a51497154bc1ea007dec4d468c9e05b12a03462128baa288d945279"
+      "bytes": 60048,
+      "sha256": "3d6a5d49e37580a8aa2f53beec04deaf54e33019881d4cb6009adaf6fa0bab46"
     },
     {
       "path": "parts/railing_short.glb",
-      "bytes": 8792,
-      "sha256": "fec5e5edb1b1497464b19c41128ad6e3eeeea6de804d78a28e03190f4cb7ac05"
+      "bytes": 98816,
+      "sha256": "28a9cf2439ce5d5306536701438e0644bdeb7969fcdf0e845bb3f9fb79095a43"
     },
     {
       "path": "parts/railing_corner.glb",
-      "bytes": 14876,
-      "sha256": "f6408653af13eb8bf4960757c6250f20881a8b5752dcff7b51f45fcc16b74dc6"
+      "bytes": 136864,
+      "sha256": "58af67e7c09b4416eed13887b815901d16059bd2d05b49a76102bf3d2f829d92"
     },
     {
       "path": "parts/pipe_bundle.glb",
-      "bytes": 16644,
-      "sha256": "8ed531147cd7f581eb5389b2a59da58eacdcef6986bef8e04314d6e0e7f6b5ea"
+      "bytes": 98188,
+      "sha256": "d3a3717122f53ce1dedf6e6e72dfc5b3d8cec1ae4c7723c1b0274697720e1fe7"
     },
     {
       "path": "parts/cable_tray.glb",
-      "bytes": 18560,
-      "sha256": "c1fba1e6bd9fbbb1a042f49d1a938c8cc0c8be91c6f2529308e15b85177eefde"
+      "bytes": 114032,
+      "sha256": "4c0cd58dff1496a76114ac64cc85d9eb98815aeefeed35fc71dbe40833181068"
     },
     {
       "path": "parts/floodlight_bracket.glb",
-      "bytes": 15624,
-      "sha256": "7215bf219967316bceb2af12dbb3267807f6ce17c667b17bde9b2a41cf21c89a"
+      "bytes": 94740,
+      "sha256": "914ad1884e6b11d97e633b82c7a49981bb4024dc79575de01503c16bdc6d3e09"
     },
     {
       "path": "parts/vent_filter_unit.glb",
-      "bytes": 17888,
-      "sha256": "9410bfbe5dc123e16326f362c52185cc112c10e5a7511112455ab10c4214415a"
+      "bytes": 131044,
+      "sha256": "5f47d76e6ae509c9ac36234adf2c4e3d66a61ff8be9c22fcd2fd7ace81592c7b"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Grid unit 4.0 m wide, 3.0 m tall, 0.4 m wall. Wall-type modules: origin at bottom centre of the wall line. model.glb is a spaced preview layout of the 14 modules, not an assembly; use parts/*.glb.",
   "measured": {
     "model_stats": {
-      "triangles": 2164,
+      "triangles": 6036,
       "triangles_per_material": {
-        "hull_offwhite": 228,
-        "graphite_navy": 252,
-        "amber_accent": 316,
-        "glass_cyan": 12,
-        "emissive_cyan": 92,
-        "titanium": 308,
+        "hull_offwhite": 836,
+        "graphite_navy": 796,
+        "amber_accent": 604,
+        "glass_cyan": 44,
+        "emissive_cyan": 252,
+        "titanium": 660,
         "emissive_amber": 48,
-        "navy_frame": 876,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0,
+        "navy_frame": 2764,
         "teal_shell": 32
       },
       "bounds_min": [
@@ -133,10 +147,10 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 189688,
+      "file_bytes": 928336,
       "meshes": 9,
       "materials": 9,
-      "triangles": 2164,
+      "triangles": 6036,
       "all_finite": true,
       "bounds_min": [
         -10.25,
@@ -264,13 +278,13 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {
     "wall_panel": {
       "file": "parts/wall_panel.glb",
-      "triangles": 72,
+      "triangles": 264,
       "size": [
         4.0,
         3.0,
@@ -289,7 +303,7 @@
     },
     "window_wall": {
       "file": "parts/window_wall.glb",
-      "triangles": 156,
+      "triangles": 572,
       "size": [
         4.0,
         3.0,
@@ -308,7 +322,7 @@
     },
     "corner_wall": {
       "file": "parts/corner_wall.glb",
-      "triangles": 168,
+      "triangles": 616,
       "size": [
         4.23,
         3.0,
@@ -327,7 +341,7 @@
     },
     "door_frame": {
       "file": "parts/door_frame.glb",
-      "triangles": 168,
+      "triangles": 616,
       "size": [
         4.0,
         3.0,
@@ -346,7 +360,7 @@
     },
     "hatch": {
       "file": "parts/hatch.glb",
-      "triangles": 468,
+      "triangles": 820,
       "size": [
         4.0,
         3.0,
@@ -365,7 +379,7 @@
     },
     "service_access_panel": {
       "file": "parts/service_access_panel.glb",
-      "triangles": 144,
+      "triangles": 528,
       "size": [
         4.0,
         3.0,
@@ -384,7 +398,7 @@
     },
     "floor_tile": {
       "file": "parts/floor_tile.glb",
-      "triangles": 108,
+      "triangles": 332,
       "size": [
         4.0,
         0.325,
@@ -403,7 +417,7 @@
     },
     "ceiling_beam": {
       "file": "parts/ceiling_beam.glb",
-      "triangles": 48,
+      "triangles": 176,
       "size": [
         4.0,
         0.48,
@@ -422,7 +436,7 @@
     },
     "railing_short": {
       "file": "parts/railing_short.glb",
-      "triangles": 72,
+      "triangles": 264,
       "size": [
         2.115,
         1.07,
@@ -441,7 +455,7 @@
     },
     "railing_corner": {
       "file": "parts/railing_corner.glb",
-      "triangles": 144,
+      "triangles": 528,
       "size": [
         1.715,
         1.07,
@@ -460,7 +474,7 @@
     },
     "pipe_bundle": {
       "file": "parts/pipe_bundle.glb",
-      "triangles": 156,
+      "triangles": 252,
       "size": [
         4.0,
         0.75,
@@ -479,7 +493,7 @@
     },
     "cable_tray": {
       "file": "parts/cable_tray.glb",
-      "triangles": 168,
+      "triangles": 360,
       "size": [
         4.0,
         0.34,
@@ -498,7 +512,7 @@
     },
     "floodlight_bracket": {
       "file": "parts/floodlight_bracket.glb",
-      "triangles": 132,
+      "triangles": 228,
       "size": [
         0.5,
         0.77,
@@ -517,7 +531,7 @@
     },
     "vent_filter_unit": {
       "file": "parts/vent_filter_unit.glb",
-      "triangles": 160,
+      "triangles": 480,
       "size": [
         1.32,
         0.8,

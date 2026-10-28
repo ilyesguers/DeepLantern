@@ -2,69 +2,79 @@
   "id": "DL-008",
   "title": "Seafloor rock kit (6 pieces)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl008.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl008.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-008_SEAFLOOR_ROCKS.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 128520,
-      "sha256": "2542fc73491a71989c2389510873b73f8d8e4dab7b910eeca1e2c493f5744b43"
+      "bytes": 307896,
+      "sha256": "932f37f2fa8301b8ccb94f05b66540a62ac50a6a05114451f8aa26a67457b7bd"
     },
     {
       "path": "model.obj",
-      "bytes": 145166,
-      "sha256": "0824bec7900a6496df252823f6b7b108f0ec4fa6beeae22dd890b2e17a2d1430"
+      "bytes": 480287,
+      "sha256": "960e08e44414ae493fc7283e11e82750ff899e237bbb491fc064f019ec53acba"
     },
     {
       "path": "model.mtl",
-      "bytes": 202,
-      "sha256": "ba7b12d9a8118098cb70221f4fcddc3b44de630e34a04a8159e6ff8716d06c6e"
+      "bytes": 333,
+      "sha256": "618f467b7d8bbe979c1d6b0dd2dd5ac9e65d885226cb30a83ab501fe4bfa8e43"
     },
     {
       "path": "preview.png",
-      "bytes": 89441,
-      "sha256": "12fede35d07c1a093899e4d4eb5479e9042f865b703e903f37310f8fbb9ea74b"
+      "bytes": 231498,
+      "sha256": "0a82a904dc6b2c109becee5323d5ac16d25e442ce8aa80cc09d1a920c57e21db"
+    },
+    {
+      "path": "textures/detail_organic.png",
+      "bytes": 35630,
+      "sha256": "9553c80895e05580e11658c42ec8a31a3eb2f1931d85228fd519212f40a8d800"
+    },
+    {
+      "path": "textures/detail_rock.png",
+      "bytes": 48250,
+      "sha256": "e0024a34e5765068adfa9e03a762cba13e4f0271000be17282bffaa8d0b1235c"
     },
     {
       "path": "parts/boulder.glb",
-      "bytes": 20436,
-      "sha256": "bcb8a7f5fefe770f7224c7e386ff874fb907a86c9a3c5810b175554f69d71b30"
+      "bytes": 82800,
+      "sha256": "ef01cea0fc964a10644bc50844954036918913a78dca720d34fb1e644a454fcb"
     },
     {
       "path": "parts/fractured_slab.glb",
-      "bytes": 8540,
-      "sha256": "ece461bad427770d0af7cee94b6cdae6a2240ec2b61ea827221a31a662d0b670"
+      "bytes": 62380,
+      "sha256": "165d09df7e88b45d4e47cae3c380bac52dacd49ef55303816f33a9424814cf9f"
     },
     {
       "path": "parts/tall_split_rock.glb",
-      "bytes": 12364,
-      "sha256": "c6cbe4041965a6b833f7bbf1ebb464030ce263f1cd06c914f1b68ba91089f9cd"
+      "bytes": 109352,
+      "sha256": "0d54f4dc4a9c554fc6c973bb15b53dff47e86f938ad5aa4025cbd100cf152145"
     },
     {
       "path": "parts/porous_volcanic.glb",
-      "bytes": 51256,
-      "sha256": "ad387b1603877e0788e031b684b5b27e78ecfe4af312d85dd2f5801e8144b4db"
+      "bytes": 171360,
+      "sha256": "023b006b2ee66c7662165641611ffe1a66438f3bb6054b6c173d8d5f21034a3e"
     },
     {
       "path": "parts/layered_shelf.glb",
-      "bytes": 13616,
-      "sha256": "c8ab2437941badf53d0a3a724aa27aeee731251834bdd8058a596d8cb23da1b1"
+      "bytes": 70780,
+      "sha256": "12630b9e567b62cad9e5929ad8498526b0341a2d70cf39cad96eb2bff84c43e0"
     },
     {
       "path": "parts/scatter_cluster.glb",
-      "bytes": 32232,
-      "sha256": "e016d875c227501bf4f0db5e617ba9a13f36278adbe93aa6064ac29ca3072d8c"
+      "bytes": 102720,
+      "sha256": "ce8f3f5867ed555519f73d20b23921e8a74a3d07078183cfd7e66cd496178ede"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Each part in parts/ has its pivot at ground contact (base centre, y=0). model.glb spaces the six along X.",
   "measured": {
     "model_stats": {
-      "triangles": 1486,
+      "triangles": 1518,
       "triangles_per_material": {
         "hull_offwhite": 0,
         "graphite_navy": 0,
@@ -74,7 +84,11 @@
         "stone_blue": 498,
         "stone_warm": 362,
         "sediment": 182,
-        "shadow_blue": 444
+        "shadow_blue": 476,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -9.8752,
@@ -93,10 +107,10 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 128520,
+      "file_bytes": 307896,
       "meshes": 4,
       "materials": 4,
-      "triangles": 1486,
+      "triangles": 1518,
       "all_finite": true,
       "bounds_min": [
         -9.8752,
@@ -161,7 +175,7 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {
@@ -205,7 +219,7 @@
     },
     "tall_split_rock": {
       "file": "parts/tall_split_rock.glb",
-      "triangles": 124,
+      "triangles": 156,
       "size": [
         3.2035,
         4.0,

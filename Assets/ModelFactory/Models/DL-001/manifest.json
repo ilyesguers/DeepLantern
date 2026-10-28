@@ -2,77 +2,91 @@
   "id": "DL-001",
   "title": "Scout / research submarine (visual asset)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl001.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl001.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Assets/ModelFactory/Tasks/DL-001.md",
   "reference": "Art/VisualReference/02_Submarine_Design.png (Scout length 8 m, width ~4.2 m, height 3.1 m)",
   "files": [
     {
       "path": "model.glb",
-      "bytes": 175300,
-      "sha256": "265797e762faf46990154ce7b5b4dc2f6a3af0b1f134d13bc762668025ddde54"
+      "bytes": 943212,
+      "sha256": "5e69bd3d163779db829e88918bd09dc930762cb8c800ccd72de5aaad84080e17"
     },
     {
       "path": "model.obj",
-      "bytes": 200706,
-      "sha256": "b090d1898d9d7514459a40b305ea4e59d93487a31e77856340a369fc7a458d65"
+      "bytes": 2004714,
+      "sha256": "4fe115cbba9da52d3f81fdd21a19d2de6181b12c66f191010abcbe303140b8e0"
     },
     {
       "path": "model.mtl",
-      "bytes": 289,
-      "sha256": "b34b1edba1e878b97c50f6ec346b0d3f948bc7985de7d329dacdba730e8829ff"
+      "bytes": 705,
+      "sha256": "16636dc0402f8c35afa981db614a1345683a82a44e7963d7533a15f52288ac0e"
     },
     {
       "path": "preview.png",
-      "bytes": 72440,
-      "sha256": "304a74fc04fc46673bccaaa6b34e5cb16d7d94b004bddd853e374ab65cbc961f"
+      "bytes": 281560,
+      "sha256": "02d1a756702e7e9e7d3a26322fce715667d5f02afaa8ed8e1f2e20a3a6905be9"
+    },
+    {
+      "path": "textures/detail_metal.png",
+      "bytes": 31243,
+      "sha256": "b3bfd89f352c9ab354fe66573f7130f13ead44697aa3a6af153dce1a4e6fd6bc"
+    },
+    {
+      "path": "textures/detail_panel.png",
+      "bytes": 22308,
+      "sha256": "7e19f722895d344bd404535248254e68402420d62c8b1a7021c8711e13fd37a4"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
-  "pivot": "Model origin (0,0,0) is the hull centreline at mid-length, roughly the vehicle root; not matched to the existing Studio submarine root (unknown).",
+  "pivot": "Model origin (0,0,0) is the hull centreline at mid-length, roughly the vehicle root; not matched to the existing Studio submarine root (unknown). fx_* meshes are optional static light-shaft visuals; delete those nodes if unwanted.",
   "measured": {
     "model_stats": {
-      "triangles": 2032,
+      "triangles": 6254,
       "triangles_per_material": {
-        "hull_offwhite": 280,
-        "graphite_navy": 1100,
-        "amber_accent": 228,
+        "hull_offwhite": 344,
+        "graphite_navy": 4182,
+        "amber_accent": 584,
+        "titanium_t": 248,
         "glass_cyan": 144,
-        "emissive_cyan": 280
+        "emissive_cyan": 600,
+        "emissive_amber": 44,
+        "fx_beam_cyan": 68,
+        "fx_halo_cyan": 40
       },
       "bounds_min": [
         -2.14,
-        -1.71,
-        -4.23
+        -1.801,
+        -9.7941
       ],
       "bounds_max": [
         2.14,
         2.05,
-        4.3
+        5.9
       ],
       "size": [
         4.28,
-        3.76,
-        8.53
+        3.851,
+        15.6941
       ]
     },
     "glb_reread": {
-      "file_bytes": 175300,
-      "meshes": 5,
-      "materials": 5,
-      "triangles": 2032,
+      "file_bytes": 943212,
+      "meshes": 9,
+      "materials": 9,
+      "triangles": 6254,
       "all_finite": true,
       "bounds_min": [
         -2.14,
-        -1.71,
-        -4.23
+        -1.801,
+        -9.7941
       ],
       "bounds_max": [
         2.14,
         2.05,
-        4.3
+        5.9
       ]
     }
   },
@@ -110,6 +124,17 @@
       "metallic": 0.2,
       "roughness": 0.5
     },
+    "titanium_t": {
+      "color": [
+        0.62,
+        0.66,
+        0.7,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.85,
+      "roughness": 0.35
+    },
     "glass_cyan": {
       "color": [
         0.3,
@@ -135,6 +160,51 @@
       ],
       "metallic": 0.1,
       "roughness": 0.4
+    },
+    "emissive_amber": {
+      "color": [
+        0.8,
+        0.5,
+        0.1,
+        1.0
+      ],
+      "emissive": [
+        1.0,
+        0.72,
+        0.25
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "fx_beam_cyan": {
+      "color": [
+        0.55,
+        0.9,
+        1.0,
+        0.1
+      ],
+      "emissive": [
+        0.55,
+        0.9,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 1.0
+    },
+    "fx_halo_cyan": {
+      "color": [
+        0.3,
+        0.85,
+        1.0,
+        0.14
+      ],
+      "emissive": [
+        0.3,
+        0.85,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 1.0
     }
   },
   "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
@@ -142,7 +212,7 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ]
 }

@@ -2,71 +2,85 @@
   "id": "DL-017",
   "title": "Navigation signage kit (5 blank plates)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl017.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl017.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-017_SIGNAGE_KIT.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 56924,
-      "sha256": "0e5e79c63b6048073a048cdaa0780ed6f8276963c8f582d101a749b4886aa487"
+      "bytes": 267020,
+      "sha256": "4acf07da773e9915f5f68ddb0a838c56745240358833361349e26447ec890d44"
     },
     {
       "path": "model.obj",
-      "bytes": 59719,
-      "sha256": "0188c0cbcbbd3f8d7f2973831a0d10389ebd117a90652efb7e6347f5a86d5907"
+      "bytes": 446276,
+      "sha256": "c63f88b75bf8c3ec219cb28490ea473d98bb4c4ebab3df9e4995c940e9241919"
     },
     {
       "path": "model.mtl",
-      "bytes": 287,
-      "sha256": "4fa9790da33bcb4d8df8468d661dc8f605497143b92c9328f49d3e7ade1f25ce"
+      "bytes": 419,
+      "sha256": "dbe7f9d859930bde03c3599d20e0d9b9fa165a686ea0134bd784b3a238ec30e8"
     },
     {
       "path": "preview.png",
-      "bytes": 19185,
-      "sha256": "591979d1d745423b6624d9bc782f97b0693b3cfd61a1b47063bed459ef4be0dd"
+      "bytes": 95405,
+      "sha256": "198ea9c61e5eb7b5d1d33206cf59a722cc6727b569d487da060ba065f28a4752"
+    },
+    {
+      "path": "textures/detail_metal.png",
+      "bytes": 31948,
+      "sha256": "e7b120c35028d81b4249023da2142cb9b9969ea1b03319032c36bd3f2d065485"
+    },
+    {
+      "path": "textures/detail_panel.png",
+      "bytes": 24504,
+      "sha256": "ccd8c11b03b12a7ddd7629aeaf83a98e5127c5aaae4cce6a3238f0f7a7e63ebb"
     },
     {
       "path": "parts/wall_plaque.glb",
-      "bytes": 13732,
-      "sha256": "2e9ad14a0ba80de3e0e8f5148c8fdd786ba2046917473c1b318711aadad35750"
+      "bytes": 106748,
+      "sha256": "b4a3d56ac28c3602d2ec72e18c324293b4861c684d90cc08688ae39da5e4a80a"
     },
     {
       "path": "parts/hanging_directional.glb",
-      "bytes": 12808,
-      "sha256": "8539e59c7c4e08028180b1e5ff02728192cd60d9d0236aaf553f0a822734376c"
+      "bytes": 113860,
+      "sha256": "0573386c658f62801374a679051987122957aa5a0d51d706cbd56b9ab09364fc"
     },
     {
       "path": "parts/floor_route_marker.glb",
-      "bytes": 12928,
-      "sha256": "9b16c4ddc03aac284f98361c92e0d2927ca66a5276d8c021a472e264de065322"
+      "bytes": 77204,
+      "sha256": "b1e86cb2d4c223218cb20630cb5fe22c17ad86e267a4cc98cdcfc5abee213f81"
     },
     {
       "path": "parts/hazard_panel.glb",
-      "bytes": 15920,
-      "sha256": "8529e4165d90384c854ab698c4a71b40c7109a28a61f41e76779709c6bb7bf37"
+      "bytes": 106156,
+      "sha256": "7c100293b4b8e4da2fbb69a3327a83744d7e59bd20c70471ac2077e79596b473"
     },
     {
       "path": "parts/equipment_plate.glb",
-      "bytes": 13776,
-      "sha256": "48e5644257e94bc586dc196e5daac0aa52149bfda6f4b75914613c2a05be7306"
+      "bytes": 106796,
+      "sha256": "b2eaeab3169b18d76337c77585acd5615b141df885b0b2eb4401ec134d0aaa1e"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Wall pieces: back plane z=0, bottom centre, facing +Z. Hanging sign: ceiling attachment at the origin. Floor marker: centre of floor contact.",
   "measured": {
     "model_stats": {
-      "triangles": 624,
+      "triangles": 1424,
       "triangles_per_material": {
-        "hull_offwhite": 96,
-        "graphite_navy": 252,
-        "amber_accent": 120,
+        "hull_offwhite": 224,
+        "graphite_navy": 796,
+        "amber_accent": 184,
         "glass_cyan": 0,
         "emissive_cyan": 36,
-        "titanium": 120
+        "titanium": 184,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -4.0,
@@ -85,10 +99,10 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 56924,
+      "file_bytes": 267020,
       "meshes": 5,
       "materials": 5,
-      "triangles": 624,
+      "triangles": 1424,
       "all_finite": true,
       "bounds_min": [
         -4.0,
@@ -168,13 +182,13 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {
     "wall_plaque": {
       "file": "parts/wall_plaque.glb",
-      "triangles": 120,
+      "triangles": 312,
       "size": [
         1.2,
         0.6,
@@ -193,7 +207,7 @@
     },
     "hanging_directional": {
       "file": "parts/hanging_directional.glb",
-      "triangles": 108,
+      "triangles": 364,
       "size": [
         1.85,
         1.11,
@@ -231,7 +245,7 @@
     },
     "hazard_panel": {
       "file": "parts/hazard_panel.glb",
-      "triangles": 156,
+      "triangles": 316,
       "size": [
         1.4,
         0.8,
@@ -250,7 +264,7 @@
     },
     "equipment_plate": {
       "file": "parts/equipment_plate.glb",
-      "triangles": 120,
+      "triangles": 312,
       "size": [
         0.45,
         0.28,

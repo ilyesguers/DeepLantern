@@ -2,63 +2,77 @@
   "id": "DL-004",
   "title": "Sample canister family (3 variants)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl004.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl004.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-004_SAMPLE_CANISTERS.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 90056,
-      "sha256": "93490284083e2c80727b1162545325bb5b32e48f014127148b0f550938fdd833"
+      "bytes": 308500,
+      "sha256": "3346177991d7b158b3e5b4097136d14f48b4ecf8e9941deb2b01c815e3097213"
     },
     {
       "path": "model.obj",
-      "bytes": 96160,
-      "sha256": "e83efe148179caa82d6970fca0561f2ac866f9070462d4341ffb249809516d2f"
+      "bytes": 548041,
+      "sha256": "6b7740e458e8c59f57516460799cfa227150ae64ef896fe92241056a873317ab"
     },
     {
       "path": "model.mtl",
-      "bytes": 469,
-      "sha256": "2b02586a5995b4d18aa7fb8070f19f062413dbc8781d30dc1953ce7d01523256"
+      "bytes": 634,
+      "sha256": "778f7aaf4e91e6735e06c44d889db7b7064d2333fdc5bb129e4929d2c22f1386"
     },
     {
       "path": "preview.png",
-      "bytes": 38269,
-      "sha256": "143a83a2c0e4d24c7cecd0a014e5012990b7173bc0f6b64a9aafbd85077ab4da"
+      "bytes": 141195,
+      "sha256": "d6aabc1ce02abd01f3842b98aab628d5c6891be595f050f658703e467aa5eb1f"
+    },
+    {
+      "path": "textures/detail_metal.png",
+      "bytes": 32661,
+      "sha256": "04a6abfb50aeeb8f268a81c73e116a9bc9c2d7773d766a0d67346f01a59270f1"
+    },
+    {
+      "path": "textures/detail_panel.png",
+      "bytes": 22971,
+      "sha256": "239de8875d9ab9bbd8b9e302a26788055797360830a49e8f5ec64d712e2d5c41"
     },
     {
       "path": "parts/standard_capsule.glb",
-      "bytes": 36312,
-      "sha256": "fa569969caaf0085485b6fd75cb6889a91b5f60ae3a29b019e0d0d0005b78b68"
+      "bytes": 141348,
+      "sha256": "81d88c155b6edd6d08292f80183ed13a0e6710ade3bd01795c6d887fb03e425f"
     },
     {
       "path": "parts/fragile_bio_sample.glb",
-      "bytes": 43204,
-      "sha256": "0bf9462511b3d6ce3ff217121912a2436b8d699130f25e957c95d8f774b414b9"
+      "bytes": 168524,
+      "sha256": "e2664b5cbc7cc7ad02e32cb4ce8c3188d40d48154a3fdf05076380448604d765"
     },
     {
       "path": "parts/mineral_vault.glb",
-      "bytes": 21456,
-      "sha256": "64355e6f81e63f2c129725a270762345ec2d42b166be80130e440440d5c6ccce"
+      "bytes": 124976,
+      "sha256": "4835900fb98ebe41abf5b058034bcce140c792c824273bf1e9137d28f8b40171"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Each variant in parts/ has its origin at its geometric centre; model.glb places the three side by side at x=-0.8/0/+0.8 with bottoms on y=0.",
   "measured": {
     "model_stats": {
-      "triangles": 984,
+      "triangles": 1752,
       "triangles_per_material": {
         "hull_offwhite": 36,
-        "graphite_navy": 180,
-        "amber_accent": 180,
-        "glass_cyan": 200,
-        "emissive_cyan": 44,
+        "graphite_navy": 532,
+        "amber_accent": 404,
+        "glass_cyan": 232,
+        "emissive_cyan": 76,
         "teal_shell": 120,
-        "titanium": 144,
-        "specimen_violet": 80
+        "titanium": 272,
+        "specimen_violet": 80,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -1.02,
@@ -77,10 +91,10 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 90056,
+      "file_bytes": 308500,
       "meshes": 8,
       "materials": 8,
-      "triangles": 984,
+      "triangles": 1752,
       "all_finite": true,
       "bounds_min": [
         -1.02,
@@ -197,13 +211,13 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {
     "standard_capsule": {
       "file": "parts/standard_capsule.glb",
-      "triangles": 356,
+      "triangles": 548,
       "size": [
         0.44,
         0.71,
@@ -222,7 +236,7 @@
     },
     "fragile_bio_sample": {
       "file": "parts/fragile_bio_sample.glb",
-      "triangles": 448,
+      "triangles": 768,
       "size": [
         0.4,
         0.605,
@@ -241,7 +255,7 @@
     },
     "mineral_vault": {
       "file": "parts/mineral_vault.glb",
-      "triangles": 180,
+      "triangles": 436,
       "size": [
         0.59,
         0.47,

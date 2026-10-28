@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (1486 triangles, 9 materials, no textures) built from Python-authored geometry (`source/generate_dl008.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (1,518 triangles, 4 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl008.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 Reusable static geological dressing in approved zones; no terrain generation or destructible-terrain system.
@@ -25,4 +25,4 @@ Per-part files:
 Pieces: low boulder, fractured slab, tall split rock, porous volcanic stone, layered sediment shelf, scatter cluster. Two stone families: cool blue-grey and warm mineral. Each part has ground-contact pivot at y=0.
 
 ## Limitations
-No normal-map or strata detail; bottoms are closed (not stripped). No seam-overlap composition test beyond the spaced layout. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+No normal-map or strata detail; bottoms are closed (not stripped). No seam-overlap composition test beyond the spaced layout. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

@@ -527,9 +527,9 @@ def write_manifest(model, out_dir, meta, files=("model.glb", "model.obj", "model
             fl.append(dict(path=f, bytes=os.path.getsize(pth), sha256=hashlib.sha256(open(pth, "rb").read()).hexdigest()))
     mf = dict(
         id=meta["id"], title=meta["title"], status="UPLOADED_TO_GITHUB",
-        generator="Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + " + meta["source_script"] + ") run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+        generator="Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + " + meta["source_script"] + ") run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
         brief=meta["brief"], reference=meta.get("reference"), files=fl,
-        format="glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL", textures="none - flat material colours only",
+        format="glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)", textures="procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
         units="metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import", axes="Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
         pivot=meta["pivot"],
         measured=dict(model_stats=model.stats(), glb_reread=glb),
@@ -537,7 +537,7 @@ def write_manifest(model, out_dir, meta, files=("model.glb", "model.obj", "model
         license="Original procedural work created for the Deep Lantern project; no third-party assets used.",
         preview="preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
         roblox_import="NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
-        not_verified=["Roblox Studio import", "UV mapping (none authored; no textures)", "fit against the existing live submarine/controller contracts"],
+        not_verified=["Roblox Studio import", "UV quality (simple box projection; seams and stretching possible on curved parts)", "fit against the existing live submarine/controller contracts"],
     )
     if extra:
         mf.update(extra)
@@ -552,7 +552,8 @@ def emit(out_dir, meta, collection, parts=None, views=None, px=44, center=(0, 0,
     collection.write_glb(os.path.join(out_dir, "model.glb"))
     collection.write_obj(os.path.join(out_dir, "model.obj"), "model.mtl")
     collection.write_mtl(os.path.join(out_dir, "model.mtl"))
-    files = ["model.glb", "model.obj", "model.mtl", "preview.png"]
+    tex_files = collection.write_textures(os.path.join(out_dir, "textures"))
+    files = ["model.glb", "model.obj", "model.mtl", "preview.png"] + tex_files
     extra = {}
     if parts:
         os.makedirs(os.path.join(out_dir, "parts"), exist_ok=True)
@@ -608,3 +609,585 @@ def std_materials(m, extra=()):
             m.material(e, (0.22, 0.25, 0.30), metallic=0.1, roughness=0.85)
         elif e == "emissive_amber":
             m.material("emissive_amber", (0.80, 0.50, 0.10), emissive=(1.0, 0.72, 0.25), roughness=0.4)
+
+
+# =============================================================================
+# v2 quality pass (overrides earlier definitions of box / write_glb / write_obj /
+# write_mtl / render_view / std_materials). Adds: chamfered boxes, voxel-baked
+# ambient occlusion in vertex colours, angle-smoothed normals, box-projected UVs
+# with procedural tiling detail textures (embedded in the .glb), static light-beam
+# FX meshes, and a preview renderer with specular light, fog and bloom.
+# =============================================================================
+import io as _io
+import itertools as _it
+
+AUTO_BEVEL = True
+_box_plain = box
+
+
+def _hull_faces(P, eps=1e-6):
+    P = np.asarray(P, dtype=np.float64)
+    n = len(P)
+    planes = {}
+    for i, j, k in _it.combinations(range(n), 3):
+        nr = np.cross(P[j] - P[i], P[k] - P[i])
+        ln = np.linalg.norm(nr)
+        if ln < eps:
+            continue
+        nr = nr / ln
+        d = float(nr @ P[i])
+        side = P @ nr - d
+        if (side <= eps).all():
+            pass
+        elif (side >= -eps).all():
+            nr, d = -nr, -d
+        else:
+            continue
+        key = tuple(np.round(np.append(nr, d), 4))
+        planes[key] = (nr, d)
+    faces = []
+    for nr, d in planes.values():
+        idx = np.where(np.abs(P @ nr - d) < 1e-5)[0]
+        c = P[idx].mean(axis=0)
+        a = np.cross(nr, [1, 0, 0]) if abs(nr[0]) < 0.9 else np.cross(nr, [0, 1, 0])
+        a /= np.linalg.norm(a)
+        b = np.cross(nr, a)
+        ang = np.arctan2((P[idx] - c) @ b, (P[idx] - c) @ a)
+        faces.append([int(x) for x in idx[np.argsort(ang)]])
+    return faces
+
+
+def hull_tris(points):
+    """Triangles of the convex hull of a point set (outward-wound)."""
+    P = np.asarray(points, dtype=np.float64)
+    tris = []
+    for f in _hull_faces(P):
+        for k in range(1, len(f) - 1):
+            tris.append([P[f[0]], P[f[k]], P[f[k + 1]]])
+    return _orient_outward(tris)
+
+
+_CHAMFER_TOPO = {}
+
+
+def _chamfer_points(a, b, d, c):
+    pts = []
+    for sx, sy, sz in _it.product((-1, 1), repeat=3):
+        pts.append((sx * a, sy * (b - c), sz * (d - c)))
+        pts.append((sx * (a - c), sy * b, sz * (d - c)))
+        pts.append((sx * (a - c), sy * (b - c), sz * d))
+    return np.array(pts, dtype=np.float64)
+
+
+def box(size, pos=(0, 0, 0), rot=(0, 0, 0), bevel=None):  # noqa: F811
+    """Axis-aligned box; v2 chamfers the edges so they catch light (bevel in metres)."""
+    mn = min(size)
+    if bevel is None:
+        bevel = min(0.03, 0.22 * mn) if AUTO_BEVEL else 0.0
+    if bevel < 0.003 or mn < 0.03:
+        return _box_plain(size, pos, rot)
+    c = min(bevel, 0.4 * mn)
+    a, b, d = (s / 2.0 for s in size)
+    if "faces" not in _CHAMFER_TOPO:
+        ref = _chamfer_points(1.0, 1.0, 1.0, 0.25)
+        _CHAMFER_TOPO["faces"] = _hull_faces(ref)
+    P = _chamfer_points(a, b, d, c)
+    tris = []
+    for f in _CHAMFER_TOPO["faces"]:
+        for k in range(1, len(f) - 1):
+            tris.append([P[f[0]], P[f[k]], P[f[k + 1]]])
+    return transform(np.array(tris), rot, pos)
+
+
+def orient_z_to(tris, direction, pos=(0, 0, 0)):
+    """Rotate geometry built along +Z so +Z points along `direction`, then translate."""
+    d = np.asarray(direction, dtype=np.float64)
+    d = d / np.linalg.norm(d)
+    z = np.array([0, 0, 1.0])
+    v = np.cross(z, d)
+    s, c = np.linalg.norm(v), float(z @ d)
+    if s < 1e-9:
+        R = np.eye(3) if c > 0 else np.diag([1, -1, -1.0])
+    else:
+        vx = np.array([[0, -v[2], v[1]], [v[2], 0, -v[0]], [-v[1], v[0], 0]])
+        R = np.eye(3) + vx + vx @ vx * ((1 - c) / (s * s))
+    return np.asarray(tris) @ R.T + np.asarray(pos, dtype=np.float64)
+
+
+def light_beam(model, key, pos, direction, length=3.0, r0=0.15, r1=0.9, n=12):
+    """Static translucent light-shaft cone (visual FX mesh, not a light, no script)."""
+    cone = loft([(0.0, r0, r0), (length, r1, r1)], n=n, cap_start=False, cap_end=False)
+    model.add(key, orient_z_to(cone, direction, pos))
+
+
+def fx_material(model, key, color=(0.2, 0.85, 1.0), alpha=0.10):
+    model.material(key, color, emissive=color, metallic=0.0, roughness=1.0, alpha=alpha)
+
+
+# ---- procedural detail textures (grayscale, tileable, multiplied with base colour) ----
+_TEX_CACHE = {}
+TEX_RES = 256
+
+
+def _pnoise(rng, power=1.5, aniso=(1.0, 1.0), res=TEX_RES):
+    F = np.fft.fft2(rng.standard_normal((res, res)))
+    fy = np.fft.fftfreq(res)[:, None] * aniso[0]
+    fx = np.fft.fftfreq(res)[None, :] * aniso[1]
+    r = np.sqrt(fx ** 2 + fy ** 2)
+    r[0, 0] = 1.0
+    F = F / (r ** power)
+    F[0, 0] = 0
+    n = np.fft.ifft2(F).real
+    return (n - n.min()) / (n.max() - n.min() + 1e-9)
+
+
+def _wrap_draw(draw_fn, res=TEX_RES):
+    for ox in (-res, 0, res):
+        for oy in (-res, 0, res):
+            draw_fn(ox, oy)
+
+
+def make_texture(kind, seed=1):
+    from PIL import Image, ImageDraw, ImageFilter
+    if (kind, seed) in _TEX_CACHE:
+        return _TEX_CACHE[(kind, seed)]
+    res = TEX_RES
+    rng = np.random.default_rng(abs(hash(kind)) % 1000 + seed)
+    if kind == "panel":
+        base = 0.84 + 0.12 * _pnoise(rng, 1.6)
+        im = Image.fromarray((base * 255).astype(np.uint8), "L")
+        d = ImageDraw.Draw(im)
+        for g in (0, res // 2):
+            _wrap_draw(lambda ox, oy, g=g: (d.line([(g + ox, oy), (g + ox, res + oy)], fill=118, width=3),
+                                             d.line([(ox, g + oy), (res + ox, g + oy)], fill=118, width=3),
+                                             d.line([(g + 2 + ox, oy), (g + 2 + ox, res + oy)], fill=250, width=1),
+                                             d.line([(ox, g + 2 + oy), (res + ox, g + 2 + oy)], fill=250, width=1)))
+        for g in (0, res // 2):
+            for t in range(0, res, 32):
+                for (x, y) in ((g, t), (t, g)):
+                    _wrap_draw(lambda ox, oy, x=x, y=y: d.ellipse([x - 3 + ox, y - 3 + oy, x + 3 + ox, y + 3 + oy], fill=95))
+                    _wrap_draw(lambda ox, oy, x=x, y=y: d.ellipse([x - 1 + ox, y - 2 + oy, x + 1 + ox, y + oy], fill=255))
+        for _ in range(26):
+            x, y = rng.integers(0, res, 2); L = rng.integers(10, 55); a = rng.uniform(0, 6.28)
+            _wrap_draw(lambda ox, oy: d.line([(x + ox, y + oy), (x + np.cos(a) * L + ox, y + np.sin(a) * L + oy)], fill=int(rng.integers(150, 215)), width=1))
+        arr = np.asarray(im, dtype=np.float64) / 255.0
+    elif kind == "metal":
+        base = 0.80 + 0.14 * _pnoise(rng, 1.4, aniso=(1.0, 0.05))
+        base += 0.04 * (_pnoise(rng, 0.8) - 0.5)
+        im = Image.fromarray((np.clip(base, 0, 1) * 255).astype(np.uint8), "L")
+        d = ImageDraw.Draw(im)
+        _wrap_draw(lambda ox, oy: (d.line([(res // 2 + ox, oy), (res // 2 + ox, res + oy)], fill=110, width=3),
+                                    d.line([(ox, res // 2 + oy), (res + ox, res // 2 + oy)], fill=110, width=3)))
+        for (x, y) in ((res // 2, 16), (res // 2, res - 16), (16, res // 2), (res - 16, res // 2)):
+            _wrap_draw(lambda ox, oy, x=x, y=y: d.ellipse([x - 4 + ox, y - 4 + oy, x + 4 + ox, y + 4 + oy], fill=90))
+            _wrap_draw(lambda ox, oy, x=x, y=y: d.ellipse([x - 2 + ox, y - 3 + oy, x + ox, y - 1 + oy], fill=255))
+        for _ in range(34):
+            x, y = rng.integers(0, res, 2); L = rng.integers(8, 70); a = rng.normal(0, 0.25)
+            _wrap_draw(lambda ox, oy: d.line([(x + ox, y + oy), (x + np.cos(a) * L + ox, y + np.sin(a) * L + oy)], fill=int(rng.integers(140, 235)), width=1))
+        arr = np.asarray(im, dtype=np.float64) / 255.0
+    elif kind == "rock":
+        n1 = _pnoise(rng, 1.3); n2 = _pnoise(rng, 2.2)
+        yy = np.linspace(0, 1, res, endpoint=False)[:, None]
+        strata = 0.07 * np.sin(2 * np.pi * (yy * 3 + 0.8 * n2))
+        arr = 0.62 + 0.30 * n1 + strata
+        im = Image.fromarray((np.clip(arr, 0, 1) * 255).astype(np.uint8), "L")
+        d = ImageDraw.Draw(im)
+        for _ in range(9):
+            x, y = rng.integers(0, res, 2)
+            pts = [(x, y)]
+            for _s in range(7):
+                x += rng.integers(-18, 18); y += rng.integers(6, 26); pts.append((x, y))
+            _wrap_draw(lambda ox, oy: d.line([(p[0] + ox, p[1] + oy) for p in pts], fill=70, width=1))
+        arr = np.asarray(im.filter(ImageFilter.GaussianBlur(0.6)), dtype=np.float64) / 255.0
+    else:  # organic
+        arr = 0.74 + 0.20 * _pnoise(rng, 1.8) + 0.05 * (_pnoise(rng, 0.7) - 0.5)
+        mott = _pnoise(rng, 2.6)
+        arr = arr - 0.10 * (mott > 0.72)
+    img = Image.fromarray((np.clip(arr, 0, 1) * 255).astype(np.uint8), "L").convert("RGB")
+    _TEX_CACHE[(kind, seed)] = img
+    return img
+
+
+def tex_kind_for(key):
+    if key.startswith("fx_") or key.startswith("emissive") or key.startswith("glass") or key.startswith("specimen"):
+        return None
+    for pre in ("stone", "sediment", "mineral", "relic", "corrosion"):
+        if key.startswith(pre):
+            return "rock"
+    for pre in ("coral", "kelp", "flora", "shadow_blue", "fish", "jelly"):
+        if key.startswith(pre):
+            return "organic"
+    for pre in ("hull", "amber", "faded_blue"):
+        if key.startswith(pre):
+            return "panel"
+    return "metal"
+
+
+# ---- baking: smoothed normals, ambient occlusion, UVs --------------------------------
+def _smooth_normals(tris, angle=55.0):
+    N = len(tris)
+    fn = np.cross(tris[:, 1] - tris[:, 0], tris[:, 2] - tris[:, 0])
+    area = np.linalg.norm(fn, axis=1)
+    fu = np.where(area[:, None] > 1e-12, fn / np.maximum(area[:, None], 1e-12), np.array([0, 1.0, 0]))
+    out = np.repeat(fu, 3, axis=0)
+    key = np.round(tris.reshape(-1, 3) * 1e4).astype(np.int64)
+    _, inv = np.unique(key, axis=0, return_inverse=True)
+    inv = inv.reshape(-1)
+    order = np.argsort(inv, kind="stable")
+    sinv = inv[order]
+    bounds = np.flatnonzero(np.diff(sinv)) + 1
+    cosT = math.cos(math.radians(angle))
+    for grp in np.split(order, bounds):
+        if len(grp) < 2:
+            continue
+        tid = grp // 3
+        nr = fu[tid] * area[tid][:, None]
+        for c, t in zip(grp, tid):
+            msk = (fu[tid] @ fu[t]) > cosT
+            v = nr[msk].sum(axis=0)
+            ln = np.linalg.norm(v)
+            if ln > 1e-12:
+                out[c] = v / ln
+    return out
+
+
+def _bake_ao(model, occl_keys, strength=0.65):
+    """Per-tri-corner AO for every material by marching rays through a voxelised copy of the model."""
+    allt = [model.mesh(k) for k in occl_keys if len(model.parts[k])]
+    if not allt:
+        return {}
+    T = np.concatenate(allt, axis=0)
+    v = T.reshape(-1, 3)
+    lo, hi = v.min(axis=0) - 0.05, v.max(axis=0) + 0.05
+    ext = float((hi - lo).max())
+    vox = ext / 110.0
+    dims = np.ceil((hi - lo) / vox).astype(int) + 1
+    occ = np.zeros(tuple(dims), dtype=bool)
+    for t in T:
+        e = max(np.linalg.norm(t[1] - t[0]), np.linalg.norm(t[2] - t[1]), np.linalg.norm(t[0] - t[2]))
+        n = max(1, int(math.ceil(e / (vox * 0.7))))
+        ii, jj = np.meshgrid(np.arange(n + 1), np.arange(n + 1))
+        m = (ii + jj) <= n
+        a = (ii[m] / n)[:, None]; b = (jj[m] / n)[:, None]
+        P = t[0] + a * (t[1] - t[0]) + b * (t[2] - t[0])
+        idx = np.floor((P - lo) / vox).astype(int)
+        occ[idx[:, 0], idx[:, 1], idx[:, 2]] = True
+    rng = np.random.default_rng(7)
+    dirs = rng.normal(size=(14, 3)); dirs[:, 1] = np.abs(dirs[:, 1]) * 0.0 + dirs[:, 1]
+    dirs /= np.linalg.norm(dirs, axis=1, keepdims=True)
+    R = 0.12 * ext
+    steps = np.array([0.18, 0.36, 0.6, 1.0]) * R
+    wts = np.array([1.0, 0.8, 0.55, 0.3])
+    res = {}
+    for key in model.parts:
+        tris = model.mesh(key)
+        if not len(tris):
+            continue
+        fn = np.cross(tris[:, 1] - tris[:, 0], tris[:, 2] - tris[:, 0])
+        fu = fn / np.maximum(np.linalg.norm(fn, axis=1, keepdims=True), 1e-12)
+        ao_t = np.ones((len(tris), 3))
+        # sample per corner, nudged slightly toward the triangle centre
+        cen = tris.mean(axis=1)
+        for c in range(3):
+            P = tris[:, c] * 0.8 + cen * 0.2
+            hit = np.zeros(len(tris))
+            for d in dirs:
+                dd = np.broadcast_to(d, fu.shape)
+                dd = np.where((fu * dd).sum(axis=1, keepdims=True) < 0, -dd, dd)
+                dd = dd * 0.75 + fu * 0.35
+                dd /= np.linalg.norm(dd, axis=1, keepdims=True)
+                h = np.zeros(len(tris), dtype=bool)
+                for s, w in zip(steps, wts):
+                    q = P + fu * vox * 1.9 + dd * s
+                    ix = np.floor((q - lo) / vox).astype(int)
+                    ok = (ix >= 0).all(axis=1) & (ix < dims).all(axis=1)
+                    got = np.zeros(len(tris), dtype=bool)
+                    got[ok] = occ[ix[ok, 0], ix[ok, 1], ix[ok, 2]]
+                    newly = got & ~h
+                    hit[newly] += w
+                    h |= got
+            ao_t[:, c] = hit / (len(dirs) * wts[0])
+        res[key] = np.clip(1.0 - strength * ao_t, 0.3, 1.0)
+    return res, (lo, hi)
+
+
+def bake(model):
+    """Returns {material: dict(pos, nrm, col, uv)} with per-corner arrays (3 corners per triangle)."""
+    sig = (len(model.parts), sum(len(model.mesh(k)) for k in model.parts))
+    if getattr(model, "_bake_sig", None) == sig:
+        return model._bake
+    solid = [k for k in model.parts if len(model.parts[k]) and not k.startswith("fx_") and model.materials[k]["color"][3] > 0.6]
+    ao, bnd = _bake_ao(model, solid)
+    ymin, ymax = bnd[0][1], bnd[1][1]
+    out = {}
+    for key in model.parts:
+        tris = model.mesh(key)
+        if not len(tris):
+            continue
+        pos = tris.reshape(-1, 3)
+        nrm = _smooth_normals(tris)
+        if key in ao:
+            aoc = ao[key].reshape(-1)
+            grad = 0.86 + 0.14 * np.clip((pos[:, 1] - ymin) / max(ymax - ymin, 1e-6), 0, 1)
+            col = np.repeat((aoc * grad)[:, None], 3, axis=1)
+        else:
+            col = np.ones((len(pos), 3))
+        fn = np.cross(tris[:, 1] - tris[:, 0], tris[:, 2] - tris[:, 0])
+        ax = np.argmax(np.abs(fn), axis=1)
+        tile = float(model.materials[key].get("tile", 1.0))
+        uv = np.zeros((len(tris), 3, 2))
+        for a in range(3):
+            m = ax == a
+            if not m.any():
+                continue
+            c = [(2, 1), (0, 2), (0, 1)][a]
+            sgn = np.where(fn[m, a] < 0, -1.0, 1.0)[:, None]
+            uv[m, :, 0] = tris[m][:, :, c[0]] * sgn / tile
+            uv[m, :, 1] = tris[m][:, :, c[1]] / tile
+        out[key] = dict(pos=pos.astype(np.float32), nrm=nrm.astype(np.float32), col=col.astype(np.float32),
+                        uv=uv.reshape(-1, 2).astype(np.float32), tex=tex_kind_for(key))
+    model._bake, model._bake_sig = out, sig
+    return out
+
+
+def _png_bytes(img):
+    b = _io.BytesIO()
+    img.save(b, "PNG", optimize=True)
+    return b.getvalue()
+
+
+def _write_glb_v2(self, path):
+    B = bake(self)
+    bin_chunks, views, accessors, meshes, nodes, mats, images, textures = [], [], [], [], [], [], [], []
+    img_index = {}
+    offset = 0
+
+    def push(data, target=None):
+        nonlocal offset
+        pad = (-len(data)) % 4
+        v = dict(buffer=0, byteOffset=offset, byteLength=len(data))
+        if target:
+            v["target"] = target
+        views.append(v)
+        bin_chunks.append(data + b"\0" * pad)
+        offset += len(data) + pad
+        return len(views) - 1
+
+    keys = [k for k in self.parts if k in B]
+    for mi, key in enumerate(keys):
+        m = self.materials[key]; d = B[key]
+        pos, nor, col, uv = d["pos"], d["nrm"], d["col"], d["uv"]
+        idx = np.arange(len(pos), dtype=np.uint32)
+        a0 = len(accessors)
+        accessors.append(dict(bufferView=push(pos.tobytes(), 34962), componentType=5126, count=len(pos), type="VEC3",
+                              min=[float(x) for x in pos.min(axis=0)], max=[float(x) for x in pos.max(axis=0)]))
+        accessors.append(dict(bufferView=push(nor.tobytes(), 34962), componentType=5126, count=len(nor), type="VEC3"))
+        accessors.append(dict(bufferView=push(idx.tobytes(), 34963), componentType=5125, count=len(idx), type="SCALAR"))
+        attrs = dict(POSITION=a0, NORMAL=a0 + 1)
+        accessors.append(dict(bufferView=push(col.tobytes(), 34962), componentType=5126, count=len(col), type="VEC3"))
+        attrs["COLOR_0"] = len(accessors) - 1
+        pbr = dict(baseColorFactor=[float(c) for c in m["color"]], metallicFactor=float(m["metallic"]), roughnessFactor=float(m["roughness"]))
+        if d["tex"]:
+            accessors.append(dict(bufferView=push(uv.tobytes(), 34962), componentType=5126, count=len(uv), type="VEC2"))
+            attrs["TEXCOORD_0"] = len(accessors) - 1
+            if d["tex"] not in img_index:
+                images.append(dict(bufferView=push(_png_bytes(make_texture(d["tex"]))), mimeType="image/png", name=f"detail_{d['tex']}"))
+                textures.append(dict(source=len(images) - 1, sampler=0))
+                img_index[d["tex"]] = len(textures) - 1
+            pbr["baseColorTexture"] = dict(index=img_index[d["tex"]])
+        mat = dict(name=key, pbrMetallicRoughness=pbr, doubleSided=True)
+        if m["emissive"] is not None:
+            mat["emissiveFactor"] = [float(c) for c in m["emissive"]]
+        if m["color"][3] < 0.999:
+            mat["alphaMode"] = "BLEND"
+        mats.append(mat)
+        meshes.append(dict(name=f"{self.name}_{key}", primitives=[dict(attributes=attrs, indices=a0 + 2, material=mi, mode=4)]))
+        nodes.append(dict(name=f"{self.name}_{key}", mesh=mi))
+    gltf = dict(asset=dict(version="2.0", generator="Deep Lantern dlmesh.py v2 (procedural geometry, baked AO, detail textures; no AI)"),
+                scene=0, scenes=[dict(nodes=[len(nodes)])], nodes=nodes + [dict(name=self.name, children=list(range(len(nodes))))],
+                meshes=meshes, materials=mats, accessors=accessors, bufferViews=views, buffers=[dict(byteLength=offset)])
+    if images:
+        gltf["images"], gltf["textures"] = images, textures
+        gltf["samplers"] = [dict(magFilter=9729, minFilter=9987, wrapS=10497, wrapT=10497)]
+    js = json.dumps(gltf, separators=(",", ":")).encode()
+    js += b" " * ((-len(js)) % 4)
+    binb = b"".join(bin_chunks)
+    total = 12 + 8 + len(js) + 8 + len(binb)
+    with open(path, "wb") as f:
+        f.write(struct.pack("<4sII", b"glTF", 2, total))
+        f.write(struct.pack("<I4s", len(js), b"JSON") + js)
+        f.write(struct.pack("<I4s", len(binb), b"BIN\0") + binb)
+
+
+def _write_obj_v2(self, obj_path, mtl_name):
+    B = bake(self)
+    lines = [f"# {self.name} - Deep Lantern dlmesh.py v2 (procedural geometry; v lines carry baked AO colour)", f"mtllib {mtl_name}"]
+    vb = 1
+    for key in self.parts:
+        if key not in B:
+            continue
+        d = B[key]
+        lines += [f"o {self.name}_{key}", f"usemtl {key}", "s 1"]
+        for p, c in zip(d["pos"], d["col"]):
+            lines.append("v %.5f %.5f %.5f %.3f %.3f %.3f" % (*p, *c))
+        for n in d["nrm"]:
+            lines.append("vn %.4f %.4f %.4f" % tuple(n))
+        for t in d["uv"]:
+            lines.append("vt %.5f %.5f" % tuple(t))
+        for i in range(len(d["pos"]) // 3):
+            b = vb + i * 3
+            if d["tex"]:
+                lines.append(f"f {b}/{b}/{b} {b+1}/{b+1}/{b+1} {b+2}/{b+2}/{b+2}")
+            else:
+                lines.append(f"f {b}//{b} {b+1}//{b+1} {b+2}//{b+2}")
+        vb += len(d["pos"])
+    open(obj_path, "w").write("\n".join(lines) + "\n")
+
+
+def _write_mtl_v2(self, mtl_path):
+    B = bake(self)
+    out = []
+    for key, m in self.materials.items():
+        if key not in B:
+            continue
+        c = m["color"]
+        out += [f"newmtl {key}", "Kd %.4f %.4f %.4f" % c[:3], "d %.3f" % c[3]]
+        if m["emissive"] is not None:
+            out.append("Ke %.4f %.4f %.4f" % tuple(m["emissive"]))
+        if B[key]["tex"]:
+            out.append(f"map_Kd textures/detail_{B[key]['tex']}.png")
+        out.append("")
+    open(mtl_path, "w").write("\n".join(out))
+
+
+def _write_textures(self, tex_dir):
+    import os
+    os.makedirs(tex_dir, exist_ok=True)
+    kinds = sorted({d["tex"] for d in bake(self).values() if d["tex"]})
+    for k in kinds:
+        make_texture(k).save(os.path.join(tex_dir, f"detail_{k}.png"), optimize=True)
+    return [f"textures/detail_{k}.png" for k in kinds]
+
+
+Model.write_glb = _write_glb_v2
+Model.write_obj = _write_obj_v2
+Model.write_mtl = _write_mtl_v2
+Model.write_textures = _write_textures
+
+_std_materials_v1 = std_materials
+
+
+def std_materials(m, extra=()):  # noqa: F811
+    _std_materials_v1(m, extra)
+    fx_material(m, "fx_beam_cyan", (0.25, 0.85, 1.0), 0.10)
+    fx_material(m, "fx_beam_amber", (1.0, 0.75, 0.30), 0.10)
+    fx_material(m, "fx_halo_teal", (0.20, 0.95, 0.85), 0.16)
+    fx_material(m, "fx_halo_violet", (0.65, 0.35, 1.0), 0.16)
+
+
+# ---- preview renderer v2 ------------------------------------------------------------
+def _box_blur(a, r, passes=3):
+    for _ in range(passes):
+        for ax in (0, 1):
+            c = np.cumsum(np.pad(a, [(r + 1, r) if i == ax else (0, 0) for i in range(a.ndim)], mode="edge"), axis=ax)
+            n = a.shape[ax]
+            sl = lambda s, e: tuple(slice(s, e) if i == ax else slice(None) for i in range(a.ndim))
+            a = (c[sl(2 * r + 1, 2 * r + 1 + n)] - c[sl(0, n)]) / (2 * r + 1)
+    return a
+
+
+def render_view(model, yaw, pitch, W, H, px_per_unit, ss=2, center=(0, 0, 0)):  # noqa: F811
+    B = bake(model)
+    R = _view_matrix(yaw, pitch)
+    Ws, Hs = W * ss, H * ss
+    top = np.array([0.015, 0.05, 0.12]); bot = np.array([0.05, 0.24, 0.34])
+    g = np.linspace(0, 1, Hs)[:, None, None]
+    img = (top * (1 - g) + bot * g) * np.ones((Hs, Ws, 3))
+    zbuf = np.full((Hs, Ws), -1e9)
+    glow = np.zeros((Hs, Ws, 3))
+    Lk = np.array([-0.45, 0.80, 0.55]); Lk /= np.linalg.norm(Lk)
+    Lf = np.array([0.65, -0.15, 0.45]); Lf /= np.linalg.norm(Lf)
+    camdir = R.T @ np.array([0, 0, 1.0])
+    s = px_per_unit * ss
+    cen = np.asarray(center, dtype=np.float64)
+    texarr = {}
+
+    def sample(kind, uv):
+        if kind not in texarr:
+            texarr[kind] = np.asarray(make_texture(kind), dtype=np.float64)[..., :1] / 255.0
+        t = texarr[kind]
+        ix = (np.floor(uv[..., 0] * t.shape[1]).astype(int)) % t.shape[1]
+        iy = (np.floor(uv[..., 1] * t.shape[0]).astype(int)) % t.shape[0]
+        return t[iy, ix]
+
+    def draw(key, d, alpha_pass):
+        m = model.materials[key]
+        base = np.array(m["color"][:3]); alpha = m["color"][3]
+        emis = np.array(m["emissive"]) if m["emissive"] is not None else None
+        rough = m["roughness"]; metal = m["metallic"]
+        P, Nn, Cc, UV = d["pos"], d["nrm"], d["col"], d["uv"]
+        pc = (P - cen) @ R.T
+        for i in range(len(P) // 3):
+            sl = slice(i * 3, i * 3 + 3)
+            p = pc[sl]
+            X = p[:, 0] * s + Ws / 2.0; Y = Hs / 2.0 - p[:, 1] * s
+            x0, x1 = int(max(0, math.floor(X.min()))), int(min(Ws - 1, math.ceil(X.max())))
+            y0, y1 = int(max(0, math.floor(Y.min()))), int(min(Hs - 1, math.ceil(Y.max())))
+            if x1 < x0 or y1 < y0:
+                continue
+            den = (Y[1] - Y[2]) * (X[0] - X[2]) + (X[2] - X[1]) * (Y[0] - Y[2])
+            if abs(den) < 1e-9:
+                continue
+            xs, ys = np.meshgrid(np.arange(x0, x1 + 1) + 0.5, np.arange(y0, y1 + 1) + 0.5)
+            w0 = ((Y[1] - Y[2]) * (xs - X[2]) + (X[2] - X[1]) * (ys - Y[2])) / den
+            w1 = ((Y[2] - Y[0]) * (xs - X[2]) + (X[0] - X[2]) * (ys - Y[2])) / den
+            w2 = 1 - w0 - w1
+            mk = (w0 >= -1e-6) & (w1 >= -1e-6) & (w2 >= -1e-6)
+            if not mk.any():
+                continue
+            z = w0 * p[0, 2] + w1 * p[1, 2] + w2 * p[2, 2]
+            sub = zbuf[y0:y1 + 1, x0:x1 + 1]
+            ok = mk & (z > sub)
+            if not ok.any():
+                continue
+            W0, W1, W2 = w0[ok][:, None], w1[ok][:, None], w2[ok][:, None]
+            n = W0 * Nn[sl][0] + W1 * Nn[sl][1] + W2 * Nn[sl][2]
+            n /= np.maximum(np.linalg.norm(n, axis=1, keepdims=True), 1e-9)
+            flip = (n @ camdir) < 0
+            n[flip] *= -1
+            ao = W0 * Cc[sl][0] + W1 * Cc[sl][1] + W2 * Cc[sl][2]
+            alb = np.broadcast_to(base, ao.shape) * ao
+            if d["tex"]:
+                uv = W0 * UV[sl][0] + W1 * UV[sl][1] + W2 * UV[sl][2]
+                alb = alb * sample(d["tex"], uv)
+            diff = np.clip(n @ Lk, 0, 1)[:, None]; fill = np.clip(n @ Lf, 0, 1)[:, None]
+            hemi = 0.5 + 0.5 * n[:, 1:2]
+            col = alb * (0.22 + 0.22 * hemi + 0.85 * diff) + np.array([0.04, 0.12, 0.2]) * fill * alb.mean(axis=1, keepdims=True) * 2
+            Hh = Lk + camdir; Hh /= np.linalg.norm(Hh)
+            sp = np.clip(n @ Hh, 0, 1)[:, None] ** (6 + (1 - rough) * 70)
+            col = col + sp * (0.10 + 0.55 * metal) * (1 - rough * 0.6) * (alb * metal + (1 - metal))
+            rim = (1 - np.clip(n @ camdir, 0, 1))[:, None] ** 3
+            col = col + rim * np.array([0.05, 0.16, 0.24]) * 0.7
+            if emis is not None:
+                e = np.broadcast_to(emis, col.shape)
+                col = np.clip(col * 0.4 + e * 0.95, 0, 1.4)
+                gy, gx = np.nonzero(ok)
+                glow[y0 + gy, x0 + gx] += e * (0.9 if not alpha_pass else 0.9 * alpha)
+            depth = np.clip((z[ok][:, None] - z.min()) / 12.0, 0, 1)
+            col = col * (1 - 0.18 * (1 - depth)) + np.array([0.02, 0.10, 0.16]) * 0.0
+            region = img[y0:y1 + 1, x0:x1 + 1]
+            a = alpha if alpha < 0.999 else 1.0
+            region[ok] = region[ok] * (1 - a) + np.clip(col, 0, 1) * a
+            if not alpha_pass:
+                sub[ok] = z[ok]
+
+    solid = [k for k in model.parts if k in B and model.materials[k]["color"][3] >= 0.999]
+    trans = [k for k in model.parts if k in B and model.materials[k]["color"][3] < 0.999]
+    for k in solid:
+        draw(k, B[k], False)
+    for k in trans:
+        draw(k, B[k], True)
+    gl = _box_blur(glow, 3 * ss, 2) * 1.6 + _box_blur(glow, 10 * ss, 2) * 2.4
+    img = np.clip(img + gl * 0.55, 0, 1)
+    img = img ** (1 / 1.08)
+    return (img.reshape(H, ss, W, ss, 3).mean(axis=(1, 3)) * 255).astype(np.uint8)

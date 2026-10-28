@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (1816 triangles, 11 materials, no textures) built from Python-authored geometry (`source/generate_dl019.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (2,104 triangles, 8 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl019.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 Non-lethal Codex creatures. No capture inventory, ecosystem, AI, combat or animation. These are STATIC, UNRIGGED meshes; no skeleton or animation exists.
@@ -22,4 +22,4 @@ Per-part files:
 Fish body and fins use different materials so they import as separate MeshParts for later rigging; the jellyfish has a bell, glowing rim and eight thick tentacles; the shrimp has clear head, body and tail segmentation. No sharp teeth or horror features.
 
 ## Limitations
-Not rigged. Creature scale is approximate (fish about 1 m long including tail). Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+Not rigged. Creature scale is approximate (fish about 1 m long including tail). Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

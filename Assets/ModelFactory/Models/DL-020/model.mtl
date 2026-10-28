@@ -1,10 +1,12 @@
 newmtl graphite_navy
 Kd 0.0700 0.1000 0.1700
 d 1.000
+map_Kd textures/detail_metal.png
 
 newmtl amber_accent
 Kd 0.9300 0.5800 0.1000
 d 1.000
+map_Kd textures/detail_panel.png
 
 newmtl emissive_cyan
 Kd 0.1000 0.5500 0.8000
@@ -14,6 +16,7 @@ Ke 0.2500 0.8500 1.0000
 newmtl titanium
 Kd 0.6200 0.6600 0.7000
 d 1.000
+map_Kd textures/detail_metal.png
 
 newmtl emissive_amber
 Kd 0.8000 0.5000 0.1000
@@ -23,3 +26,4 @@ Ke 1.0000 0.7200 0.2500
 newmtl teal_shell
 Kd 0.0700 0.2700 0.3200
 d 1.000
+map_Kd textures/detail_metal.png

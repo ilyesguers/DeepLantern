@@ -2,67 +2,81 @@
   "id": "DL-018",
   "title": "Research equipment crates (hard case, supply crate + lid, instrument case)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl018.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl018.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-018_RESEARCH_CRATES.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 77984,
-      "sha256": "e23b59490353b38330d61a5b82df6cb36bcb531183d2a9e78a93c6d137fc88f7"
+      "bytes": 501796,
+      "sha256": "aba2a36cab43aa9d235f4407b77907a65c7c504af1ceee1c668bef733784570a"
     },
     {
       "path": "model.obj",
-      "bytes": 84144,
-      "sha256": "f6640398814bacb290781f20edcf840ab8f508435566eff3831ab1e38e86e176"
+      "bytes": 962542,
+      "sha256": "e731bb776837ad592e65e4c6b809900a30b01fb030edef2b89ed3ea03c6ab632"
     },
     {
       "path": "model.mtl",
-      "bytes": 338,
-      "sha256": "f69796316c98f6070c9a03bc422332ac255126eaefdeaba8e961de4ed93b0d3d"
+      "bytes": 503,
+      "sha256": "6cffd1d18fe37730573407e699adab9860e56a42fc6bd338ffe09674e5726efa"
     },
     {
       "path": "preview.png",
-      "bytes": 27828,
-      "sha256": "4af042c870ebe8a5de8672b9a125c258e13c4142e76f0343bef6353438eda177"
+      "bytes": 114576,
+      "sha256": "a0de9ce4e906e85468717698c59074df0b67973b007a5bec6c786ee86aa1ae5a"
+    },
+    {
+      "path": "textures/detail_metal.png",
+      "bytes": 33852,
+      "sha256": "647033d530b3b4e0d96b754baff5cb95a8c7208a90e43af9e5955d2b8fbfac0c"
+    },
+    {
+      "path": "textures/detail_panel.png",
+      "bytes": 22849,
+      "sha256": "992edb13b84bc480943bf813732920c8ce83a6c093f9330aa7050acf31c0cd16"
     },
     {
       "path": "parts/hard_case.glb",
-      "bytes": 20616,
-      "sha256": "e5560eb7e4cd302b82ebf7e469c5596df6661d158c43d9482c0a15c3540e275c"
+      "bytes": 160012,
+      "sha256": "1473afd84fb004974f3a0f347f729f270189eadc04058ae3b671f9ddc24fcc8d"
     },
     {
       "path": "parts/supply_crate_body.glb",
-      "bytes": 19792,
-      "sha256": "3ef66b81a1dd69a3aa10d7703bb1360d388467784e8e81bb891abd88dc013a53"
+      "bytes": 158852,
+      "sha256": "1ed4e445cd9e350c3964203f5debbb55d2e3dca4173d3c70d16504c32cb93270"
     },
     {
       "path": "parts/supply_crate_lid.glb",
-      "bytes": 9720,
-      "sha256": "a792d7244b79753594e39554fd25d1d03617385e6af74f092120008c44a590a4"
+      "bytes": 100120,
+      "sha256": "a13c694721ab2fa9d8327b68c2157d6c559a3a7a0aed16aff272a6dfdc57ed9f"
     },
     {
       "path": "parts/instrument_case.glb",
-      "bytes": 22736,
-      "sha256": "906174b071964401257d04379aff397e87063c28e92e6205c1c8334be8ad6472"
+      "bytes": 172324,
+      "sha256": "f851d5a50cedd7e807c90389ab8ba9b081fa0c562eb6def8146bdc6a376b3717"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Each part has its pivot at base centre (y=0); the lid's origin is its bottom centre. model.glb shows a hard case stacked on a second one to the left as a visual-clipping check (not a measured test).",
   "measured": {
     "model_stats": {
-      "triangles": 864,
+      "triangles": 3040,
       "triangles_per_material": {
-        "hull_offwhite": 48,
-        "graphite_navy": 504,
-        "amber_accent": 108,
+        "hull_offwhite": 80,
+        "graphite_navy": 1848,
+        "amber_accent": 396,
         "glass_cyan": 0,
         "emissive_cyan": 12,
-        "titanium": 96,
-        "teal_shell": 96
+        "titanium": 352,
+        "teal_shell": 352,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -2.01,
@@ -81,10 +95,10 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 77984,
+      "file_bytes": 501796,
       "meshes": 6,
       "materials": 6,
-      "triangles": 864,
+      "triangles": 3040,
       "all_finite": true,
       "bounds_min": [
         -2.01,
@@ -175,13 +189,13 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {
     "hard_case": {
       "file": "parts/hard_case.glb",
-      "triangles": 192,
+      "triangles": 672,
       "size": [
         0.82,
         0.365,
@@ -200,7 +214,7 @@
     },
     "supply_crate_body": {
       "file": "parts/supply_crate_body.glb",
-      "triangles": 192,
+      "triangles": 672,
       "size": [
         1.44,
         0.96,
@@ -219,7 +233,7 @@
     },
     "supply_crate_lid": {
       "file": "parts/supply_crate_lid.glb",
-      "triangles": 72,
+      "triangles": 264,
       "size": [
         1.44,
         0.195,
@@ -238,7 +252,7 @@
     },
     "instrument_case": {
       "file": "parts/instrument_case.glb",
-      "triangles": 216,
+      "triangles": 760,
       "size": [
         0.92,
         0.405,

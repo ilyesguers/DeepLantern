@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (1618 triangles, 11 materials, no textures) built from Python-authored geometry (`source/generate_dl009.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (1,810 triangles, 6 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl009.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 Existing MVP-zone dressing and discovery visuals. No bloom/event logic, particles or gameplay. Emissive parts are limited to small rims, cores and tips.
@@ -22,4 +22,4 @@ Per-part files:
 Cup anemone (glowing rim and core), bulb cluster (violet stalks with teal/violet/amber bulb tips) and a thin-stemmed sea flower. Bodies are non-emissive; glow is on separate meshes so it can be tuned or recoloured in Studio.
 
 ## Limitations
-The flower stem is a 0.05 m-radius sweep that may be thin at distance. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+The flower stem is a 0.05 m-radius sweep that may be thin at distance. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

@@ -2,111 +2,130 @@
   "id": "DL-010",
   "title": "Small wreckage set (6 pieces)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl010.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl010.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-010_WRECKAGE_SET.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 101288,
-      "sha256": "d387592c8def3aa1534c6fcf673be9770269a3e57ef013cd0dea77bf9e50988a"
+      "bytes": 366676,
+      "sha256": "af098f07c3dae507a85966a94f3b2e88f43de86617b5fb0afd950d47b4b66976"
     },
     {
       "path": "model.obj",
-      "bytes": 111120,
-      "sha256": "294a224f8301637c7d7f86cfa4c7fb5cb76064b1f2fa5b63e3946020e9ee06b2"
+      "bytes": 564282,
+      "sha256": "916700462b432e21ac7896792fff20f12812d4890470b6ba6c1139b1c5ab0955"
     },
     {
       "path": "model.mtl",
-      "bytes": 252,
-      "sha256": "a2942d9bee6c555ca7b78b6542e656a5845f427957756dc1f8293fe83895c625"
+      "bytes": 415,
+      "sha256": "09d2cfe0721ae88605fe208f5955e40419e27475f02b82a7ddde6a1f1ea0f42c"
     },
     {
       "path": "preview.png",
-      "bytes": 60088,
-      "sha256": "4a31b558a1285ce4ade84b30c30f097ded3212fcfde263bc92397f330020a11e"
+      "bytes": 182511,
+      "sha256": "23257102526bf879841892346f30a8cc01217640e87052fb7ac2819169743f82"
+    },
+    {
+      "path": "textures/detail_metal.png",
+      "bytes": 32147,
+      "sha256": "7616ec4ad888c45d454e7e91f4ac299f262f3f347bdba3436e8534c80d9b9f9d"
+    },
+    {
+      "path": "textures/detail_panel.png",
+      "bytes": 21746,
+      "sha256": "b0077ae8053c2f8a234eff986053dc920f40a3c7ae1c0cc7d2743cf7c8b1a1a7"
+    },
+    {
+      "path": "textures/detail_rock.png",
+      "bytes": 48009,
+      "sha256": "7b1f5c233191399b5156521886e49f6cbcc1b7bcd1c183b0223b750f7ef31c01"
     },
     {
       "path": "parts/bent_panel.glb",
-      "bytes": 9660,
-      "sha256": "17541db5c6441487a334856219ec345d25fa75fe0608f6cd7ded30e1e805a826"
+      "bytes": 145408,
+      "sha256": "f926fce4d847bf29fc3d0558af2479b1cd59e4f22fdbe9461505dd5325a6aa6e"
     },
     {
       "path": "parts/broken_support_frame.glb",
-      "bytes": 9764,
-      "sha256": "742a3a4a36120491ad2b3a29d4f966380901bd9ba8699b3344a94fab0f8a51ac"
+      "bytes": 145508,
+      "sha256": "8ab97469424b88fbf0594ad6845f67411399250a9cd2f5cb062e9da93aef19ed"
     },
     {
       "path": "parts/sensor_housing.glb",
-      "bytes": 26688,
-      "sha256": "342f602a8ba459e397bc1ea86341a9db4d81aac62d1ebcb1d5d5af3d09545e7e"
+      "bytes": 151216,
+      "sha256": "2486574bb8e3c3fee10e621461022aa2521cab5d139f3dfdd4af69b4d69d06f8"
     },
     {
       "path": "parts/cracked_pressure_door.glb",
-      "bytes": 31828,
-      "sha256": "da0f4f924be5e9ccc77b53e57120f7227e8bddfbb9ee9ba96bea6c7e09708218"
+      "bytes": 164556,
+      "sha256": "02b07ab0491af4e8331cf5a77d3a7c775312395acb918727498c4144fc7d81de"
     },
     {
       "path": "parts/pipe_segment.glb",
-      "bytes": 24840,
-      "sha256": "b7e95af7413d0d303b34788e2ce413e90b24d3edcf58d1ae0469b1de31f3d82d"
+      "bytes": 143704,
+      "sha256": "ae4ffa9d11e745fad789628662206f0162a3cfbd7763e8cf29a66e5ca499f14e"
     },
     {
       "path": "parts/damaged_crate.glb",
-      "bytes": 18580,
-      "sha256": "3cab177d1a6d420e44a4085f1b407a5a4c632c54c91314bd5e152f74c9327095"
+      "bytes": 155800,
+      "sha256": "43f6e77fb6a9fbe3dea164d46f552f5676c7ad67b455cfdf7ed5f47d5ca4a7cf"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Each part in parts/ has its pivot at ground contact (y=0). model.glb spaces the six along X.",
   "measured": {
     "model_stats": {
-      "triangles": 1152,
+      "triangles": 1792,
       "triangles_per_material": {
         "hull_offwhite": 0,
         "graphite_navy": 0,
-        "amber_accent": 116,
+        "amber_accent": 212,
         "glass_cyan": 0,
         "emissive_cyan": 0,
-        "metal_dark": 256,
-        "faded_blue": 224,
-        "corrosion": 112,
-        "mineral": 444
+        "metal_dark": 512,
+        "faded_blue": 352,
+        "corrosion": 240,
+        "mineral": 476,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -9.25,
         -0.0614,
-        -0.9882
+        -0.9789
       ],
       "bounds_max": [
-        8.9049,
-        2.466,
-        1.3333
+        8.8805,
+        2.4619,
+        1.3163
       ],
       "size": [
-        18.1549,
-        2.5274,
-        2.3215
+        18.1305,
+        2.5233,
+        2.2953
       ]
     },
     "glb_reread": {
-      "file_bytes": 101288,
+      "file_bytes": 366676,
       "meshes": 5,
       "materials": 5,
-      "triangles": 1152,
+      "triangles": 1792,
       "all_finite": true,
       "bounds_min": [
         -9.25,
         -0.0614,
-        -0.9882
+        -0.9789
       ],
       "bounds_max": [
-        8.9049,
-        2.466,
-        1.3333
+        8.8805,
+        2.4619,
+        1.3163
       ]
     }
   },
@@ -172,51 +191,51 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {
     "bent_panel": {
       "file": "parts/bent_panel.glb",
-      "triangles": 72,
+      "triangles": 264,
       "size": [
         2.5,
-        0.8947,
-        2.3215
+        0.8866,
+        2.2953
       ],
       "bounds_min": [
         -1.25,
         -0.025,
-        -0.9882
+        -0.9789
       ],
       "bounds_max": [
         1.25,
-        0.8697,
-        1.3333
+        0.8616,
+        1.3163
       ]
     },
     "broken_support_frame": {
       "file": "parts/broken_support_frame.glb",
-      "triangles": 72,
+      "triangles": 264,
       "size": [
-        2.7186,
-        2.4734,
-        1.0237
+        2.6994,
+        2.4661,
+        0.9985
       ],
       "bounds_min": [
-        -1.3022,
-        -0.0074,
-        -0.1794
+        -1.2981,
+        -0.0043,
+        -0.1692
       ],
       "bounds_max": [
-        1.4163,
-        2.466,
-        0.8443
+        1.4013,
+        2.4619,
+        0.8293
       ]
     },
     "sensor_housing": {
       "file": "parts/sensor_housing.glb",
-      "triangles": 264,
+      "triangles": 296,
       "size": [
         1.1765,
         1.77,
@@ -235,7 +254,7 @@
     },
     "cracked_pressure_door": {
       "file": "parts/cracked_pressure_door.glb",
-      "triangles": 324,
+      "triangles": 388,
       "size": [
         2.7427,
         2.3024,
@@ -273,20 +292,20 @@
     },
     "damaged_crate": {
       "file": "parts/damaged_crate.glb",
-      "triangles": 168,
+      "triangles": 328,
       "size": [
-        1.781,
-        1.1242,
-        1.4265
+        1.7566,
+        1.1114,
+        1.421
       ],
       "bounds_min": [
         -0.8761,
         0.0,
-        -0.6005
+        -0.595
       ],
       "bounds_max": [
-        0.9049,
-        1.1242,
+        0.8805,
+        1.1114,
         0.826
       ]
     }

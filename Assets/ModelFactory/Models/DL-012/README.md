@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (1640 triangles, 11 materials, no textures) built from Python-authored geometry (`source/generate_dl012.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (4,584 triangles, 5 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl012.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 A discoverable prop for existing Relics, Codex and Archive categories. No new lore, zone or mechanic; a full Lost Ruins area is post-MVP. No runes are modelled.
@@ -21,4 +21,4 @@ Per-part files:
 Broken concentric rings, a sealed aperture disc with a cyan glow ring and three seams, two support pylons and a base block. parts/relic_clean.glb is the clean version; parts/relic_buried.glb is sunk 1.2 m into a sediment mound for terrain blending.
 
 ## Limitations
-Rings are faceted from 24 and 18 box segments; fine detail must come from material masks later. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+Rings are faceted from 24 and 18 box segments; fine detail must come from material masks later. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (984 triangles, 8 materials, no textures) built from Python-authored geometry (`source/generate_dl004.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (1,752 triangles, 8 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl004.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 Visual props for the existing biological-sample / cargo / debrief categories. No new inventory type, crafting or capture mechanic. Sample contents are separate meshes so they can be swapped; label plates are empty (no baked text).
@@ -22,4 +22,4 @@ Per-part files:
 Three variants share one palette and scale family: standard pressure capsule, caged fragile biological sample (violet content), and a hexagonal rare-mineral vault with a reinforced window. model.glb places all three side by side; each variant is also exported on its own under parts/.
 
 ## Limitations
-Glass uses alpha blending; silhouettes and colour bands still identify each variant if transparency renders poorly. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+Glass uses alpha blending; silhouettes and colour bands still identify each variant if transparency renders poorly. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

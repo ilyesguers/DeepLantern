@@ -67,3 +67,6 @@ See Assets/ModelFactory/GDD_COMPLIANCE_AUDIT.md for the full 20-item scope revie
 
 ## Update rules
 After each genuine model commit, update the relevant row with exact paths and commit SHA. Use BLOCKED if no real model generator/export is available. UPLOADED_TO_GITHUB only means actual model bytes are committed, not that Roblox Studio has imported or validated them. Every new Claude session must read recent commits and this file before acting.
+## v2 quality pass (branch assets/model-upgrade-v2)
+All 20 models regenerated with the upgraded Tools/dlmesh.py: chamfered boxes, baked vertex ambient occlusion, 55-degree smoothed normals, box-projected UVs with embedded procedural grayscale detail textures (panel/metal/rock/organic, 256 px), optional static `fx_*` translucent beam/halo meshes (DL-001 nose lantern, thruster halo), and a better software preview (spec, rim, fog, bloom). DL-001 received a full hero detail pass (6,254 triangles). Manifests re-measured from the re-read GLB.
+Not done / not claimed: textures are procedural, not hand-painted; FX are static meshes (no particles, lights or scripts); DL-019 still unrigged; Roblox Studio import still NOT TESTED.

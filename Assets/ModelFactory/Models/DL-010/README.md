@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (1152 triangles, 9 materials, no textures) built from Python-authored geometry (`source/generate_dl010.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (1,792 triangles, 5 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl010.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 Small static points of interest within an existing MVP zone; not a wreck-dungeon, structural simulation or combat system. Faded research blue, dark metal, a few orange remnants; no gore or horror shapes.
@@ -25,4 +25,4 @@ Per-part files:
 Pieces: bent panel, broken support frame, sensor housing with snapped mast, cracked pressure door, pipe segment with jagged end, damaged crate. Damage is in the geometry (bends, breaks, tilted caps).
 
 ## Limitations
-Cracks are modelled as gaps/offset pieces, not fine fracture lines; no decals or grime textures. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+Cracks are modelled as gaps/offset pieces, not fine fracture lines; no decals or grime textures. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

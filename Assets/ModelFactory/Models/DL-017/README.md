@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (624 triangles, 6 materials, no textures) built from Python-authored geometry (`source/generate_dl017.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (1,424 triangles, 5 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl017.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 Diegetic wayfinding only. No GPS quest markers, minimap or UI system. Plates are blank so text and arrows can come from Roblox UI or decals; the cyan chevrons are geometric marks, not words.
@@ -24,4 +24,4 @@ Per-part files:
 Pieces: wall plaque, hanging directional sign, floor route marker, hazard stripe panel, numbered-equipment plate (blank). Wall pieces face +Z with the back plane at z=0.
 
 ## Limitations
-No preview with placeholder glyphs was produced (the brief asked for one); only blank production plates are shown. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+No preview with placeholder glyphs was produced (the brief asked for one); only blank production plates are shown. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

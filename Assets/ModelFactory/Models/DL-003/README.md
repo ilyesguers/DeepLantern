@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (1156 triangles, 7 materials, no textures) built from Python-authored geometry (`source/generate_dl003.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (1,828 triangles, 5 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl003.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 A static, anchored landmark prop for existing MVP zones. No deployable network, GPS markers, passive rewards or new system; the emissive ring is only a visual accent.
@@ -19,4 +19,4 @@ A static, anchored landmark prop for existing MVP zones. No deployable network, 
 Teal pressure housing, titanium rings, six-rib protective cage with a thin cyan luminous ring, sensor head, side service ports, orange grab handles, tether eye and three deployed feet. Pivot at the base bottom centre so it sits flat on the seafloor.
 
 ## Limitations
-Tether eye and service hatch are static geometry. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+Tether eye and service hatch are static geometry. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

@@ -2,48 +2,58 @@
   "id": "DL-007",
   "title": "Kelp cluster (small, medium, tall)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl007.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl007.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-007_KELP_CLUSTER.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 279240,
-      "sha256": "980a4c5ddf80dd7a22ab89ca291a858af00edbfc42378a859be5d9ae1b2fdcfe"
+      "bytes": 558080,
+      "sha256": "a497447cf6a900d125cae5c353a2faf00104aaf9ae62da81368f803d2f0c45e3"
     },
     {
       "path": "model.obj",
-      "bytes": 318855,
-      "sha256": "5066ccacce92506cad40c6187102624c199e634a3467543ac821788ca5f695f9"
+      "bytes": 1034682,
+      "sha256": "ad07f7f282994933c23854884886d6fb1c6f44f0785573f08d3dc7251c766b78"
     },
     {
       "path": "model.mtl",
-      "bytes": 539,
-      "sha256": "8453beb82d5ad95367b938643d95e0dbbafa027d186dbb9d3d1fa791c6939751"
+      "bytes": 421,
+      "sha256": "fde235451dd4e72e24c0fe61e3a2e1cbf6f0abfedb68f883c54955862d443d9f"
     },
     {
       "path": "preview.png",
-      "bytes": 72148,
-      "sha256": "9cd82cd665a70858514f270d0d7bc0dc0ff8c600bfb744cc1ca5c0a5e90fb85b"
+      "bytes": 110776,
+      "sha256": "a8d77630d8dcc8c1154391878af3c71110a94b03acbe5ab4ff5779c4a7017075"
+    },
+    {
+      "path": "textures/detail_organic.png",
+      "bytes": 34364,
+      "sha256": "66901576d121b3a5f220a485c5a012ee61a848f18986af75385a3b9863a77e84"
+    },
+    {
+      "path": "textures/detail_rock.png",
+      "bytes": 46230,
+      "sha256": "38503ca02136fef0a028e5d3866b5a80f92563911ed2980085a3608324237a19"
     },
     {
       "path": "parts/kelp_small.glb",
-      "bytes": 72900,
-      "sha256": "64909b02ce80806b0688295b952f5ee48f0c95cb187341dc0bd389474adcd7e9"
+      "bytes": 204376,
+      "sha256": "12339e7775d03d6a980310d65ff231f8c8a3bbdc038a69642bc389b39e7c56ea"
     },
     {
       "path": "parts/kelp_medium.glb",
-      "bytes": 97436,
-      "sha256": "7a186f559fda1baff0fc5182eed2ce40271ebf8d1e776ff225929432d482562e"
+      "bytes": 246436,
+      "sha256": "13bee441c87523d5448f08c886e8fe610009d8fb969e2ee88ac218d4918ee748"
     },
     {
       "path": "parts/kelp_tall.glb",
-      "bytes": 117912,
-      "sha256": "6c5f35740f3b5879395385c1cf72be62bd7a14b1a7f67efc720a32bb3957a5aa"
+      "bytes": 281548,
+      "sha256": "1569044d99167e8224ff9ce2be4b089b3e0a75368b25b287775be910bd361c74"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Each part in parts/ has its pivot at the root centre on the seafloor (y=0). model.glb lays the three out 1.8 m apart along X.",
@@ -60,7 +70,11 @@
         "kelp_mid": 720,
         "kelp_lime": 288,
         "kelp_gold": 384,
-        "stone_blue": 324
+        "stone_blue": 324,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -2.3368,
@@ -79,7 +93,7 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 279240,
+      "file_bytes": 558080,
       "meshes": 5,
       "materials": 5,
       "triangles": 3270,
@@ -97,65 +111,6 @@
     }
   },
   "materials": {
-    "hull_offwhite": {
-      "color": [
-        0.84,
-        0.87,
-        0.9,
-        1.0
-      ],
-      "emissive": null,
-      "metallic": 0.15,
-      "roughness": 0.55
-    },
-    "graphite_navy": {
-      "color": [
-        0.07,
-        0.1,
-        0.17,
-        1.0
-      ],
-      "emissive": null,
-      "metallic": 0.45,
-      "roughness": 0.55
-    },
-    "amber_accent": {
-      "color": [
-        0.93,
-        0.58,
-        0.1,
-        1.0
-      ],
-      "emissive": null,
-      "metallic": 0.2,
-      "roughness": 0.5
-    },
-    "glass_cyan": {
-      "color": [
-        0.3,
-        0.78,
-        0.95,
-        0.5
-      ],
-      "emissive": null,
-      "metallic": 0.0,
-      "roughness": 0.1
-    },
-    "emissive_cyan": {
-      "color": [
-        0.1,
-        0.55,
-        0.8,
-        1.0
-      ],
-      "emissive": [
-        0.25,
-        0.85,
-        1.0
-      ],
-      "metallic": 0.1,
-      "roughness": 0.4
-    },
     "kelp_deep": {
       "color": [
         0.04,
@@ -217,7 +172,7 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {

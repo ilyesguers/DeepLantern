@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (1002 triangles, 12 materials, no textures) built from Python-authored geometry (`source/generate_dl015.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (1,098 triangles, 6 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl015.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 A small secret/point of interest inside an existing MVP zone. No new zone, procedural caves, GPS marker or deferred Ruins content. The entrance is left open; the dark back wall is set back from the opening.
@@ -23,4 +23,4 @@ Per-part files:
 Pieces: rock mouth with arch, overhanging ledge with a thin luminous mineral seam, side-wall buttress, and a separate mineral accent cluster. model.glb shows an illustrative arrangement, not a verified snap assembly.
 
 ## Limitations
-Only a finished-material preview exists (no neutral gray blockout). Interior is a shallow back wall, not a navigable tunnel. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+Only a finished-material preview exists (no neutral gray blockout). Interior is a shallow back wall, not a navigable tunnel. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

@@ -2,33 +2,43 @@
   "id": "DL-011",
   "title": "Twilight Reef landmark arch",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl011.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl011.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-011_TWILIGHT_REEF_ARCH.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 109776,
-      "sha256": "f381d806729dd7a5bda42b0c81114ed36f0737b25cfd9cf04b098138f4bed14a"
+      "bytes": 262068,
+      "sha256": "ae38fdd16d584d7f4a803b80de11eefa663a8ab045d6ae35011d2c61db3eb72d"
     },
     {
       "path": "model.obj",
-      "bytes": 117236,
-      "sha256": "c7a7c69a0fd79e02248caf5c38c8cf03622543f04c5df56677d5b524e7e82489"
+      "bytes": 376310,
+      "sha256": "e806ad1f7222dd9dcadfc7c5a9c61810621c93165efbc38a4bc31a0533303e8e"
     },
     {
       "path": "model.mtl",
-      "bytes": 519,
-      "sha256": "965f9aed293cadb0938ab1765448d81e936e71a8b43e280313f504aebae70047"
+      "bytes": 758,
+      "sha256": "b27998231596402abc1388cd8e82f2021c7e684bf4d814f261ce5c2ce75e7795"
     },
     {
       "path": "preview.png",
-      "bytes": 105836,
-      "sha256": "2f4bfc97436173f09328d390eda1f6843ff8a43702d1b306b2aef547f4b61669"
+      "bytes": 485240,
+      "sha256": "a47b492a7230bff45f48bc64fc218ccbacf3585e0934fb25c7218b263ad52da8"
+    },
+    {
+      "path": "textures/detail_organic.png",
+      "bytes": 35044,
+      "sha256": "cff73a1f9cd84256152213c92c8be6b9c1d20efc46b678879344ab0dce5ad43a"
+    },
+    {
+      "path": "textures/detail_rock.png",
+      "bytes": 48377,
+      "sha256": "1d2962f2f413c28d30a56efb55beda322679bb2b75c97ea4d5898cbad44f7873"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Centre of the footprint on the seafloor (0,0,0); opening faces +/-Z, spans X.",
@@ -49,7 +59,11 @@
         "coral_turq": 36,
         "shadow_blue": 96,
         "emissive_teal": 140,
-        "emissive_violet": 140
+        "emissive_violet": 140,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -6.6443,
@@ -68,7 +82,7 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 109776,
+      "file_bytes": 262068,
       "meshes": 9,
       "materials": 9,
       "triangles": 1210,
@@ -199,7 +213,7 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ]
 }

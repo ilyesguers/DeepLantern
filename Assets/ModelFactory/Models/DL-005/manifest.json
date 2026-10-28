@@ -2,47 +2,61 @@
   "id": "DL-005",
   "title": "Research Lab console (visual prop)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl005.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl005.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-005_RESEARCH_CONSOLE.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 74404,
-      "sha256": "37a21626e0844a59421ef60de142038a1ae4ca505e779de5b20f0881cb53d4ee"
+      "bytes": 274520,
+      "sha256": "8cf57a73811ab3c4f225770b0d5628d57fee57e38d26070ae052a00d6d6e4963"
     },
     {
       "path": "model.obj",
-      "bytes": 79409,
-      "sha256": "8fde15acea33be33935fc6a086324019d1eabc954684fc34d7c5ea7e69a6bc45"
+      "bytes": 476180,
+      "sha256": "b9b8418451e5128b35b2f5f86f8438b37ded2a56c31626736bb5ce2a6bf7284a"
     },
     {
       "path": "model.mtl",
-      "bytes": 417,
-      "sha256": "639d79e5dd83417bbbb347a158a49745618f9bd4f74f9284cddadad2e757b888"
+      "bytes": 498,
+      "sha256": "f308528a52ff4f8291a27711fcf19e6aab48a57f067cbde6e0a96a8a21e254d3"
     },
     {
       "path": "preview.png",
-      "bytes": 26889,
-      "sha256": "62914262cda2165b5773acc8c0e5e43c86f348c20e0179d737685669c94c6efe"
+      "bytes": 163283,
+      "sha256": "baf5fbf839eb63443798b9581c5f2636a692dc3334c75a46c60f5ac3136e9e22"
+    },
+    {
+      "path": "textures/detail_metal.png",
+      "bytes": 31495,
+      "sha256": "7673a69c3712047c8db6e702d64d5f42d3e83a513c147a676d2a2c2f189bed41"
+    },
+    {
+      "path": "textures/detail_panel.png",
+      "bytes": 23699,
+      "sha256": "1ba1f9f200bcb56434c9115d391db5482465d7a44128f072e9bc6c21ec2af2ce"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Floor centre of the base (0,0,0); user side is +Z.",
   "measured": {
     "model_stats": {
-      "triangles": 820,
+      "triangles": 1524,
       "triangles_per_material": {
-        "hull_offwhite": 12,
-        "graphite_navy": 260,
-        "amber_accent": 148,
+        "hull_offwhite": 44,
+        "graphite_navy": 708,
+        "amber_accent": 276,
         "glass_cyan": 0,
         "emissive_cyan": 232,
-        "titanium": 144,
-        "emissive_amber": 24
+        "titanium": 176,
+        "emissive_amber": 88,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -0.65,
@@ -61,10 +75,10 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 74404,
+      "file_bytes": 274520,
       "meshes": 6,
       "materials": 6,
-      "triangles": 820,
+      "triangles": 1524,
       "all_finite": true,
       "bounds_min": [
         -0.65,
@@ -111,17 +125,6 @@
       "emissive": null,
       "metallic": 0.2,
       "roughness": 0.5
-    },
-    "glass_cyan": {
-      "color": [
-        0.3,
-        0.78,
-        0.95,
-        0.5
-      ],
-      "emissive": null,
-      "metallic": 0.0,
-      "roughness": 0.1
     },
     "emissive_cyan": {
       "color": [
@@ -170,7 +173,7 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ]
 }

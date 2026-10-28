@@ -2,59 +2,69 @@
   "id": "DL-015",
   "title": "Cave entrance kit (mouth, ledge, buttress, accent)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl015.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl015.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-015_CAVE_ENTRANCE.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 89620,
-      "sha256": "80dc9a49e2296b5a217bfa32a1bfef6c755f27a394c3b7bcf675ee445474948f"
+      "bytes": 242204,
+      "sha256": "d074ee16b654063d7d4bf35cfed5924b2ad0534df525d46c5e5b1b0b7aac1d20"
     },
     {
       "path": "model.obj",
-      "bytes": 97408,
-      "sha256": "63d09cea600c45329b7aba271d308c28bc438c52986f71855a33a2ec71eea710"
+      "bytes": 343321,
+      "sha256": "5d564c6ce3cc630f699266bfe0d536636d8e0b315a40d1372ed9832719a59f23"
     },
     {
       "path": "model.mtl",
-      "bytes": 333,
-      "sha256": "47882c5bd34c9f206e9f97a639692ddf080c88e0619bfb9bac1bd4a666c8023d"
+      "bytes": 499,
+      "sha256": "67d3d0f9bc61d5a03ee65f2dd71681e4d7d9012a23617beb2042f3bb0d8ae792"
     },
     {
       "path": "preview.png",
-      "bytes": 80633,
-      "sha256": "b3b3d2e14ecad7debbbb3e630587ae11eab281bf47ce01dff97ef0c2a44f6722"
+      "bytes": 331466,
+      "sha256": "72290dcc6e14d94a273f7422100a7b9096aa7daec6f703f1304bbcbe7b43d124"
+    },
+    {
+      "path": "textures/detail_organic.png",
+      "bytes": 33217,
+      "sha256": "5cce42bdd91a097366afaef2699841ab0905c0adff76e4561635a3091c28089d"
+    },
+    {
+      "path": "textures/detail_rock.png",
+      "bytes": 46680,
+      "sha256": "eed771b77f9a2546eec573aa18d52dde3f993dd30fee4b2e4f6bd522409fd230"
     },
     {
       "path": "parts/rock_mouth.glb",
-      "bytes": 38556,
-      "sha256": "6de7668f108e0f979cce304d960f353be053289cf5a9ce18bc1abb75770c808d"
+      "bytes": 149736,
+      "sha256": "b51c01332924a72d884dfb7fa6e56b36890c7b36390300d223c531c10073a366"
     },
     {
       "path": "parts/overhanging_ledge.glb",
-      "bytes": 13256,
-      "sha256": "19c2f6a200bc2591654d989325cdb0c897e51589ad41bfa6fe5aaa754d355560"
+      "bytes": 109700,
+      "sha256": "1ba46b7ff1cb384a8834b1c4bcea8fb61acf7a50be13992dc9a9468f5b65a470"
     },
     {
       "path": "parts/side_wall_buttress.glb",
-      "bytes": 21008,
-      "sha256": "0513912b7ae0542c918febfac26a6f1647e7e749b7c9d2b968ce4d1d790b9214"
+      "bytes": 81884,
+      "sha256": "86e3d3a70c9e2be25114ec5949f65f116359ee68c6faed82285d17bb9d6ebbd5"
     },
     {
       "path": "parts/mineral_accent.glb",
-      "bytes": 24404,
-      "sha256": "cc7c9688712851dcb1b4f95095a08e1a89a0189e1f0f23f6666b789d6638941c"
+      "bytes": 118464,
+      "sha256": "4cfa66a4df47a9d8f8e8c28dd94451420c2c81eebea99d8815a835a84650c7f5"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Each part in parts/ has its pivot at ground-contact centre (y=0), mouth facing +Z. model.glb shows an illustrative arrangement (ledge raised 5.1 m, buttress 9.5 m to -X), not a verified snap assembly.",
   "measured": {
     "model_stats": {
-      "triangles": 1002,
+      "triangles": 1098,
       "triangles_per_material": {
         "hull_offwhite": 0,
         "graphite_navy": 0,
@@ -64,10 +74,14 @@
         "stone_blue": 492,
         "stone_warm": 174,
         "sediment": 152,
-        "shadow_blue": 24,
-        "emissive_teal": 112,
+        "shadow_blue": 88,
+        "emissive_teal": 144,
         "coral_violet": 48,
-        "coral_pink": 0
+        "coral_pink": 0,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -11.6719,
@@ -86,10 +100,10 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 89620,
+      "file_bytes": 242204,
       "meshes": 6,
       "materials": 6,
-      "triangles": 1002,
+      "triangles": 1098,
       "all_finite": true,
       "bounds_min": [
         -11.6719,
@@ -180,13 +194,13 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {
     "rock_mouth": {
       "file": "parts/rock_mouth.glb",
-      "triangles": 416,
+      "triangles": 448,
       "size": [
         13.0473,
         7.0822,
@@ -205,7 +219,7 @@
     },
     "overhanging_ledge": {
       "file": "parts/overhanging_ledge.glb",
-      "triangles": 114,
+      "triangles": 178,
       "size": [
         8.8313,
         4.8,

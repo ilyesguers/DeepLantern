@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (1210 triangles, 14 materials, no textures) built from Python-authored geometry (`source/generate_dl011.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (1,210 triangles, 9 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl011.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 One readable landmark within the existing Twilight Reef zone (Zone_TwilightReef); not a new zone or traversal mechanic. The opening is clear (about 6 m wide).
@@ -19,4 +19,4 @@ One readable landmark within the existing Twilight Reef zone (Zone_TwilightReef)
 Asymmetric blue and warm-stone supports, a curved lintel, coral shelves and four luminous focal growths. Triangle count is below the 8k-18k target in the brief; it is a mobile-friendly mid-poly landmark.
 
 ## Limitations
-No baked detail maps; coral shelves are simple lumps. Not checked against actual Twilight Reef terrain. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+No baked detail maps; coral shelves are simple lumps. Not checked against actual Twilight Reef terrain. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

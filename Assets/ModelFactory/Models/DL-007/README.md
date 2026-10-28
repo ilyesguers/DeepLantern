@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (3270 triangles, 10 materials, no textures) built from Python-authored geometry (`source/generate_dl007.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (3,270 triangles, 5 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl007.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 Kelp Forest dressing only; no ecosystem simulation or growth logic.
@@ -22,4 +22,4 @@ Per-part files:
 Each cluster has a rock root, curved tapering ribbon fronds in three green tones, thicker stipes and a few gold gas bladders. Small 5 fronds, medium 7, tall 9. No sway animation is included; fronds are static meshes.
 
 ## Limitations
-Fronds are single thin ribbons (thickness 0.05 m), which may look sparse when seen edge-on; no translucency. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+Fronds are single thin ribbons (thickness 0.05 m), which may look sparse when seen edge-on; no translucency. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

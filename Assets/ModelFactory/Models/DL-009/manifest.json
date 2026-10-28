@@ -2,66 +2,80 @@
   "id": "DL-009",
   "title": "Bioluminescent flora (3 assets)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl009.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl009.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-009_BIOLUMINESCENT_FLORA.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 141568,
-      "sha256": "4d6911429dc6d86536de108fdb54e3c87164deedb95ddc3025e21989accf2521"
+      "bytes": 339408,
+      "sha256": "f9e2568e352c4f510e811d5780e08481908f03468fdd748cec8b305d2de115e2"
     },
     {
       "path": "model.obj",
-      "bytes": 158116,
-      "sha256": "638b23892fbb5dab8726b40a1f3f7f183284bf23b2426e90141796b263c691de"
+      "bytes": 566690,
+      "sha256": "300efe12ca68f3ea2a9c3c94c13852db316431e490f0c4509b4519e52dfcc0d9"
     },
     {
       "path": "model.mtl",
-      "bytes": 391,
-      "sha256": "59af657133763d950825ddc004d2520f9795cde549ab6640a80a074c36ec8e0e"
+      "bytes": 493,
+      "sha256": "d5e2b1076e291f6000de024b31d69318a62b3f7e129060cd62900a8eb66c62ff"
     },
     {
       "path": "preview.png",
-      "bytes": 45633,
-      "sha256": "9dee77a63499c82273d0d17ba9d3dbe9e0e908114844b90c3bd3c5afd754d5df"
+      "bytes": 85820,
+      "sha256": "1ceea9fa9162089636445e8137f604dfeb0a084a1c8b77aa614b173c8b8ddd09"
+    },
+    {
+      "path": "textures/detail_organic.png",
+      "bytes": 33117,
+      "sha256": "a8ea08ec28ca2bb4a1ae8f21d4f946ed58da1c8895439cf3c8e75aed30b4a815"
+    },
+    {
+      "path": "textures/detail_rock.png",
+      "bytes": 47567,
+      "sha256": "57ac011307d0d6ebb15cb13030affb2c7bdc458789632fd74f9aefc703448db3"
     },
     {
       "path": "parts/cup_anemone.glb",
-      "bytes": 43028,
-      "sha256": "02a2853871af69e553af66142a8e3840ca2a247b80744ca1b9ea5ff4d030b49b"
+      "bytes": 150440,
+      "sha256": "d84700065a239ff492273f78a64fbdbad1ac9ec9d1e9d93370f46e29f962c928"
     },
     {
       "path": "parts/bulb_cluster.glb",
-      "bytes": 80980,
-      "sha256": "34651b5e785977b627fc275c86b43034b765843ee74c29063b0b7156c8537d22"
+      "bytes": 211620,
+      "sha256": "9772804495c43f410d7f32a2de0af7825a5e0120cd8919ba8398b0019b63886f"
     },
     {
       "path": "parts/glowing_sea_flower.glb",
-      "bytes": 24936,
-      "sha256": "148e1b0b19b05b9279e09c25916f0497fe6d5f20594f1730a70ad5382c688931"
+      "bytes": 149160,
+      "sha256": "49e9a58baa78c10d36caf00333898b3fab9f2e6c7c066ef2ec2b358856efb258"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Each part in parts/ has its pivot at base centre (y=0). model.glb spaces the three 2.2 m apart along X.",
   "measured": {
     "model_stats": {
-      "triangles": 1618,
+      "triangles": 1810,
       "triangles_per_material": {
         "hull_offwhite": 0,
         "graphite_navy": 0,
         "amber_accent": 0,
         "glass_cyan": 0,
         "emissive_cyan": 0,
-        "flora_body": 556,
-        "flora_violet": 346,
+        "flora_body": 652,
+        "flora_violet": 442,
         "emissive_teal": 248,
         "emissive_violet": 96,
         "emissive_amber": 48,
-        "stone_blue": 324
+        "stone_blue": 324,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -2.86,
@@ -70,20 +84,20 @@
       ],
       "bounds_max": [
         2.7823,
-        2.1413,
+        2.1366,
         0.7001
       ],
       "size": [
         5.6423,
-        2.2213,
+        2.2166,
         1.4673
       ]
     },
     "glb_reread": {
-      "file_bytes": 141568,
+      "file_bytes": 339408,
       "meshes": 6,
       "materials": 6,
-      "triangles": 1618,
+      "triangles": 1810,
       "all_finite": true,
       "bounds_min": [
         -2.86,
@@ -92,7 +106,7 @@
       ],
       "bounds_max": [
         2.7823,
-        2.1413,
+        2.1366,
         0.7001
       ]
     }
@@ -182,7 +196,7 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {
@@ -226,10 +240,10 @@
     },
     "glowing_sea_flower": {
       "file": "parts/glowing_sea_flower.glb",
-      "triangles": 252,
+      "triangles": 444,
       "size": [
         1.0769,
-        2.2013,
+        2.1966,
         1.0263
       ],
       "bounds_min": [
@@ -239,7 +253,7 @@
       ],
       "bounds_max": [
         0.5823,
-        2.1413,
+        2.1366,
         0.5159
       ]
     }

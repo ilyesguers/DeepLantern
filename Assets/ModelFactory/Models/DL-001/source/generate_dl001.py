@@ -11,12 +11,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(HERE, "..", "..", "..", "Tools"))
 import numpy as np  # noqa: E402
+import math
 import dlmesh as dm  # noqa: E402
 
 m = dm.Model("DL001_ScoutSub")
 m.material("hull_offwhite", (0.84, 0.87, 0.90), metallic=0.15, roughness=0.55)
 m.material("graphite_navy", (0.07, 0.10, 0.17), metallic=0.45, roughness=0.55)
 m.material("amber_accent", (0.93, 0.58, 0.10), metallic=0.2, roughness=0.5)
+m.material("titanium_t", (0.62, 0.66, 0.70), metallic=0.85, roughness=0.35)
 m.material("glass_cyan", (0.30, 0.78, 0.95), metallic=0.0, roughness=0.1, alpha=0.5)
 m.material("emissive_cyan", (0.10, 0.55, 0.80), emissive=(0.25, 0.85, 1.0), roughness=0.4)
 
@@ -102,18 +104,76 @@ for x in (-1.05, 1.05):
     m.add("amber_accent", dm.cylinder(0.58, 0.07, n=12, axis="z", pos=(x, -0.10, 3.20)))
 m.add("graphite_navy", dm.box((0.9, 0.25, 0.5), pos=(0, -0.10, 3.45)))  # thruster bridge
 
+
+# ============================ v2 hero detail pass ============================
+m.material("emissive_amber", (0.80, 0.50, 0.10), emissive=(1.0, 0.72, 0.25), roughness=0.4)
+dm.fx_material(m, "fx_beam_cyan", (0.55, 0.90, 1.0), 0.10)
+dm.fx_material(m, "fx_halo_cyan", (0.30, 0.85, 1.0), 0.14)
+
+# raised armour plates + amber flank stripes (chamfered, sit on the hull)
+for z, w in [(-0.55, 0.9), (1.2, 0.7)]:
+    rx, ry = hull_r(z)
+    m.add_mirrored("graphite_navy", dm.box((0.10, 0.34, w), pos=(rx * 0.93, 0.62, z), rot=(0, 0, -14)))
+    m.add_mirrored("graphite_navy", dm.box((0.10, 0.34, w), pos=(rx * 0.93, -0.50, z), rot=(0, 0, 14)))
+for z in (-0.9, 0.3, 1.8):
+    rx, ry = hull_r(z)
+    m.add("graphite_navy", dm.box((0.9, 0.08, 0.34), pos=(0, ry * 1.02, z)))                       # roof spine plates
+    m.add("amber_accent", dm.box((0.5, 0.05, 0.10), pos=(0, ry * 1.02 + 0.045, z)))
+
+# grab rails along the flanks (posts + rail)
+for s in (-1, 1):
+    for z in (-0.4, 0.5, 1.3):
+        rx, ry = hull_r(z)
+        m.add("graphite_navy", dm.box((0.10, 0.06, 0.06), pos=(s * rx * 1.02, 0.78, z)))
+    m.add("titanium_t", dm.box((0.07, 0.07, 1.9), pos=(s * (hull_r(0.5)[0] * 1.02 + 0.07), 0.78, 0.45)))
+
+# cockpit interior seen through the glass: seat, console, pilot rest
+m.add("graphite_navy", dm.box((0.55, 0.10, 0.50), pos=(0, 0.52, -2.20)))
+m.add("graphite_navy", dm.box((0.50, 0.42, 0.10), pos=(0, 0.78, -1.95)))
+m.add("graphite_navy", dm.box((0.70, 0.22, 0.30), pos=(0, 0.62, -2.80)))
+m.add("emissive_cyan", dm.box((0.46, 0.14, 0.03), pos=(0, 0.74, -2.94), rot=(-20, 0, 0)))
+# dome frame ribs
+for a in (-50, 0, 50):
+    r = math.radians(a)
+    pts = [(math.sin(r) * 0.98 * k, 0.88 + math.cos(math.radians(k * 80)) * 0.92 * 0.99, -2.35 + math.cos(r) * 0.0) for k in (1.0, 0.8, 0.5, 0.2)]
+for s in (-1, 1):
+    m.add("graphite_navy", dm.sweep([(s * 0.96, 0.9, -2.35), (s * 0.78, 1.4, -2.35), (s * 0.40, 1.72, -2.35), (0, 1.80, -2.35)], 0.05, n=5))
+m.add("graphite_navy", dm.sweep([(0, 0.9, -3.30), (0, 1.5, -3.0), (0, 1.80, -2.35), (0, 1.5, -1.65), (0, 0.9, -1.40)], 0.05, n=5))
+
+# under-nose camera pod and ballast vents
+m.add("graphite_navy", dm.cylinder(0.22, 0.34, n=10, axis="z", pos=(0, -0.95, -3.0)))
+m.add("emissive_cyan", dm.cylinder(0.12, 0.04, n=10, axis="z", pos=(0, -0.95, -3.19)))
+for s in (-1, 1):
+    for i in range(5):
+        m.add("graphite_navy", dm.box((0.06, 0.28, 0.07), pos=(s * 2.08, -0.26, -0.55 + i * 0.30)))
+
+# thruster internals: guard ring, 6-blade fan, glowing core
+for x in (-1.05, 1.05):
+    m.add("graphite_navy", dm.annulus(0.50, 0.42, 0.10, n=12, axis="z", pos=(x, -0.10, 4.20)))
+    for k in range(6):
+        a = k * 60
+        m.add("graphite_navy", dm.box((0.34, 0.07, 0.05), pos=(x + math.cos(math.radians(a)) * 0.20, -0.10 + math.sin(math.radians(a)) * 0.20, 4.20), rot=(0, 0, a)))
+    m.add("emissive_cyan", dm.cylinder(0.10, 0.10, n=8, axis="z", pos=(x, -0.10, 4.27)))
+    dm.light_beam(m, "fx_halo_cyan", (x, -0.10, 4.30), (0, 0, 1), length=1.6, r0=0.34, r1=0.12, n=10)
+
+# tail light, second mast, lifting eyes
+m.add("emissive_amber", dm.box((0.12, 0.12, 0.12), pos=(0, 1.94, 3.7)))
+m.add("graphite_navy", dm.cylinder(0.05, 0.5, n=6, axis="y", pos=(-0.4, 1.52, 1.2)))
+m.add("emissive_cyan", dm.box((0.08, 0.08, 0.08), pos=(-0.4, 1.80, 1.2)))
+for x in (-0.45, 0.45):
+    m.add("titanium_t", dm.annulus(0.16, 0.09, 0.06, n=10, axis="x", pos=(x * 1.0, 1.42, 1.6)))
+
+# nose lantern: housing frame, lens, and a static light-shaft FX cone (visual only, not a light)
+m.add("graphite_navy", dm.annulus(0.62, 0.50, 0.12, n=14, axis="z", pos=(0, -0.12, -4.14)))
+dm.light_beam(m, "fx_beam_cyan", (0, -0.12, -4.24), (0, -0.04, -1), length=5.5, r0=0.30, r1=1.5, n=14)
+for x in (-1.0, 1.0):
+    dm.light_beam(m, "fx_beam_cyan", (x, 0.05, -3.34), (x * 0.05, -0.02, -1), length=2.8, r0=0.14, r1=0.55, n=10)
+
 if __name__ == "__main__":
-    os.makedirs(OUT, exist_ok=True)
-    m.write_glb(os.path.join(OUT, "model.glb"))
-    m.write_obj(os.path.join(OUT, "model.obj"), "model.mtl")
-    m.write_mtl(os.path.join(OUT, "model.mtl"))
     views = [("3/4 front", -143, 20), ("side", -90, 0), ("front", 180, 0), ("top", 0, 90)]
-    dm.render_sheet(m, os.path.join(OUT, "preview.png"),
-                    "DL-001 Scout - software render of the exported geometry (flat shading, no textures)",
-                    views, px_per_unit=44, center=(0, 0.2, 0))
-    dm.write_manifest(m, OUT, dict(
+    print(dm.emit(OUT, dict(
         id="DL-001", title="Scout / research submarine (visual asset)",
         source_script="source/generate_dl001.py", brief="Assets/ModelFactory/Tasks/DL-001.md",
         reference="Art/VisualReference/02_Submarine_Design.png (Scout length 8 m, width ~4.2 m, height 3.1 m)",
-        pivot="Model origin (0,0,0) is the hull centreline at mid-length, roughly the vehicle root; not matched to the existing Studio submarine root (unknown)."))
-    print(m.stats())
+        pivot="Model origin (0,0,0) is the hull centreline at mid-length, roughly the vehicle root; not matched to the existing Studio submarine root (unknown). fx_* meshes are optional static light-shaft visuals; delete those nodes if unwanted."),
+        m, views=views, px=44, center=(0, 0.2, 0), title="DL-001 Scout - software render of the exported geometry (baked AO, detail textures, bloom)"))

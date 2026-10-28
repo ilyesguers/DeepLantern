@@ -2,57 +2,71 @@
   "id": "DL-014",
   "title": "Submarine docking pad + service arm (compact Docking Ring-compatible)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl014.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl014.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-014_DOCKING_PAD.md (branch assets/model-factory-queue) + GDD audit",
   "reference": "Scout submarine dimensions from Art/VisualReference/02_Submarine_Design.png (cradle spacing matches DL-001 skids at x=+/-1.15)",
   "files": [
     {
       "path": "model.glb",
-      "bytes": 79672,
-      "sha256": "0daa9d99755b7af202955073fc66d90dd265b49420366ee8928521192d1978f6"
+      "bytes": 394660,
+      "sha256": "336c414c2d8697f9fdba733d89d07848025a8db5e43fe15443827b11d19f4c1d"
     },
     {
       "path": "model.obj",
-      "bytes": 86592,
-      "sha256": "71d4c37386d099586b0db5b3fde1e4b650744a50db8cedcf1bae67a104428b9b"
+      "bytes": 750897,
+      "sha256": "c06b5c1dc2a2ca89a50456f1ab20d3388ef519f12b291c80d056bd5165b2a3b9"
     },
     {
       "path": "model.mtl",
-      "bytes": 389,
-      "sha256": "bd38ec6350365afffa4f4303435145d3d677c887756bcb95a22930f24fa445fe"
+      "bytes": 503,
+      "sha256": "6f04ffef3d8be8ada9eb41c754d7eb1f5278914b917c089867353e8070fd9076"
     },
     {
       "path": "preview.png",
-      "bytes": 35837,
-      "sha256": "cfd706c704021f73b503155d4c756b4f41d330ddc627ef17f9795b4fe3ab3fe5"
+      "bytes": 181561,
+      "sha256": "9abab32ceeb584f1f5c813866e3db50c55be40c324ac55f4598248e802ce9ec0"
+    },
+    {
+      "path": "textures/detail_metal.png",
+      "bytes": 32194,
+      "sha256": "9f83689319e8ce137f4477681efafbced4fe4e73f3f1a021be265f5c27773d47"
+    },
+    {
+      "path": "textures/detail_panel.png",
+      "bytes": 20466,
+      "sha256": "fe0ac42059f1b3626299128dec5f906cc130a7f953b2f0f3477a52c78eaba660"
     },
     {
       "path": "parts/pad.glb",
-      "bytes": 37784,
-      "sha256": "0e8e5466264244baa2640ee2cf26b56ddc230312a94298779421b64bac909ba0"
+      "bytes": 260764,
+      "sha256": "eed9e48e5f27637e4afd338f1e2831b5f15bc8daee9de50b9a231ad9a7f7c27c"
     },
     {
       "path": "parts/arm.glb",
-      "bytes": 45556,
-      "sha256": "c0560a2ebc5a9f7eeda821062e4759b0b49654a37d306b64e45e1b7e632719d8"
+      "bytes": 191780,
+      "sha256": "5b631627a5d27734464d5c94d33aa036a7364630a7bbe0ee8b66965eb1c73539"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "parts/pad.glb: centre of the floor-contact plane (0,0,0). parts/arm.glb: foot centre on the floor. model.glb places the arm 4.7 m to the -X side of the pad.",
   "measured": {
     "model_stats": {
-      "triangles": 884,
+      "triangles": 2388,
       "triangles_per_material": {
-        "hull_offwhite": 36,
-        "graphite_navy": 332,
-        "amber_accent": 240,
+        "hull_offwhite": 132,
+        "graphite_navy": 1004,
+        "amber_accent": 560,
         "glass_cyan": 0,
-        "emissive_cyan": 108,
-        "teal_shell": 48,
-        "titanium": 120
+        "emissive_cyan": 396,
+        "teal_shell": 176,
+        "titanium": 120,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -5.4,
@@ -71,10 +85,10 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 79672,
+      "file_bytes": 394660,
       "meshes": 6,
       "materials": 6,
-      "triangles": 884,
+      "triangles": 2388,
       "all_finite": true,
       "bounds_min": [
         -5.4,
@@ -122,17 +136,6 @@
       "metallic": 0.2,
       "roughness": 0.5
     },
-    "glass_cyan": {
-      "color": [
-        0.3,
-        0.78,
-        0.95,
-        0.5
-      ],
-      "emissive": null,
-      "metallic": 0.0,
-      "roughness": 0.1
-    },
     "emissive_cyan": {
       "color": [
         0.1,
@@ -176,16 +179,16 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {
     "pad": {
       "file": "parts/pad.glb",
-      "triangles": 396,
+      "triangles": 1452,
       "size": [
         6.4,
-        1.8026,
+        1.7943,
         10.45
       ],
       "bounds_min": [
@@ -195,13 +198,13 @@
       ],
       "bounds_max": [
         3.2,
-        1.8026,
+        1.7943,
         5.2
       ]
     },
     "arm": {
       "file": "parts/arm.glb",
-      "triangles": 488,
+      "triangles": 936,
       "size": [
         3.4299,
         2.3985,

@@ -2,95 +2,109 @@
   "id": "DL-020",
   "title": "Lighting fixture kit (work lamp, wall floodlight, nav beacon)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl020.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl020.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-020_LIGHTING_KIT.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 93172,
-      "sha256": "089decc6d4ffb7ce2d8e9817cece9cb95cbc3bbc76e26509a6cd3be95cb7ef95"
+      "bytes": 305368,
+      "sha256": "b64104039c08782f7598114ed1d9faef6bb0dce4bc2b1758df1bebcdaabd73ae"
     },
     {
       "path": "model.obj",
-      "bytes": 100702,
-      "sha256": "fb6fda9031b230bf32365cf6e95a71caf83137e96a3be8b5f087859f59ae3b64"
+      "bytes": 537564,
+      "sha256": "aec97cdbd8e0d26affd25b120c5d86056180fa9a998bf99bcdcc333a89504c4a"
     },
     {
       "path": "model.mtl",
-      "bytes": 363,
-      "sha256": "715567bbe5c091a1c268df391bc062d149593e2b0b4ce574c1a32cee9196e0a1"
+      "bytes": 495,
+      "sha256": "ebedf7650d696a33e936042031590792213fb55457854d223a937699dd57b640"
     },
     {
       "path": "preview.png",
-      "bytes": 45566,
-      "sha256": "6dc0f19875ce6901f99b06eb5d4361d3aef8a60172dc0ac514b77c00a140ffc8"
+      "bytes": 108961,
+      "sha256": "9d25d6c8175e68918d0b3732fc857180fcbbcf9ef5c653ee5c547a7ece54bddc"
+    },
+    {
+      "path": "textures/detail_metal.png",
+      "bytes": 32514,
+      "sha256": "7df2af03fe764c9492dd211c6038b767c83602354f158f8e7566f72e3cb6f059"
+    },
+    {
+      "path": "textures/detail_panel.png",
+      "bytes": 21517,
+      "sha256": "a67ce9b308db269b77d90abfc6b87c30c839b8303d530ef5cd9be7d0593389c4"
     },
     {
       "path": "parts/work_lamp.glb",
-      "bytes": 39316,
-      "sha256": "24aeb795345c08df9422c72a78a362ed16eb56a4bbe8fc4ab2a7f46ed77aed17"
+      "bytes": 156040,
+      "sha256": "77215acf76dc22f50b27156107ef60946f21fe624af9bb6dc3e0b90a6c5b445c"
     },
     {
       "path": "parts/wall_floodlight.glb",
-      "bytes": 33996,
-      "sha256": "4e29b1dcc64350f091b30a0de62bb12e897e344589d8805904b9c6ff4745f288"
+      "bytes": 146880,
+      "sha256": "e55fbcb658d17a54ea0963a45612c4eb46d78297397dc74e0a6da83ec9f865ea"
     },
     {
       "path": "parts/nav_beacon.glb",
-      "bytes": 26420,
-      "sha256": "9e824fe75c8f8bfcd2692834b635a6340c896372ebd71777aef4615828ffde96"
+      "bytes": 119996,
+      "sha256": "9ea3932f415567abcc0353e99b2b8416f2c59ccac650e93c6792460059d67dd4"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Work lamp: clamp base centre (y=0). Floodlight: back plane z=0, faces +Z. Nav beacon: base centre (y=0). No light objects included.",
   "measured": {
     "model_stats": {
-      "triangles": 1044,
+      "triangles": 1716,
       "triangles_per_material": {
         "hull_offwhite": 0,
-        "graphite_navy": 436,
-        "amber_accent": 36,
+        "graphite_navy": 724,
+        "amber_accent": 132,
         "glass_cyan": 0,
         "emissive_cyan": 40,
-        "titanium": 396,
+        "titanium": 684,
         "emissive_amber": 96,
-        "teal_shell": 40
+        "teal_shell": 40,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
-        -1.6118,
+        -1.6098,
         -0.0,
         -0.3369
       ],
       "bounds_max": [
         2.02,
         1.5356,
-        0.7663
+        0.7638
       ],
       "size": [
-        3.6318,
+        3.6298,
         1.5356,
-        1.1033
+        1.1007
       ]
     },
     "glb_reread": {
-      "file_bytes": 93172,
+      "file_bytes": 305368,
       "meshes": 6,
       "materials": 6,
-      "triangles": 1044,
+      "triangles": 1716,
       "all_finite": true,
       "bounds_min": [
-        -1.6118,
+        -1.6098,
         -0.0,
         -0.3369
       ],
       "bounds_max": [
         2.02,
         1.5356,
-        0.7663
+        0.7638
       ]
     }
   },
@@ -175,36 +189,36 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {
     "work_lamp": {
       "file": "parts/work_lamp.glb",
-      "triangles": 424,
+      "triangles": 680,
       "size": [
-        0.8368,
+        0.8348,
         1.5356,
-        0.6813
+        0.6809
       ],
       "bounds_min": [
-        -0.6118,
+        -0.6098,
         0.0,
         -0.3369
       ],
       "bounds_max": [
         0.225,
         1.5356,
-        0.3444
+        0.344
       ]
     },
     "wall_floodlight": {
       "file": "parts/wall_floodlight.glb",
-      "triangles": 360,
+      "triangles": 616,
       "size": [
         0.533,
         0.6532,
-        0.7663
+        0.7638
       ],
       "bounds_min": [
         -0.2665,
@@ -214,12 +228,12 @@
       "bounds_max": [
         0.2665,
         0.6232,
-        0.7663
+        0.7638
       ]
     },
     "nav_beacon": {
       "file": "parts/nav_beacon.glb",
-      "triangles": 260,
+      "triangles": 420,
       "size": [
         0.64,
         0.765,

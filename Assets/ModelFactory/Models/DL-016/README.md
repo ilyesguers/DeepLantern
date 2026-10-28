@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (1892 triangles, 7 materials, no textures) built from Python-authored geometry (`source/generate_dl016.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (2,084 triangles, 5 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl016.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 Static dressing only. No simulated cable physics, power network or interactive connection.
@@ -26,4 +26,4 @@ Per-part files:
 Hose radius 0.12 m with 0.17 m connectors on every end (strain-relief bands in amber). Pieces: straight, 90-degree bend, U-bend, coiled cable, wall connector, pressure coupling, cable clamp. No loose ends: every hose end has a connector. Hose start end is the pivot.
 
 ## Limitations
-Hoses are faceted 8-sided sweeps; the coil is dark and low-contrast against dark water. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+Hoses are faceted 8-sided sweeps; the coil is dark and low-contrast against dark water. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.

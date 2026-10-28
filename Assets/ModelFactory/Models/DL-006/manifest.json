@@ -2,58 +2,63 @@
   "id": "DL-006",
   "title": "Coral family (5 species)",
   "status": "UPLOADED_TO_GITHUB",
-  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl006.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py v2 + source/generate_dl006.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender. v2 adds chamfered edges, baked vertex-colour ambient occlusion, smoothed normals, box-projected UVs and procedural grayscale detail textures.",
   "brief": "Blender/MODEL_FACTORY/TASKS/DL-006_CORAL_FAMILY.md (branch assets/model-factory-queue) + GDD audit",
   "reference": null,
   "files": [
     {
       "path": "model.glb",
-      "bytes": 239504,
-      "sha256": "9b04673d8803374984d93d71abdda01749ea4d80b4a76128ab1a89cc78e57f62"
+      "bytes": 441320,
+      "sha256": "94e3948ae9f2db130c81c20520e70d7fbbbedadb345c3f5b113d1d40ab1407ac"
     },
     {
       "path": "model.obj",
-      "bytes": 271641,
-      "sha256": "27b04a6c88e6f448581b9300ac4919d754010bce93e9627bf7bb9164b85af818"
+      "bytes": 876700,
+      "sha256": "ddb512e247a56f9a054db96fd7ce152f38b32fb3ba51a7eabb620ab1c2d277dc"
     },
     {
       "path": "model.mtl",
-      "bytes": 388,
-      "sha256": "c557ed78ed01fb938c2c75f46e742e601b923230a6315fcc294dcb64a63af837"
+      "bytes": 598,
+      "sha256": "0ef6089ce681d069737f3916a628f71563813297fa59d58de5ec8140a472474d"
     },
     {
       "path": "preview.png",
-      "bytes": 71473,
-      "sha256": "2c071c05e99368effeda05e9b7f5c86d0d815cd351f8c35591321d5b8b8e2723"
+      "bytes": 111904,
+      "sha256": "c52e3dc9f5b1b18adce40548ce4e6d7eeeb49169b6acfc74ee7ac1ebcb13a5c6"
+    },
+    {
+      "path": "textures/detail_organic.png",
+      "bytes": 34321,
+      "sha256": "206bf1a7c9691189d0981cd8ce6f581ee37e33ed5b375176f01044ab73980ef7"
     },
     {
       "path": "parts/branching_fan.glb",
-      "bytes": 56112,
-      "sha256": "34b98bb4120aebb5395877daa3cfc384df0f5ff10448ec20c3a6d8647d3eca47"
+      "bytes": 129724,
+      "sha256": "0f7137ba47272a57da1ec9a98ed764447570918d02d1bd9460d291116b89318a"
     },
     {
       "path": "parts/brain_coral.glb",
-      "bytes": 50196,
-      "sha256": "8725c79287099edff649137a42fb2b5ca41110087d3b3f74d93c867aba66a013"
+      "bytes": 119604,
+      "sha256": "1fe3f3a17dd1f48f839e631849efca1c2fa80d915a71e600ebfe19aa3ac55050"
     },
     {
       "path": "parts/plate_coral.glb",
-      "bytes": 16252,
-      "sha256": "8a06ed28748acb1f85fec0ca82e11cc4f206f3658bafce636f03b2449c9344d8"
+      "bytes": 61412,
+      "sha256": "e4fddcd3a950e81ac086cde78b8a351f93fa34f98bbaeda4768eea1eb4a19dc8"
     },
     {
       "path": "parts/tubular_coral.glb",
-      "bytes": 76432,
-      "sha256": "34379a9948f2c365cf7a12ec177cff3b8be3e5df271dc104f4b06dc7f40c6567"
+      "bytes": 164568,
+      "sha256": "8b6ca5d993628f77ac450a3683f512bc6a4b43b4b3bc32be416433523231848f"
     },
     {
       "path": "parts/mound_coral.glb",
-      "bytes": 49244,
-      "sha256": "9845f40780bfb922ab2b408c037567a4d852212e603ad8190c6650cca0f9080d"
+      "bytes": 116036,
+      "sha256": "f1e4a8553a0d519dd8c494b34cdecf23124d54dd2b076410c0123b2071523246"
     }
   ],
-  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
-  "textures": "none - flat material colours only",
+  "format": "glTF 2.0 binary (.glb; textures embedded) plus Wavefront OBJ/MTL (with vn/vt and AO vertex colours)",
+  "textures": "procedural grayscale detail maps (256 px, tileable, multiplied with the material colour): panel, metal, rock, organic - see textures/; emissive, glass and FX materials are untextured",
   "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
   "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
   "pivot": "Each part in parts/ has its pivot at seafloor contact (base centre, y=0). model.glb lays the five out 2.4 m apart along X.",
@@ -72,7 +77,11 @@
         "coral_mint": 168,
         "coral_turq": 288,
         "shadow_blue": 652,
-        "emissive_teal": 60
+        "emissive_teal": 60,
+        "fx_beam_cyan": 0,
+        "fx_beam_amber": 0,
+        "fx_halo_teal": 0,
+        "fx_halo_violet": 0
       },
       "bounds_min": [
         -5.8287,
@@ -91,7 +100,7 @@
       ]
     },
     "glb_reread": {
-      "file_bytes": 239504,
+      "file_bytes": 441320,
       "meshes": 7,
       "materials": 7,
       "triangles": 2776,
@@ -196,7 +205,7 @@
   "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
   "not_verified": [
     "Roblox Studio import",
-    "UV mapping (none authored; no textures)",
+    "UV quality (simple box projection; seams and stretching possible on curved parts)",
     "fit against the existing live submarine/controller contracts"
   ],
   "parts": {

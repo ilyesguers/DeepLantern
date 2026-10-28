@@ -1,26 +1,32 @@
 newmtl hull_offwhite
 Kd 0.8400 0.8700 0.9000
 d 1.000
+map_Kd textures/detail_panel.png
 
 newmtl graphite_navy
 Kd 0.0700 0.1000 0.1700
 d 1.000
+map_Kd textures/detail_metal.png
 
 newmtl coral_orange
 Kd 0.9500 0.5200 0.2200
 d 1.000
+map_Kd textures/detail_organic.png
 
 newmtl coral_pink
 Kd 0.9000 0.4200 0.5500
 d 1.000
+map_Kd textures/detail_organic.png
 
 newmtl coral_turq
 Kd 0.1500 0.7200 0.7500
 d 1.000
+map_Kd textures/detail_organic.png
 
 newmtl coral_violet
 Kd 0.5000 0.3200 0.7200
 d 1.000
+map_Kd textures/detail_organic.png
 
 newmtl emissive_violet
 Kd 0.3500 0.2000 0.5500

@@ -3,7 +3,7 @@
 Status: UPLOADED_TO_GITHUB. Roblox Studio import/visual/performance: NOT TESTED (deferred by design).
 
 ## What this is
-A real low-poly 3D model (614 triangles, 8 materials, no textures) built from Python-authored geometry (`source/generate_dl013.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
+A real low-poly 3D model (774 triangles, 7 materials, v2 quality pass: chamfers, baked AO, smoothed normals, procedural detail textures) built from Python-authored geometry (`source/generate_dl013.py` + `../../Tools/dlmesh.py`). It is not AI-generated and not sculpted in Blender. Every figure below was measured from the exported files.
 
 ## GDD scope
 Visual showcase for the Aquarium/Gallery wing. No passive income, stat bonus or interaction. The specimen is a separate replaceable object and the label plate is blank for in-game UI.
@@ -21,4 +21,4 @@ Per-part files:
 Octagonal pedestal with a single thick glass dome (no overlapping transparent shells), a thin cyan inspection ring, specimen mount and blank label plate. parts/specimen_placeholder.glb is a simple violet crystal stand-in; model.glb seats it on the mount.
 
 ## Limitations
-Dome uses alpha blending; check it on mobile or substitute a Studio glass material. Stylised first pass with flat materials and no UV/texture detail; Roblox import, scale fit, collision and mobile performance are not tested.
+Dome uses alpha blending; check it on mobile or substitute a Studio glass material. Stylised first pass with v2 shading (baked vertex AO, smoothed normals, procedural grayscale detail textures; no hand-painted textures); Roblox import, scale fit, collision and mobile performance are not tested.
