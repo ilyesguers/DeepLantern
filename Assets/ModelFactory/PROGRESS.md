@@ -5,7 +5,7 @@ Current stage: v2 geometry exports exist for DL-001..DL-020; DL-001 reopened for
 Current asset: DL-001 Scout / research submarine
 Status: DL-001 NEEDS_REVIEW; other assets have committed v2 exports with file measurements recorded in their manifests
 Actual 3D models uploaded: 20 of 20 (DL-001..DL-020)
-Blocked tasks: DL-001 geometry correction is blocked in this session by the missing local Python/3D toolchain and no connected Roblox Studio
+Blocker: DL-001 geometry correction could not be exported in this session because no local Python/3D toolchain was available; Studio validation is also unavailable
 Roblox Studio validation: NOT TESTED for all 20
 
 ## Current session handoff (2026-10-27)
