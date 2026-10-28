@@ -1,0 +1,265 @@
+{
+  "id": "DL-019",
+  "title": "Small non-threatening fauna (reef fish, jellyfish, cleaner shrimp) - static, unrigged",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl019.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-019_SMALL_FAUNA.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 159780,
+      "sha256": "642ed325514248d43e55d17175e4f062f09005d0def91eb6d670be344808934b"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 176651,
+      "sha256": "c47b65a15b63f306805ebd3f3baabe93d10bc77bd6717d217ff55739aef983cc"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 473,
+      "sha256": "b467fe5ae3d1aeb1cf0f2fcb11e5d58630a70454ef8b1a77fe65446eaffb6318"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 73963,
+      "sha256": "1a954e5fcf43112d8469832b8550fa90564ac609618be02d5d1739c892bc6a26"
+    },
+    {
+      "path": "parts/reef_fish.glb",
+      "bytes": 34948,
+      "sha256": "24ff0f0032a9ce9fc21a47e91e691e1020d72a6381ca7b2c2308d8d928c45adc"
+    },
+    {
+      "path": "parts/jellyfish.glb",
+      "bytes": 61728,
+      "sha256": "7b4456b55bc8c5d97e41c8b5dd22c7297e20272a14b40646c60f3efed35cd8d2"
+    },
+    {
+      "path": "parts/cleaner_shrimp.glb",
+      "bytes": 65380,
+      "sha256": "7ea03403d9ff75838bf26bb067feaf1dd18a255b0c7542e44ef93f4c84d3f092"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Creature visual centre; facing +Z. UNRIGGED static meshes (no skeleton, no animation). model.glb spaces the three along X.",
+  "measured": {
+    "model_stats": {
+      "triangles": 1816,
+      "triangles_per_material": {
+        "hull_offwhite": 408,
+        "graphite_navy": 192,
+        "amber_accent": 0,
+        "glass_cyan": 0,
+        "emissive_cyan": 0,
+        "coral_orange": 120,
+        "coral_pink": 348,
+        "coral_turq": 48,
+        "coral_violet": 428,
+        "emissive_violet": 152,
+        "emissive_teal": 120
+      },
+      "bounds_min": [
+        -1.71,
+        -0.0077,
+        -0.62
+      ],
+      "bounds_max": [
+        1.7134,
+        1.38,
+        0.7894
+      ],
+      "size": [
+        3.4234,
+        1.3877,
+        1.4094
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 159780,
+      "meshes": 8,
+      "materials": 8,
+      "triangles": 1816,
+      "all_finite": true,
+      "bounds_min": [
+        -1.71,
+        -0.0077,
+        -0.62
+      ],
+      "bounds_max": [
+        1.7134,
+        1.38,
+        0.7894
+      ]
+    }
+  },
+  "materials": {
+    "hull_offwhite": {
+      "color": [
+        0.84,
+        0.87,
+        0.9,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.15,
+      "roughness": 0.55
+    },
+    "graphite_navy": {
+      "color": [
+        0.07,
+        0.1,
+        0.17,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.45,
+      "roughness": 0.55
+    },
+    "coral_orange": {
+      "color": [
+        0.95,
+        0.52,
+        0.22,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "coral_pink": {
+      "color": [
+        0.9,
+        0.42,
+        0.55,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "coral_turq": {
+      "color": [
+        0.15,
+        0.72,
+        0.75,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "coral_violet": {
+      "color": [
+        0.5,
+        0.32,
+        0.72,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.8
+    },
+    "emissive_violet": {
+      "color": [
+        0.35,
+        0.2,
+        0.55,
+        1.0
+      ],
+      "emissive": [
+        0.65,
+        0.35,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "emissive_teal": {
+      "color": [
+        0.1,
+        0.5,
+        0.5,
+        1.0
+      ],
+      "emissive": [
+        0.2,
+        0.95,
+        0.85
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ],
+  "parts": {
+    "reef_fish": {
+      "file": "parts/reef_fish.glb",
+      "triangles": 372,
+      "size": [
+        0.42,
+        0.58,
+        0.9561
+      ],
+      "bounds_min": [
+        -0.21,
+        -0.2,
+        -0.6
+      ],
+      "bounds_max": [
+        0.21,
+        0.38,
+        0.3561
+      ]
+    },
+    "jellyfish": {
+      "file": "parts/jellyfish.glb",
+      "triangles": 700,
+      "size": [
+        1.08,
+        1.3877,
+        1.08
+      ],
+      "bounds_min": [
+        -0.54,
+        -0.9077,
+        -0.54
+      ],
+      "bounds_max": [
+        0.54,
+        0.48,
+        0.54
+      ]
+    },
+    "cleaner_shrimp": {
+      "file": "parts/cleaner_shrimp.glb",
+      "triangles": 744,
+      "size": [
+        0.6284,
+        0.4059,
+        1.4094
+      ],
+      "bounds_min": [
+        -0.3149,
+        -0.1849,
+        -0.62
+      ],
+      "bounds_max": [
+        0.3134,
+        0.221,
+        0.7894
+      ]
+    }
+  }
+}

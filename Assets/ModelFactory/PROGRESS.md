@@ -1,11 +1,11 @@
 # Deep Lantern Model Factory Progress
 
 Last updated: 2026-10-22
-Current stage: PRODUCING via procedural Python geometry (no AI/Blender available)
-Current asset: DL-013 (next P2), then DL-016, DL-017, DL-018, DL-020, DL-019
-Status: IN_PROGRESS
-Actual 3D models uploaded: 14 (all P0 + all P1: DL-001..DL-012, DL-014, DL-015)
-Blocked tasks: 6 of 20 (P2/P3, not yet attempted; the earlier blocker no longer applies)
+Current stage: QUEUE COMPLETE (procedural low-poly geometry; Studio import NOT TESTED)
+Current asset: none - queue complete; next stage is Roblox Studio import/validation (deferred)
+Status: UPLOADED_TO_GITHUB (all 20)
+Actual 3D models uploaded: 20 of 20 (DL-001..DL-020)
+Blocked tasks: 0
 Roblox Studio validation: NOT STARTED (intentionally deferred)
 
 ## Session checkpoint
@@ -55,12 +55,12 @@ Owner authorised any workable method. Blender/bpy and AI generators remain unrea
 | DL-010 | Small wreckage set | P1 | UPLOADED_TO_GITHUB | Static points of interest in an existing MVP zone | Assets/ModelFactory/Models/DL-010/ (model.glb, model.obj, preview.png, manifest.json) |
 | DL-015 | Cave entrance pieces | P1 | UPLOADED_TO_GITHUB | Existing-zone secret only; no Lost Ruins zone | Assets/ModelFactory/Models/DL-015/ (model.glb, model.obj, preview.png, manifest.json) |
 | DL-012 | Individual relic props | P1 | UPLOADED_TO_GITHUB | Existing Codex/Archive relics; full Lost Ruins is post-MVP | Assets/ModelFactory/Models/DL-012/ (model.glb, model.obj, preview.png, manifest.json) |
-| DL-013 | Aquarium/Gallery discovery display | P2 | BLOCKED | Visual showcase only; no passive income/stat bonuses | Assets/ModelFactory/Models/DL-013/BLOCKED.md (40f9c0f) |
-| DL-016 | Cables and hoses | P2 | BLOCKED | Static dressing; no simulated cable physics or power network | Assets/ModelFactory/Models/DL-016/BLOCKED.md (40f9c0f) |
-| DL-017 | Diegetic signage kit | P2 | BLOCKED | Wayfinding only; no GPS quest markers/minimap | Assets/ModelFactory/Models/DL-017/BLOCKED.md (40f9c0f) |
-| DL-018 | Research crates | P2 | BLOCKED | Existing cargo/station dressing only | Assets/ModelFactory/Models/DL-018/BLOCKED.md (40f9c0f) |
-| DL-020 | Lighting fixture meshes | P2 | BLOCKED | Fixture meshes only; Studio lights added later | Assets/ModelFactory/Models/DL-020/BLOCKED.md (40f9c0f) |
-| DL-019 | Small Codex fauna | P3 | BLOCKED | Non-lethal, light/simple; no capture inventory or complex ecosystem | Assets/ModelFactory/Models/DL-019/BLOCKED.md (40f9c0f) |
+| DL-013 | Aquarium/Gallery discovery display | P2 | UPLOADED_TO_GITHUB | Visual showcase only; no passive income/stat bonuses | Assets/ModelFactory/Models/DL-013/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-016 | Cables and hoses | P2 | UPLOADED_TO_GITHUB | Static dressing; no simulated cable physics or power network | Assets/ModelFactory/Models/DL-016/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-017 | Diegetic signage kit | P2 | UPLOADED_TO_GITHUB | Wayfinding only; no GPS quest markers/minimap | Assets/ModelFactory/Models/DL-017/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-018 | Research crates | P2 | UPLOADED_TO_GITHUB | Existing cargo/station dressing only | Assets/ModelFactory/Models/DL-018/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-020 | Lighting fixture meshes | P2 | UPLOADED_TO_GITHUB | Fixture meshes only; Studio lights added later | Assets/ModelFactory/Models/DL-020/ (model.glb, model.obj, preview.png, manifest.json) |
+| DL-019 | Small Codex fauna | P3 | UPLOADED_TO_GITHUB | Non-lethal, light/simple; no capture inventory or complex ecosystem | Assets/ModelFactory/Models/DL-019/ (model.glb, model.obj, preview.png, manifest.json) |
 
 ## GDD compliance audit
 See Assets/ModelFactory/GDD_COMPLIANCE_AUDIT.md for the full 20-item scope review, MVP/post-MVP boundaries, and acceptance checklist.

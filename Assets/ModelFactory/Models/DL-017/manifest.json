@@ -1,0 +1,271 @@
+{
+  "id": "DL-017",
+  "title": "Navigation signage kit (5 blank plates)",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl017.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-017_SIGNAGE_KIT.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 56924,
+      "sha256": "0e5e79c63b6048073a048cdaa0780ed6f8276963c8f582d101a749b4886aa487"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 59719,
+      "sha256": "0188c0cbcbbd3f8d7f2973831a0d10389ebd117a90652efb7e6347f5a86d5907"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 287,
+      "sha256": "4fa9790da33bcb4d8df8468d661dc8f605497143b92c9328f49d3e7ade1f25ce"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 19185,
+      "sha256": "591979d1d745423b6624d9bc782f97b0693b3cfd61a1b47063bed459ef4be0dd"
+    },
+    {
+      "path": "parts/wall_plaque.glb",
+      "bytes": 13732,
+      "sha256": "2e9ad14a0ba80de3e0e8f5148c8fdd786ba2046917473c1b318711aadad35750"
+    },
+    {
+      "path": "parts/hanging_directional.glb",
+      "bytes": 12808,
+      "sha256": "8539e59c7c4e08028180b1e5ff02728192cd60d9d0236aaf553f0a822734376c"
+    },
+    {
+      "path": "parts/floor_route_marker.glb",
+      "bytes": 12928,
+      "sha256": "9b16c4ddc03aac284f98361c92e0d2927ca66a5276d8c021a472e264de065322"
+    },
+    {
+      "path": "parts/hazard_panel.glb",
+      "bytes": 15920,
+      "sha256": "8529e4165d90384c854ab698c4a71b40c7109a28a61f41e76779709c6bb7bf37"
+    },
+    {
+      "path": "parts/equipment_plate.glb",
+      "bytes": 13776,
+      "sha256": "48e5644257e94bc586dc196e5daac0aa52149bfda6f4b75914613c2a05be7306"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Wall pieces: back plane z=0, bottom centre, facing +Z. Hanging sign: ceiling attachment at the origin. Floor marker: centre of floor contact.",
+  "measured": {
+    "model_stats": {
+      "triangles": 624,
+      "triangles_per_material": {
+        "hull_offwhite": 96,
+        "graphite_navy": 252,
+        "amber_accent": 120,
+        "glass_cyan": 0,
+        "emissive_cyan": 36,
+        "titanium": 120
+      },
+      "bounds_min": [
+        -4.0,
+        -0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        4.125,
+        2.26,
+        0.5
+      ],
+      "size": [
+        8.125,
+        2.26,
+        1.0
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 56924,
+      "meshes": 5,
+      "materials": 5,
+      "triangles": 624,
+      "all_finite": true,
+      "bounds_min": [
+        -4.0,
+        -0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        4.125,
+        2.26,
+        0.5
+      ]
+    }
+  },
+  "materials": {
+    "hull_offwhite": {
+      "color": [
+        0.84,
+        0.87,
+        0.9,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.15,
+      "roughness": 0.55
+    },
+    "graphite_navy": {
+      "color": [
+        0.07,
+        0.1,
+        0.17,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.45,
+      "roughness": 0.55
+    },
+    "amber_accent": {
+      "color": [
+        0.93,
+        0.58,
+        0.1,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.2,
+      "roughness": 0.5
+    },
+    "emissive_cyan": {
+      "color": [
+        0.1,
+        0.55,
+        0.8,
+        1.0
+      ],
+      "emissive": [
+        0.25,
+        0.85,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "titanium": {
+      "color": [
+        0.62,
+        0.66,
+        0.7,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.85,
+      "roughness": 0.35
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ],
+  "parts": {
+    "wall_plaque": {
+      "file": "parts/wall_plaque.glb",
+      "triangles": 120,
+      "size": [
+        1.2,
+        0.6,
+        0.135
+      ],
+      "bounds_min": [
+        -0.6,
+        0.0,
+        -0.015
+      ],
+      "bounds_max": [
+        0.6,
+        0.6,
+        0.12
+      ]
+    },
+    "hanging_directional": {
+      "file": "parts/hanging_directional.glb",
+      "triangles": 108,
+      "size": [
+        1.85,
+        1.11,
+        0.16
+      ],
+      "bounds_min": [
+        -0.9,
+        -1.05,
+        -0.04
+      ],
+      "bounds_max": [
+        0.95,
+        0.06,
+        0.12
+      ]
+    },
+    "floor_route_marker": {
+      "file": "parts/floor_route_marker.glb",
+      "triangles": 120,
+      "size": [
+        1.0,
+        0.085,
+        1.0
+      ],
+      "bounds_min": [
+        -0.5,
+        -0.0,
+        -0.5
+      ],
+      "bounds_max": [
+        0.5,
+        0.085,
+        0.5
+      ]
+    },
+    "hazard_panel": {
+      "file": "parts/hazard_panel.glb",
+      "triangles": 156,
+      "size": [
+        1.4,
+        0.8,
+        0.125
+      ],
+      "bounds_min": [
+        -0.7,
+        0.0,
+        -0.015
+      ],
+      "bounds_max": [
+        0.7,
+        0.8,
+        0.11
+      ]
+    },
+    "equipment_plate": {
+      "file": "parts/equipment_plate.glb",
+      "triangles": 120,
+      "size": [
+        0.45,
+        0.28,
+        0.1
+      ],
+      "bounds_min": [
+        -0.225,
+        0.0,
+        -0.015
+      ],
+      "bounds_max": [
+        0.225,
+        0.28,
+        0.085
+      ]
+    }
+  }
+}

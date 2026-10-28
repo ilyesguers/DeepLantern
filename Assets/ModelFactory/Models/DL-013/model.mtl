@@ -1,0 +1,29 @@
+newmtl hull_offwhite
+Kd 0.8400 0.8700 0.9000
+d 1.000
+
+newmtl graphite_navy
+Kd 0.0700 0.1000 0.1700
+d 1.000
+
+newmtl glass_cyan
+Kd 0.3000 0.7800 0.9500
+d 0.500
+
+newmtl emissive_cyan
+Kd 0.1000 0.5500 0.8000
+d 1.000
+Ke 0.2500 0.8500 1.0000
+
+newmtl teal_shell
+Kd 0.0700 0.2700 0.3200
+d 1.000
+
+newmtl titanium
+Kd 0.6200 0.6600 0.7000
+d 1.000
+
+newmtl emissive_violet
+Kd 0.3500 0.2000 0.5500
+d 1.000
+Ke 0.6500 0.3500 1.0000

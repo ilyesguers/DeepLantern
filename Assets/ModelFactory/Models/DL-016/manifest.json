@@ -1,0 +1,320 @@
+{
+  "id": "DL-016",
+  "title": "Cable and hose kit (7 pieces)",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl016.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-016_CABLE_KIT.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 163480,
+      "sha256": "68a939512654a4637c364c27b67bed945ff08147288a8491012e343c0ef49c95"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 186491,
+      "sha256": "b6a7bdf0bab84857d21e614bb8ffe5cc11a5ba05527da16ebc0990f866e89215"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 285,
+      "sha256": "5a94bc80026f8c41843c824915adfe7a9171086a18a2ea92d3a52e54685d6da3"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 30914,
+      "sha256": "2440fab2298b6c3bb2036c60105e86e16a6c3ea0e302535c4932b2ab97d30b60"
+    },
+    {
+      "path": "parts/hose_straight.glb",
+      "bytes": 20288,
+      "sha256": "66e1ba628a49dd146969cd2060ed3c8ca8cfc3588d86e7b54cb530677d47a659"
+    },
+    {
+      "path": "parts/hose_90_bend.glb",
+      "bytes": 22932,
+      "sha256": "349ac529b52fc4047e67b60e944f627de6e58e85d54e747525e0ab4b0aad9927"
+    },
+    {
+      "path": "parts/hose_u_bend.glb",
+      "bytes": 26976,
+      "sha256": "9944fa039e336407768fe598e8d65d6826391cc1e23558dd2e92bb5d82a7f815"
+    },
+    {
+      "path": "parts/coiled_cable.glb",
+      "bytes": 56272,
+      "sha256": "e119ac0ae2156ea590174de635d66ed285c535b16ff0dfc655b611e096281730"
+    },
+    {
+      "path": "parts/wall_connector.glb",
+      "bytes": 22972,
+      "sha256": "0c243f14b41528d8f061838ed9550bdaacbeeb380ad8da463e223eb6b6b3100d"
+    },
+    {
+      "path": "parts/pressure_coupling.glb",
+      "bytes": 17484,
+      "sha256": "ed4c61fa749dd728bc6fc92eab9adf5c85f9b50c14a6f3def390179c95c4f0dd"
+    },
+    {
+      "path": "parts/cable_clamp.glb",
+      "bytes": 12560,
+      "sha256": "3533f4f9a5c29ae09233da9e4eb6e0fa5b0ef655a9ca5257f24abf3f0a3b4e9f"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Hose pieces: start attachment end at the origin, running toward +X (bend/U turn toward +Z), centreline 0.2 m above the floor plane. Wall connector: back plane z=0, socket faces +Z. model.glb spaces the pieces for preview.",
+  "measured": {
+    "model_stats": {
+      "triangles": 1892,
+      "triangles_per_material": {
+        "hull_offwhite": 0,
+        "graphite_navy": 176,
+        "amber_accent": 284,
+        "glass_cyan": 0,
+        "emissive_cyan": 12,
+        "titanium": 544,
+        "rubber_dark": 876
+      },
+      "bounds_min": [
+        -6.06,
+        -0.03,
+        -2.8169
+      ],
+      "bounds_max": [
+        3.2,
+        1.026,
+        4.56
+      ],
+      "size": [
+        9.26,
+        1.056,
+        7.3769
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 163480,
+      "meshes": 5,
+      "materials": 5,
+      "triangles": 1892,
+      "all_finite": true,
+      "bounds_min": [
+        -6.06,
+        -0.03,
+        -2.8169
+      ],
+      "bounds_max": [
+        3.2,
+        1.026,
+        4.56
+      ]
+    }
+  },
+  "materials": {
+    "graphite_navy": {
+      "color": [
+        0.07,
+        0.1,
+        0.17,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.45,
+      "roughness": 0.55
+    },
+    "amber_accent": {
+      "color": [
+        0.93,
+        0.58,
+        0.1,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.2,
+      "roughness": 0.5
+    },
+    "emissive_cyan": {
+      "color": [
+        0.1,
+        0.55,
+        0.8,
+        1.0
+      ],
+      "emissive": [
+        0.25,
+        0.85,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "titanium": {
+      "color": [
+        0.62,
+        0.66,
+        0.7,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.85,
+      "roughness": 0.35
+    },
+    "rubber_dark": {
+      "color": [
+        0.05,
+        0.06,
+        0.08,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.9
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ],
+  "parts": {
+    "hose_straight": {
+      "file": "parts/hose_straight.glb",
+      "triangles": 208,
+      "size": [
+        3.12,
+        0.3808,
+        0.3808
+      ],
+      "bounds_min": [
+        -0.06,
+        0.0096,
+        -0.1904
+      ],
+      "bounds_max": [
+        3.06,
+        0.3904,
+        0.1904
+      ]
+    },
+    "hose_90_bend": {
+      "file": "parts/hose_90_bend.glb",
+      "triangles": 240,
+      "size": [
+        1.6504,
+        0.3808,
+        2.2504
+      ],
+      "bounds_min": [
+        -0.06,
+        0.0096,
+        -0.1904
+      ],
+      "bounds_max": [
+        1.5904,
+        0.3904,
+        2.06
+      ]
+    },
+    "hose_u_bend": {
+      "file": "parts/hose_u_bend.glb",
+      "triangles": 288,
+      "size": [
+        1.58,
+        0.3808,
+        1.5808
+      ],
+      "bounds_min": [
+        -0.06,
+        0.0096,
+        -0.1904
+      ],
+      "bounds_max": [
+        1.52,
+        0.3904,
+        1.3904
+      ]
+    },
+    "coiled_cable": {
+      "file": "parts/coiled_cable.glb",
+      "triangles": 636,
+      "size": [
+        1.2849,
+        1.056,
+        1.3669
+      ],
+      "bounds_min": [
+        -0.55,
+        -0.03,
+        -0.8169
+      ],
+      "bounds_max": [
+        0.7349,
+        1.026,
+        0.55
+      ]
+    },
+    "wall_connector": {
+      "file": "parts/wall_connector.glb",
+      "triangles": 240,
+      "size": [
+        0.5,
+        0.5,
+        0.37
+      ],
+      "bounds_min": [
+        -0.25,
+        0.0,
+        0.0
+      ],
+      "bounds_max": [
+        0.25,
+        0.5,
+        0.37
+      ]
+    },
+    "pressure_coupling": {
+      "file": "parts/pressure_coupling.glb",
+      "triangles": 164,
+      "size": [
+        1.0,
+        0.4311,
+        0.425
+      ],
+      "bounds_min": [
+        0.0,
+        -0.0021,
+        -0.2125
+      ],
+      "bounds_max": [
+        1.0,
+        0.429,
+        0.2125
+      ]
+    },
+    "cable_clamp": {
+      "file": "parts/cable_clamp.glb",
+      "triangles": 116,
+      "size": [
+        0.4,
+        0.4,
+        0.34
+      ],
+      "bounds_min": [
+        -0.2,
+        0.0,
+        -0.17
+      ],
+      "bounds_max": [
+        0.2,
+        0.4,
+        0.17
+      ]
+    }
+  }
+}

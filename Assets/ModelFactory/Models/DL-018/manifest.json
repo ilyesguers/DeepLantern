@@ -1,0 +1,259 @@
+{
+  "id": "DL-018",
+  "title": "Research equipment crates (hard case, supply crate + lid, instrument case)",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl018.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-018_RESEARCH_CRATES.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 77984,
+      "sha256": "e23b59490353b38330d61a5b82df6cb36bcb531183d2a9e78a93c6d137fc88f7"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 84144,
+      "sha256": "f6640398814bacb290781f20edcf840ab8f508435566eff3831ab1e38e86e176"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 338,
+      "sha256": "f69796316c98f6070c9a03bc422332ac255126eaefdeaba8e961de4ed93b0d3d"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 27828,
+      "sha256": "4af042c870ebe8a5de8672b9a125c258e13c4142e76f0343bef6353438eda177"
+    },
+    {
+      "path": "parts/hard_case.glb",
+      "bytes": 20616,
+      "sha256": "e5560eb7e4cd302b82ebf7e469c5596df6661d158c43d9482c0a15c3540e275c"
+    },
+    {
+      "path": "parts/supply_crate_body.glb",
+      "bytes": 19792,
+      "sha256": "3ef66b81a1dd69a3aa10d7703bb1360d388467784e8e81bb891abd88dc013a53"
+    },
+    {
+      "path": "parts/supply_crate_lid.glb",
+      "bytes": 9720,
+      "sha256": "a792d7244b79753594e39554fd25d1d03617385e6af74f092120008c44a590a4"
+    },
+    {
+      "path": "parts/instrument_case.glb",
+      "bytes": 22736,
+      "sha256": "906174b071964401257d04379aff397e87063c28e92e6205c1c8334be8ad6472"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Each part has its pivot at base centre (y=0); the lid's origin is its bottom centre. model.glb shows a hard case stacked on a second one to the left as a visual-clipping check (not a measured test).",
+  "measured": {
+    "model_stats": {
+      "triangles": 864,
+      "triangles_per_material": {
+        "hull_offwhite": 48,
+        "graphite_navy": 504,
+        "amber_accent": 108,
+        "glass_cyan": 0,
+        "emissive_cyan": 12,
+        "titanium": 96,
+        "teal_shell": 96
+      },
+      "bounds_min": [
+        -2.01,
+        -0.02,
+        -0.52
+      ],
+      "bounds_max": [
+        2.16,
+        1.085,
+        0.56
+      ],
+      "size": [
+        4.17,
+        1.105,
+        1.08
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 77984,
+      "meshes": 6,
+      "materials": 6,
+      "triangles": 864,
+      "all_finite": true,
+      "bounds_min": [
+        -2.01,
+        -0.02,
+        -0.52
+      ],
+      "bounds_max": [
+        2.16,
+        1.085,
+        0.56
+      ]
+    }
+  },
+  "materials": {
+    "hull_offwhite": {
+      "color": [
+        0.84,
+        0.87,
+        0.9,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.15,
+      "roughness": 0.55
+    },
+    "graphite_navy": {
+      "color": [
+        0.07,
+        0.1,
+        0.17,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.45,
+      "roughness": 0.55
+    },
+    "amber_accent": {
+      "color": [
+        0.93,
+        0.58,
+        0.1,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.2,
+      "roughness": 0.5
+    },
+    "emissive_cyan": {
+      "color": [
+        0.1,
+        0.55,
+        0.8,
+        1.0
+      ],
+      "emissive": [
+        0.25,
+        0.85,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "titanium": {
+      "color": [
+        0.62,
+        0.66,
+        0.7,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.85,
+      "roughness": 0.35
+    },
+    "teal_shell": {
+      "color": [
+        0.07,
+        0.27,
+        0.32,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.3,
+      "roughness": 0.6
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ],
+  "parts": {
+    "hard_case": {
+      "file": "parts/hard_case.glb",
+      "triangles": 192,
+      "size": [
+        0.82,
+        0.365,
+        0.6
+      ],
+      "bounds_min": [
+        -0.41,
+        0.0,
+        -0.295
+      ],
+      "bounds_max": [
+        0.41,
+        0.365,
+        0.305
+      ]
+    },
+    "supply_crate_body": {
+      "file": "parts/supply_crate_body.glb",
+      "triangles": 192,
+      "size": [
+        1.44,
+        0.96,
+        1.06
+      ],
+      "bounds_min": [
+        -0.72,
+        -0.02,
+        -0.52
+      ],
+      "bounds_max": [
+        0.72,
+        0.94,
+        0.54
+      ]
+    },
+    "supply_crate_lid": {
+      "file": "parts/supply_crate_lid.glb",
+      "triangles": 72,
+      "size": [
+        1.44,
+        0.195,
+        1.08
+      ],
+      "bounds_min": [
+        -0.72,
+        -0.03,
+        -0.52
+      ],
+      "bounds_max": [
+        0.72,
+        0.165,
+        0.56
+      ]
+    },
+    "instrument_case": {
+      "file": "parts/instrument_case.glb",
+      "triangles": 216,
+      "size": [
+        0.92,
+        0.405,
+        0.635
+      ],
+      "bounds_min": [
+        -0.46,
+        0.0,
+        -0.31
+      ],
+      "bounds_max": [
+        0.46,
+        0.405,
+        0.325
+      ]
+    }
+  }
+}

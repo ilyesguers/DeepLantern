@@ -1,0 +1,227 @@
+{
+  "id": "DL-013",
+  "title": "Discovery specimen display (pedestal + replaceable specimen)",
+  "status": "UPLOADED_TO_GITHUB",
+  "generator": "Procedural geometry written in Python (Assets/ModelFactory/Tools/dlmesh.py + source/generate_dl013.py) run in a Claude session. Not AI text-to-3D, not hand-sculpted in Blender.",
+  "brief": "Blender/MODEL_FACTORY/TASKS/DL-013_DISCOVERY_DISPLAY.md (branch assets/model-factory-queue) + GDD audit",
+  "reference": null,
+  "files": [
+    {
+      "path": "model.glb",
+      "bytes": 57912,
+      "sha256": "e0ae8cbb94db2759918131db6d5f218aed07cd6433d057c76cb071903342ee2b"
+    },
+    {
+      "path": "model.obj",
+      "bytes": 59550,
+      "sha256": "ef5bd0466ff241bcd150f38bed1e0b4ead69df7f3937252a438b7b341ba39885"
+    },
+    {
+      "path": "model.mtl",
+      "bytes": 416,
+      "sha256": "9869e86a6396b28753d71d6a0607722409e83b5d41837024f6f7e61f07553c5d"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 45448,
+      "sha256": "d92539c3f4614d8b3d2fda4ec39a4deae62be746bac590e3485b60e9d20e0388"
+    },
+    {
+      "path": "parts/display_pedestal.glb",
+      "bytes": 47576,
+      "sha256": "05722d52f0eff4ed9707f011144b3c8a38af691a95da5f016437a17da2f6a5a5"
+    },
+    {
+      "path": "parts/specimen_placeholder.glb",
+      "bytes": 11496,
+      "sha256": "639879775d3957ea998b635bb68e4444f733b269ea577b5ae8ef61e65ecab59c"
+    }
+  ],
+  "format": "glTF 2.0 binary (.glb) plus Wavefront OBJ/MTL",
+  "textures": "none - flat material colours only",
+  "units": "metres in file (1 unit = 1 m in the design sheet); Roblox stud mapping to be set at import",
+  "axes": "Y up, nose/front toward -Z, +X right (not verified against Roblox import)",
+  "pivot": "Pedestal: floor centre (0,0,0). Specimen placeholder: bottom centre; model.glb seats it on the mount at y=1.03.",
+  "measured": {
+    "model_stats": {
+      "triangles": 614,
+      "triangles_per_material": {
+        "hull_offwhite": 44,
+        "graphite_navy": 156,
+        "amber_accent": 0,
+        "glass_cyan": 126,
+        "emissive_cyan": 128,
+        "teal_shell": 32,
+        "titanium": 48,
+        "emissive_violet": 80
+      },
+      "bounds_min": [
+        -0.62,
+        -0.0,
+        -0.62
+      ],
+      "bounds_max": [
+        0.62,
+        1.73,
+        0.62
+      ],
+      "size": [
+        1.24,
+        1.73,
+        1.24
+      ]
+    },
+    "glb_reread": {
+      "file_bytes": 57912,
+      "meshes": 7,
+      "materials": 7,
+      "triangles": 614,
+      "all_finite": true,
+      "bounds_min": [
+        -0.62,
+        -0.0,
+        -0.62
+      ],
+      "bounds_max": [
+        0.62,
+        1.73,
+        0.62
+      ]
+    }
+  },
+  "materials": {
+    "hull_offwhite": {
+      "color": [
+        0.84,
+        0.87,
+        0.9,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.15,
+      "roughness": 0.55
+    },
+    "graphite_navy": {
+      "color": [
+        0.07,
+        0.1,
+        0.17,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.45,
+      "roughness": 0.55
+    },
+    "glass_cyan": {
+      "color": [
+        0.3,
+        0.78,
+        0.95,
+        0.5
+      ],
+      "emissive": null,
+      "metallic": 0.0,
+      "roughness": 0.1
+    },
+    "emissive_cyan": {
+      "color": [
+        0.1,
+        0.55,
+        0.8,
+        1.0
+      ],
+      "emissive": [
+        0.25,
+        0.85,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    },
+    "teal_shell": {
+      "color": [
+        0.07,
+        0.27,
+        0.32,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.3,
+      "roughness": 0.6
+    },
+    "titanium": {
+      "color": [
+        0.62,
+        0.66,
+        0.7,
+        1.0
+      ],
+      "emissive": null,
+      "metallic": 0.85,
+      "roughness": 0.35
+    },
+    "emissive_violet": {
+      "color": [
+        0.35,
+        0.2,
+        0.55,
+        1.0
+      ],
+      "emissive": [
+        0.65,
+        0.35,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.4
+    }
+  },
+  "license": "Original procedural work created for the Deep Lantern project; no third-party assets used.",
+  "preview": "preview.png is a software (numpy) render of the exported geometry; flat shading, not an engine render.",
+  "roblox_import": "NOT TESTED. Suggested: import .glb/.obj via Studio 3D Importer, one MeshPart per material, set Anchored/CanCollide/CollisionFidelity in Studio; collision should use a simplified hull.",
+  "not_verified": [
+    "Roblox Studio import",
+    "UV mapping (none authored; no textures)",
+    "fit against the existing live submarine/controller contracts"
+  ],
+  "parts": {
+    "display_pedestal": {
+      "file": "parts/display_pedestal.glb",
+      "triangles": 502,
+      "size": [
+        1.24,
+        1.73,
+        1.24
+      ],
+      "bounds_min": [
+        -0.62,
+        -0.0,
+        -0.62
+      ],
+      "bounds_max": [
+        0.62,
+        1.73,
+        0.62
+      ]
+    },
+    "specimen_placeholder": {
+      "file": "parts/specimen_placeholder.glb",
+      "triangles": 112,
+      "size": [
+        0.22,
+        0.4263,
+        0.22
+      ],
+      "bounds_min": [
+        -0.11,
+        -0.0063,
+        -0.11
+      ],
+      "bounds_max": [
+        0.11,
+        0.42,
+        0.11
+      ]
+    }
+  }
+}
